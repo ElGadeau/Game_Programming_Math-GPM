@@ -5,6 +5,16 @@
 
 namespace GPM::Tools
 {
+	inline float Utils::ToRadians(const float p_angle)
+	{
+		return p_angle * 3.1415926535f / 180.0f;
+	}
+
+	inline float Utils::ToDegrees(const float p_angle)
+	{
+		return p_angle * 180.0f / 3.1415926535f;
+	}
+	
 	template<typename T>
 	inline T Utils::Pow(const T p_value, const int p_exp)
 	{

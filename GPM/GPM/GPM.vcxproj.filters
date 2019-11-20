@@ -24,6 +24,12 @@
     <ClInclude Include="include\GPM\GPM.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\GPM\Vector\Vector3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GPM\Tools\Utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GPM.cpp">
@@ -32,6 +38,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="include\GPM\Vector\Vector4.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="include\GPM\Vector\Vector3.inl">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="include\GPM\Tools\Utils.inl">
       <Filter>Header Files</Filter>
     </None>
   </ItemGroup>

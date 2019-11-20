@@ -1,7 +1,7 @@
 #pragma once
 
 #include <stdexcept>
-#include "Tools/Utils.h"
+#include "GPM/Tools/Utils.h"
 
 namespace GPM
 {
