@@ -30,9 +30,9 @@ template<typename type>
 void GPM::Matrix4<type>::ToString()
 {
     std::cout << '[' << m_data[0] << "  " << m_data[1] << "  " << m_data[2] << "  " << m_data[3] << "]\n"
-        << '[' << m_data[4] << "  " << m_data[5] << "  " << m_data[6] << "  " << m_data[7] << "]\n"
-        << '[' << m_data[8] << "  " << m_data[9] << "  " << m_data[10] << "  " << m_data[11] << "]\n"
-        << '[' << m_data[12] << "  " << m_data[13] << "  " << m_data[14] << "  " << m_data[15] << "]\n";
+              << '[' << m_data[4] << "  " << m_data[5] << "  " << m_data[6] << "  " << m_data[7] << "]\n"
+              << '[' << m_data[8] << "  " << m_data[9] << "  " << m_data[10] << "  " << m_data[11] << "]\n"
+              << '[' << m_data[12] << "  " << m_data[13] << "  " << m_data[14] << "  " << m_data[15] << "]\n";
 }
 
 
@@ -55,6 +55,18 @@ GPM::Matrix4<type> GPM::Matrix4<type>::Inverse()
 }
 
 template<typename type>
+GPM::Matrix4<type> GPM::Matrix4<type>::SetRow(int p_row, Vector4<type> p_vector)
+{
+    //TODO
+}
+
+template<typename type>
+GPM::Matrix4<type> GPM::Matrix4<type>::SetColumn(int p_row, Vector4<type> p_vector)
+{
+    //TODO
+}
+
+template<typename type>
 GPM::Matrix4<type> GPM::Matrix4<type>::Scale(Vector3<type> p_scale)
 {
     //TODO
@@ -68,6 +80,18 @@ GPM::Matrix4<type> GPM::Matrix4<type>::Rotation(Vector3<type> p_rotation)
 
 template<typename type>
 GPM::Matrix4<type> GPM::Matrix4<type>::Translate(Vector3<type> p_translate)
+{
+    //TODO
+}
+
+template<typename type> GPM::Matrix4<type>
+GPM::Matrix4<type>::operator*(Vector4<type> p_vector)
+{
+    //TODO
+}
+
+template<typename type> GPM::Matrix4<type>
+GPM::Matrix4<type>::operator*=(Vector4<type> p_vector)
 {
     //TODO
 }

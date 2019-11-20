@@ -20,11 +20,16 @@ namespace GPM
         type GetMinor();
 
         Matrix4<type> Inverse();
+        Matrix4<type> SetRow(int p_row, Vector4<type> p_vector);
+        Matrix4<type> SetColumn(int p_column, Vector4<type> p_vector);
+
         Matrix4<type> Scale(Vector3<type> p_scale);
         Matrix4<type> Rotation(Vector3<type> p_rotation);
         Matrix4<type> Translate(Vector3<type> p_translate);
 
-        Matrix4<type>* operator(Vector4<type> p_vector);
+        //operators
+        Matrix4<type> operator*(Vector4<type> p_vector);
+        Matrix4<type> operator*=(Vector4<type> p_vector);
     };
 
     using Matrix4F = Matrix4<float>;
