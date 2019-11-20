@@ -172,6 +172,7 @@
     <ClCompile Include="src\GPM.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="include\GPM\Matrix\Matrix4.inl" />
     <None Include="include\GPM\Tools\Utils.inl" />
     <None Include="include\GPM\Vector\Vector3.inl" />
     <None Include="include\GPM\Vector\Vector4.inl" />

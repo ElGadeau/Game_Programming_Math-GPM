@@ -18,6 +18,7 @@ namespace GPM
 		T w;
 
 		static const Vector4<T> Zero;
+		static const Vector4<T> One;
 		static const Vector4<T> XAxis;
 		static const Vector4<T> YAxis;
 		static const Vector4<T> ZAxis;
@@ -78,7 +79,65 @@ namespace GPM
 		 */
 		constexpr Vector4<T>& operator=(Vector4<T>&& p_other) noexcept;
 #pragma endregion
+#pragma region Tests & Comparisons
 
+		/**
+		 * Return true if the two vectors are parallel
+		 * @param p_other
+		 */
+		constexpr bool IsParallelTo(const Vector4<T>& p_other) const;
+
+		/**
+		 * Return true if the two vectors are parallel
+		 * @param p_left
+		 * @param p_right
+		 */
+		constexpr static bool AreParallel(const Vector4<T>& p_left, const Vector4<T>& p_right);
+
+		/**
+		 * Return true if the two vectors are perpendicular
+		 * @param p_other
+		 */
+		constexpr bool IsPerpendicularTo(const Vector4<T>& p_other) const;
+
+		/**
+		 * Return true if the two vectors are perpendicular
+		 * @param p_left
+		 * @param p_right
+		 */
+		constexpr static bool ArePerpendicular(const Vector4<T>& p_left, const Vector4<T>& p_right);
+
+		/**
+		 * Return true if the vector is homogenized
+		 */
+		constexpr bool IsHomogenized() const;
+
+		/**
+		 * Return true if the vector is homogenized
+		 * @param p_vector
+		 */
+		constexpr static bool IsHomogenized(const Vector4<T>& p_vector);
+
+		/**
+		 * Return true if the two vectors are identical
+		 * @param p_other
+		 */
+		constexpr bool IsEqualTo(const Vector4<T>& p_other) const;
+
+		/**
+		 * Return true if the two vectors are identical
+		 * @param p_left
+		 * @param p_right
+		 */
+		constexpr static bool AreEqual(const Vector4<T>& p_left, const Vector4<T>& p_right);
+
+		/**
+		 * Return true if the two vectors are identical
+		 * @param p_other
+		 */
+		constexpr bool operator==(const Vector4<T>& p_other) const;
+
+#pragma endregion
 #pragma region Arithmetic Operations
 
 #pragma region Add
@@ -87,7 +146,7 @@ namespace GPM
 		 * Add scalar to x, y and z
 		 * @param p_scalar
 		 */
-		Vector4<T>& Add(T p_scalar);
+		Vector4<T>& Add(const T p_scalar);
 
 		/**
 		 * Add scalar to vector left
@@ -113,25 +172,25 @@ namespace GPM
 		* Return the summation of other vector and actual vector
 		* @param p_scalar
 		*/
-		constexpr Vector4<T> operator +(const T p_scalar) const;
+		constexpr Vector4<T> operator+(const T p_scalar) const;
 
 		/**
 		* Add other vector to the actual vector
 		* @param p_scalar
 		*/
-		Vector4<T>& operator +=(const T p_scalar);
+		Vector4<T>& operator+=(const T p_scalar);
 
 		/**
 		 * Return the summation of other vector and actual vector
 		 * @param p_other
 		 */
-		constexpr Vector4<T> operator +(const Vector4<T>& p_other) const;
+		constexpr Vector4<T> operator+(const Vector4<T>& p_other) const;
 
 		/**
 		 * Add other vector to the actual vector
 		 * @param p_other
 		 */
-		Vector4<T>& operator +=(const Vector4<T>& p_other);
+		Vector4<T>& operator+=(const Vector4<T>& p_other);
 
 #pragma endregion
 #pragma region Substract
@@ -245,6 +304,7 @@ namespace GPM
 #pragma endregion
 
 #pragma endregion
+
 #pragma region Vector Operations
 
 		/**
@@ -344,7 +404,7 @@ namespace GPM
 		* @param p_end
 		* @param p_interpolationCoefficient between 0 and 1, 0 is start, 1 is end
 		*/
-		constexpr static Vector4<T> Lerp(const Vector4<T>& p_start, const Vector4<T>& p_end, float p_interpolationCoefficient);
+		constexpr static Vector4<T> Lerp(const Vector4<T>& p_start, const Vector4<T>& p_end, const float p_interpolationCoefficient);
 
 		/**
 		* Return the start vector moving to the end vector at step interpolationCoefficient
@@ -352,7 +412,7 @@ namespace GPM
 		* @param p_end
 		* @param p_interpolationCoefficient between 0 and 1, 0 is start, 1 is end
 		*/
-		constexpr static Vector4<T> Slerp(const Vector4<T>& p_start, const Vector4<T>& p_end, float p_interpolationCoefficient);
+		constexpr static Vector4<T> Slerp(const Vector4<T>& p_start, const Vector4<T>& p_end, const float p_interpolationCoefficient);
 
 #pragma endregion
 #pragma region Conversions
@@ -377,28 +437,28 @@ namespace GPM
 	constexpr std::ostream& operator<<(std::ostream& p_stream, const Vector4<T>& p_vector);
 
 	template <typename T>
-	constexpr Vector4<T> operator+(T p_scalar, const Vector4<T>& p_vector);
+	constexpr Vector4<T> operator+(const T p_scalar, const Vector4<T>& p_vector);
 
 	template <typename T>
-	constexpr Vector4<T>& operator+=(T p_scalar, Vector4<T>& p_vector);
+	constexpr Vector4<T>& operator+=(const T p_scalar, Vector4<T>& p_vector);
 
 	template <typename T>
-	constexpr Vector4<T> operator-(T p_scalar, const Vector4<T>& p_vector);
+	constexpr Vector4<T> operator-(const T p_scalar, const Vector4<T>& p_vector);
 
 	template <typename T>
-	constexpr Vector4<T>& operator-=(T p_scalar, Vector4<T>& p_vector);
+	constexpr Vector4<T>& operator-=(const T p_scalar, Vector4<T>& p_vector);
 
 	template <typename T>
-	constexpr Vector4<T> operator*(T p_scalar, const Vector4<T>& p_vector);
+	constexpr Vector4<T> operator*(const T p_scalar, const Vector4<T>& p_vector);
 
 	template <typename T>
-	constexpr Vector4<T>& operator*=(T p_scalar, Vector4<T>& p_vector);
+	constexpr Vector4<T>& operator*=(const T p_scalar, Vector4<T>& p_vector);
 
 	template <typename T>
-	constexpr Vector4<T> operator/(T p_scalar, const Vector4<T>& p_vector);
+	constexpr Vector4<T> operator/(const T p_scalar, const Vector4<T>& p_vector);
 
 	template <typename T>
-	constexpr Vector4<T>& operator/=(T p_scalar, Vector4<T>& p_vector);
+	constexpr Vector4<T>& operator/=(const T p_scalar, Vector4<T>& p_vector);
 
 #pragma endregion
 
