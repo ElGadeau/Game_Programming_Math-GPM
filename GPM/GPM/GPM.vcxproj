@@ -169,6 +169,9 @@
   <ItemGroup>
     <ClCompile Include="src\GPM.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="include\GPM\Vector\Vector4.inl" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
