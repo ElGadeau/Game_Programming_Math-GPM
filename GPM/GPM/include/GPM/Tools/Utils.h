@@ -3,6 +3,10 @@
 namespace GPM::Tools
 {
 	/**
+	 * PI Alias for maths
+	 */
+	constexpr long double M_PI = 3.141592653589793238462643383279502884L;
+	/**
 	 * Utils class provides some simple mathematics tools, such as operations, pow, root, trigonometry stuffs...
 	 */
 	class Utils final
