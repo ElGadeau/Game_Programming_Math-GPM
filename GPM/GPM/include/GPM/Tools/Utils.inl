@@ -37,7 +37,7 @@ namespace GPM::Tools
 	}
 
 	template <typename T>
-	T Utils::SquareRootF(const T p_value)
+	inline T Utils::SquareRootF(const T p_value)
 	{
 		static_assert(std::is_arithmetic<T>::value, "The value to root must be arithmetic");
 		return static_cast<T>(std::sqrtf(p_value));
