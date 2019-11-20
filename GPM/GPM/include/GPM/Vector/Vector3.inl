@@ -1,6 +1,8 @@
 #include <GPM/Vector/Vector3.h>
 #include <cmath>
 
+#define PI 3.14159265359
+
 template<typename T>
 void Vector3<T>::Add(Vector3<T>& p_vec)
 {
@@ -39,6 +41,12 @@ void Vector3<T>::Set(T px, T py, T pz)
     x = px;
     y = py;
     z = pz;
+}
+
+template<typename T>
+void Vector3<T>::Normalize()
+{
+    Set(x / GetMagnitude(), y / GetMagnitude(), z / GetMagnitude());
 }
 
 template<typename T>
@@ -97,8 +105,53 @@ Vector3<T> Vector3<T>::One()
 }
 
 template<typename T>
+T Vector3<T>::RadToDeg(T& p_value)
+{
+    return p_value * 180 / PI;
+}
+
+template<typename T>
+T Vector3<T>::DegToRad(T& p_value)
+{
+    return p_value * PI / 180;
+}
+
+template<typename T>
+T Vector3<T>::Distance(Vector3<T>& vec1, Vector3<T>& vec2)
+{
+    return sqrt(pow((vec1.x - vec2.x), 2) + pow((vec1.y - vec2.y), 2) + pow((vec1.z - vec2.z), 2));
+}
+
+template<typename T>
+T Vector3<T>::Dot(Vector3<T>& p_vec)
+{
+    T dot = (x * p_vec.x) + (y * p_vec.y) + (z * p_vec.z);
+
+    return dot;
+}
+
+template<typename T>
+inline T Vector3<T>::Angle(Vector3<T>& p_vec)
+{
+    T dot = (x * p_vec.x) + (y * p_vec.y) + (z * p_vec.z);
+    T magnitude = GetMagnitude() * p_vec.GetMagnitude();
+
+    return acos(dot / magnitude);
+}
+
+template<typename T>
 T Vector3<T>::GetMagnitude()
 {
     T magnitude = sqrt((x * x) + (y * y) + (z * z));
+
     return magnitude;
+}
+
+template<typename T>
+Vector3<T> Vector3<T>::GetNormalized()
+{
+    Vector3<T> tmp;
+    tmp.Set(x / GetMagnitude(), y / GetMagnitude(), z / GetMagnitude());
+
+    return tmp;
 }
