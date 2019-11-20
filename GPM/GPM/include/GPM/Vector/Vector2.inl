@@ -1,3 +1,5 @@
+#pragma once
+
 #include <utility>
 #include <math.h>
 #include "Vector2.h"

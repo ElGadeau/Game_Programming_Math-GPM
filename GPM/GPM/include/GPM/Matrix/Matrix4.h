@@ -6,6 +6,8 @@ namespace GPM
     template<typename type>
     struct Matrix4
     {
+        static_assert(std::is_arithmetic<type>::value, "Matrix4 should only be used with arithmetic types");
+    	
         //data
         type m_data[16];
 

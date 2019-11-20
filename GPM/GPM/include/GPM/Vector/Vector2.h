@@ -9,6 +9,8 @@ namespace GPM
 	template<typename T>
 	struct Vector2
 	{
+        static_assert(std::is_arithmetic<T>::value, "Matrix3 should only be used with arithmetic types");
+		
 		T X;
 		T Y;
 
