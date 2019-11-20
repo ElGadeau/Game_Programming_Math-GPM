@@ -10,26 +10,42 @@ namespace GPM
         type m_data[16];
 
         //statics
-        static Matrix4<type> GetZero();
-        static Matrix4<type> GetIdentity();
+        constexpr static Matrix4<type> GetZero() noexcept;
+        constexpr static Matrix4<type> GetIdentity() noexcept;
 
         //methods
-        void ToString();
+        constexpr void ToString() noexcept;
+        constexpr void SetColumn(int p_column, Vector4<type>& p_vector) noexcept;
+        constexpr void SetRow(int p_row, Vector4<type>& p_vector) noexcept;
 
         type Determinant();
         type GetMinor();
 
         Matrix4<type> Inverse();
-        Matrix4<type> SetRow(int p_row, Vector4<type> p_vector);
-        Matrix4<type> SetColumn(int p_column, Vector4<type> p_vector);
 
-        Matrix4<type> Scale(Vector3<type> p_scale);
-        Matrix4<type> Rotation(Vector3<type> p_rotation);
-        Matrix4<type> Translate(Vector3<type> p_translate);
+        Matrix4<type> Scale(Vector3<type>& p_scale);
+        Matrix4<type> Rotation(Vector3<type>& p_rotation);
+        Matrix4<type> Translate(Vector3<type>& p_translate);
 
+#pragma region Operators
         //operators
-        Matrix4<type> operator*(Vector4<type> p_vector);
-        Matrix4<type> operator*=(Vector4<type> p_vector);
+        Matrix4<type> operator+(Matrix4<type>& p_matrix);
+        void operator+=(Matrix4<type>& p_matrix);
+
+        Matrix4<type> operator-(Matrix4<type>& p_matrix);
+        void operator-=(Matrix4<type>& p_matrix);
+
+        Matrix4<type> operator*(Matrix4<type>& p_matrix);
+        void operator*=(Matrix4<type>& p_matrix);
+        Matrix4<type> operator*(Vector4<type>& p_vector);
+        void operator*=(Vector4<type>& p_vector);
+
+        bool operator==(Matrix4<type>& p_matrix);
+        bool operator!=(Matrix4<type>& p_matrix);
+
+        type operator[](int p_position);
+#pragma endregion
+
     };
 
     using Matrix4F = Matrix4<float>;
