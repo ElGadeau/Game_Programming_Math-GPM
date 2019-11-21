@@ -1,20 +1,20 @@
 #pragma once
 
 #include <stdexcept>
-#include "GPM/Tools/Utils.h"
+#include <GPM/Tools/Utils.h>
 
 namespace GPM
 {
 	template <typename T>
-	const Vector4<T> Vector4<T>::Zero = Vector4<T>(0, 0, 0, 1);
+	const Vector4<T> Vector4<T>::zero = Vector4<T>(0, 0, 0, 1);
 	template <typename T>
-	const Vector4<T> Vector4<T>::One = Vector4<T>(1, 1, 1, 1);
+	const Vector4<T> Vector4<T>::one = Vector4<T>(1, 1, 1, 1);
 	template <typename T>
-	const Vector4<T> Vector4<T>::XAxis = Vector4<T>(1, 0, 0, 1);
+	const Vector4<T> Vector4<T>::xAxis = Vector4<T>(1, 0, 0, 1);
 	template <typename T>
-	const Vector4<T> Vector4<T>::YAxis = Vector4<T>(0, 1, 0, 1);
+	const Vector4<T> Vector4<T>::yAxis = Vector4<T>(0, 1, 0, 1);
 	template <typename T>
-	const Vector4<T> Vector4<T>::ZAxis = Vector4<T>(0, 0, 1, 1);
+	const Vector4<T> Vector4<T>::zAxis = Vector4<T>(0, 0, 1, 1);
 
 #pragma region Constructors & Assignment
 
@@ -320,7 +320,7 @@ namespace GPM
 	constexpr float Vector4<T>::Distance(const Vector4<T>& p_vector) const
 	{
 		if (w != 0 || p_vector.w != 0)
-			throw std::logic_error("Can't Compute Distance, One of the params is a direction: W != 0");
+			throw std::logic_error("Can't Compute Distance, one of the params is a direction: W != 0");
 
 		return Tools::Utils::SquareRootF((x - p_vector.x * x - p_vector.x) + (y - p_vector.y) * (y - p_vector.y) + (z - p_vector.z) * (z - p_vector.z));
 	}
@@ -329,7 +329,7 @@ namespace GPM
 	constexpr float Vector4<T>::Distance(const Vector4<T>& p_left, const Vector4<T>& p_right)
 	{
 		if (p_left.w != 0 || p_right.w != 0)
-			throw std::logic_error("Can't Compute Distance, One of the params is a point: W != 0");
+			throw std::logic_error("Can't Compute Distance, one of the params is a point: W != 0");
 
 		return Tools::Utils::SquareRootF((p_left.x - p_right.x * p_left.x - p_right.x) + (p_left.y - p_right.y) * (p_left.y - p_right.y) + (p_left.z - p_right.z) * (p_left.z - p_right.z));
 	}
@@ -353,27 +353,27 @@ namespace GPM
 	}
 	
 	template <typename T>
-	constexpr T Vector4<T>::Length() const
+	constexpr T Vector4<T>::Magnitude() const
 	{
 		return { static_cast<T>(Tools::Utils::SquareRootF(x * x + y * y + z * z)) };
 	}
 
 	template <typename T>
-	constexpr T Vector4<T>::Length(const Vector4<T>& p_vector)
+	constexpr T Vector4<T>::Magnitude(const Vector4<T>& p_vector)
 	{
-		return { p_vector.Length() };
+		return { p_vector.Magnitude() };
 	}
 
 	template <typename T>
-	constexpr T Vector4<T>::LengthSquare() const
+	constexpr T Vector4<T>::MagnitudeSquare() const
 	{
 		return { static_cast<T>(x * x + y * y + z * z) };
 	}
 
 	template <typename T>
-	constexpr T Vector4<T>::LengthSquare(const Vector4<T>& p_vector)
+	constexpr T Vector4<T>::MagnitudeSquare(const Vector4<T>& p_vector)
 	{
-		return { p_vector.LengthSquare() };
+		return { p_vector.MagnitudeSquare() };
 	}
 
 	template <typename T>
@@ -397,7 +397,7 @@ namespace GPM
 		Vector4<T> result;
 
 		if (w == 0 || p_other.w == 0)
-			throw std::logic_error("Can't Compute CrossProduct, One of the params is a point: W = 0");
+			throw std::logic_error("Can't Compute CrossProduct, one of the params is a point: W = 0");
 
 		const Vector4<T> right = Vector4<T>::Homogenize(*this);
 		const Vector4<T> left = Vector4<T>::Homogenize(p_other);
@@ -427,10 +427,10 @@ namespace GPM
 	constexpr T Vector4<T>::AngleBetween(const Vector4<T>& p_other) const
 	{
 		if (w == 0 || p_other.w == 0)
-			throw std::logic_error("Can't Compute angle, One of the params is a point: W = 0");
+			throw std::logic_error("Can't Compute angle, one of the params is a point: W = 0");
 
 		const float dotProduct = DotProduct(p_other);
-		const T lengthProduct = Length() * p_other.Length();
+		const T lengthProduct = Magnitude() * p_other.Magnitude();
 
 		const T fractionResult = dotProduct / lengthProduct;
 
@@ -449,7 +449,7 @@ namespace GPM
 	template <typename T>
 	Vector4<T>& Vector4<T>::Normalize()
 	{
-		const float length = Length();
+		const float length = Magnitude();
 
 		if (length > 0)
 		{

@@ -3,7 +3,7 @@
 #include <type_traits>
 #include <string>
 #include <ostream>
-#include "Vector3.h"
+#include <GPM/Vector/Vector3.h>
 
 namespace GPM
 {
@@ -17,11 +17,11 @@ namespace GPM
 		T z;
 		T w;
 
-		static const Vector4<T> Zero;
-		static const Vector4<T> One;
-		static const Vector4<T> XAxis;
-		static const Vector4<T> YAxis;
-		static const Vector4<T> ZAxis;
+		static const Vector4<T> zero;
+		static const Vector4<T> one;
+		static const Vector4<T> xAxis;
+		static const Vector4<T> yAxis;
+		static const Vector4<T> zAxis;
 
 #pragma region Constructors & Assignment
 		/**
@@ -36,46 +36,46 @@ namespace GPM
 
 		/**
 		 * Constructor with parameters
-		 * @param p_x
-		 * @param p_y
-		 * @param p_z
+		 * @param p_x x coordinate
+		 * @param p_y y coordinate
+		 * @param p_z z coordinate
 		 * @param p_w Set to 1 for vectors, 0 for points
 		 */
 		constexpr Vector4(const T p_x, const T p_y, const T p_z, const T p_w = 1.0f);
 
 		/**
 		* Constructor from vector3
-		* @param p_other
+		* @param p_other The vector to construct from
 		*/
 		explicit constexpr Vector4(const Vector3<T>& p_other);
 
 		/**
 		* Move Constructor from vector3
-		* @param p_other
+		* @param p_other The vector to construct from
 		*/
 		explicit constexpr Vector4(Vector3<T>&& p_other);
 
 		/**
 		 * Copy Constructor
-		 * @param p_other
+		 * @param p_other The vector to construct from
 		 */
 		constexpr Vector4(const Vector4<T>& p_other);
 
 		/**
 		 * Move Constructor
-		 * @param p_other
+		 * @param p_other The vector to construct from
 		 */
 		constexpr Vector4(Vector4<T>&& p_other) noexcept;
 
 		/**
 		 * Overload = operator by copy
-		 * @param p_other
+		 * @param p_other The vector to construct from
 		 */
 		constexpr Vector4<T>& operator=(const Vector4<T>& p_other);
 
 		/**
 		 * Overload = operator by move
-		 * @param p_other
+		 * @param p_other The vector to construct from
 		 */
 		constexpr Vector4<T>& operator=(Vector4<T>&& p_other) noexcept;
 #pragma endregion
@@ -83,27 +83,27 @@ namespace GPM
 
 		/**
 		 * Return true if the two vectors are parallel
-		 * @param p_other
+		 * @param p_other The vector used for the checkup
 		 */
 		constexpr bool IsParallelTo(const Vector4<T>& p_other) const;
 
 		/**
 		 * Return true if the two vectors are parallel
-		 * @param p_left
-		 * @param p_right
+		 * @param p_left The left vector
+		 * @param p_right The right vector
 		 */
 		constexpr static bool AreParallel(const Vector4<T>& p_left, const Vector4<T>& p_right);
 
 		/**
 		 * Return true if the two vectors are perpendicular
-		 * @param p_other
+		 * @param p_other The vector used for the checkup
 		 */
 		constexpr bool IsPerpendicularTo(const Vector4<T>& p_other) const;
 
 		/**
 		 * Return true if the two vectors are perpendicular
-		 * @param p_left
-		 * @param p_right
+		 * @param p_left The left vector
+		 * @param p_right The right vector
 		 */
 		constexpr static bool ArePerpendicular(const Vector4<T>& p_left, const Vector4<T>& p_right);
 
@@ -114,26 +114,26 @@ namespace GPM
 
 		/**
 		 * Return true if the vector is homogenized
-		 * @param p_vector
+		 * @param p_vector The vector used for the checkup
 		 */
 		constexpr static bool IsHomogenized(const Vector4<T>& p_vector);
 
 		/**
 		 * Return true if the two vectors are identical
-		 * @param p_other
+		 * @param p_other The vector used for the checkup
 		 */
 		constexpr bool IsEqualTo(const Vector4<T>& p_other) const;
 
 		/**
 		 * Return true if the two vectors are identical
-		 * @param p_left
-		 * @param p_right
+		 * @param p_left The left vector
+		 * @param p_right The right vector
 		 */
 		constexpr static bool AreEqual(const Vector4<T>& p_left, const Vector4<T>& p_right);
 
 		/**
 		 * Return true if the two vectors are identical
-		 * @param p_other
+		 * @param p_other The vector used for the checkup
 		 */
 		constexpr bool operator==(const Vector4<T>& p_other) const;
 
@@ -144,51 +144,51 @@ namespace GPM
 
 		/**
 		 * Add scalar to x, y and z
-		 * @param p_scalar
+		 * @param p_scalar The scalar
 		 */
 		Vector4<T>& Add(const T p_scalar);
 
 		/**
 		 * Add scalar to vector left
-		 * @param p_left
-		 * @param p_scalar
+		 * @param p_left The left vector to add
+		 * @param p_scalar The scalar
 		 */
 		constexpr static Vector4<T> Add(const Vector4<T>& p_left, const T p_scalar);
 
 		/**
 		 * Add other vector to the actual vector
-		 * @param p_other
+		 * @param p_other The vector to add
 		 */
 		Vector4<T>& Add(const Vector4<T>& p_other);
 
 		/**
 		 * Add left vector to the right vector
-		 * @param p_left
-		 * @param p_right
+		 * @param p_left The left vector
+		 * @param p_right The right vector
 		 */
 		constexpr static Vector4<T> Add(const Vector4<T>& p_left, const Vector4<T>& p_right);
 
 		/**
 		* Return the summation of other vector and actual vector
-		* @param p_scalar
+		* @param p_scalar The scalar
 		*/
 		constexpr Vector4<T> operator+(const T p_scalar) const;
 
 		/**
 		* Add other vector to the actual vector
-		* @param p_scalar
+		* @param p_scalar The scalar
 		*/
 		Vector4<T>& operator+=(const T p_scalar);
 
 		/**
 		 * Return the summation of other vector and actual vector
-		 * @param p_other
+		 * @param p_other The other vector
 		 */
 		constexpr Vector4<T> operator+(const Vector4<T>& p_other) const;
 
 		/**
 		 * Add other vector to the actual vector
-		 * @param p_other
+		 * @param p_other The other vector
 		 */
 		Vector4<T>& operator+=(const Vector4<T>& p_other);
 
@@ -197,51 +197,51 @@ namespace GPM
 
 		/**
 		 * Subtract scalar to x, y and z
-		 * @param p_scalar
+		 * @param p_scalar The scalar
 		 */
 		Vector4<T>& Subtract(const T p_scalar);
 
 		/**
 		 * Subtract scalar to vector left
-		 * @param p_left
-		 * @param p_scalar
+		 * @param p_left The left vector
+		 * @param p_scalar The scalar
 		 */
 		constexpr static Vector4<T> Subtract(const Vector4<T>& p_left, const T p_scalar);
 
 		/**
 		 * Subtract other vector to the actual vector
-		 * @param p_other
+		 * @param p_other The other vector
 		 */
 		Vector4<T>& Subtract(const Vector4<T>& p_other);
 
 		/**
 		 * Subtract left vector to the right vector
-		 * @param p_left
-		 * @param p_right
+		 * @param p_left The left vector
+		 * @param p_right The right vector
 		 */
 		constexpr static Vector4<T> Subtract(const Vector4<T>& p_left, const Vector4<T>& p_right);
 
 		/**
 		* Return the subtraction of other vector and actual vector
-		* @param p_scalar
+		* @param p_scalar The scalar
 		*/
 		constexpr Vector4<T> operator-(const T p_scalar) const;
 
 		/**
 		* Subtract other vector to the actual vector
-		* @param p_scalar
+		* @param p_scalar The scalar
 		*/
 		Vector4<T>& operator-=(const T p_scalar);
 
 		/**
 		 * Return the subtraction of other vector and actual vector
-		 * @param p_other
+		 * @param p_other The other vector
 		 */
 		constexpr Vector4<T> operator-(const Vector4<T>& p_other) const;
 
 		/**
 		 * Subtract other vector to the actual vector
-		 * @param p_other
+		 * @param p_other The vector to use
 		 */
 		Vector4<T>& operator -=(const Vector4<T>& p_other);
 
@@ -250,26 +250,26 @@ namespace GPM
 
 		/**
 		 * Multiply scalar to x, y and z
-		 * @param p_scalar
+		 * @param p_scalar The scalar
 		 */
 		Vector4<T>& Multiply(const T p_scalar);
 
 		/**
 		 * Multiply scalar to vector left
-		 * @param p_left
-		 * @param p_scalar
+		 * @param p_left The vector to multiply
+		 * @param p_scalar The scalar
 		 */
 		constexpr static Vector4<T> Multiply(const Vector4<T>& p_left, T p_scalar);
 
 		/**
 		 * Return the multiplication of scalar and actual vector
-		 * @param p_scalar
+		 * @param p_scalar The scalar
 		 */
 		constexpr Vector4<T> operator*(const T p_scalar) const;
 
 		/**
 		 * Multiply scalar to the actual vector
-		 * @param p_scalar
+		 * @param p_scalar The scalar
 		 */
 		Vector4<T>& operator*=(const T p_scalar);
 
@@ -278,26 +278,26 @@ namespace GPM
 
 		/**
 		 * Divide scalar to x, y and z
-		 * @param p_scalar
+		 * @param p_scalar The scalar
 		 */
 		Vector4<T>& Divide(const T p_scalar);
 
 		/**
 		 * Divide scalar to vector left
-		 * @param p_left
-		 * @param p_scalar
+		 * @param p_left The vector to divide
+		 * @param p_scalar The scalar
 		 */
 		constexpr static Vector4<T> Divide(const Vector4<T>& p_left, const T p_scalar);
 
 		/**
 		 * Return the division of scalar and actual vector
-		 * @param p_scalar
+		 * @param p_scalar The scalar
 		 */
 		constexpr Vector4<T> operator/(const T p_scalar) const;
 
 		/**
 		 * Divide scalar to the actual vector
-		 * @param p_scalar
+		 * @param p_scalar The scalar
 		 */
 		Vector4<T>& operator/=(const T p_scalar);
 
@@ -309,96 +309,96 @@ namespace GPM
 
 		/**
 		 * Calculate the distance between the vector and another
-		 * @param p_vector
+		 * @param p_vector The vector to compare distance
 		 */
 		constexpr float Distance(const Vector4<T>& p_vector) const;
 
 		/**
 		 * Calculate the distance between the vector and another
-		 * @param p_left
-		 * @param p_right
+		 * @param p_left The left vector
+		 * @param p_right The right vector
 		 */
 		constexpr static float Distance(const Vector4<T>& p_left, const Vector4<T>& p_right);
 
 		/**
 		 * Scale the vector with scalar
-		 * @param p_scale
+		 * @param p_scale The scalar
 		 */
 		constexpr Vector4<T>& Scale(const T p_scale) const;
 
 		/**
 		 * Calculate the distance between the vector and another
-		 * @param p_vector
-		 * @param p_scale
+		 * @param p_vector The vector to scale
+		 * @param p_scale The scalar
 		 */
 		constexpr static Vector4<T> Scale(const Vector4<T>& p_vector, const T p_scale);
 
 		/**
 		 * Calculate the length of the vector
 		 */
-		constexpr T Length() const;
+		constexpr T Magnitude() const;
 
 		/**
 		 * Calculate the length of the vector
-		 * @param p_vector
+		 * @param p_vector The vector on which we calculate the magnitude
 		 */
-		constexpr static T Length(const Vector4<T>& p_vector);
+		constexpr static T Magnitude(const Vector4<T>& p_vector);
 
 		/**
 		 * Calculate the squared length of the vector
 		 */
-		constexpr T LengthSquare() const;
+		constexpr T MagnitudeSquare() const;
 
 		/**
 		 * Calculate the squared length of the vector
-		 * @param p_vector
+		 * @param p_vector The vector on which we calculate the square magnitude
 		 */
-		constexpr static T LengthSquare(const Vector4<T>& p_vector);
+		constexpr static T MagnitudeSquare(const Vector4<T>& p_vector);
 
 		/**
 		 * Calculate the dot product with other vector
-		 * @param p_other
+		 * @param p_other The other vector for dot product
 		 */
 		constexpr T DotProduct(const Vector4<T>& p_other) const;
 
 		/**
 		 * Calculate the dot product between two vectors
-		 * @param p_left
-		 * @param p_right
+		 * @param p_left The left vector
+		 * @param p_right The right vector
 		 */
 		constexpr static T DotProduct(const Vector4<T>& p_left, const Vector4<T>& p_right);
 
 		/**
 		 * Calculate the cross product with other vector
-		 * @param p_other
+		 * @param p_other The other vector for cross product
 		 */
 		constexpr Vector4<T> CrossProduct(const Vector4<T>& p_other) const;
 
 		/**
 		 * Calculate the cross product between two vectors
-		 * @param p_left
-		 * @param p_right
+		 * @param p_left Left vector
+		 * @param p_right Right vector
 		 */
 		constexpr static Vector4<T> CrossProduct(const Vector4<T>& p_left, const Vector4<T>& p_right);
 
 		/**
-		 * Calculate the dot product between left and the result of cross product between middle and left
-		 * @param p_left
-		 * @param p_middle
-		 * @param p_right
+		 * Calculate the dot product between left and the result of cross product between middle and right
+		 * @param p_left Left product
+		 * @param p_middle Middle vector
+		 * @param p_right Right vector
 		 */
 		constexpr static T TripleProduct(const Vector4<T>& p_left, const Vector4<T>& p_middle, const Vector4<T>& p_right);
 
 		/**
 		 * Calculate the angle between two vectors in radiant
-		 * @param p_other
+		 * @param p_other The vector to lookup for angle
 		 */
 		constexpr T AngleBetween(const Vector4<T>& p_other) const;
 
 		/**
 		 * Calculate the angle between two vectors in radiant
-		 * @param p_left
-		 * @param p_right
+		 * @param p_left The left vector
+		 * @param p_right The right vector
 		 */
 		constexpr static T AngleBetween(const Vector4<T>& p_left, const Vector4<T>& p_right);
 
@@ -409,7 +409,7 @@ namespace GPM
 
 		/**
 		 * Return the normalized vector
-		 * @param p_vector
+		 * @param p_vector The vector to normalized
 		 */
 		constexpr static Vector4<T> Normalize(const Vector4<T>& p_vector);
 
@@ -420,22 +420,22 @@ namespace GPM
 
 		/**
 		 * Return the homogenized vector
-		 * @param p_vector
+		 * @param p_vector The vector to homogenize
 		 */
 		constexpr static Vector4<T> Homogenize(const Vector4<T>& p_vector);
 
 		/**
 		* Return the start vector moving to the end vector at step interpolationCoefficient
-		* @param p_start
-		* @param p_end
+		* @param p_start The beginning vector
+		* @param p_end The ending vector
 		* @param p_interpolationCoefficient between 0 and 1, 0 is start, 1 is end
 		*/
 		constexpr static Vector4<T> Lerp(const Vector4<T>& p_start, const Vector4<T>& p_end, const float p_interpolationCoefficient);
 
 		/**
 		* Return the start vector moving to the end vector at step interpolationCoefficient
-		* @param p_start
-		* @param p_end
+		* @param p_start The beginning vector
+		* @param p_end The ending vector
 		* @param p_interpolationCoefficient between 0 and 1, 0 is start, 1 is end
 		*/
 		constexpr static Vector4<T> Slerp(const Vector4<T>& p_start, const Vector4<T>& p_end, const float p_interpolationCoefficient);
@@ -450,7 +450,7 @@ namespace GPM
 
 		/**
 		* Convert vector to string
-		* @param p_vector
+		* @param p_vector The vector to print
 		*/
 		constexpr static std::string ToString(const Vector4<T>& p_vector);
 
@@ -489,7 +489,11 @@ namespace GPM
 #pragma endregion
 
 	using Vector4F = Vector4<float>;
+	using Vector4D = Vector4<double>;
 	using Vector4I = Vector4<int>;
+	using Vector4L = Vector4<long>;
+	using Vector4U = Vector4<unsigned int>;
+	
 }
 
-#include "Vector4.inl"
+#include <GPM/Vector/Vector4.inl>
