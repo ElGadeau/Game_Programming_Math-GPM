@@ -38,7 +38,7 @@ constexpr void GPM::Matrix4<type>::ToString() noexcept
 template<typename type>
 constexpr void GPM::Matrix4<type>::SetColumn(int p_column, Vector4<type>& p_vector) noexcept
 {
-    int columnStart = p_column - 1;
+    int columnStart = p_column;
     m_data[columnStart] = p_vector.x;
     m_data[columnStart + 4] = p_vector.y;
     m_data[columnStart + 8] = p_vector.z;
@@ -48,7 +48,7 @@ constexpr void GPM::Matrix4<type>::SetColumn(int p_column, Vector4<type>& p_vect
 template<typename type>
 constexpr void GPM::Matrix4<type>::SetRow(int p_row, Vector4<type>& p_vector) noexcept
 {
-    int rowStart = (4 * p_row) - 4;
+    int rowStart = (4 * p_row);
     m_data[rowStart] = p_vector.x;
     m_data[rowStart + 1] = p_vector.y;
     m_data[rowStart + 2] = p_vector.z;
