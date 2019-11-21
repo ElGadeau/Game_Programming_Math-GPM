@@ -9,15 +9,14 @@ namespace GPM
 {
 #pragma region Constructor
     template <typename T>
-    constexpr Vector3<T>::Vector3(const Vector3<T>& p_other)
-    {
-        *this = p_other;
-    }
+    constexpr Vector3<T>::Vector3(const Vector3<T>& p_other) : x{p_other.x}, y{ p_other.y }, z{ p_other.z }{}
 
     template <typename T>
     constexpr Vector3<T>::Vector3(Vector3<T>&& p_other) noexcept
     {
-        *this = p_other;
+        x = p_other.x;
+        y = p_other.y;
+        z = p_other.z;
     }
 
     template<typename T>
