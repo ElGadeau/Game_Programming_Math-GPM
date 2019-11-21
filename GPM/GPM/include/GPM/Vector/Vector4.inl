@@ -15,7 +15,7 @@ namespace GPM
 	const Vector4<T> Vector4<T>::YAxis = Vector4<T>(0, 1, 0, 1);
 	template <typename T>
 	const Vector4<T> Vector4<T>::ZAxis = Vector4<T>(0, 0, 1, 1);
-	
+
 #pragma region Constructors & Assignment
 
 	template <typename T>
@@ -303,6 +303,24 @@ namespace GPM
 	constexpr Vector4<T> Vector4<T>::operator/(const T p_scalar) const
 	{
 		return { Vector4<T>(*this).Divide(p_scalar) };
+	}
+
+	template <typename T>
+	constexpr float Vector4<T>::Distance(const Vector4<T>& p_vector) const
+	{
+		if (w != 0 || p_vector.w != 0)
+			throw std::logic_error("Can't Compute Distance, One of the params is a direction: W != 0");
+
+		return Tools::Utils::SquareRootF((x - p_vector.x * x - p_vector.x) + (y - p_vector.y) * (y - p_vector.y) + (z - p_vector.z) * (z - p_vector.z));
+	}
+
+	template <typename T>
+	constexpr float Vector4<T>::Distance(const Vector4<T>& p_left, const Vector4<T>& p_right)
+	{
+		if (p_left.w != 0 || p_right.w != 0)
+			throw std::logic_error("Can't Compute Distance, One of the params is a point: W != 0");
+
+		return Tools::Utils::SquareRootF((p_left.x - p_right.x * p_left.x - p_right.x) + (p_left.y - p_right.y) * (p_left.y - p_right.y) + (p_left.z - p_right.z) * (p_left.z - p_right.z));
 	}
 
 	template <typename T>

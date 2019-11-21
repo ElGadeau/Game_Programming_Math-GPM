@@ -308,6 +308,19 @@ namespace GPM
 #pragma region Vector Operations
 
 		/**
+		 * Calculate the distance between the vector and another
+		 * @param p_vector
+		 */
+		constexpr float Distance(const Vector4<T>& p_vector) const;
+
+		/**
+		 * Calculate the distance between the vector and another
+		 * @param p_left
+		 * @param p_right
+		 */
+		constexpr static float Distance(const Vector4<T>& p_left, const Vector4<T>& p_right);
+		
+		/**
 		 * Calculate the length of the vector
 		 */
 		constexpr T Length() const;
