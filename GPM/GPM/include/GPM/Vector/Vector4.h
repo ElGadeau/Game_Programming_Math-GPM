@@ -3,7 +3,7 @@
 #include <type_traits>
 #include <string>
 #include <ostream>
-#include "Vector3.h"
+#include <GPM/Vector/Vector3.h>
 
 namespace GPM
 {
@@ -17,11 +17,11 @@ namespace GPM
 		T z;
 		T w;
 
-		static const Vector4<T> Zero;
-		static const Vector4<T> One;
-		static const Vector4<T> XAxis;
-		static const Vector4<T> YAxis;
-		static const Vector4<T> ZAxis;
+		static const Vector4<T> zero;
+		static const Vector4<T> one;
+		static const Vector4<T> xAxis;
+		static const Vector4<T> yAxis;
+		static const Vector4<T> zAxis;
 
 #pragma region Constructors & Assignment
 		/**
@@ -336,24 +336,24 @@ namespace GPM
 		/**
 		 * Calculate the length of the vector
 		 */
-		constexpr T Length() const;
+		constexpr T Magnitude() const;
 
 		/**
 		 * Calculate the length of the vector
 		 * @param p_vector
 		 */
-		constexpr static T Length(const Vector4<T>& p_vector);
+		constexpr static T Magnitude(const Vector4<T>& p_vector);
 
 		/**
 		 * Calculate the squared length of the vector
 		 */
-		constexpr T LengthSquare() const;
+		constexpr T MagnitudeSquare() const;
 
 		/**
 		 * Calculate the squared length of the vector
 		 * @param p_vector
 		 */
-		constexpr static T LengthSquare(const Vector4<T>& p_vector);
+		constexpr static T MagnitudeSquare(const Vector4<T>& p_vector);
 
 		/**
 		 * Calculate the dot product with other vector
@@ -489,7 +489,11 @@ namespace GPM
 #pragma endregion
 
 	using Vector4F = Vector4<float>;
+	using Vector4D = Vector4<double>;
 	using Vector4I = Vector4<int>;
+	using Vector4L = Vector4<long>;
+	using Vector4U = Vector4<unsigned int>;
+	
 }
 
-#include "Vector4.inl"
+#include <GPM/Vector/Vector4.inl>
