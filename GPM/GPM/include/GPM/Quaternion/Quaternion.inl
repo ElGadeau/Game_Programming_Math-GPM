@@ -34,6 +34,50 @@ namespace GPM
 		axis.z = p_axis.z * Tools::Utils::SinF(p_angleInRadians / 2.0f);
 	}
 
+	inline Vector3<float> Quaternion::ToEuler()
+	{
+		// 3x3 matrix - column major. X vector is 0, 1, 2, etc. (openGL prefer way)
+		//	0	3	6
+		//	1	4	7
+		//	2	5	8
+
+
+		float x = 0.0f;
+		float y = 0.0f;
+		float z = 0.0f;
+
+		const float test = 2.0f * (axis.x * axis.z - w * axis.y);
+
+		if (test != 1.0f && test != -1.0f) {
+
+			x = atan2(axis.y * axis.z + w * axis.x, 0.5f - (axis.x * axis.x + axis.y * axis.y));
+			y = asin(-2.0f * (axis.x * axis.z - w * axis.y));
+			z = atan2(axis.x * axis.y + w * axis.z, 0.5f - (axis.y * axis.y + axis.z * axis.z));
+
+		}
+		else if (test == 1.0f) {
+			z = atan2(axis.x * axis.y + w * axis.z, 0.5 - (axis.y * axis.y + axis.z * axis.z));
+			y = -Tools::M_PI / 2.0;
+			x = -z + atan2(axis.x * axis.y - w * axis.z, axis.x * axis.z + w * axis.y);
+
+		}
+		else if (test == -1) {
+
+			z = atan2(axis.x * axis.y + w * axis.z, 0.5 - (axis.y * axis.y + axis.z * axis.z));
+			y = Tools::M_PI / 2.0;
+			x = z + atan2(axis.x * axis.y - w * axis.z, axis.x * axis.z + w * axis.y);
+
+		}
+
+		x = Tools::Utils::ToDegrees(x);
+		y = Tools::Utils::ToDegrees(y);
+		z = Tools::Utils::ToDegrees(z);
+
+		Vector3<float> euler(x, y, z);
+
+		return euler;
+	}
+
 	inline std::string Quaternion::ToString() const
 	{
 		return { std::string("(w: " + std::to_string(w) + "; x: " + std::to_string(axis.x) + ", y: " + std::to_string(axis.y) +
