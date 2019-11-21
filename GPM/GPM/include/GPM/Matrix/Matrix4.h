@@ -39,6 +39,7 @@ namespace GPM
         static Matrix4<T> Add(Matrix4<T>& p_matrix, Matrix4<T>& p_other);
         static Matrix4<T> Subtract(Matrix4<T>& p_matrix, Matrix4<T>& p_other);
         static Matrix4<T> Multiply(Matrix4<T>& p_matrix, Matrix4<T>& p_other);
+        static Vector4<T> Multiply(Matrix4<T>& p_matrix, Vector4<T>& p_vector);
         static bool Equals(Matrix4<T>& p_matrix, Matrix4<T>& p_other);
 
 #pragma endregion 
@@ -53,8 +54,7 @@ namespace GPM
 
         Matrix4<T> operator*(Matrix4<T>& p_matrix);
         void operator*=(Matrix4<T>& p_matrix);
-        Matrix4<T> operator*(Vector4<T>& p_vector);
-        void operator*=(Vector4<T>& p_vector);
+        Vector4<T> operator*(Vector4<T>& p_vector);
 
         bool operator==(Matrix4<T>& p_matrix);
         bool operator!=(Matrix4<T>& p_matrix);

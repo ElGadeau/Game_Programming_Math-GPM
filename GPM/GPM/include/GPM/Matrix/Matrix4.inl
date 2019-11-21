@@ -129,6 +129,41 @@ GPM::Matrix4<T> GPM::Matrix4<T>::Multiply(Matrix4<T>& p_matrix, Matrix4<T>& p_ot
 }
 
 template<typename T>
+GPM::Vector4<T> GPM::Matrix4<T>::Multiply(Matrix4<T>& p_matrix, Vector4<T>& p_vector)
+{
+    Vector4<T> tmpVec = Vector4F::zero;
+
+    // for (int i = 0; i <= 12; i += 4)
+    // {
+    //     for (int j = 0; j < 4; j++)
+    //     {
+            tmpVec.x = (p_matrix[0] * p_vector.x)
+                + (p_matrix[1] * p_vector.y)
+                + (p_matrix[2] * p_vector.z)
+                + (p_matrix[3] * p_vector.w);
+
+            tmpVec.y = (p_matrix[4] * p_vector.x)
+                + (p_matrix[5] * p_vector.y)
+                + (p_matrix[6] * p_vector.z)
+                + (p_matrix[7] * p_vector.w);
+
+            tmpVec.z = (p_matrix[8] * p_vector.x)
+                + (p_matrix[9] * p_vector.y)
+                + (p_matrix[10] * p_vector.z)
+                + (p_matrix[11] * p_vector.w);
+
+            tmpVec.w = (p_matrix[12] * p_vector.x)
+                + (p_matrix[13] * p_vector.y)
+                + (p_matrix[14] * p_vector.z)
+                + (p_matrix[15] * p_vector.w);
+
+    //     }
+    // }
+
+    return tmpVec;
+}
+
+template<typename T>
 bool GPM::Matrix4<T>::Equals(Matrix4<T>& p_matrix, Matrix4<T>& p_other)
 {
     for (int i = 0; i < 16; i++)
@@ -181,15 +216,9 @@ void GPM::Matrix4<T>::operator*=(Matrix4<T>& p_matrix)
 }
 
 template<typename T>
-GPM::Matrix4<T> GPM::Matrix4<T>::operator*(Vector4<T>& p_vector)
+GPM::Vector4<T> GPM::Matrix4<T>::operator*(Vector4<T>& p_vector)
 {
-    //TODO
-}
-
-template<typename T>
-void GPM::Matrix4<T>::operator*=(Vector4<T>& p_vector)
-{
-    //TODO
+    return Multiply(*this, p_vector);
 }
 
 template<typename T>
