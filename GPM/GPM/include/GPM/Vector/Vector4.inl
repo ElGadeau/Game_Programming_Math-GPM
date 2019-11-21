@@ -306,6 +306,17 @@ namespace GPM
 	}
 
 	template <typename T>
+	Vector4<T>& Vector4<T>::operator/=(const T p_scalar)
+	{
+		return { Divide(p_scalar) };
+	}
+
+#pragma endregion
+
+#pragma endregion
+#pragma region Vector Operations
+
+	template <typename T>
 	constexpr float Vector4<T>::Distance(const Vector4<T>& p_vector) const
 	{
 		if (w != 0 || p_vector.w != 0)
@@ -322,18 +333,25 @@ namespace GPM
 
 		return Tools::Utils::SquareRootF((p_left.x - p_right.x * p_left.x - p_right.x) + (p_left.y - p_right.y) * (p_left.y - p_right.y) + (p_left.z - p_right.z) * (p_left.z - p_right.z));
 	}
-
+	
 	template <typename T>
-	Vector4<T>& Vector4<T>::operator/=(const T p_scalar)
+	constexpr Vector4<T>& Vector4<T>::Scale(const T p_scale) const
 	{
-		return { Divide(p_scalar) };
+		x *= p_scale;
+		y *= p_scale;
+		z *= p_scale;
+
+		return { *this };
 	}
 
-#pragma endregion
+	template <typename T>
+	constexpr Vector4<T> Vector4<T>::Scale(const Vector4<T>& p_vector, const T p_scale)
+	{
+		const Vector4<T> result { p_vector.x * p_scale , p_vector.y *= p_scale, p_vector.z *= p_scale, p_vector.w };
 
-#pragma endregion
-#pragma region Vector Operations
-
+		return { result };
+	}
+	
 	template <typename T>
 	constexpr T Vector4<T>::Length() const
 	{

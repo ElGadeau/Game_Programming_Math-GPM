@@ -319,7 +319,20 @@ namespace GPM
 		 * @param p_right
 		 */
 		constexpr static float Distance(const Vector4<T>& p_left, const Vector4<T>& p_right);
-		
+
+		/**
+		 * Scale the vector with scalar
+		 * @param p_scale
+		 */
+		constexpr Vector4<T>& Scale(const T p_scale) const;
+
+		/**
+		 * Calculate the distance between the vector and another
+		 * @param p_vector
+		 * @param p_scale
+		 */
+		constexpr static Vector4<T> Scale(const Vector4<T>& p_vector, const T p_scale);
+
 		/**
 		 * Calculate the length of the vector
 		 */
