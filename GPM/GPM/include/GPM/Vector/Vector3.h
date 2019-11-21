@@ -18,51 +18,54 @@ namespace GPM
 		T y;
 		T z;
 
-		Vector3<T> Add(const Vector3<T>& p_vector);
+        constexpr Vector3<T> Add(const Vector3<T>& p_vector);
         constexpr Vector3<T> Add(const Vector3<T>& p_left, const Vector3<T>& p_right);
-		void Substract(const Vector3<T>& p_vector);
-		void Multiply(const Vector3<T>& p_vector);
-		void Divide(const Vector3<T>& p_vector);
-		void Set(T p_x, T p_y, T p_z);
+        constexpr void Substract(const Vector3<T>& p_vector);
+        constexpr void Multiply(const Vector3<T>& p_vector);
+        constexpr void Divide(const Vector3<T>& p_vector);
+        constexpr void Set(T p_x, T p_y, T p_z);
+        constexpr void Scale(T p_factor);
+        constexpr void Normalize();
+        constexpr Vector3<T> Normalized();
+        constexpr std::string ToString();
 
-		void Normalize();
-		Vector3<T> Normalized();
-        std::string ToString();
+        constexpr T Dot(const Vector3<T>& p_vector);
+        constexpr T Angle(const Vector3<T>& p_vector);
 
-		T Dot(const Vector3<T>& p_vector);
-		T Angle(const Vector3<T>& p_vector);
+        constexpr T Magnitude();
 
-		T Magnitude();
+        static Vector3<T> forward;
+        static Vector3<T> right;
+        static Vector3<T> up;
+        static Vector3<T> zero;
+        static Vector3<T> one;
 
-		static Vector3<T> forward;
-		static Vector3<T> right;
-		static Vector3<T> up;
-		static Vector3<T> zero;
-		static Vector3<T> one;
+        constexpr static Vector3<T> Cross(const Vector3<T>& p_vectorA, const Vector3<T>& p_vectorB);
+        constexpr static Vector3<T> Lerp(Vector3<T>& p_vectorA, Vector3<T>& p_vectorB, const T p_factor);
+        constexpr static T Distance(const Vector3<T>& p_vectorA, const Vector3<T>& p_vectorB);
+        constexpr static bool Equals(const Vector3<T>& p_vectorA, const Vector3<T>& p_vectorB);
 
-        static Vector3<T> Cross(const Vector3<T>& p_vectorA, const Vector3<T>& p_vectorB);
-        static Vector3<T> Lerp(Vector3<T>& p_vectorA, Vector3<T>& p_vectorB, const T p_factor);
-		static T Distance(const Vector3<T>& p_vectorA, const Vector3<T>& p_vectorB);
-        static bool Equals(const Vector3<T>& p_vectorA, const Vector3<T>& p_vectorB);
+        constexpr inline Vector3<T>& operator +=(const Vector3<T> p_vector);
+        constexpr inline Vector3<T>& operator -=(const Vector3<T> p_vector);
+        constexpr inline Vector3<T>& operator *=(const Vector3<T> p_vector);
+        constexpr inline Vector3<T>& operator /=(const Vector3<T> p_vector);
 
+        constexpr inline Vector3<T> operator+(const Vector3<T>& p_other);
+        constexpr inline Vector3<T> operator -(const Vector3<T>& p_vector);
+        constexpr inline Vector3<T>& operator=(const Vector3<T>& p_other);
+        constexpr inline Vector3<T> operator /(const Vector3<T>& p_vector);
+        constexpr inline Vector3<T> operator *(const Vector3<T>& p_vector);
+        constexpr inline Vector3<T> operator *(const T& p_scalar);
 
-        /*T& operator *(Vector3<T>& p_scalar);*/
-
-        Vector3<T>& operator +=(const Vector3<T> p_vector);
-        Vector3<T>& operator -=(const Vector3<T> p_vector);
-        Vector3<T>& operator *=(const Vector3<T> p_vector);
-        Vector3<T>& operator /=(const Vector3<T> p_vector);
-
-        constexpr Vector3<T> operator+(const Vector3<T>& p_other);
-        constexpr Vector3<T> operator -(const Vector3<T>& p_vector);
-        constexpr Vector3<T>& operator=(const Vector3<T>& p_other);
-        constexpr Vector3<T> operator /(const Vector3<T>& p_vector);
-        constexpr Vector3<T> operator *(const Vector3<T>& p_vector);
-        constexpr Vector3<T> operator *(const T& p_scalar);
-        bool operator==(const Vector3<T>& p_vector);
-        bool operator!=(const Vector3<T>& p_vector);
+        constexpr inline bool operator==(const Vector3<T>& p_vector);
+        constexpr inline bool operator!=(const Vector3<T>& p_vector);
 	};
 
+    using Vector3F = GPM::Vector3<float>;
+    using Vector3L = GPM::Vector3<long>;
+    using Vector3U = GPM::Vector3<unsigned int>;
+    using Vector3I = GPM::Vector3<int>;
+    using Vector3D = GPM::Vector3<double>;
 }
 
 #include <GPM/Vector/Vector3.inl>
