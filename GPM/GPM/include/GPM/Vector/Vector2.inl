@@ -227,8 +227,6 @@ constexpr void GPM::operator+=(Vector2<T>& p_vector2Left, Vector2<U> const& p_ve
 {
 	p_vector2Left.x += p_vector2Right.x;
 	p_vector2Left.y += p_vector2Right.y;
-
-	Vector2<T>::Add(p_vector2Left, p_vector2Right);
 }
 
 template<typename T, typename U>
