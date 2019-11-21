@@ -10,7 +10,7 @@
 #include <GPM/Matrix/Matrix4.h>
 
 //Quaternion
-//#include "GPM/Quaternion/Quaternion.h"
+#include <GPM/Quaternion/Quaternion.h>
 
 //Tools
 #include <GPM/Tools/Random.h>
