@@ -3,55 +3,72 @@
 
 namespace GPM
 {
-    template<typename type>
+    template<typename T>
     struct Matrix4
     {
-        static_assert(std::is_arithmetic<type>::value, "Matrix4 should only be used with arithmetic types");
+        static_assert(std::is_arithmetic<T>::value, "Matrix4 should only be used with arithmetic types");
     	
         //data
-        type m_data[16];
+        T m_data[16] = {
+            1, 0, 0, 0,
+            0, 1, 0, 0,
+            0, 0, 1, 0,
+            0, 0, 0, 1
+        };
 
-        //statics
-        constexpr static Matrix4<type> GetZero() noexcept;
-        constexpr static Matrix4<type> GetIdentity() noexcept;
+        //static
+        static Matrix4<T> identity;
+        static Matrix4<T> zero;
 
         //methods
         constexpr void ToString() noexcept;
-        constexpr void SetColumn(int p_column, Vector4<type>& p_vector) noexcept;
-        constexpr void SetRow(int p_row, Vector4<type>& p_vector) noexcept;
+        constexpr void SetColumn(int p_column, Vector4<T>& p_vector);
+        constexpr void SetRow(int p_row, Vector4<T>& p_vector);
 
-        type Determinant();
-        type GetMinor();
+        T Determinant();
+        T GetMinor();
 
-        Matrix4<type> Inverse();
+        Matrix4<T> Inverse();
 
-        Matrix4<type> Scale(Vector3<type>& p_scale);
-        Matrix4<type> Rotation(Vector3<type>& p_rotation);
-        Matrix4<type> Translate(Vector3<type>& p_translate);
+        Matrix4<T> Scale(Vector3<T>& p_scale);
+        Matrix4<T> Rotation(Vector3<T>& p_rotation);
+        Matrix4<T> Translate(Vector3<T>& p_translate);
+
+#pragma region Arithmetic Operations
+
+        static Matrix4<T> Add(Matrix4<T>& p_matrix, Matrix4<T>& p_other);
+        static Matrix4<T> Subtract(Matrix4<T>& p_matrix, Matrix4<T>& p_other);
+        static Matrix4<T> Multiply(Matrix4<T>& p_matrix, Matrix4<T>& p_other);
+        static Vector4<T> Multiply(Matrix4<T>& p_matrix, Vector4<T>& p_vector);
+        static bool Equals(Matrix4<T>& p_matrix, Matrix4<T>& p_other);
+
+#pragma endregion 
 
 #pragma region Operators
         //operators
-        Matrix4<type> operator+(Matrix4<type>& p_matrix);
-        void operator+=(Matrix4<type>& p_matrix);
+        Matrix4<T> operator+(Matrix4<T>& p_matrix);
+        void operator+=(Matrix4<T>& p_matrix);
 
-        Matrix4<type> operator-(Matrix4<type>& p_matrix);
-        void operator-=(Matrix4<type>& p_matrix);
+        Matrix4<T> operator-(Matrix4<T>& p_matrix);
+        void operator-=(Matrix4<T>& p_matrix);
 
-        Matrix4<type> operator*(Matrix4<type>& p_matrix);
-        void operator*=(Matrix4<type>& p_matrix);
-        Matrix4<type> operator*(Vector4<type>& p_vector);
-        void operator*=(Vector4<type>& p_vector);
+        Matrix4<T> operator*(Matrix4<T>& p_matrix);
+        void operator*=(Matrix4<T>& p_matrix);
+        Vector4<T> operator*(Vector4<T>& p_vector);
 
-        bool operator==(Matrix4<type>& p_matrix);
-        bool operator!=(Matrix4<type>& p_matrix);
+        bool operator==(Matrix4<T>& p_matrix);
+        bool operator!=(Matrix4<T>& p_matrix);
 
-        type operator[](int p_position);
+        T operator[](int p_position);
 #pragma endregion
 
     };
 
     using Matrix4F = Matrix4<float>;
+    using Matrix4L = Matrix4<long>;
+    using Matrix4U = Matrix4<unsigned int>;
     using Matrix4I = Matrix4<int>;
+    using Matrix4D = Matrix4<double>;
 }
 
 #include "GPM/Matrix/Matrix4.inl"
