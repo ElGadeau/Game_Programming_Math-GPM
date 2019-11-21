@@ -165,6 +165,7 @@
     <ClInclude Include="include\GPM\GPM.h" />
     <ClInclude Include="include\GPM\Matrix\Matrix3.h" />
     <ClInclude Include="include\GPM\Matrix\Matrix4.h" />
+    <ClInclude Include="include\GPM\Tools\Random.h" />
     <ClInclude Include="include\GPM\Tools\Utils.h" />
     <ClInclude Include="include\GPM\Vector\Vector2.h" />
     <ClInclude Include="include\GPM\Vector\Vector3.h" />
@@ -176,6 +177,7 @@
   <ItemGroup>
     <None Include="include\GPM\Matrix\Matrix3.inl" />
     <None Include="include\GPM\Matrix\Matrix4.inl" />
+    <None Include="include\GPM\Tools\Random.inl" />
     <None Include="include\GPM\Tools\Utils.inl" />
     <None Include="include\GPM\Vector\Vector2.inl" />
     <None Include="include\GPM\Vector\Vector3.inl" />
