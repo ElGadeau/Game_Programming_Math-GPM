@@ -131,10 +131,22 @@ namespace GPM::Tools
 		static float Tan(const float p_value);
 
 		/**
+		 * Mathematics tangent implementation with float precision
+		 * @param p_value
+		 */
+		static float TanF(const float p_value);
+		
+		/**
 		 * Mathematics arc co-sinus implementation
 		 * @param p_value
 		 */
 		static float Arccos(const float p_value);
+
+		/**
+		 * Mathematics arc co-sinus implementation with float precision
+		 * @param p_value
+		 */
+		static float ArccosF(const float p_value);
 
 		/**
 		 * Mathematics arc sinus implementation
@@ -143,10 +155,22 @@ namespace GPM::Tools
 		static float Arcsin(const float p_value);
 
 		/**
+		 * Mathematics arc sinus implementation with float precision
+		 * @param p_value
+		 */
+		static float ArcsinF(const float p_value);
+
+		/**
 		 * Mathematics arc tangent implementation
 		 * @param p_value
 		 */
 		static float Arctan(const float p_value);
+
+		/**
+		 * Mathematics arc tangent implementation with float precision
+		 * @param p_value
+		 */
+		static float ArctanF(const float p_value);
 
 		/**
 		* Mathematics arc tangent implementation
@@ -154,6 +178,13 @@ namespace GPM::Tools
 		* @param p_valueXx
 		*/
 		static float Arctan2(const float p_valueYx, const float p_valueXx);
+
+		/**
+		* Mathematics arc tangent implementation with float precision
+		* @param p_valueYx
+		* @param p_valueXx
+		*/
+		static float Arctan2F(const float p_valueYx, const float p_valueXx);
 	};
 }
 

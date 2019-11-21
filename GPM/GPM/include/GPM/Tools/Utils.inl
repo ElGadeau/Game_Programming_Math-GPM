@@ -14,7 +14,77 @@ namespace GPM::Tools
 	{
 		return p_angle * 180.0f / 3.1415926535f;
 	}
+
+	inline float Utils::Sin(const float p_value)
+	{
+		return std::sin(p_value);
+	}
+
+	inline float Utils::SinF(const float p_value)
+	{
+		return std::sinf(p_value);
+	}
+
+	inline float Utils::Cos(const float p_value)
+	{
+		return std::cos(p_value);
+	}
+
+	inline float Utils::CosF(const float p_value)
+	{
+		return std::cosf(p_value);
+	}
+
+	inline float Utils::Tan(const float p_value)
+	{
+		return std::tan(p_value);
+	}
+
+	inline float Utils::TanF(const float p_value)
+	{
+		return std::tanf(p_value);
+	}
+
+	inline float Utils::Arccos(const float p_value)
+	{
+		return std::acos(p_value);
+	}
+
+	inline float Utils::ArccosF(const float p_value)
+	{
+		return std::acosf(p_value);
+	}
+
+	inline float Utils::Arcsin(const float p_value)
+	{
+		return std::asin(p_value);
+	}
+
+	inline float Utils::ArcsinF(const float p_value)
+	{
+		return std::asinf(p_value);
+	}
+
+	inline float Utils::Arctan(const float p_value)
+	{
+		return std::atan(p_value);
+	}
 	
+	inline float Utils::ArctanF(const float p_value)
+	{
+		return std::atanf(p_value);
+	}
+
+	inline float Utils::Arctan2(const float p_valueYx, const float p_valueXx)
+	{
+		return std::atan2(p_valueYx, p_valueXx);
+	}
+
+	inline float Utils::Arctan2F(const float p_valueYx, const float p_valueXx)
+	{
+		return std::atan2f(p_valueYx, p_valueXx);
+	}
+
 	template<typename T>
 	inline T Utils::Pow(const T p_value, const int p_exp)
 	{

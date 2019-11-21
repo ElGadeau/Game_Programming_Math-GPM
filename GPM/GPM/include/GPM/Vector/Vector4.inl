@@ -87,7 +87,7 @@ namespace GPM
 	template <typename T>
 	constexpr bool Vector4<T>::IsPerpendicularTo(const Vector4<T>& p_other) const
 	{
-		return { DotProduct(p_other) == 0 };
+		return { Dot(p_other) == 0 };
 	}
 
 	template <typename T>
@@ -377,7 +377,7 @@ namespace GPM
 	}
 
 	template <typename T>
-	constexpr T Vector4<T>::DotProduct(const Vector4<T>& p_other) const
+	constexpr T Vector4<T>::Dot(const Vector4<T>& p_other) const
 	{
 		const Vector4<T> left = Vector4<T>::Homogenize(*this);
 		const Vector4<T> right = Vector4<T>::Homogenize(p_other);
@@ -386,18 +386,18 @@ namespace GPM
 	}
 
 	template <typename T>
-	constexpr T Vector4<T>::DotProduct(const Vector4<T>& p_left, const Vector4<T>& p_right)
+	constexpr T Vector4<T>::Dot(const Vector4<T>& p_left, const Vector4<T>& p_right)
 	{
-		return { p_left.DotProduct(p_right) };
+		return { p_left.Dot(p_right) };
 	}
 
 	template <typename T>
-	constexpr Vector4<T> Vector4<T>::CrossProduct(const Vector4<T>& p_other) const
+	constexpr Vector4<T> Vector4<T>::Cross(const Vector4<T>& p_other) const
 	{
 		Vector4<T> result;
 
 		if (w == 0 || p_other.w == 0)
-			throw std::logic_error("Can't Compute CrossProduct, one of the params is a point: W = 0");
+			throw std::logic_error("Can't Compute Cross, one of the params is a point: W = 0");
 
 		const Vector4<T> right = Vector4<T>::Homogenize(*this);
 		const Vector4<T> left = Vector4<T>::Homogenize(p_other);
@@ -410,26 +410,26 @@ namespace GPM
 	}
 
 	template <typename T>
-	constexpr Vector4<T> Vector4<T>::CrossProduct(const Vector4<T>& p_left, const Vector4<T>& p_right)
+	constexpr Vector4<T> Vector4<T>::Cross(const Vector4<T>& p_left, const Vector4<T>& p_right)
 	{
-		return p_left.CrossProduct(p_right);
+		return p_left.Cross(p_right);
 	}
 
 	template <typename T>
 	constexpr T Vector4<T>::TripleProduct(const Vector4<T>& p_left, const Vector4<T>& p_middle,
 		const Vector4<T>& p_right)
 	{
-		const Vector4<T> resultCross = p_middle.CrossProduct(p_right);
-		return p_left.DotProduct(resultCross);
+		const Vector4<T> resultCross = p_middle.Cross(p_right);
+		return p_left.Dot(resultCross);
 	}
 
 	template <typename T>
-	constexpr T Vector4<T>::AngleBetween(const Vector4<T>& p_other) const
+	constexpr T Vector4<T>::Angle(const Vector4<T>& p_other) const
 	{
 		if (w == 0 || p_other.w == 0)
 			throw std::logic_error("Can't Compute angle, one of the params is a point: W = 0");
 
-		const float dotProduct = DotProduct(p_other);
+		const float dotProduct = Dot(p_other);
 		const T lengthProduct = Magnitude() * p_other.Magnitude();
 
 		const T fractionResult = dotProduct / lengthProduct;
@@ -441,9 +441,9 @@ namespace GPM
 	}
 
 	template <typename T>
-	constexpr T Vector4<T>::AngleBetween(const Vector4<T>& p_left, const Vector4<T>& p_right)
+	constexpr T Vector4<T>::Angle(const Vector4<T>& p_left, const Vector4<T>& p_right)
 	{
-		return  { p_left.AngleBetween(p_right) };
+		return  { p_left.Angle(p_right) };
 	}
 
 	template <typename T>
@@ -451,7 +451,7 @@ namespace GPM
 	{
 		const float length = Magnitude();
 
-		if (length > 0)
+		if (length > 0.0f)
 		{
 			x /= length;
 			y /= length;
@@ -494,26 +494,32 @@ namespace GPM
 	constexpr Vector4<T> Vector4<T>::Lerp(const Vector4<T>& p_start, const Vector4<T>& p_end,
 		const float p_interpolationCoefficient)
 	{
-		if (p_interpolationCoefficient >= 0 && p_interpolationCoefficient <= 1)
+		if (p_interpolationCoefficient >= 0.0f && p_interpolationCoefficient <= 1.0f)
 			return { p_start + (p_end - p_start) * p_interpolationCoefficient };
 
-		return { p_start };
+		if (p_interpolationCoefficient < 0.0f)
+			return { p_start };
+
+		return { p_end };
 	}
 
 	template <typename T>
 	constexpr Vector4<T> Vector4<T>::Slerp(const Vector4<T>& p_start, const Vector4<T>& p_end,
 		const float p_interpolationCoefficient)
 	{
-		if (p_interpolationCoefficient >= 0 && p_interpolationCoefficient <= 1)
+		if (p_interpolationCoefficient >= 0.0f && p_interpolationCoefficient <= 1.0f)
 		{
-			const float angle = p_start.AngleBetween(p_end) * p_interpolationCoefficient;
-			Vector4<T> relativeVector = p_end - p_start * p_start.DotProduct(p_end);
+			const float angle = p_start.Angle(p_end) * p_interpolationCoefficient;
+			Vector4<T> relativeVector = p_end - p_start * p_start.Dot(p_end);
 			relativeVector.Normalize();
 
 			return { (p_start * Tools::Utils::Cos(angle)) + (relativeVector * Tools::Utils::Sin(angle)) };
 		}
 
-		return { p_start };
+		if (p_interpolationCoefficient < 0.0f)
+			return { p_start };
+
+		return { p_end };
 	}
 
 #pragma endregion

@@ -8,7 +8,7 @@
 namespace GPM
 {
 	template<typename T>
-	struct Vector4
+	struct Vector4 final
 	{
 		static_assert(std::is_arithmetic<T>::value, "Vector4 should only be used with arithmetic types");
 
@@ -128,7 +128,7 @@ namespace GPM
 		 * Return true if the two vectors are identical
 		 * @param p_left The left vector
 		 * @param p_right The right vector
-		 */
+		 */ 
 		constexpr static bool AreEqual(const Vector4<T>& p_left, const Vector4<T>& p_right);
 
 		/**
@@ -359,27 +359,27 @@ namespace GPM
 		 * Calculate the dot product with other vector
 		 * @param p_other The other vector for dot product
 		 */
-		constexpr T DotProduct(const Vector4<T>& p_other) const;
+		constexpr T Dot(const Vector4<T>& p_other) const;
 
 		/**
 		 * Calculate the dot product between two vectors
 		 * @param p_left The left vector
 		 * @param p_right The right vector
 		 */
-		constexpr static T DotProduct(const Vector4<T>& p_left, const Vector4<T>& p_right);
+		constexpr static T Dot(const Vector4<T>& p_left, const Vector4<T>& p_right);
 
 		/**
 		 * Calculate the cross product with other vector
 		 * @param p_other The other vector for cross product
 		 */
-		constexpr Vector4<T> CrossProduct(const Vector4<T>& p_other) const;
+		constexpr Vector4<T> Cross(const Vector4<T>& p_other) const;
 
 		/**
 		 * Calculate the cross product between two vectors
 		 * @param p_left Left vector
 		 * @param p_right Right vector
 		 */
-		constexpr static Vector4<T> CrossProduct(const Vector4<T>& p_left, const Vector4<T>& p_right);
+		constexpr static Vector4<T> Cross(const Vector4<T>& p_left, const Vector4<T>& p_right);
 
 		/**
 		 * Calculate the dot product between left and the result of cross product between middle and right
@@ -393,14 +393,14 @@ namespace GPM
 		 * Calculate the angle between two vectors in radiant
 		 * @param p_other The vector to lookup for angle
 		 */
-		constexpr T AngleBetween(const Vector4<T>& p_other) const;
+		constexpr T Angle(const Vector4<T>& p_other) const;
 
 		/**
 		 * Calculate the angle between two vectors in radiant
 		 * @param p_left The left vector
 		 * @param p_right The right vector
 		 */
-		constexpr static T AngleBetween(const Vector4<T>& p_left, const Vector4<T>& p_right);
+		constexpr static T Angle(const Vector4<T>& p_left, const Vector4<T>& p_right);
 
 		/**
 		 * Normalize the vector

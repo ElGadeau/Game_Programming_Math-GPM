@@ -6,20 +6,16 @@
 
 namespace GPM
 {
-	class Quaternion final
+	struct Quaternion final
 	{
-	private:
-		float x;
-		float y;
-		float z;
+		Vector3<float> axis;
 		//m_w is the real value of quaternion, this will be used to check if the quaternion is pure/identity or not.
 		float w;
 
-	public:
 		static Quaternion Identity();
 
 #pragma region Constructors & Assignment
-		Quaternion();
+		inline Quaternion();
 		/**
 		 * @param p_x Vector part of Quaternion
 		 * @param p_y Vector part of Quaternion
@@ -28,35 +24,43 @@ namespace GPM
 		 *
 		 * In pure/applied Maths, we write W (or real), (Xi + Yj + Zk) (or Vector)
 		 */
-		Quaternion(const float p_x, const float p_y, const float p_z, const float p_w);
+		inline Quaternion(const float p_x, const float p_y, const float p_z, const float p_w);
 		/**
 		 * Copy Constructor
 		 * @param p_other
 		 */
-		Quaternion(const Quaternion& p_other);
+		inline Quaternion(const Quaternion& p_other);
 
 		/**
-		 * Construct from rotation matrix
-		 * @param p_matrix Rotation matrix
+		 * Move Constructor
+		 * @param p_other
 		 */
-		Quaternion(const Matrix3<float>& p_matrix);
+		inline Quaternion(Quaternion&& p_other) noexcept;
+		
 		/**
 		 * Construct from rotation matrix
 		 * @param p_matrix Rotation matrix
 		 */
-		Quaternion(const Matrix4<float>& p_matrix);
+		inline Quaternion(const Matrix3<float>& p_matrix);
+		/**
+		 * Construct from rotation matrix
+		 * @param p_matrix Rotation matrix
+		 */
+		inline Quaternion(const Matrix4<float>& p_matrix);
 
 		/**
 		 * Constuct a quaternion from axis and angle in radian
 		 * @param p_axis
 		 * @param p_angleInRadians
 		 */
-		Quaternion(const Vector3<float>& p_axis, const float p_angleInRadians);
+		inline Quaternion(const Vector3<float>& p_axis, const float p_angleInRadians);
 
+		~Quaternion() = default;
+		
 		/**
 		 * Construct from euler angles
 		 */
-		void MakeFromEuler(const Vector3<float>& p_euler);
+		inline void MakeFromEuler(const Vector3<float>& p_euler);
 #pragma endregion
 
 #pragma region Tests & Comparisons
