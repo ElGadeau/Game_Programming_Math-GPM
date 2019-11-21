@@ -103,8 +103,7 @@ namespace GPM
     inline Vector3<T> Vector3<T>::Lerp(Vector3<T>& p_vectorA, Vector3<T>& p_vectorB, const T p_factor)
     {
         Vector3<T> lerped_vector;
-        //lerped_vector = p_vectorA + ((p_vectorB - p_vectorA) * factor);
-        lerped_vector = p_vectorA + p_vectorB;
+        lerped_vector = p_vectorA + ((p_vectorB - p_vectorA) * p_factor);
         return lerped_vector;
     }
 
