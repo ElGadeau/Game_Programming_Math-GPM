@@ -236,7 +236,7 @@ namespace GPM
 	}
 
 	template <typename T>
-	constexpr Vector3<T>& Vector3<T>::operator=(const Vector3<T>& p_other)
+	constexpr Vector3<T>& Vector3<T>::operator=(const Vector3<T>& p_other) 
 	{
 		x = p_other.x;
 		y = p_other.y;
@@ -302,7 +302,7 @@ namespace GPM
 	}
 
 	template<typename T>
-	constexpr inline bool Vector3<T>::operator==(const Vector3<T>& p_vector)
+	constexpr inline bool Vector3<T>::operator==(const Vector3<T>& p_vector) const 
 	{
 		if (x == p_vector.x && y == p_vector.y && z == p_vector.z)
 			return true;
@@ -311,7 +311,7 @@ namespace GPM
 	}
 
 	template<typename T>
-	constexpr inline bool Vector3<T>::operator!=(const Vector3<T>& p_vector)
+	constexpr inline bool Vector3<T>::operator!=(const Vector3<T>& p_vector) const 
 	{
 		if (x == p_vector.x && y == p_vector.y && z == p_vector.z)
 			return false;
