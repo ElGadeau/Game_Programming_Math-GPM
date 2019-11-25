@@ -132,7 +132,18 @@ namespace GPM
 #pragma region Add
 
 	template <typename T>
-	Vector4<T>& Vector4<T>::Add(T p_scalar)
+	Vector4<T>& Vector4<T>::Add(const T p_scalar)
+	{
+		x += p_scalar;
+		y += p_scalar;
+		z += p_scalar;
+
+		return { *this };
+	}
+
+	template <typename T>
+	template <typename U>
+	Vector4<T>& Vector4<T>::Add(const U p_scalar)
 	{
 		x += p_scalar;
 		y += p_scalar;
@@ -148,7 +159,25 @@ namespace GPM
 	}
 
 	template <typename T>
+	template <typename U>
+	constexpr Vector4<T> Vector4<T>::Add(const Vector4<T>& p_left, const U p_scalar)
+	{
+		return { Vector4<T>(p_left).Add(p_scalar) };
+	}
+
+	template <typename T>
 	Vector4<T>& Vector4<T>::Add(const Vector4<T>& p_other)
+	{
+		x += p_other.x;
+		y += p_other.y;
+		z += p_other.z;
+
+		return { *this };
+	}
+
+	template <typename T>
+	template <typename U>
+	Vector4<T>& Vector4<T>::Add(const Vector4<U>& p_other)
 	{
 		x += p_other.x;
 		y += p_other.y;
@@ -164,7 +193,21 @@ namespace GPM
 	}
 
 	template <typename T>
+	template <typename U>
+	constexpr Vector4<T> Vector4<T>::Add(const Vector4<T>& p_left, const Vector4<U>& p_right)
+	{
+		return { Vector4<T>(p_left).Add(p_right) };
+	}
+
+	template <typename T>
 	constexpr Vector4<T> Vector4<T>::operator+(const T p_scalar) const
+	{
+		return { Vector4<T>(*this).Add(p_scalar) };
+	}
+
+	template <typename T>
+	template <typename U>
+	constexpr Vector4<T> Vector4<T>::operator+(const U p_scalar) const
 	{
 		return { Vector4<T>(*this).Add(p_scalar) };
 	}
@@ -176,13 +219,34 @@ namespace GPM
 	}
 
 	template <typename T>
+	template <typename U>
+	Vector4<T>& Vector4<T>::operator+=(const U p_scalar)
+	{
+		return { Add(p_scalar) };
+	}
+
+	template <typename T>
 	constexpr Vector4<T> Vector4<T>::operator+(const Vector4<T>& p_other) const
 	{
 		return { Vector4<T>(*this).Add(p_other) };
 	}
 
 	template <typename T>
+	template <typename U>
+	constexpr Vector4<T> Vector4<T>::operator+(const Vector4<U>& p_other) const
+	{
+		return { Vector4<T>(*this).Add(p_other) };
+	}
+
+	template <typename T>
 	Vector4<T>& Vector4<T>::operator+=(const Vector4<T>& p_other)
+	{
+		return { Add(p_other) };
+	}
+
+	template <typename T>
+	template <typename U>
+	Vector4<T>& Vector4<T>::operator+=(const Vector4<U>& p_other)
 	{
 		return { Add(p_other) };
 	}
@@ -201,7 +265,25 @@ namespace GPM
 	}
 
 	template <typename T>
+	template <typename U>
+	Vector4<T>& Vector4<T>::Subtract(const U p_scalar)
+	{
+		x -= p_scalar;
+		y -= p_scalar;
+		z -= p_scalar;
+
+		return { *this };
+	}
+
+	template <typename T>
 	constexpr Vector4<T> Vector4<T>::Subtract(const Vector4<T>& p_left, const T p_scalar)
+	{
+		return { Vector4<T>(p_left).Subtract(p_scalar) };
+	}
+
+	template <typename T>
+	template <typename U>
+	constexpr Vector4<T> Vector4<T>::Subtract(const Vector4<T>& p_left, const U p_scalar)
 	{
 		return { Vector4<T>(p_left).Subtract(p_scalar) };
 	}
@@ -217,7 +299,25 @@ namespace GPM
 	}
 
 	template <typename T>
+	template <typename U>
+	Vector4<T>& Vector4<T>::Subtract(const Vector4<U>& p_other)
+	{
+		x -= p_other.x;
+		y -= p_other.y;
+		z -= p_other.z;
+
+		return { *this };
+	}
+
+	template <typename T>
 	constexpr Vector4<T> Vector4<T>::Subtract(const Vector4<T>& p_left, const Vector4<T>& p_right)
+	{
+		return { Vector4<T>(p_left).Subtract(p_right) };
+	}
+
+	template <typename T>
+	template <typename U>
+	constexpr Vector4<T> Vector4<T>::Subtract(const Vector4<T>& p_left, const Vector4<U>& p_right)
 	{
 		return { Vector4<T>(p_left).Subtract(p_right) };
 	}
@@ -229,7 +329,21 @@ namespace GPM
 	}
 
 	template <typename T>
+	template <typename U>
+	constexpr Vector4<T> Vector4<T>::operator-(const U p_scalar) const
+	{
+		return { Vector4<T>(*this).Subtract(p_scalar) };
+	}
+
+	template <typename T>
 	Vector4<T>& Vector4<T>::operator-=(const T p_scalar)
+	{
+		return { Subtract(p_scalar) };
+	}
+
+	template <typename T>
+	template <typename U>
+	Vector4<T>& Vector4<T>::operator-=(const U p_scalar)
 	{
 		return { Subtract(p_scalar) };
 	}
@@ -241,7 +355,21 @@ namespace GPM
 	}
 
 	template <typename T>
+	template <typename U>
+	constexpr Vector4<T> Vector4<T>::operator-(const Vector4<U>& p_other) const
+	{
+		return { Vector4<T>(*this).Subtract(p_other) };
+	}
+
+	template <typename T>
 	Vector4<T>& Vector4<T>::operator-=(const Vector4<T>& p_other)
+	{
+		return { Subtract(p_other) };
+	}
+
+	template <typename T>
+	template <typename U>
+	Vector4<T>& Vector4<T>::operator-=(const Vector4<U>& p_other)
 	{
 		return { Subtract(p_other) };
 	}
@@ -260,7 +388,46 @@ namespace GPM
 	}
 
 	template <typename T>
+	template <typename U>
+	Vector4<T>& Vector4<T>::Multiply(const U p_scalar)
+	{
+		x *= p_scalar;
+		y *= p_scalar;
+		z *= p_scalar;
+
+		return { *this };
+	}
+
+	template <typename T>
+	Vector4<T>& Vector4<T>::Multiply(const Vector4<T>& p_other)
+	{
+		x *= p_other.x;
+		y *= p_other.y;
+		z *= p_other.z;
+
+		return { *this };
+	}
+
+	template <typename T>
+	template <typename U>
+	Vector4<T>& Vector4<T>::Multiply(const Vector4<U>& p_other)
+	{
+		x *= p_other.x;
+		y *= p_other.y;
+		z *= p_other.z;
+
+		return { *this };
+	}
+
+	template <typename T>
 	constexpr Vector4<T> Vector4<T>::Multiply(const Vector4<T>& p_left, T p_scalar)
+	{
+		return  { Vector4<T>(p_left).Multiply(p_scalar) };
+	}
+
+	template <typename T>
+	template <typename U>
+	constexpr Vector4<T> Vector4<T>::Multiply(const Vector4<T>& p_left, U p_scalar)
 	{
 		return  { Vector4<T>(p_left).Multiply(p_scalar) };
 	}
@@ -272,9 +439,49 @@ namespace GPM
 	}
 
 	template <typename T>
+	template <typename U>
+	constexpr Vector4<T> Vector4<T>::operator*(const U p_scalar) const
+	{
+		return { Vector4<T>(*this).Multiply(p_scalar) };
+	}
+
+	template <typename T>
 	Vector4<T>& Vector4<T>::operator*=(const T p_scalar)
 	{
 		return { Multiply(p_scalar) };
+	}
+
+	template <typename T>
+	template <typename U>
+	Vector4<T>& Vector4<T>::operator*=(const U p_scalar)
+	{
+		return { Multiply(p_scalar) };
+	}
+
+	template <typename T>
+	constexpr Vector4<T> Vector4<T>::operator*(const Vector4<T>& p_other) const
+	{
+		return { Vector4<T>(*this).Multiply(p_other) };
+	}
+
+	template <typename T>
+	template <typename U>
+	constexpr Vector4<T> Vector4<T>::operator*(const Vector4<U>& p_other) const
+	{
+		return { Vector4<T>(*this).Multiply(p_other) };
+	}
+
+	template <typename T>
+	Vector4<T>& Vector4<T>::operator*=(const Vector4<T>& p_other)
+	{
+		return { Multiply(p_other) };
+	}
+
+	template <typename T>
+	template <typename U>
+	Vector4<T>& Vector4<T>::operator*=(const Vector4<U>& p_other)
+	{
+		return { Multiply(p_other) };
 	}
 
 #pragma endregion
@@ -294,9 +501,57 @@ namespace GPM
 	}
 
 	template <typename T>
+	template <typename U>
+	Vector4<T>& Vector4<T>::Divide(const U p_scalar)
+	{
+		if (p_scalar == 0)
+			throw std::logic_error("Division by 0");
+
+		x /= p_scalar;
+		y /= p_scalar;
+		z /= p_scalar;
+
+		return { *this };
+	}
+
+	template <typename T>
 	constexpr Vector4<T> Vector4<T>::Divide(const Vector4<T>& p_left, const T p_scalar)
 	{
 		return { Vector4<T>(p_left).Divide(p_scalar) };
+	}
+
+	template <typename T>
+	template <typename U>
+	constexpr Vector4<T> Vector4<T>::Divide(const Vector4<T>& p_left, const U p_scalar)
+	{
+		return { Vector4<T>(p_left).Divide(p_scalar) };
+	}
+
+	template <typename T>
+	Vector4<T>& Vector4<T>::Divide(const Vector4<T>& p_other)
+	{
+		if (p_other.x == 0 || p_other.y == 0 || p_other.z == 0)
+			throw std::logic_error("Division by 0");
+
+		x /= p_other.x;
+		y /= p_other.y;
+		z /= p_other.z;
+
+		return { *this };
+	}
+
+	template <typename T>
+	template <typename U>
+	Vector4<T>& Vector4<T>::Divide(const Vector4<U>& p_other)
+	{
+		if (p_other.x == 0 || p_other.y == 0 || p_other.z == 0)
+			throw std::logic_error("Division by 0");
+		
+		x /= p_other.x;
+		y /= p_other.y;
+		z /= p_other.z;
+
+		return { *this };
 	}
 
 	template <typename T>
@@ -306,9 +561,49 @@ namespace GPM
 	}
 
 	template <typename T>
+	template <typename U>
+	constexpr Vector4<T> Vector4<T>::operator/(const U p_scalar) const
+	{
+		return { Vector4<T>(*this).Divide(p_scalar) };
+	}
+
+	template <typename T>
 	Vector4<T>& Vector4<T>::operator/=(const T p_scalar)
 	{
 		return { Divide(p_scalar) };
+	}
+
+	template <typename T>
+	template <typename U>
+	Vector4<T>& Vector4<T>::operator/=(const U p_scalar)
+	{
+		return { Divide(p_scalar) };
+	}
+
+	template <typename T>
+	constexpr Vector4<T> Vector4<T>::operator/(const Vector4<T>& p_other) const
+	{
+		return { Vector4<T>(*this).Divide(p_other) };
+	}
+
+	template <typename T>
+	template <typename U>
+	constexpr Vector4<T> Vector4<T>::operator/(const Vector4<U>& p_other) const
+	{
+		return { Vector4<T>(*this).Divide(p_other) };
+	}
+
+	template <typename T>
+	Vector4<T>& Vector4<T>::operator/=(const Vector4<T>& p_other)
+	{
+		return { Divide(p_other) };
+	}
+
+	template <typename T>
+	template <typename U>
+	Vector4<T>& Vector4<T>::operator/=(const Vector4<U>& p_other)
+	{
+		return { Divide(p_other) };
 	}
 
 #pragma endregion
@@ -322,7 +617,7 @@ namespace GPM
 		if (w != 0 || p_vector.w != 0)
 			throw std::logic_error("Can't Compute Distance, one of the params is a direction: W != 0");
 
-		return Tools::Utils::FastSquareRoot((x - p_vector.x * x - p_vector.x) + (y - p_vector.y) * (y - p_vector.y) + (z - p_vector.z) * (z - p_vector.z));
+		return Tools::Utils::SquareRootF((x - p_vector.x * x - p_vector.x) + (y - p_vector.y) * (y - p_vector.y) + (z - p_vector.z) * (z - p_vector.z));
 	}
 
 	template <typename T>
@@ -331,9 +626,9 @@ namespace GPM
 		if (p_left.w != 0 || p_right.w != 0)
 			throw std::logic_error("Can't Compute Distance, one of the params is a point: W != 0");
 
-		return Tools::Utils::FastSquareRoot((p_left.x - p_right.x * p_left.x - p_right.x) + (p_left.y - p_right.y) * (p_left.y - p_right.y) + (p_left.z - p_right.z) * (p_left.z - p_right.z));
+		return Tools::Utils::SquareRootF((p_left.x - p_right.x * p_left.x - p_right.x) + (p_left.y - p_right.y) * (p_left.y - p_right.y) + (p_left.z - p_right.z) * (p_left.z - p_right.z));
 	}
-	
+
 	template <typename T>
 	constexpr Vector4<T>& Vector4<T>::Scale(const T p_scale) const
 	{
@@ -347,15 +642,15 @@ namespace GPM
 	template <typename T>
 	constexpr Vector4<T> Vector4<T>::Scale(const Vector4<T>& p_vector, const T p_scale)
 	{
-		const Vector4<T> result { p_vector.x * p_scale , p_vector.y *= p_scale, p_vector.z *= p_scale, p_vector.w };
+		const Vector4<T> result{ p_vector.x * p_scale , p_vector.y *= p_scale, p_vector.z *= p_scale, p_vector.w };
 
 		return { result };
 	}
-	
+
 	template <typename T>
 	constexpr T Vector4<T>::Magnitude() const
 	{
-		return { static_cast<T>(Tools::Utils::FastSquareRoot(x * x + y * y + z * z)) };
+		return { static_cast<T>(Tools::Utils::SquareRootF(x * x + y * y + z * z)) };
 	}
 
 	template <typename T>
@@ -563,8 +858,20 @@ namespace GPM
 		return { p_vector + p_scalar };
 	}
 
+	template <typename T, typename U>
+	constexpr Vector4<T> operator+(const U p_scalar, const Vector4<T>& p_vector)
+	{
+		return { p_vector + p_scalar };
+	}
+
 	template <typename T>
 	constexpr Vector4<T>& operator+=(const T p_scalar, Vector4<T>& p_vector)
+	{
+		return { p_vector += p_scalar };
+	}
+
+	template <typename T, typename U>
+	constexpr Vector4<T>& operator+=(const U p_scalar, Vector4<T>& p_vector)
 	{
 		return { p_vector += p_scalar };
 	}
@@ -575,8 +882,20 @@ namespace GPM
 		return { p_vector - p_scalar };
 	}
 
+	template <typename T, typename U>
+	constexpr Vector4<T> operator-(const U p_scalar, const Vector4<T>& p_vector)
+	{
+		return { p_vector - p_scalar };
+	}
+
 	template <typename T>
 	constexpr Vector4<T>& operator-=(const T p_scalar, Vector4<T>& p_vector)
+	{
+		return { p_vector -= p_scalar };
+	}
+
+	template <typename T, typename U>
+	constexpr Vector4<T>& operator-=(const U p_scalar, Vector4<T>& p_vector)
 	{
 		return { p_vector -= p_scalar };
 	}
@@ -587,8 +906,20 @@ namespace GPM
 		return { p_vector * p_scalar };
 	}
 
+	template <typename T, typename U>
+	constexpr Vector4<T> operator*(const U p_scalar, const Vector4<T>& p_vector)
+	{
+		return { p_vector * p_scalar };
+	}
+
 	template <typename T>
 	constexpr Vector4<T>& operator*=(const T p_scalar, Vector4<T>& p_vector)
+	{
+		return { p_vector *= p_scalar };
+	}
+
+	template <typename T, typename U>
+	constexpr Vector4<T>& operator*=(const U p_scalar, Vector4<T>& p_vector)
 	{
 		return { p_vector *= p_scalar };
 	}
@@ -599,8 +930,20 @@ namespace GPM
 		return p_vector / p_scalar;
 	}
 
+	template <typename T, typename U>
+	constexpr Vector4<T> operator/(const U p_scalar, const Vector4<T>& p_vector)
+	{
+		return p_vector / p_scalar;
+	}
+
 	template <typename T>
 	constexpr Vector4<T>& operator/=(const T p_scalar, Vector4<T>& p_vector)
+	{
+		return { p_vector /= p_scalar };
+	}
+
+	template <typename T, typename U>
+	constexpr Vector4<T>& operator/=(const U p_scalar, Vector4<T>& p_vector)
 	{
 		return { p_vector /= p_scalar };
 	}

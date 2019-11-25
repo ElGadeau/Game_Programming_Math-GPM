@@ -128,7 +128,7 @@ namespace GPM
 		 * Return true if the two vectors are identical
 		 * @param p_left The left vector
 		 * @param p_right The right vector
-		 */ 
+		 */
 		constexpr static bool AreEqual(const Vector4<T>& p_left, const Vector4<T>& p_right);
 
 		/**
@@ -149,6 +149,13 @@ namespace GPM
 		Vector4<T>& Add(const T p_scalar);
 
 		/**
+		 * Add scalar to x, y and z
+		 * @param p_scalar The scalar
+		 */
+		template<typename U>
+		Vector4<T>& Add(const U p_scalar);
+
+		/**
 		 * Add scalar to vector left
 		 * @param p_left The left vector to add
 		 * @param p_scalar The scalar
@@ -156,10 +163,25 @@ namespace GPM
 		constexpr static Vector4<T> Add(const Vector4<T>& p_left, const T p_scalar);
 
 		/**
+		 * Add scalar to vector left
+		 * @param p_left The left vector to add
+		 * @param p_scalar The scalar
+		 */
+		template<typename U>
+		constexpr static Vector4<T> Add(const Vector4<T>& p_left, const U p_scalar);
+
+		/**
 		 * Add other vector to the actual vector
 		 * @param p_other The vector to add
 		 */
 		Vector4<T>& Add(const Vector4<T>& p_other);
+
+		/**
+		 * Add other vector to the actual vector
+		 * @param p_other The vector to add
+		 */
+		template <typename U>
+		Vector4<T>& Add(const Vector4<U>& p_other);
 
 		/**
 		 * Add left vector to the right vector
@@ -169,10 +191,25 @@ namespace GPM
 		constexpr static Vector4<T> Add(const Vector4<T>& p_left, const Vector4<T>& p_right);
 
 		/**
+		 * Add left vector to the right vector
+		 * @param p_left The left vector
+		 * @param p_right The right vector
+		 */
+		template <typename U>
+		constexpr static Vector4<T> Add(const Vector4<T>& p_left, const Vector4<U>& p_right);
+
+		/**
 		* Return the summation of other vector and actual vector
 		* @param p_scalar The scalar
 		*/
 		constexpr Vector4<T> operator+(const T p_scalar) const;
+
+		/**
+		* Return the summation of other vector and actual vector
+		* @param p_scalar The scalar
+		*/
+		template <typename U>
+		constexpr Vector4<T> operator+(const U p_scalar) const;
 
 		/**
 		* Add other vector to the actual vector
@@ -181,16 +218,37 @@ namespace GPM
 		Vector4<T>& operator+=(const T p_scalar);
 
 		/**
+		* Add other vector to the actual vector
+		* @param p_scalar The scalar
+		*/
+		template <typename U>
+		Vector4<T>& operator+=(const U p_scalar);
+
+		/**
 		 * Return the summation of other vector and actual vector
 		 * @param p_other The other vector
 		 */
 		constexpr Vector4<T> operator+(const Vector4<T>& p_other) const;
 
 		/**
+		 * Return the summation of other vector and actual vector
+		 * @param p_other The other vector
+		 */
+		template <typename U>
+		constexpr Vector4<T> operator+(const Vector4<U>& p_other) const;
+
+		/**
 		 * Add other vector to the actual vector
 		 * @param p_other The other vector
 		 */
 		Vector4<T>& operator+=(const Vector4<T>& p_other);
+
+		/**
+		 * Add other vector to the actual vector
+		 * @param p_other The other vector
+		 */
+		template <typename U>
+		Vector4<T>& operator+=(const Vector4<U>& p_other);
 
 #pragma endregion
 #pragma region Substract
@@ -202,6 +260,13 @@ namespace GPM
 		Vector4<T>& Subtract(const T p_scalar);
 
 		/**
+		 * Subtract scalar to x, y and z
+		 * @param p_scalar The scalar
+		 */
+		template <typename U>
+		Vector4<T>& Subtract(const U p_scalar);
+
+		/**
 		 * Subtract scalar to vector left
 		 * @param p_left The left vector
 		 * @param p_scalar The scalar
@@ -209,10 +274,25 @@ namespace GPM
 		constexpr static Vector4<T> Subtract(const Vector4<T>& p_left, const T p_scalar);
 
 		/**
+		 * Subtract scalar to vector left
+		 * @param p_left The left vector
+		 * @param p_scalar The scalar
+		 */
+		template <typename U>
+		constexpr static Vector4<T> Subtract(const Vector4<T>& p_left, const U p_scalar);
+
+		/**
 		 * Subtract other vector to the actual vector
 		 * @param p_other The other vector
 		 */
 		Vector4<T>& Subtract(const Vector4<T>& p_other);
+
+		/**
+		 * Subtract other vector to the actual vector
+		 * @param p_other The other vector
+		 */
+		template <typename U>
+		Vector4<T>& Subtract(const Vector4<U>& p_other);
 
 		/**
 		 * Subtract left vector to the right vector
@@ -222,10 +302,25 @@ namespace GPM
 		constexpr static Vector4<T> Subtract(const Vector4<T>& p_left, const Vector4<T>& p_right);
 
 		/**
+		 * Subtract left vector to the right vector
+		 * @param p_left The left vector
+		 * @param p_right The right vector
+		 */
+		template<typename U>
+		constexpr static Vector4<T> Subtract(const Vector4<T>& p_left, const Vector4<U>& p_right);
+
+		/**
 		* Return the subtraction of other vector and actual vector
 		* @param p_scalar The scalar
 		*/
 		constexpr Vector4<T> operator-(const T p_scalar) const;
+
+		/**
+		* Return the subtraction of other vector and actual vector
+		* @param p_scalar The scalar
+		*/
+		template <typename U>
+		constexpr Vector4<T> operator-(const U p_scalar) const;
 
 		/**
 		* Subtract other vector to the actual vector
@@ -234,16 +329,37 @@ namespace GPM
 		Vector4<T>& operator-=(const T p_scalar);
 
 		/**
+		* Subtract other vector to the actual vector
+		* @param p_scalar The scalar
+		*/
+		template <typename U>
+		Vector4<T>& operator-=(const U p_scalar);
+
+		/**
 		 * Return the subtraction of other vector and actual vector
 		 * @param p_other The other vector
 		 */
 		constexpr Vector4<T> operator-(const Vector4<T>& p_other) const;
 
 		/**
+		 * Return the subtraction of other vector and actual vector
+		 * @param p_other The other vector
+		 */
+		template <typename U>
+		constexpr Vector4<T> operator-(const Vector4<U>& p_other) const;
+
+		/**
 		 * Subtract other vector to the actual vector
 		 * @param p_other The vector to use
 		 */
-		Vector4<T>& operator -=(const Vector4<T>& p_other);
+		Vector4<T>& operator-=(const Vector4<T>& p_other);
+
+		/**
+		 * Subtract other vector to the actual vector
+		 * @param p_other The vector to use
+		 */
+		template <typename U>
+		Vector4<T>& operator-=(const Vector4<U>& p_other);
 
 #pragma endregion
 #pragma region Multiply
@@ -255,11 +371,39 @@ namespace GPM
 		Vector4<T>& Multiply(const T p_scalar);
 
 		/**
+		 * Multiply scalar to x, y and z
+		 * @param p_scalar The scalar
+		 */
+		template <typename U>
+		Vector4<T>& Multiply(const U p_scalar);
+
+		/**
 		 * Multiply scalar to vector left
 		 * @param p_left The vector to multiply
 		 * @param p_scalar The scalar
 		 */
 		constexpr static Vector4<T> Multiply(const Vector4<T>& p_left, T p_scalar);
+
+		/**
+		 * Multiply scalar to vector left
+		 * @param p_left The vector to multiply
+		 * @param p_scalar The scalar
+		 */
+		template <typename U>
+		constexpr static Vector4<T> Multiply(const Vector4<T>& p_left, U p_scalar);
+
+		/**
+		 * Multiply other vector to the actual vector
+		 * @param p_other The other vector
+		 */
+		Vector4<T>& Multiply(const Vector4<T>& p_other);
+
+		/**
+		 * Multiply other vector to the actual vector
+		 * @param p_other The other vector
+		 */
+		template <typename U>
+		Vector4<T>& Multiply(const Vector4<U>& p_other);
 
 		/**
 		 * Return the multiplication of scalar and actual vector
@@ -268,10 +412,50 @@ namespace GPM
 		constexpr Vector4<T> operator*(const T p_scalar) const;
 
 		/**
+		 * Return the multiplication of scalar and actual vector
+		 * @param p_scalar The scalar
+		 */
+		template <typename U>
+		constexpr Vector4<T> operator*(const U p_scalar) const;
+
+		/**
 		 * Multiply scalar to the actual vector
 		 * @param p_scalar The scalar
 		 */
 		Vector4<T>& operator*=(const T p_scalar);
+
+		/**
+		 * Multiply scalar to the actual vector
+		 * @param p_scalar The scalar
+		 */
+		template <typename U>
+		Vector4<T>& operator*=(const U p_scalar);
+
+		/**
+		 * Return the multiplication of a vector and actual vector
+		 * @param p_other The scalar
+		 */
+		constexpr Vector4<T> operator*(const Vector4<T>& p_other) const;
+
+		/**
+		 * Return the multiplication of a vector and actual vector
+		 * @param p_other The vector
+		 */
+		template <typename U>
+		constexpr Vector4<T> operator*(const Vector4<U>& p_other) const;
+
+		/**
+		 * Multiply vector to the actual vector
+		 * @param p_other The vector
+		 */
+		Vector4<T>& operator*=(const Vector4<T>& p_other);
+
+		/**
+		 * Multiply vector to the actual vector
+		 * @param p_other The vector
+		 */
+		template <typename U>
+		Vector4<T>& operator*=(const Vector4<U>& p_other);
 
 #pragma endregion
 #pragma region Divide
@@ -283,6 +467,13 @@ namespace GPM
 		Vector4<T>& Divide(const T p_scalar);
 
 		/**
+		 * Divide scalar to x, y and z
+		 * @param p_scalar The scalar
+		 */
+		template <typename U>
+		Vector4<T>& Divide(const U p_scalar);
+
+		/**
 		 * Divide scalar to vector left
 		 * @param p_left The vector to divide
 		 * @param p_scalar The scalar
@@ -290,16 +481,78 @@ namespace GPM
 		constexpr static Vector4<T> Divide(const Vector4<T>& p_left, const T p_scalar);
 
 		/**
+		 * Divide scalar to vector left
+		 * @param p_left The vector to divide
+		 * @param p_scalar The scalar
+		 */
+		template <typename U>
+		constexpr static Vector4<T> Divide(const Vector4<T>& p_left, const U p_scalar);
+
+		/**
+		 * Divide other vector to the actual vector
+		 * @param p_other The other vector
+		 */
+		Vector4<T>& Divide(const Vector4<T>& p_other);
+
+		/**
+		 * Divide other vector to the actual vector
+		 * @param p_other The other vector
+		 */
+		template <typename U>
+		Vector4<T>& Divide(const Vector4<U>& p_other);
+		
+		/**
 		 * Return the division of scalar and actual vector
 		 * @param p_scalar The scalar
 		 */
 		constexpr Vector4<T> operator/(const T p_scalar) const;
 
 		/**
+		 * Return the division of scalar and actual vector
+		 * @param p_scalar The scalar
+		 */
+		template <typename U>
+		constexpr Vector4<T> operator/(const U p_scalar) const;
+
+		/**
 		 * Divide scalar to the actual vector
 		 * @param p_scalar The scalar
 		 */
 		Vector4<T>& operator/=(const T p_scalar);
+
+		/**
+		 * Divide scalar to the actual vector
+		 * @param p_scalar The scalar
+		 */
+		template <typename U>
+		Vector4<T>& operator/=(const U p_scalar);
+
+
+		/**
+		 * Return the division of a vector and actual vector
+		 * @param p_other The scalar
+		 */
+		constexpr Vector4<T> operator/(const Vector4<T>& p_other) const;
+
+		/**
+		 * Return the division of a vector and actual vector
+		 * @param p_other The vector
+		 */
+		template <typename U>
+		constexpr Vector4<T> operator/(const Vector4<U>& p_other) const;
+
+		/**
+		 * Divide vector to the actual vector
+		 * @param p_other The vector
+		 */
+		Vector4<T>& operator/=(const Vector4<T>& p_other);
+
+		/**
+		 * Divide vector to the actual vector
+		 * @param p_other The vector
+		 */
+		template <typename U>
+		Vector4<T>& operator/=(const Vector4<U>& p_other);
 
 #pragma endregion
 
@@ -473,26 +726,50 @@ namespace GPM
 	template <typename T>
 	constexpr Vector4<T> operator+(const T p_scalar, const Vector4<T>& p_vector);
 
+	template <typename T, typename U>
+	constexpr Vector4<T> operator+(const U p_scalar, const Vector4<T>& p_vector);
+
 	template <typename T>
 	constexpr Vector4<T>& operator+=(const T p_scalar, Vector4<T>& p_vector);
+
+	template <typename T, typename U>
+	constexpr Vector4<T>& operator+=(const U p_scalar, Vector4<T>& p_vector);
 
 	template <typename T>
 	constexpr Vector4<T> operator-(const T p_scalar, const Vector4<T>& p_vector);
 
+	template <typename T, typename U>
+	constexpr Vector4<T> operator-(const U p_scalar, const Vector4<T>& p_vector);
+
 	template <typename T>
 	constexpr Vector4<T>& operator-=(const T p_scalar, Vector4<T>& p_vector);
+
+	template <typename T, typename U>
+	constexpr Vector4<T>& operator-=(const U p_scalar, Vector4<T>& p_vector);
 
 	template <typename T>
 	constexpr Vector4<T> operator*(const T p_scalar, const Vector4<T>& p_vector);
 
+	template <typename T, typename U>
+	constexpr Vector4<T> operator*(const U p_scalar, const Vector4<T>& p_vector);
+
 	template <typename T>
 	constexpr Vector4<T>& operator*=(const T p_scalar, Vector4<T>& p_vector);
+
+	template <typename T, typename U>
+	constexpr Vector4<T>& operator*=(const U p_scalar, Vector4<T>& p_vector);
 
 	template <typename T>
 	constexpr Vector4<T> operator/(const T p_scalar, const Vector4<T>& p_vector);
 
+	template <typename T, typename U>
+	constexpr Vector4<T> operator/(const U p_scalar, const Vector4<T>& p_vector);
+
 	template <typename T>
 	constexpr Vector4<T>& operator/=(const T p_scalar, Vector4<T>& p_vector);
+
+	template <typename T, typename U>
+	constexpr Vector4<T>& operator/=(const U p_scalar, Vector4<T>& p_vector);
 
 #pragma endregion
 
