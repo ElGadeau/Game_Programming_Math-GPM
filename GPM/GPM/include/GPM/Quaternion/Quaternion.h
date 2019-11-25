@@ -12,11 +12,12 @@ namespace GPM
 		//m_w is the real value of quaternion, this will be used to check if the quaternion is pure/identity or not.
 		float w;
 
-		static Quaternion Identity();
+		static Quaternion identity;
 
 #pragma region Constructors & Assignment
 		inline Quaternion();
 		/**
+		 * Constructor using all values
 		 * @param p_x Vector part of Quaternion
 		 * @param p_y Vector part of Quaternion
 		 * @param p_z Vector part of Quaternion
@@ -26,6 +27,11 @@ namespace GPM
 		 */
 		inline Quaternion(const float p_x, const float p_y, const float p_z, const float p_w);
 
+		/**
+		 * Constructor using a scalar and a vector
+		 * @param p_scalar The scalar
+		 * @param p_vector The vector
+		 */
 		inline Quaternion(const float p_scalar, const Vector3F& p_vector);
 
 		/**
@@ -147,21 +153,8 @@ namespace GPM
 		Quaternion& ConvertToUnitNormQuaternion();
 
 		static Vector3F RotateVectorAboutAngleAndAxis(const float p_angle, const Vector3F& p_axis, const Vector3F& p_vectorToRotate);
-		
-		/**
-		* @param p_axis
-		* @param p_angle
-		*/
-		void GetAxisAndAngle(Vector3<float>& p_axis, float p_angle) const;
 
-		Vector3<float> GetAxisZ() const;
-		Vector3<float> GetAxisY() const;
-		Vector3<float> GetAxisX() const;
-
-		Vector3<float> GetForwardVector() const;
-		Vector3<float> GetRightVector() const;
-		Vector3<float> GetUpVector() const;
-		Vector3<float> GetRotationAxis() const;
+		Vector3F GetRotationAxis() const;
 
 		float AngularDistance(const Quaternion& p_other) const;
 

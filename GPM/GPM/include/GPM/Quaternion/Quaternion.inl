@@ -6,6 +6,8 @@
 
 namespace GPM
 {
+	Quaternion Quaternion::identity = Quaternion{ 1.0f, 0.0f, 0.0f, 0.0f };
+
 #pragma region Constructors & Assignment
 	inline Quaternion::Quaternion()
 		: axis{ 0.0f, 0.0f, 0.0f }, w{ 0.0f }
@@ -35,7 +37,7 @@ namespace GPM
 		if (trace > 0)
 		{      //s=4*qw
 
-			w = 0.5f * sqrt(1 + trace);
+			w = 0.5f * Tools::Utils::FastSquareRoot(1 + trace);
 			const float S = 0.25f / w;
 
 			axis.x = S * (p_matrix.m_data[5] - p_matrix.m_data[7]);
@@ -46,7 +48,7 @@ namespace GPM
 		else if (p_matrix.m_data[0] > p_matrix.m_data[4] && p_matrix.m_data[0] > p_matrix.m_data[8])
 		{ //s=4*qx
 
-			axis.x = 0.5f * sqrt(1 + p_matrix.m_data[0] - p_matrix.m_data[4] - p_matrix.m_data[8]);
+			axis.x = 0.5f * Tools::Utils::FastSquareRoot(1 + p_matrix.m_data[0] - p_matrix.m_data[4] - p_matrix.m_data[8]);
 			const float X = 0.25f / axis.x;
 
 			axis.y = X * (p_matrix.m_data[3] + p_matrix.m_data[1]);
@@ -57,7 +59,7 @@ namespace GPM
 		else if (p_matrix.m_data[4] > p_matrix.m_data[8])
 		{ //s=4*qy
 
-			axis.y = 0.5f * sqrt(1 - p_matrix.m_data[0] + p_matrix.m_data[4] - p_matrix.m_data[8]);
+			axis.y = 0.5f * Tools::Utils::FastSquareRoot(1 - p_matrix.m_data[0] + p_matrix.m_data[4] - p_matrix.m_data[8]);
 			const float Y = 0.25f / axis.y;
 			axis.x = Y * (p_matrix.m_data[3] + p_matrix.m_data[1]);
 			axis.z = Y * (p_matrix.m_data[7] + p_matrix.m_data[5]);
@@ -67,7 +69,7 @@ namespace GPM
 		else
 		{ //s=4*qz
 
-			axis.z = 0.5f * sqrt(1 - p_matrix.m_data[0] - p_matrix.m_data[4] + p_matrix.m_data[8]);
+			axis.z = 0.5f * Tools::Utils::FastSquareRoot(1 - p_matrix.m_data[0] - p_matrix.m_data[4] + p_matrix.m_data[8]);
 			const float Z = 0.25f / axis.z;
 			axis.x = Z * (p_matrix.m_data[6] + p_matrix.m_data[2]);
 			axis.y = Z * (p_matrix.m_data[7] + p_matrix.m_data[5]);
@@ -124,6 +126,31 @@ namespace GPM
 		axis = p_other.axis;
 
 		return (*this);
+	}
+
+	inline bool Quaternion::IsIdentity() const
+	{
+		return axis.x == 0.0f && axis.y == 0.0f && axis.z == 0.0f;
+	}
+
+	inline bool Quaternion::IsPure() const
+	{
+		return w == 0.0f;
+	}
+
+	inline bool Quaternion::IsNormalized() const
+	{
+		return Norm() == 1.0f;
+	}
+
+	inline bool Quaternion::operator==(const Quaternion& p_otherQuaternion) const
+	{
+		return w == p_otherQuaternion.w && axis == p_otherQuaternion.axis;
+	}
+
+	inline bool Quaternion::operator!=(const Quaternion& p_otherQuaternion) const
+	{
+		return w != p_otherQuaternion.w || axis != p_otherQuaternion.axis;
 	}
 
 	inline Quaternion Quaternion::operator+(const Quaternion& p_otherQuaternion) const
@@ -305,6 +332,51 @@ namespace GPM
 		const Quaternion rotatedVector = q * p * qInverse;
 
 		return rotatedVector.axis;
+	}
+
+	inline Vector3<float> Quaternion::GetRotationAxis() const
+	{
+		return axis;
+	}
+
+	inline float Quaternion::GetXAxisValue() const
+	{
+		return axis.x;
+	}
+
+	inline float Quaternion::GetYAxisValue() const
+	{
+		return axis.y;
+	}
+
+	inline float Quaternion::GetZAxisValue() const
+	{
+		return axis.z;
+	}
+
+	inline float Quaternion::GetRealValue() const
+	{
+		return w;
+	}
+
+	inline void Quaternion::SetXAxisValue(const float p_xValue)
+	{
+		axis.x = p_xValue;
+	}
+
+	inline void Quaternion::SetYAxisValue(const float p_yValue)
+	{
+		axis.y = p_yValue;
+	}
+
+	inline void Quaternion::SetZAxisValue(const float p_zValue)
+	{
+		axis.z = p_zValue;
+	}
+
+	inline void Quaternion::SetRealValue(const float p_realValue)
+	{
+		w = p_realValue;
 	}
 
 	constexpr float Quaternion::NormSquare() const

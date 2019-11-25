@@ -440,6 +440,14 @@ namespace GPM
 		*/
 		constexpr static Vector4<T> Slerp(const Vector4<T>& p_start, const Vector4<T>& p_end, const float p_interpolationCoefficient);
 
+		/**
+		* Return the start vector moving to the end vector at step interpolationCoefficient
+		* @param p_start The beginning vector
+		* @param p_end The ending vector
+		* @param p_interpolationCoefficient between 0 and 1, 0 is start, 1 is end
+		*/
+		constexpr static Vector4<T> Nlerp(const Vector4<T>& p_start, const Vector4<T>& p_end, const float p_interpolationCoefficient);
+
 #pragma endregion
 #pragma region Conversions
 
@@ -492,8 +500,6 @@ namespace GPM
 	using Vector4D = Vector4<double>;
 	using Vector4I = Vector4<int>;
 	using Vector4L = Vector4<long>;
-	using Vector4U = Vector4<unsigned int>;
-	
 }
 
 #include <GPM/Vector/Vector4.inl>
