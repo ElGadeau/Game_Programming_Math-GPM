@@ -5,7 +5,7 @@
 namespace GPM
 {
     /**
-     * A standard 3 by 3 Matrix. Default value is an identity matrix.
+     * A standard 3 by 3 Matrix. Default value is an identity matrix
      */
     template <typename T>
     struct Matrix3
@@ -16,8 +16,9 @@ namespace GPM
         ~Matrix3() = default;
 
 
-        constexpr Matrix3(const T i0, const T i1, const T i2, const T i3, const T i4, const T i5, 
-            const T i6, const T i7, const T i8);
+        constexpr Matrix3(const T p_i0, const T p_i1, const T p_i2, 
+                          const T p_i3, const T p_i4, const T p_i5,
+                          const T p_i6, const T p_i7, const T p_i8);
 
         constexpr Matrix3(const T p_data[9]);
         constexpr Matrix3(const Matrix3& p_other);
@@ -28,10 +29,7 @@ namespace GPM
                         0,1,0,
                         0,0,1 };
 
-        /**
-         * @brief function used to debug values from the matrix
-         */
-        std::string ToString();
+        
 
 #pragma region Static Properties
         /**
@@ -46,6 +44,13 @@ namespace GPM
 #pragma endregion 
 
 #pragma region Properties
+
+        T Determinant();
+
+        static T Determinant(const Matrix3& p_matrix);
+
+        Matrix3<T>& Transpose();
+        static Matrix3<T> Transpose(const Matrix3& p_matrix3);
          
 #pragma endregion
 
@@ -54,30 +59,34 @@ namespace GPM
 #pragma region Add
 
         /**
-         * Add other matrix to the current matrix
-         * @param p_other
+         * @brief Add other matrix to the current matrix
+         * @param p_other : The other matrix you want to add to the current one
+         * @return The current Matrix modified
          */
         template<typename U>
         Matrix3<T>& Add(const Matrix3<U>& p_other);
 
         /**
-         * Add left matrix to the right matrix
-         * @param p_left
-         * @param p_right
+         * @brief Add left matrix to the right matrix
+         * @param p_left : The first matrix you want to add
+         * @param p_right : The second matrix to be added to the first one
+         * @return The copy of the Matrix operation result
          */
         template<typename U>
         constexpr static Matrix3<T> Add(const Matrix3<T>& p_left, const Matrix3<U>& p_right);
 
         /**
-         * Return the summation of other matrix and current matrix
-         * @param p_other
+         * @brief Return the summation of other matrix and current matrix
+         * @param p_other : The other matrix you want to add
+         * @return The copy of the Matrix operation result
          */
         template<typename U>
         constexpr Matrix3<T> operator+(const Matrix3<U>& p_other) const;
 
         /**
-         * Add other matrix to the current matrix
-         * @param p_other
+         * @brief Add other matrix to the current matrix
+         * @param p_other : The other matrix you want to add to the current one
+         * @return The current Matrix modified
          */
         template<typename U>
         Matrix3<T>& operator+=(const Matrix3<U>& p_other);
@@ -86,30 +95,34 @@ namespace GPM
 #pragma region Subtract
 
         /**
-         * Subtract other vector to the current matrix
-         * @param p_other
+         * @brief Subtract other matrix to the current matrix
+         * @param p_other : The matrix you want to subtract to the current one
+         * @return The current Matrix modified
          */
         template<typename U>
         Matrix3<T>& Subtract(const Matrix3<U>& p_other);
 
         /**
-         * Subtract left matrix to the right matrix
-         * @param p_left
-         * @param p_right
+         * @brief Subtract left matrix to the right matrix
+         * @param p_left : The first matrix you want to subtract to
+         * @param p_right : The second matrix to be subtracted from the first one
+         * @return The copy of the Matrix operation result
          */
         template<typename U>
         constexpr static Matrix3<T> Subtract(const Matrix3<T>& p_left, const Matrix3<U>& p_right);
 
         /**
-         * Return the subtraction of other matrix and current matrix
-         * @param p_other
+         * @brief Return the subtraction of other matrix and current matrix
+         * @param p_other : The matrix you want to subtract to the current one
+         * @return The copy of the Matrix operation result
          */
         template<typename U>
         constexpr Matrix3<T> operator-(const Matrix3<U>& p_other) const;
 
         /**
-         * Subtract other matrix to the current matrix
-         * @param p_other
+         * @brief Subtract other matrix to the current matrix
+         * @param p_other : The matrix you want to subtract to the current one
+         * @return The current Matrix modified
          */
         template<typename U>
         Matrix3<T>& operator -=(const Matrix3<U>& p_other);
@@ -118,55 +131,76 @@ namespace GPM
 #pragma region Multiply
 
         /**
-         * Multiply scalar to x, y and z
-         * @param p_scalar
+         * @brief Multiply scalar to elements
+         * @param p_scalar : The value you want to scale the matrix with
+         * @return The current Matrix modified
          */
         template<typename U>
         Matrix3<T>& Multiply(U p_scalar);
 
         /**
-         * Multiply scalar to x, y and z
-         * @param p_scalar
+         * @brief Multiply matrix with another matrix.
+         * @param p_other : The matrix you want to use as a scalar
+         * @return The current Matrix modified
          */
         template<typename U>
         Matrix3<T>& Multiply(const Matrix3<U>& p_other);
 
         /**
-         * Multiply scalar to matrix left
-         * @param p_left
-         * @param p_scalar
+         * @brief Multiply scalar to matrix left
+         * @param p_left : Multiply this matrix by the other parameter
+         * @param p_scalar : Multiply this scalar to the other parameter
+         * @return The copy of the Matrix operation result
          */
         template<typename U>
         constexpr static Matrix3<T> Multiply(const Matrix3<T>& p_left, U p_scalar);
 
         /**
-         * Return the multiplication of scalar and current matrix
-         * @param p_scalar
+         * @brief Return the multiplication of scalar and current matrix
+         * @param p_scalar : Multiply this scalar to the current matrix
+         * @return The copy of the Matrix operation result
          */
         template<typename U>
         constexpr Matrix3<T> operator*(U p_scalar) const;
 
         /**
-         * Multiply scalar to the current matrix
-         * @param p_scalar
+         * @brief Multiply scalar to the current matrix
+         * @param p_scalar : Multiply this scalar to the current matrix
+         * @return The current Matrix modified
          */
         template<typename U>
         Matrix3<T>& operator*=(U p_scalar);
 
 
         /**
-        * Multiply scalar to the current matrix
-        * @param p_scalar
+        * @brief Multiply matrix to the current matrix
+        * @param p_other : Multiply this matrix to the current one
+        * @return The copy of the Matrix operation result
         */
         template<class U> constexpr Matrix3<T> operator*(const Matrix3<U>& p_other) const;
 
         /**
-        * Multiply scalar to the current matrix
-        * @param p_scalar
+        * @brief Multiply matrix to the current matrix
+        * @param p_other : Multiply this matrix to the current one
+        * @return The current Matrix modified
         */
         template<class U> Matrix3<T>& operator*=(const Matrix3<U>& p_other);
 
 #pragma endregion
+
+#pragma endregion
+
+#pragma region Conversions
+        /**
+         * @brief function used to debug values from the matrix
+         */
+        constexpr std::string ToString();
+
+        /**
+        * @brief Function used to debug values from the matrix
+        * @param p_matrix The matrix to print
+        */
+        constexpr static std::string ToString(const Matrix3<T>& p_matrix);
 
 #pragma endregion
     };
