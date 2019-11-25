@@ -6,6 +6,17 @@ namespace GPM::Tools
 	 * PI Alias for maths
 	 */
 	constexpr long double M_PI = 3.141592653589793238462643383279502884L;
+
+	/**
+	* Return the square root of a numeric value
+	* @param p_value
+	*/
+	double inline __declspec (naked) __fastcall FastSquareRoot(const double p_value)
+	{
+		_asm fld qword ptr[esp + 4]
+			_asm fsqrt
+		_asm ret 8
+	}
 	
 	/**
 	 * Utils class provides some simple mathematics tools, such as operations, pow, root, trigonometry stuffs...
@@ -58,17 +69,6 @@ namespace GPM::Tools
 		*/		
 		template<typename T>
 		static T SquareRoot(const T p_value);
-
-		/**
-		* Return the square root of a numeric value
-		* @param p_value
-		*/
-		static double inline __declspec (naked) __fastcall FastSquareRoot(const double p_value)
-		{
-			_asm fld qword ptr[esp + 4]
-				_asm fsqrt
-			_asm ret 8
-		}
 		
 		/**
 		* Return the square root of a numeric value with float precision
