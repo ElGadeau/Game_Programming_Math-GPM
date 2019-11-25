@@ -117,6 +117,23 @@ GPM::Matrix4<T> GPM::Matrix4<T>::TranslateMatrix4(const Vector3<T>& p_translate)
     return tmpTrans;
 }
 
+
+template<typename T>
+GPM::Matrix4<T> GPM::Matrix4<T>::Transpose(const Matrix4<T>& p_translate)
+{
+    Matrix4<T> tmpMat = identity;
+
+    for (int n = 0; n < 16; n++)
+    {
+        int i = n / 4;
+        int j = n % 4;
+
+        tmpMat.m_data[n]  = p_translate.m_data[4 * j + i];
+    }
+
+    return tmpMat;
+}
+
 template<typename T>
 constexpr void GPM::Matrix4<T>::ToString() noexcept
 {
@@ -149,7 +166,6 @@ constexpr void GPM::Matrix4<T>::SetRow(int p_row, const Vector4<T>& p_vector)
 template<typename T>
 T GPM::Matrix4<T>::Determinant()
 {
-    //TODO need GetMinor to complete
     return ((m_data[0] * GetMinor({ m_data[5], m_data[6], m_data[7], m_data[9], m_data[10], m_data[11], m_data[13], m_data[14], m_data[15] }))
           - (m_data[1] * GetMinor({ m_data[4], m_data[6], m_data[7], m_data[8], m_data[10], m_data[11], m_data[12], m_data[14], m_data[15] }))
           + (m_data[2] * GetMinor({ m_data[4], m_data[5], m_data[7], m_data[8], m_data[9], m_data[11], m_data[12], m_data[13], m_data[15] }))
@@ -181,7 +197,6 @@ void GPM::Matrix4<T>::Scale(const Vector3<T>& p_scale)
 template<typename T>
 void GPM::Matrix4<T>::Rotation(const Vector3<T>& p_rotation)
 {
-    //TODO
     Matrix4<T> tmpRot = Matrix4<T>::RotationMatrix4(p_rotation);
     *this *= tmpRot;
 }
