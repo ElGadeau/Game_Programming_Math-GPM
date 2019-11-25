@@ -34,6 +34,8 @@ namespace GPM
         static Matrix4<T> RotationMatrix4(const Vector3<T>& p_rotation);
         static Matrix4<T> TranslateMatrix4(const Vector3<T>& p_translate);
 
+        static Matrix4<T> Transpose(const Matrix4<T>& p_transpose);
+
         //methods
         constexpr void ToString() noexcept;
         constexpr void SetColumn(int p_column, const Vector4<T>& p_vector);
