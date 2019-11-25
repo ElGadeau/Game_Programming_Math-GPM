@@ -7,12 +7,12 @@ namespace GPM::Tools
 {
 	inline float Utils::ToRadians(const float p_angle)
 	{
-		return p_angle * 3.1415926535f / 180.0f;
+		return p_angle * (static_cast<float>(M_PI) / 180.0f);
 	}
 
 	inline float Utils::ToDegrees(const float p_angle)
 	{
-		return p_angle * 180.0f / 3.1415926535f;
+		return p_angle * (180.0f / static_cast<float>(M_PI));
 	}
 
 	inline float Utils::Sin(const float p_value)
