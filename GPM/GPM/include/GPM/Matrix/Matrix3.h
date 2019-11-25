@@ -125,6 +125,13 @@ namespace GPM
         Matrix3<T>& Multiply(U p_scalar);
 
         /**
+         * Multiply scalar to x, y and z
+         * @param p_scalar
+         */
+        template<typename U>
+        Matrix3<T>& Multiply(const Matrix3<U>& p_other);
+
+        /**
          * Multiply scalar to matrix left
          * @param p_left
          * @param p_scalar
@@ -145,6 +152,19 @@ namespace GPM
          */
         template<typename U>
         Matrix3<T>& operator*=(U p_scalar);
+
+
+        /**
+        * Multiply scalar to the current matrix
+        * @param p_scalar
+        */
+        template<class U> constexpr Matrix3<T> operator*(const Matrix3<U>& p_other) const;
+
+        /**
+        * Multiply scalar to the current matrix
+        * @param p_scalar
+        */
+        template<class U> Matrix3<T>& operator*=(const Matrix3<U>& p_other);
 
 #pragma endregion
 
@@ -169,13 +189,11 @@ namespace GPM
     template <typename T>
     constexpr Matrix3<T>& operator-=(const T p_scalar, Matrix3<T>& p_matrix3);
 
-    template <typename T>
-    template <typename U>
-    constexpr Matrix3<T> operator*(const U p_scalar, const Matrix3<T>& p_matrix3);
+    template <typename T, typename U>
+    constexpr Matrix3<U> operator*(T p_scalar, const Matrix3<U>& p_matrix3);
 
-    template <typename T>
-    template <typename U>
-    constexpr Matrix3<T>& operator*=(const U p_scalar, Matrix3<T>& p_matrix3);
+    template <typename T, typename U>
+    constexpr Matrix3<U>& operator*=(T p_scalar, Matrix3<U>& p_matrix3);
 
 #pragma endregion
 
