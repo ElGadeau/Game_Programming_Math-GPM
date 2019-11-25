@@ -30,19 +30,23 @@ namespace GPM
         static Matrix4<T> identity;
         static Matrix4<T> zero;
 
+        static Matrix4<T> ScaleMatrix4(const Vector3<T>& p_scale);
+        static Matrix4<T> RotationMatrix4(const Vector3<T>& p_rotation);
+        static Matrix4<T> TranslateMatrix4(const Vector3<T>& p_translate);
+
         //methods
         constexpr void ToString() noexcept;
         constexpr void SetColumn(int p_column, const Vector4<T>& p_vector);
         constexpr void SetRow(int p_row, const Vector4<T>& p_vector);
 
         T Determinant();
-        T GetMinor();
+        T GetMinor(Matrix3<T> p_minor);
 
         Matrix4<T> Inverse();
 
-        Matrix4<T> Scale(const Vector3<T>& p_scale);
-        Matrix4<T> Rotation(const Vector3<T>& p_rotation);
-        Matrix4<T> Translate(const Vector3<T>& p_translate);
+        void Scale(const Vector3<T>& p_scale);
+        void Rotation(const Vector3<T>& p_rotation);
+        void Translate(const Vector3<T>& p_translate);
 
 #pragma region Arithmetic Operations
 
