@@ -11,11 +11,11 @@ namespace GPM::Tools
 	* Return the square root of a numeric value
 	* @param p_value
 	*/
-	double inline __declspec (naked) __fastcall FastSquareRoot(const double p_value)
+	double inline __declspec (naked) __fastcall FastSquareRoot(const double n)
 	{
-		_asm fld qword ptr[esp + 4]
-			_asm fsqrt
-		_asm ret 8
+		__asm fld qword ptr[esp + 4]
+			__asm fsqrt
+		__asm ret 8
 	}
 	
 	/**

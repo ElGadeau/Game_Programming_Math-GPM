@@ -264,7 +264,7 @@ namespace GPM
 	{
 		float absoluteValue = Norm();
 		absoluteValue *= absoluteValue;
-		absoluteValue = 1 / absoluteValue;
+		absoluteValue = 1.0f / absoluteValue;
 
 		const Quaternion conjugateValue = Conjugate();
 
@@ -319,7 +319,7 @@ namespace GPM
 		const Quaternion p{ 0, p_vectorToRotate };
 
 		//normalize the axis
-		Vector3F uAxis = p_axis.Normalized();
+		const Vector3F uAxis = p_axis.Normalized();
 
 		//create the real quaternion
 		Quaternion q{ p_angle, uAxis };
@@ -327,7 +327,7 @@ namespace GPM
 		//convert quaternion to unit norm quaternion
 		q.ConvertToUnitNormQuaternion();
 
-		const Quaternion qInverse = q.Inverse();
+		const Quaternion qInverse = Inverse(q);
 
 		const Quaternion rotatedVector = q * p * qInverse;
 
