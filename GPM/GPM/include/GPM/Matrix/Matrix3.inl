@@ -1,13 +1,11 @@
 #pragma once
 
-#include <iostream>
-#include <cstdlib>
-#include <cmath>
 #include <string>
 #include <sstream>
-#include <cassert>
 
 using namespace GPM;
+
+#pragma region Static Properties
 
 template<typename T>
 Matrix3<T> Matrix3<T>::identity = { 1,0,0,
@@ -17,16 +15,7 @@ template<typename T>
 Matrix3<T> Matrix3<T>::zero = { 0,0,0,
                                 0,0,0,
                                 0,0,0 };
-
-template <typename T>
-std::string Matrix3<T>::ToString()
-{
-    std::stringstream stringStream;
-    stringStream << '[' << m_data[0] << "  " << m_data[1] << "  " << m_data[2] << "]\n"
-                 << '|' << m_data[3] << "  " << m_data[4] << "  " << m_data[5] << "|\n"
-                 << '[' << m_data[6] << "  " << m_data[7] << "  " << m_data[8] << "]\n";
-    return { stringStream.str() };
-}
+#pragma endregion
 
 #pragma region Constructors & Assignment
 template<typename T>
@@ -37,9 +26,9 @@ constexpr Matrix3<T>::Matrix3()
 
 template<typename T>
 constexpr Matrix3<T>::Matrix3(const T p_i0, const T p_i1, const T p_i2,
-                              const T p_i3, const T p_i4, const T p_i5, 
-                              const T p_i6, const T p_i7, const T p_i8)
-                              : m_data{ p_i0, p_i1, p_i2, p_i3, p_i4, p_i5, p_i6, p_i7, p_i8} {}
+    const T p_i3, const T p_i4, const T p_i5,
+    const T p_i6, const T p_i7, const T p_i8)
+    : m_data{ p_i0, p_i1, p_i2, p_i3, p_i4, p_i5, p_i6, p_i7, p_i8 } {}
 
 template<typename T>
 constexpr Matrix3<T>::Matrix3(const T p_data[9])
@@ -60,7 +49,59 @@ constexpr Matrix3<T>::Matrix3(Matrix3&& p_other) noexcept
 }
 #pragma endregion
 
+#pragma region Properties
+
+template<typename T>
+T Matrix3<T>::Determinant()
+{
+    return ((m_data[0] * ((m_data[4] * m_data[8]) - (m_data[5] * m_data[7])))
+        - (m_data[1] * ((m_data[3] * m_data[8]) - (m_data[5] * m_data[6])))
+        + (m_data[2] * ((m_data[3] * m_data[7]) - (m_data[4] * m_data[6]))));
+}
+
+template<typename T>
+T Matrix3<T>::Determinant(const Matrix3& p_matrix3)
+{
+    return ((p_matrix3.m_data[0] * ((p_matrix3.m_data[4] * p_matrix3.m_data[8]) - (p_matrix3.m_data[5] * p_matrix3.m_data[7])))
+          - (p_matrix3.m_data[1] * ((p_matrix3.m_data[3] * p_matrix3.m_data[8]) - (p_matrix3.m_data[5] * p_matrix3.m_data[6])))
+          + (p_matrix3.m_data[2] * ((p_matrix3.m_data[3] * p_matrix3.m_data[7]) - (p_matrix3.m_data[4] * p_matrix3.m_data[6]))));
+}
+
+template<typename T>
+Matrix3<T>& Matrix3<T>::Transpose()
+{
+    Matrix3<T> tmpMat(this->m_data);
+
+    for (int n = 0; n < 9; n++)
+    {
+        int i = n / 3;
+        int j = n % 3;
+
+        m_data[n] = tmpMat.m_data[3 * j + i];
+    }
+    return {*this};
+}
+
+template<typename T>
+Matrix3<T> Matrix3<T>::Transpose(const Matrix3& p_matrix3)
+{
+    Matrix3<T> tmpMat = identity;
+
+    for (int n = 0; n < 9; n++)
+    {
+        int i = n / 3;
+        int j = n % 3;
+
+        tmpMat.m_data[n] = p_matrix3.m_data[3 * j + i];
+    }
+
+    return tmpMat;
+}
+
+#pragma endregion
+
 #pragma region Arithmetic Operations
+
 template<typename T>
 template<typename U>
 Matrix3<T>& Matrix3<T>::Add(const Matrix3<U>& p_other)
@@ -102,21 +143,19 @@ Matrix3<T>& Matrix3<T>::Subtract(const Matrix3<U>& p_other)
     return { *this };
 }
 
-template<typename T> 
+template<typename T>
 template<typename U>
 constexpr Matrix3<T> Matrix3<T>::Subtract(const Matrix3<T>& p_left, const Matrix3<U>& p_right)
 {
     return Matrix3<T>(p_left).Subtract(p_right);
 }
 
-template<typename T> 
+template<typename T>
 template<typename U>
 constexpr Matrix3<T> Matrix3<T>::operator-(const Matrix3<U>& p_other) const
 {
     return Subtract(this, p_other);
 }
-
-
 
 template<typename T>
 template<typename U>
@@ -124,7 +163,7 @@ Matrix3<T>& Matrix3<T>::operator-=(const Matrix3<U>& p_other)
 {
     return Subtract(p_other);
 }
-template<typename T> 
+template<typename T>
 template<typename U>
 Matrix3<T>& Matrix3<T>::Multiply(U p_scalar)
 {
@@ -145,51 +184,76 @@ Matrix3<T>& Matrix3<T>::Multiply(const Matrix3<U>& p_other)
         for (unsigned int j = 0; j < 3; j++)
         {
             m_data[i + j] = (tmpMat.m_data[i] * p_other.m_data[j])
-                          + (tmpMat.m_data[i + 1] * p_other.m_data[j + 3])
-                          + (tmpMat.m_data[i + 2] * p_other.m_data[j + 6]);
+                + (tmpMat.m_data[i + 1] * p_other.m_data[j + 3])
+                + (tmpMat.m_data[i + 2] * p_other.m_data[j + 6]);
         }
     }
     return { *this };
 }
 
-template<typename T> 
-template<typename U> 
+template<typename T>
+template<typename U>
 constexpr Matrix3<T> Matrix3<T>::Multiply(const Matrix3<T>& p_left, U p_scalar)
 {
     return Matrix3<T>(p_left).Multiply(p_scalar);
 }
 
-template<typename T> 
-template<typename U> 
+template<typename T>
+template<typename U>
 constexpr Matrix3<T> Matrix3<T>::operator*(U p_scalar) const
 {
     return Multiply(this, p_scalar);
 }
 
 
-template<typename T> 
-template<typename U> 
+template<typename T>
+template<typename U>
 Matrix3<T>& Matrix3<T>::operator*=(U p_scalar)
 {
     return Multiply(p_scalar);
 }
 
-template<typename T> 
-template<typename U> 
+template<typename T>
+template<typename U>
 constexpr Matrix3<T> Matrix3<T>::operator*(const Matrix3<U>& p_other) const
 {
     return Multiply(p_other);
 }
 
 
-template<typename T> 
-template<typename U> 
+template<typename T>
+template<typename U>
 Matrix3<T>& Matrix3<T>::operator*=(const Matrix3<U>& p_other)
 {
     return Multiply(p_other);
 }
 
 #pragma endregion 
+
+#pragma region Conversions
+
+template <typename T>
+constexpr std::string Matrix3<T>::ToString()
+{
+    std::stringstream stringStream;
+    stringStream << '[' << m_data[0] << "  " << m_data[1] << "  " << m_data[2] << "]\n"
+        << '|' << m_data[3] << "  " << m_data[4] << "  " << m_data[5] << "|\n"
+        << '[' << m_data[6] << "  " << m_data[7] << "  " << m_data[8] << "]\n";
+    return { stringStream.str() };
+}
+
+template<typename T>
+constexpr std::string Matrix3<T>::ToString(const Matrix3<T>& p_matrix)
+{
+    std::stringstream stringStream;
+    stringStream << '[' << p_matrix.m_data[0] << "  " << p_matrix.m_data[1] << "  " << p_matrix.m_data[2] << "]\n"
+        << '|' << p_matrix.m_data[3] << "  " << p_matrix.m_data[4] << "  " << p_matrix.m_data[5] << "|\n"
+        << '[' << p_matrix.m_data[6] << "  " << p_matrix.m_data[7] << "  " << p_matrix.m_data[8] << "]\n";
+    return { stringStream.str() };
+}
+
+#pragma  endregion
+
 
 #pragma region Outside Operators
 template<typename T, typename U>
