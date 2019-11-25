@@ -53,6 +53,71 @@ GPM::Matrix4<T> GPM::Matrix4<T>::zero({
 });
 
 template<typename T>
+GPM::Matrix4<T> GPM::Matrix4<T>::ScaleMatrix4(const Vector3<T>& p_scale)
+{
+    Matrix4<T> tmpScale = identity;
+    tmpScale.m_data[0] = p_scale.x;
+    tmpScale.m_data[5] = p_scale.y;
+    tmpScale.m_data[10] = p_scale.z;
+    return tmpScale;
+}
+
+template<typename T>
+GPM::Matrix4<T> GPM::Matrix4<T>::RotationMatrix4(const Vector3<T>& p_rotation)
+{
+    //stuck angle in radians
+    float xAngle = Tools::Utils::ToRadians(p_rotation.x);
+    float yAngle = Tools::Utils::ToRadians(p_rotation.y);
+    float zAngle = Tools::Utils::ToRadians(p_rotation.z);
+
+    //stuck cos and sin of angle
+    float xAngleCos = Tools::Utils::CosF(xAngle);
+    float xAngleSin = Tools::Utils::SinF(xAngle);
+
+    float yAngleCos = Tools::Utils::CosF(yAngle);
+    float yAngleSin = Tools::Utils::SinF(yAngle);
+
+    float zAngleCos = Tools::Utils::CosF(zAngle);
+    float zAngleSin = Tools::Utils::SinF(zAngle);
+
+
+    //X
+    Matrix4<T> tmpX = identity;
+    tmpX.m_data[5] = xAngleCos;
+    tmpX.m_data[6] = xAngleSin;
+    tmpX.m_data[9] = -xAngleSin;
+    tmpX.m_data[10] = xAngleCos;
+
+    //Y
+    Matrix4<T> tmpY = identity;
+
+    tmpY.m_data[0] = yAngleCos;
+    tmpY.m_data[2] = yAngleSin;
+    tmpY.m_data[8] = -yAngleSin;
+    tmpY.m_data[10] = yAngleCos;
+
+    //Z
+    Matrix4<T> tmpZ = identity;
+
+    tmpZ.m_data[0] = zAngleCos;
+    tmpZ.m_data[1] = -zAngleSin;
+    tmpZ.m_data[4] = zAngleSin;
+    tmpZ.m_data[5] = zAngleCos;
+
+    return tmpZ * tmpY * tmpX;
+}
+
+template<typename T>
+GPM::Matrix4<T> GPM::Matrix4<T>::TranslateMatrix4(const Vector3<T>& p_translate)
+{
+    Matrix4<T> tmpTrans = identity;
+    tmpTrans.m_data[3] = p_translate.x;
+    tmpTrans.m_data[7] = p_translate.y;
+    tmpTrans.m_data[11] = p_translate.z;
+    return tmpTrans;
+}
+
+template<typename T>
 constexpr void GPM::Matrix4<T>::ToString() noexcept
 {
     std::cout << '[' << m_data[0] << "  " << m_data[1] << "  " << m_data[2] << "  " << m_data[3] << "]\n"
@@ -85,12 +150,19 @@ template<typename T>
 T GPM::Matrix4<T>::Determinant()
 {
     //TODO need GetMinor to complete
+    return ((m_data[0] * GetMinor({ m_data[5], m_data[6], m_data[7], m_data[9], m_data[10], m_data[11], m_data[13], m_data[14], m_data[15] }))
+          - (m_data[1] * GetMinor({ m_data[4], m_data[6], m_data[7], m_data[8], m_data[10], m_data[11], m_data[12], m_data[14], m_data[15] }))
+          + (m_data[2] * GetMinor({ m_data[4], m_data[5], m_data[7], m_data[8], m_data[9], m_data[11], m_data[12], m_data[13], m_data[15] }))
+          - (m_data[3] * GetMinor({ m_data[4], m_data[5], m_data[6], m_data[8], m_data[9], m_data[10], m_data[12], m_data[13], m_data[14] })));
+
 }
 
 template<typename T>
-T GPM::Matrix4<T>::GetMinor()
+T GPM::Matrix4<T>::GetMinor(Matrix3<T> p_minor)
 {
-    //TODO
+    return ((p_minor.m_data[0] * ((p_minor.m_data[4] * p_minor.m_data[8]) - (p_minor.m_data[5] * p_minor.m_data[7])))
+          - (p_minor.m_data[1] * ((p_minor.m_data[3] * p_minor.m_data[8]) - (p_minor.m_data[5] * p_minor.m_data[6])))
+          + (p_minor.m_data[2] * ((p_minor.m_data[3] * p_minor.m_data[7]) - (p_minor.m_data[4] * p_minor.m_data[6]))));
 }
 
 template<typename T>
@@ -100,21 +172,25 @@ GPM::Matrix4<T> GPM::Matrix4<T>::Inverse()
 }
 
 template<typename T>
-GPM::Matrix4<T> GPM::Matrix4<T>::Scale(const Vector3<T>& p_scale)
+void GPM::Matrix4<T>::Scale(const Vector3<T>& p_scale)
 {
-    //TODO
+    Matrix4<T> tmpScale = Matrix4<T>::ScaleMatrix4(p_scale);
+    *this *= tmpScale;
 }
 
 template<typename T>
-GPM::Matrix4<T> GPM::Matrix4<T>::Rotation(const Vector3<T>& p_rotation)
+void GPM::Matrix4<T>::Rotation(const Vector3<T>& p_rotation)
 {
     //TODO
+    Matrix4<T> tmpRot = Matrix4<T>::RotationMatrix4(p_rotation);
+    *this *= tmpRot;
 }
 
 template<typename T>
-GPM::Matrix4<T> GPM::Matrix4<T>::Translate(const Vector3<T>& p_translate)
+void GPM::Matrix4<T>::Translate(const Vector3<T>& p_translate)
 {
-    //TODO
+    Matrix4<T> tmpTrans = Matrix4<T>::TranslateMatrix4(p_translate);
+    *this *= tmpTrans;
 }
 
 #pragma region Arithmetic Operations
@@ -154,10 +230,10 @@ GPM::Matrix4<T> GPM::Matrix4<T>::Multiply(const Matrix4<T>& p_matrix, const Matr
     {
         for (int j = 0; j < 4; j++)
         {
-            tmpMat.m_data[i + j] = (p_matrix[i] * p_other[j])
-                                 + (p_matrix[i + 1] * p_other[j + 4])
-                                 + (p_matrix[i + 2] * p_other[j + 8])
-                                 + (p_matrix[i + 3] * p_other[j + 12]);
+            tmpMat.m_data[i + j] = (p_matrix.m_data[i] * p_other.m_data[j])
+                                 + (p_matrix.m_data[i + 1] * p_other.m_data[j + 4])
+                                 + (p_matrix.m_data[i + 2] * p_other.m_data[j + 8])
+                                 + (p_matrix.m_data[i + 3] * p_other.m_data[j + 12]);
         }
     }
 
