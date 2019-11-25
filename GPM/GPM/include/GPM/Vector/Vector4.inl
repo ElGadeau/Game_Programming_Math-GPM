@@ -322,7 +322,7 @@ namespace GPM
 		if (w != 0 || p_vector.w != 0)
 			throw std::logic_error("Can't Compute Distance, one of the params is a direction: W != 0");
 
-		return Tools::Utils::SquareRootF((x - p_vector.x * x - p_vector.x) + (y - p_vector.y) * (y - p_vector.y) + (z - p_vector.z) * (z - p_vector.z));
+		return Tools::Utils::FastSquareRoot((x - p_vector.x * x - p_vector.x) + (y - p_vector.y) * (y - p_vector.y) + (z - p_vector.z) * (z - p_vector.z));
 	}
 
 	template <typename T>
@@ -331,7 +331,7 @@ namespace GPM
 		if (p_left.w != 0 || p_right.w != 0)
 			throw std::logic_error("Can't Compute Distance, one of the params is a point: W != 0");
 
-		return Tools::Utils::SquareRootF((p_left.x - p_right.x * p_left.x - p_right.x) + (p_left.y - p_right.y) * (p_left.y - p_right.y) + (p_left.z - p_right.z) * (p_left.z - p_right.z));
+		return Tools::Utils::FastSquareRoot((p_left.x - p_right.x * p_left.x - p_right.x) + (p_left.y - p_right.y) * (p_left.y - p_right.y) + (p_left.z - p_right.z) * (p_left.z - p_right.z));
 	}
 	
 	template <typename T>
@@ -355,7 +355,7 @@ namespace GPM
 	template <typename T>
 	constexpr T Vector4<T>::Magnitude() const
 	{
-		return { static_cast<T>(Tools::Utils::SquareRootF(x * x + y * y + z * z)) };
+		return { static_cast<T>(Tools::Utils::FastSquareRoot(x * x + y * y + z * z)) };
 	}
 
 	template <typename T>
@@ -513,13 +513,20 @@ namespace GPM
 			Vector4<T> relativeVector = p_end - p_start * p_start.Dot(p_end);
 			relativeVector.Normalize();
 
-			return { (p_start * Tools::Utils::Cos(angle)) + (relativeVector * Tools::Utils::Sin(angle)) };
+			return { (p_start * Tools::Utils::Cos(Tools::Utils::ToRadians(angle))) + (relativeVector * Tools::Utils::Sin(Tools::Utils::ToRadians(angle))) };
 		}
 
 		if (p_interpolationCoefficient < 0.0f)
 			return { p_start };
 
 		return { p_end };
+	}
+
+	template <typename T>
+	constexpr Vector4<T> Vector4<T>::Nlerp(const Vector4<T>& p_start,
+		const Vector4<T>& p_end, const float p_interpolationCoefficient)
+	{
+		return Lerp(p_start, p_end, p_interpolationCoefficient).Normalize();
 	}
 
 #pragma endregion

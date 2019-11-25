@@ -26,13 +26,13 @@ namespace GPM
         constexpr void Set(T p_x, T p_y, T p_z);
         constexpr void Scale(T p_factor);
         constexpr void Normalize();
-        constexpr Vector3<T> Normalized();
+        constexpr Vector3<T> Normalized() const;
         constexpr std::string ToString();
 
         constexpr T Dot(const Vector3<T>& p_vector) const;
-        constexpr T Angle(const Vector3<T>& p_vector);
+        constexpr T Angle(const Vector3<T>& p_vector) const;
 
-        constexpr T Magnitude();
+        constexpr T Magnitude() const;
 
         static Vector3<T> forward;
         static Vector3<T> right;
@@ -43,6 +43,7 @@ namespace GPM
 		constexpr inline Vector3<T> Cross(const Vector3<T>& p_other) const;
         constexpr static Vector3<T> Cross(const Vector3<T>& p_vectorA, const Vector3<T>& p_vectorB);
         constexpr static Vector3<T> Lerp(Vector3<T>& p_vectorA, Vector3<T>& p_vectorB, const T p_factor);
+        constexpr static Vector3<T> Slerp(Vector3<T>& p_vectorA, Vector3<T>& p_vectorB, const T p_factor);
         constexpr static T Distance(const Vector3<T>& p_vectorA, const Vector3<T>& p_vectorB);
         constexpr static bool Equals(const Vector3<T>& p_vectorA, const Vector3<T>& p_vectorB);
 
@@ -59,8 +60,8 @@ namespace GPM
         constexpr inline Vector3<T> operator *(const Vector3<T>& p_vector) const;
         constexpr inline Vector3<T> operator *(const T& p_scalar) const;
 
-        constexpr inline bool operator==(const Vector3<T>& p_vector);
-        constexpr inline bool operator!=(const Vector3<T>& p_vector);
+        constexpr inline bool operator==(const Vector3<T>& p_vector) const;
+        constexpr inline bool operator!=(const Vector3<T>& p_vector) const;
 	};
 
     using Vector3F = GPM::Vector3<float>;

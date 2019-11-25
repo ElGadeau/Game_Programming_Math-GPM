@@ -51,13 +51,25 @@ namespace GPM::Tools
 		template<typename T>
 		static T Pow(const T p_value, const float p_exp);
 
+
+		/**
+		* Return the square root of a numeric value
+		* @param p_value
+		*/		
+		template<typename T>
+		static T SquareRoot(const T p_value);
+
 		/**
 		* Return the square root of a numeric value
 		* @param p_value
 		*/
-		template<typename T>
-		static T SquareRoot(const T p_value);
-
+		static double inline __declspec (naked) __fastcall FastSquareRoot(const double p_value)
+		{
+			_asm fld qword ptr[esp + 4]
+				_asm fsqrt
+			_asm ret 8
+		}
+		
 		/**
 		* Return the square root of a numeric value with float precision
 		* @param p_value

@@ -6,6 +6,8 @@
 
 namespace GPM
 {
+	Quaternion Quaternion::identity = Quaternion{ 1.0f, 0.0f, 0.0f, 0.0f };
+
 #pragma region Constructors & Assignment
 	inline Quaternion::Quaternion()
 		: axis{ 0.0f, 0.0f, 0.0f }, w{ 0.0f }
@@ -28,6 +30,53 @@ namespace GPM
 		: axis{ std::move(p_other.axis) }, w{ p_other.w }
 	{	}
 
+	inline Quaternion::Quaternion(const Matrix3<float>& p_matrix)
+	{
+		const float trace = p_matrix.m_data[0] + p_matrix.m_data[4] + p_matrix.m_data[8];
+
+		if (trace > 0)
+		{      //s=4*qw
+
+			w = 0.5f * Tools::Utils::FastSquareRoot(1 + trace);
+			const float S = 0.25f / w;
+
+			axis.x = S * (p_matrix.m_data[5] - p_matrix.m_data[7]);
+			axis.y = S * (p_matrix.m_data[6] - p_matrix.m_data[2]);
+			axis.z = S * (p_matrix.m_data[1] - p_matrix.m_data[3]);
+
+		}
+		else if (p_matrix.m_data[0] > p_matrix.m_data[4] && p_matrix.m_data[0] > p_matrix.m_data[8])
+		{ //s=4*qx
+
+			axis.x = 0.5f * Tools::Utils::FastSquareRoot(1 + p_matrix.m_data[0] - p_matrix.m_data[4] - p_matrix.m_data[8]);
+			const float X = 0.25f / axis.x;
+
+			axis.y = X * (p_matrix.m_data[3] + p_matrix.m_data[1]);
+			axis.z = X * (p_matrix.m_data[6] + p_matrix.m_data[2]);
+			w = X * (p_matrix.m_data[5] - p_matrix.m_data[7]);
+
+		}
+		else if (p_matrix.m_data[4] > p_matrix.m_data[8])
+		{ //s=4*qy
+
+			axis.y = 0.5f * Tools::Utils::FastSquareRoot(1 - p_matrix.m_data[0] + p_matrix.m_data[4] - p_matrix.m_data[8]);
+			const float Y = 0.25f / axis.y;
+			axis.x = Y * (p_matrix.m_data[3] + p_matrix.m_data[1]);
+			axis.z = Y * (p_matrix.m_data[7] + p_matrix.m_data[5]);
+			w = Y * (p_matrix.m_data[6] - p_matrix.m_data[2]);
+
+		}
+		else
+		{ //s=4*qz
+
+			axis.z = 0.5f * Tools::Utils::FastSquareRoot(1 - p_matrix.m_data[0] - p_matrix.m_data[4] + p_matrix.m_data[8]);
+			const float Z = 0.25f / axis.z;
+			axis.x = Z * (p_matrix.m_data[6] + p_matrix.m_data[2]);
+			axis.y = Z * (p_matrix.m_data[7] + p_matrix.m_data[5]);
+			w = Z * (p_matrix.m_data[1] - p_matrix.m_data[3]);
+		}
+	}
+
 	inline Quaternion::Quaternion(const Vector3<float>& p_axis,
 		const float p_angleInRadians)
 		: axis{ 0.0f, 0.0f, 0.0f }
@@ -39,12 +88,69 @@ namespace GPM
 		axis.z = p_axis.z * Tools::Utils::SinF(p_angleInRadians / 2.0f);
 	}
 
+	inline void Quaternion::MakeFromEuler(const Vector3<float>& p_euler)
+	{
+		float x = Tools::Utils::ToRadians(p_euler.x);
+		float y = Tools::Utils::ToRadians(p_euler.y);
+		float z = Tools::Utils::ToRadians(p_euler.z);
+
+		x = x / 2.0f;
+		y = y / 2.0f;
+		z = z / 2.0f;
+
+		w = cos(z) * cos(y) * cos(x) + sin(z) * sin(y) * sin(x);
+		axis.x = cos(z) * cos(y) * sin(x) - sin(z) * sin(y) * cos(x);
+		axis.y = cos(z) * sin(y) * cos(x) + sin(z) * cos(y) * sin(x);
+		axis.z = sin(z) * cos(y) * cos(x) - cos(z) * sin(y) * sin(x);
+	}
+
+	inline void Quaternion::MakeFromEuler(const float p_x, const float p_y, const float p_z)
+	{
+		float x = Tools::Utils::ToRadians(p_x);
+		float y = Tools::Utils::ToRadians(p_y);
+		float z = Tools::Utils::ToRadians(p_z);
+
+		x = x / 2.0f;
+		y = y / 2.0f;
+		z = z / 2.0f;
+
+		w = cos(z) * cos(y) * cos(x) + sin(z) * sin(y) * sin(x);
+		axis.x = cos(z) * cos(y) * sin(x) - sin(z) * sin(y) * cos(x);
+		axis.y = cos(z) * sin(y) * cos(x) + sin(z) * cos(y) * sin(x);
+		axis.z = sin(z) * cos(y) * cos(x) - cos(z) * sin(y) * sin(x);
+	}
+
 	inline Quaternion& Quaternion::operator=(Quaternion&& p_other) noexcept
 	{
 		w = p_other.w;
 		axis = p_other.axis;
 
 		return (*this);
+	}
+
+	inline bool Quaternion::IsIdentity() const
+	{
+		return axis.x == 0.0f && axis.y == 0.0f && axis.z == 0.0f;
+	}
+
+	inline bool Quaternion::IsPure() const
+	{
+		return w == 0.0f;
+	}
+
+	inline bool Quaternion::IsNormalized() const
+	{
+		return Norm() == 1.0f;
+	}
+
+	inline bool Quaternion::operator==(const Quaternion& p_otherQuaternion) const
+	{
+		return w == p_otherQuaternion.w && axis == p_otherQuaternion.axis;
+	}
+
+	inline bool Quaternion::operator!=(const Quaternion& p_otherQuaternion) const
+	{
+		return w != p_otherQuaternion.w || axis != p_otherQuaternion.axis;
 	}
 
 	inline Quaternion Quaternion::operator+(const Quaternion& p_otherQuaternion) const
@@ -197,6 +303,82 @@ namespace GPM
 		return { Quaternion { p_quaternion.w, p_quaternion.axis * -1.0f } };
 	}
 
+	inline Quaternion& Quaternion::ConvertToUnitNormQuaternion()
+	{
+		const float angle = Tools::Utils::ToRadians(w);
+
+		axis.Normalize();
+		w = Tools::Utils::CosF(angle * 0.5f);
+		axis = axis * Tools::Utils::SinF(angle * 0.5f);
+
+		return { (*this) };
+	}
+
+	inline Vector3F Quaternion::RotateVectorAboutAngleAndAxis(const float p_angle, const Vector3F& p_axis, const Vector3F& p_vectorToRotate)
+	{
+		const Quaternion p{ 0, p_vectorToRotate };
+
+		//normalize the axis
+		Vector3F uAxis = p_axis.Normalized();
+
+		//create the real quaternion
+		Quaternion q{ p_angle, uAxis };
+
+		//convert quaternion to unit norm quaternion
+		q.ConvertToUnitNormQuaternion();
+
+		const Quaternion qInverse = q.Inverse();
+
+		const Quaternion rotatedVector = q * p * qInverse;
+
+		return rotatedVector.axis;
+	}
+
+	inline Vector3<float> Quaternion::GetRotationAxis() const
+	{
+		return axis;
+	}
+
+	inline float Quaternion::GetXAxisValue() const
+	{
+		return axis.x;
+	}
+
+	inline float Quaternion::GetYAxisValue() const
+	{
+		return axis.y;
+	}
+
+	inline float Quaternion::GetZAxisValue() const
+	{
+		return axis.z;
+	}
+
+	inline float Quaternion::GetRealValue() const
+	{
+		return w;
+	}
+
+	inline void Quaternion::SetXAxisValue(const float p_xValue)
+	{
+		axis.x = p_xValue;
+	}
+
+	inline void Quaternion::SetYAxisValue(const float p_yValue)
+	{
+		axis.y = p_yValue;
+	}
+
+	inline void Quaternion::SetZAxisValue(const float p_zValue)
+	{
+		axis.z = p_zValue;
+	}
+
+	inline void Quaternion::SetRealValue(const float p_realValue)
+	{
+		w = p_realValue;
+	}
+
 	constexpr float Quaternion::NormSquare() const
 	{
 		return w * w + axis.x * axis.x + axis.y * axis.y + axis.z * axis.z;
@@ -228,6 +410,19 @@ namespace GPM
 		}
 
 		return { Quaternion{ scalar, vector} };
+	}
+
+	inline Quaternion Quaternion::ToUnitNormQuaternion()
+	{
+		Quaternion result;
+
+		const float angle = Tools::Utils::ToRadians(w);
+
+		axis.Normalize();
+		result.w = Tools::Utils::CosF(angle * 0.5f);
+		result.axis = axis * Tools::Utils::SinF(angle * 0.5f);
+
+		return { result };
 	}
 
 	inline Vector3<float> Quaternion::ToEuler() const
@@ -273,6 +468,46 @@ namespace GPM
 		return euler;
 	}
 
+	inline Quaternion Quaternion::FromEulerToQuaternion(const Vector3F& p_euler) const
+	{
+		Quaternion result;
+
+		float x = Tools::Utils::ToRadians(p_euler.x);
+		float y = Tools::Utils::ToRadians(p_euler.y);
+		float z = Tools::Utils::ToRadians(p_euler.z);
+
+		x = x / 2.0f;
+		y = y / 2.0f;
+		z = z / 2.0f;
+
+		result.w = cos(z) * cos(y) * cos(x) + sin(z) * sin(y) * sin(x);
+		result.axis.x = cos(z) * cos(y) * sin(x) - sin(z) * sin(y) * cos(x);
+		result.axis.y = cos(z) * sin(y) * cos(x) + sin(z) * cos(y) * sin(x);
+		result.axis.z = sin(z) * cos(y) * cos(x) - cos(z) * sin(y) * sin(x);
+
+		return { result };
+	}
+
+	inline Quaternion Quaternion::FromEulerToQuaternion(const float p_x, const float p_y, const float p_z) const
+	{
+		Quaternion result;
+
+		float x = Tools::Utils::ToRadians(p_x);
+		float y = Tools::Utils::ToRadians(p_y);
+		float z = Tools::Utils::ToRadians(p_z);
+
+		x = x / 2.0f;
+		y = y / 2.0f;
+		z = z / 2.0f;
+
+		result.w = cos(z) * cos(y) * cos(x) + sin(z) * sin(y) * sin(x);
+		result.axis.x = cos(z) * cos(y) * sin(x) - sin(z) * sin(y) * cos(x);
+		result.axis.y = cos(z) * sin(y) * cos(x) + sin(z) * cos(y) * sin(x);
+		result.axis.z = sin(z) * cos(y) * cos(x) - cos(z) * sin(y) * sin(x);
+
+		return { result };
+	}
+
 	inline std::string Quaternion::ToString() const
 	{
 		return { std::string("(w: " + std::to_string(w) + "; x: " + std::to_string(axis.x) + ", y: " + std::to_string(axis.y) +
@@ -282,6 +517,25 @@ namespace GPM
 	inline std::string Quaternion::ToString(const Quaternion& p_quaternion)
 	{
 		return { p_quaternion.ToString() };
+	}
+
+	inline Matrix3<float> Quaternion::ToMatrix3() const
+	{
+		Matrix3<float> result;
+
+		result.m_data[0] = 2.0f * (w * w + axis.x * axis.x) - 1.0f;
+		result.m_data[3] = 2.0f * (axis.x * axis.y - w * axis.z);
+		result.m_data[6] = 2.0f * (axis.x * axis.z + w * axis.y);
+
+		result.m_data[1] = 2.0f * (axis.x * axis.y + w * axis.z);
+		result.m_data[4] = 2.0f * (w * w + axis.y * axis.y) - 1.0f;
+		result.m_data[7] = 2.0f * (axis.y * axis.z - w * axis.x);
+
+		result.m_data[2] = 2.0f * (axis.x * axis.z - w * axis.y);
+		result.m_data[5] = 2.0f * (axis.y * axis.z + w * axis.x);
+		result.m_data[8] = 2.0f * (w * w + axis.z * axis.z) - 1.0f;
+
+		return result;
 	}
 
 	inline std::ostream& operator<<(std::ostream& p_stream,
