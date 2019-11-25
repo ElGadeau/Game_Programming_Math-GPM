@@ -126,10 +126,33 @@ namespace GPM
 	template<typename T>
 	constexpr Vector3<T> Vector3<T>::Lerp(Vector3<T>& p_vectorA, Vector3<T>& p_vectorB, const T p_factor)
 	{
+        if (p_factor < 0)
+            return p_vectorA;
+
 		Vector3<T> lerped_vector;
 		lerped_vector = p_vectorA + ((p_vectorB - p_vectorA) * p_factor);
 		return lerped_vector;
 	}
+
+    template<typename T>
+    constexpr Vector3<T> Vector3<T>::Slerp(Vector3<T>& p_vectorA, Vector3<T>& p_vectorB, const T p_factor)
+    {
+        if (p_factor < 0)
+            return p_vectorA;
+
+       /* Vector3<T> tmpVec;
+        float angle = p_vectorA.Angle(p_vectorB) * p_factor;
+        tmpVec = p_vectorB - p_vectorA * p_vectorA.Dot(p_vectorB);
+        tmpVec.Normalize();*/
+
+        float dot = p_vectorA.Angle(p_vectorB);
+        float theta = acos(dot) * p_factor;
+        Vector3<T> relativeVec = p_vectorB - p_vectorA * dot;
+        relativeVec.Normalize();
+
+        return { ((p_vectorA * cos(theta)) + (relativeVec * sin(theta))) };
+        //return { (p_vectorA * cos(angle)) + (tmpVec * sin(angle)) };
+    }
 
 	template<typename T>
 	constexpr T Vector3<T>::Distance(const Vector3<T>& p_vectorA, const Vector3<T>& p_vectorB)
@@ -149,26 +172,28 @@ namespace GPM
 	template<typename T>
 	constexpr T Vector3<T>::Dot(const Vector3<T>& p_vector) const
 	{
-		return (x * p_vector.x) + (y * p_vector.y) + (z * p_vector.z);
+        Vector3<T> tmp = p_vector.Normalized();
+        Vector3<T> tmp2 = Normalized();
+		return (tmp2.x * tmp.x) + (tmp2.y * tmp.y) + (tmp2.z * tmp.z);
 	}
 
 	template<typename T>
-	constexpr T Vector3<T>::Angle(const Vector3<T>& p_vector)
+	constexpr T Vector3<T>::Angle(const Vector3<T>& p_vector) const
 	{
 		T dot = (x * p_vector.x) + (y * p_vector.y) + (z * p_vector.z);
-		T magnitude = magnitude() * p_vector.Magnitude();
+		T mag = Magnitude() * p_vector.Magnitude();
 
-		return acos(dot / magnitude);
+		return acos(dot / mag);
 	}
 
 	template<typename T>
-	constexpr T Vector3<T>::Magnitude()
+	constexpr T Vector3<T>::Magnitude() const
 	{
 		return sqrt((x * x) + (y * y) + (z * z));
 	}
 
 	template<typename T>
-	constexpr Vector3<T> Vector3<T>::Normalized()
+	constexpr Vector3<T> Vector3<T>::Normalized() const
 	{
 		return { x / Magnitude(), y / Magnitude(), z / Magnitude() };
 	}
