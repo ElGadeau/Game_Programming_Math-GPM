@@ -60,8 +60,8 @@ namespace GPM
         constexpr inline Vector3<T> operator *(const Vector3<T>& p_vector) const;
         constexpr inline Vector3<T> operator *(const T& p_scalar) const;
 
-        constexpr inline bool operator==(const Vector3<T>& p_vector);
-        constexpr inline bool operator!=(const Vector3<T>& p_vector);
+        constexpr inline bool operator==(const Vector3<T>& p_vector) const;
+        constexpr inline bool operator!=(const Vector3<T>& p_vector) const;
 	};
 
     using Vector3F = GPM::Vector3<float>;
