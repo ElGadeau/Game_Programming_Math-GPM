@@ -11,12 +11,12 @@ namespace GPM::Tools
 	* Return the square root of a numeric value
 	* @param p_value
 	*/
-	double inline __declspec (naked) __fastcall FastSquareRoot(const double n)
+	/*double inline __declspec (naked) __fastcall FastSquareRoot(const double n)
 	{
 		__asm fld qword ptr[esp + 4]
 			__asm fsqrt
 		__asm ret 8
-	}
+	}*/
 	
 	/**
 	 * Utils class provides some simple mathematics tools, such as operations, pow, root, trigonometry stuffs...
