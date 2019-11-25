@@ -146,7 +146,7 @@ namespace GPM
 
 		Quaternion& ConvertToUnitNormQuaternion();
 
-		Vector3F RotateVectorAboutAngleAndAxis(const float p_angle, const Vector3F& p_axis, const Vector3F& p_vectorToRotate);
+		static Vector3F RotateVectorAboutAngleAndAxis(const float p_angle, const Vector3F& p_axis, const Vector3F& p_vectorToRotate);
 		
 		/**
 		* @param p_axis

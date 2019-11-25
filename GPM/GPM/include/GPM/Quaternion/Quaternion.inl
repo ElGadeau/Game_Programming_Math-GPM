@@ -287,7 +287,7 @@ namespace GPM
 		return { (*this) };
 	}
 
-	inline Vector3F Quaternion::RotateVectorAboutAngleAndAxis(const float p_angle, const Vector3F& p_axis, Vector3F& p_vectorToRotate)
+	inline Vector3F Quaternion::RotateVectorAboutAngleAndAxis(const float p_angle, const Vector3F& p_axis, const Vector3F& p_vectorToRotate)
 	{
 		const Quaternion p{ 0, p_vectorToRotate };
 
