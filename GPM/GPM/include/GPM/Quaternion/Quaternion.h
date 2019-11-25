@@ -64,6 +64,7 @@ namespace GPM
 		 * Construct from euler angles
 		 */
 		inline void MakeFromEuler(const Vector3<float>& p_euler);
+		inline void MakeFromEuler(const float p_x, const float p_y, const float p_z);
 
 		inline Quaternion& operator=(const Quaternion& p_other) = default;
 		inline Quaternion& operator=(Quaternion&& p_other) noexcept;
@@ -143,6 +144,10 @@ namespace GPM
 		Quaternion& Square();
 		static Quaternion Square(const Quaternion& p_quaternion);
 
+		Quaternion& ConvertToUnitNormQuaternion();
+
+		Vector3F RotateVectorAboutAngleAndAxis(const float p_angle, const Vector3F& p_axis, const Vector3F& p_vectorToRotate);
+		
 		/**
 		* @param p_axis
 		* @param p_angle
@@ -211,12 +216,13 @@ namespace GPM
 
 #pragma endregion
 #pragma region Conversions
-
+		Quaternion ToUnitNormQuaternion();
 		Vector3<float> ToEuler() const;
+		Quaternion FromEulerToQuaternion(const Vector3F& p_euler) const;
+		Quaternion FromEulerToQuaternion(const float p_x, const float p_y, const float p_z) const;
 		std::string ToString() const;
 		static std::string ToString(const Quaternion& p_quaternion);
-		Matrix3<float> ToMatrix3();
-
+		Matrix3<float> ToMatrix3() const;
 		Matrix4<float> ToMatrix4();
 #pragma endregion
 	};
