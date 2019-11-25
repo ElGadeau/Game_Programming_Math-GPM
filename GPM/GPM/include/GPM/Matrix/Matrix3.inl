@@ -5,6 +5,7 @@
 #include <cmath>
 #include <string>
 #include <sstream>
+#include <cassert>
 
 using namespace GPM;
 
@@ -63,10 +64,8 @@ template<typename T>
 template<typename U>
 void Matrix3<T>::Add(const Matrix3<U>& p_other)
 {
-    if (std::is_unsigned<T>::value && !std::is_unsigned<U>::value)
-        std::cerr << "Can't Add to an Unsigned Matrix a right value that isn't of the same type\n"
-                  << "Values will look completely wrong.\n";
-    
+        static_assert(!(std::is_unsigned<T>::value && !std::is_unsigned<U>::value), 
+                     "Can't add to an unsigned Matrix3 a right value that isn't unsigned.\nValues will look completely wrong.\n");
         for (unsigned int i = 0; i < 9; ++i)
             m_data[i] += p_other.m_data[i];
 }
