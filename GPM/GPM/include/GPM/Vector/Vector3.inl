@@ -1,5 +1,4 @@
 #pragma once
-#include <GPM/Vector/Vector3.h>
 #include <cmath>
 #include <iostream>
 
@@ -8,11 +7,14 @@
 namespace GPM
 {
 #pragma region Constructor
-	template <typename T>
-	constexpr Vector3<T>::Vector3(const Vector3<T>& p_other) : x{ p_other.x }, y{ p_other.y }, z{ p_other.z }{}
 
 	template <typename T>
-	constexpr Vector3<T>::Vector3(Vector3<T>&& p_other) noexcept
+	template <typename U>
+	constexpr Vector3<T>::Vector3(const Vector3<U>& p_other) : x{ p_other.x }, y{ p_other.y }, z{ p_other.z }{}
+
+	template <typename T>
+    template <typename U>
+	constexpr Vector3<T>::Vector3(Vector3<U>&& p_other) noexcept
 	{
 		x = p_other.x;
 		y = p_other.y;
@@ -44,8 +46,10 @@ namespace GPM
 
 #pragma endregion
 #pragma region Arithmetic
+
 	template<typename T>
-	constexpr Vector3<T> Vector3<T>::Add(const Vector3<T>& p_vector)
+	template<typename U>
+	constexpr Vector3<T> Vector3<T>::Add(const Vector3<U>& p_vector)
 	{
 		x += p_vector.x;
 		y += p_vector.y;
@@ -55,13 +59,15 @@ namespace GPM
 	}
 
 	template<typename T>
-	constexpr Vector3<T> Vector3<T>::Add(const Vector3<T>& p_left, const Vector3<T>& p_right)
+	template<typename U>
+	constexpr Vector3<T> Vector3<T>::Add(const Vector3<T>& p_left, const Vector3<U>& p_right)
 	{
 		return { Vector3<T>(p_left).Add(p_right) };
 	}
 
 	template<typename T>
-	constexpr void Vector3<T>::Substract(const Vector3<T>& p_vector)
+	template<typename U>
+	constexpr void Vector3<T>::Substract(const Vector3<U>& p_vector)
 	{
 		x -= p_vector.x;
 		y -= p_vector.y;
@@ -69,7 +75,8 @@ namespace GPM
 	}
 
 	template<typename T>
-	constexpr void Vector3<T>::Multiply(const Vector3<T>& p_vector)
+	template<typename U>
+	constexpr void Vector3<T>::Multiply(const Vector3<U>& p_vector)
 	{
 		x *= p_vector.x;
 		y *= p_vector.y;
@@ -77,7 +84,8 @@ namespace GPM
 	}
 
 	template<typename T>
-	constexpr void Vector3<T>::Divide(const Vector3<T>& p_vector)
+	template<typename U>
+	constexpr void Vector3<T>::Divide(const Vector3<U>& p_vector)
 	{
 		x /= p_vector.x;
 		y /= p_vector.y;
@@ -100,9 +108,9 @@ namespace GPM
 	{
 		Set(x / Magnitude(), y / Magnitude(), z / Magnitude());
 	}
-
 	template <typename T>
-	constexpr Vector3<T> Vector3<T>::Cross(const Vector3<T>& p_other) const
+	template <typename U>
+	constexpr Vector3<T> Vector3<T>::Cross(const Vector3<U>& p_other) const
 	{
 		Vector3<T> tmp{};
 		tmp.x = (y * p_other.z) - (z * p_other.y);
@@ -113,7 +121,8 @@ namespace GPM
 	}
 
 	template<typename T>
-	constexpr Vector3<T> Vector3<T>::Cross(const Vector3<T>& p_vectorA, const Vector3<T>& p_vectorB)
+	template<typename U>
+	constexpr Vector3<T> Vector3<T>::Cross(const Vector3<T>& p_vectorA, const Vector3<U>& p_vectorB)
 	{
 		Vector3<T> tmp;
 		tmp.x = (p_vectorA.y * p_vectorB.z) - (p_vectorA.z * p_vectorB.y);
@@ -124,7 +133,8 @@ namespace GPM
 	}
 
 	template<typename T>
-	constexpr Vector3<T> Vector3<T>::Lerp(Vector3<T>& p_vectorA, Vector3<T>& p_vectorB, const T p_factor)
+	template<typename U>
+	constexpr Vector3<T> Vector3<T>::Lerp(Vector3<T>& p_vectorA, Vector3<U>& p_vectorB, const T p_factor)
 	{
         if (p_factor < 0)
             return p_vectorA;
@@ -135,7 +145,8 @@ namespace GPM
 	}
 
     template<typename T>
-    constexpr Vector3<T> Vector3<T>::Slerp(Vector3<T>& p_vectorA, Vector3<T>& p_vectorB, const T p_factor)
+    template<typename U>
+    constexpr Vector3<T> Vector3<T>::Slerp(Vector3<T>& p_vectorA, Vector3<U>& p_vectorB, const T p_factor)
     {
         if (p_factor < 0)
             return p_vectorA;
@@ -155,13 +166,15 @@ namespace GPM
     }
 
 	template<typename T>
-	constexpr T Vector3<T>::Distance(const Vector3<T>& p_vectorA, const Vector3<T>& p_vectorB)
+	template<typename U>
+	constexpr T Vector3<T>::Distance(const Vector3<T>& p_vectorA, const Vector3<U>& p_vectorB)
 	{
 		return sqrt(pow((p_vectorA.x - p_vectorB.x), 2) + pow((p_vectorA.y - p_vectorB.y), 2) + pow((p_vectorA.z - p_vectorB.z), 2));
 	}
 
 	template<typename T>
-	constexpr bool Vector3<T>::Equals(const Vector3<T>& p_vectorA, const Vector3<T>& p_vectorB)
+	template<typename U>
+	constexpr bool Vector3<T>::Equals(const Vector3<T>& p_vectorA, const Vector3<U>& p_vectorB)
 	{
 		if (p_vectorA.x == p_vectorB.x && p_vectorA.y == p_vectorB.y && p_vectorA.z == p_vectorB.z)
 			return true;
@@ -170,7 +183,8 @@ namespace GPM
 	}
 
 	template<typename T>
-	constexpr T Vector3<T>::Dot(const Vector3<T>& p_vector) const
+	template<typename U>
+	constexpr T Vector3<T>::Dot(const Vector3<U>& p_vector) const
 	{
         Vector3<T> tmp = p_vector.Normalized();
         Vector3<T> tmp2 = Normalized();
@@ -178,7 +192,8 @@ namespace GPM
 	}
 
 	template<typename T>
-	constexpr T Vector3<T>::Angle(const Vector3<T>& p_vector) const
+	template<typename U>
+	constexpr T Vector3<T>::Angle(const Vector3<U>& p_vector) const
 	{
 		T dot = (x * p_vector.x) + (y * p_vector.y) + (z * p_vector.z);
 		T mag = Magnitude() * p_vector.Magnitude();
@@ -201,13 +216,15 @@ namespace GPM
 #pragma endregion
 #pragma region Operator Overloading
 	template<typename T>
-	constexpr Vector3<T> Vector3<T>::operator+(const Vector3<T>& p_other) const
+    template<typename U>
+	constexpr Vector3<T> Vector3<T>::operator+(const Vector3<U>& p_other) const
 	{
 		return Vector3<T>(x + p_other.x, y + p_other.y, z + p_other.z);
 	}
 
 	template<typename T>
-	constexpr Vector3<T> Vector3<T>::operator-(const Vector3<T>& p_vector) const
+    template<typename U>
+	constexpr Vector3<T> Vector3<T>::operator-(const Vector3<U>& p_vector) const
 	{
 		return Vector3<T>(x - p_vector.x, y - p_vector.y, z - p_vector.z);
 	}
@@ -219,13 +236,15 @@ namespace GPM
 	}
 
 	template<typename T>
-	constexpr Vector3<T> Vector3<T>::operator*(const Vector3<T>& p_vector) const
+    template<typename U>
+	constexpr Vector3<T> Vector3<T>::operator*(const Vector3<U>& p_vector) const
 	{
 		return Vector3<T>(x * p_vector.x, y * p_vector.y, z * p_vector.z);
 	}
 
 	template<typename T>
-	constexpr Vector3<T> Vector3<T>::operator/(const Vector3<T>& p_vector) const
+    template<typename U>
+	constexpr Vector3<T> Vector3<T>::operator/(const Vector3<U>& p_vector) const
 	{
 		if (p_vector.x == 0 || p_vector.y == 0 || p_vector.z == 0 || x == 0 || y == 0 || z == 0)
 		{
@@ -236,7 +255,8 @@ namespace GPM
 	}
 
 	template <typename T>
-	constexpr Vector3<T>& Vector3<T>::operator=(const Vector3<T>& p_other) 
+    template <typename U>
+	constexpr Vector3<T>& Vector3<T>::operator=(const Vector3<U>& p_other) 
 	{
 		x = p_other.x;
 		y = p_other.y;
@@ -246,13 +266,8 @@ namespace GPM
 	}
 
 	template<typename T>
-	constexpr bool operator ==(const Vector3<T>& p_vectorA, const Vector3<T>& p_vectorB)
-	{
-		return false;
-	}
-
-	template<typename T>
-	constexpr inline Vector3<T>& Vector3<T>::operator+=(const Vector3<T> p_vector)
+    template<typename U>
+	constexpr inline Vector3<T>& Vector3<T>::operator+=(const Vector3<U> p_vector)
 	{
 		x += p_vector.x;
 		y += p_vector.y;
@@ -262,7 +277,8 @@ namespace GPM
 	}
 
 	template<typename T>
-	constexpr inline Vector3<T>& Vector3<T>::operator-=(const Vector3<T> p_vector)
+    template<typename U>
+	constexpr inline Vector3<T>& Vector3<T>::operator-=(const Vector3<U> p_vector)
 	{
 		x -= p_vector.x;
 		y -= p_vector.y;
@@ -272,7 +288,8 @@ namespace GPM
 	}
 
 	template<typename T>
-	constexpr inline Vector3<T>& Vector3<T>::operator*=(const Vector3<T> p_vector)
+    template<typename U>
+	constexpr inline Vector3<T>& Vector3<T>::operator*=(const Vector3<U> p_vector)
 	{
 		x *= p_vector.x;
 		y *= p_vector.y;
@@ -292,7 +309,8 @@ namespace GPM
 	}
 
 	template<typename T>
-	constexpr inline Vector3<T>& Vector3<T>::operator/=(const Vector3<T> p_vector)
+    template<typename U>
+	constexpr inline Vector3<T>& Vector3<T>::operator/=(const Vector3<U> p_vector)
 	{
 		x /= p_vector.x;
 		y /= p_vector.y;
@@ -302,7 +320,8 @@ namespace GPM
 	}
 
 	template<typename T>
-	constexpr inline bool Vector3<T>::operator==(const Vector3<T>& p_vector) const 
+    template<typename U>
+	constexpr inline bool Vector3<T>::operator==(const Vector3<U>& p_vector) const 
 	{
 		if (x == p_vector.x && y == p_vector.y && z == p_vector.z)
 			return true;
@@ -311,7 +330,8 @@ namespace GPM
 	}
 
 	template<typename T>
-	constexpr inline bool Vector3<T>::operator!=(const Vector3<T>& p_vector) const 
+    template<typename U>
+	constexpr inline bool Vector3<T>::operator!=(const Vector3<U>& p_vector) const 
 	{
 		if (x == p_vector.x && y == p_vector.y && z == p_vector.z)
 			return false;
