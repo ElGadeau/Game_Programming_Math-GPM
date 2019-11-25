@@ -25,6 +25,9 @@ namespace GPM
 		 * In pure/applied Maths, we write W (or real), (Xi + Yj + Zk) (or Vector)
 		 */
 		inline Quaternion(const float p_x, const float p_y, const float p_z, const float p_w);
+
+		inline Quaternion(const float p_scalar, const Vector3F& p_vector);
+
 		/**
 		 * Copy Constructor
 		 * @param p_other
@@ -61,6 +64,9 @@ namespace GPM
 		 * Construct from euler angles
 		 */
 		inline void MakeFromEuler(const Vector3<float>& p_euler);
+
+		inline Quaternion& operator=(const Quaternion& p_other) = default;
+		inline Quaternion& operator=(Quaternion&& p_other) noexcept;
 #pragma endregion
 
 #pragma region Tests & Comparisons
@@ -96,15 +102,18 @@ namespace GPM
 #pragma region Multiply
 		float DotProduct(const Quaternion& p_otherQuaternion) const;
 		static float DotProduct(const Quaternion& p_left, const Quaternion& p_right);
+		
 		float operator|(const Quaternion& p_otherQuaternion) const;
 
-		Quaternion& operator*=(const float p_scale);
-		Quaternion operator*(const float p_scale) const;
+		inline Quaternion operator*(const float p_scale) const;
+		inline Quaternion& operator*=(const float p_scale);
 
-		Quaternion operator*(const Quaternion& p_otherQuaternion) const;
-		Quaternion& operator*=(const Quaternion& p_otherQuaternion);
+		inline Quaternion operator*(const Quaternion& p_otherQuaternion) const;
+		inline Quaternion& operator*=(const Quaternion& p_otherQuaternion);
 
-		Vector3<float> operator*(const Vector3<float>& p_toMultiply) const;
+		inline Quaternion operator*(const Vector3<float>& p_toMultiply) const;
+		inline Quaternion& operator*=(const Vector3<float>& p_toMultiply);
+		
 		Matrix3<float> operator*(const Matrix3<float>& p_multiply) const;
 
 #pragma endregion
@@ -119,8 +128,10 @@ namespace GPM
 		Quaternion& Normalize();
 		static Quaternion Normalize(const Quaternion& p_quaternion);
 
-		float Length() const;
-		float LengthSquare() const;
+		inline Quaternion Multiply(const Quaternion& p_quaternion) const;
+		
+		inline float Norm() const;
+		constexpr inline float NormSquare() const;
 		float GetAngle() const;
 
 		Quaternion& Inverse();
@@ -136,7 +147,7 @@ namespace GPM
 		* @param p_axis
 		* @param p_angle
 		*/
-		void GetAxisAndAngle(Vector3<float>& p_axis, float& p_angle) const;
+		void GetAxisAndAngle(Vector3<float>& p_axis, float p_angle) const;
 
 		Vector3<float> GetAxisZ() const;
 		Vector3<float> GetAxisY() const;
@@ -154,10 +165,10 @@ namespace GPM
 		float GetZAxisValue() const;
 		float GetRealValue() const;
 
-		void SetXAxisValue(float p_xValue);
-		void SetYAxisValue(float p_yValue);
-		void SetZAxisValue(float p_zValue);
-		void SetRealValue(float p_realValue);
+		void SetXAxisValue(const float p_xValue);
+		void SetYAxisValue(const float p_yValue);
+		void SetZAxisValue(const float p_zValue);
+		void SetRealValue(const float p_realValue);
 
 		/**
 		 * @param p_first
@@ -201,7 +212,7 @@ namespace GPM
 #pragma endregion
 #pragma region Conversions
 
-		Vector3<float> ToEuler();
+		Vector3<float> ToEuler() const;
 		std::string ToString() const;
 		static std::string ToString(const Quaternion& p_quaternion);
 		Matrix3<float> ToMatrix3();
