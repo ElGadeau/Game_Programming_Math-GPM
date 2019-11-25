@@ -86,4 +86,4 @@ namespace GPM
     using Matrix4D = Matrix4<double>;
 }
 
-#include "GPM/Matrix/Matrix4.inl"
+#include <GPM/Matrix/Matrix4.inl>
