@@ -11,7 +11,9 @@ namespace GPM
     struct Matrix3
     {
         static_assert(std::is_arithmetic<T>::value, "Matrix3 should only be used with arithmetic types");
-        
+
+#pragma region Constructors & Assignment
+
         constexpr Matrix3();
         ~Matrix3() = default;
 
@@ -22,8 +24,33 @@ namespace GPM
 
         constexpr Matrix3(const T p_data[9]);
         constexpr Matrix3(const Matrix3& p_other);
+
+        template<typename U>
+        constexpr Matrix3(const Matrix3<U>& p_other);
+
         constexpr Matrix3(Matrix3&& p_other) noexcept;
 
+        /**
+        * @brief Assignment operator for Matrix3
+        * @param p_other The matrix to construct from
+        */
+        constexpr Matrix3<T>& operator=(const Matrix3<T>& p_other);
+
+        /**
+        * @brief Assignment operator for Matrix3
+        * @param p_other The matrix to construct from
+        */
+        template<typename U>
+        constexpr Matrix3<T>& operator=(const Matrix3<U>& p_other);
+
+        /**
+         * @brief Assignment operator for Matrix3
+         * @param p_other The matrix to construct from
+         */
+        template<typename U>
+        constexpr Matrix3<T>& operator=(Matrix3<U>&& p_other) noexcept;
+
+#pragma endregion
 
         T m_data[9] = { 1,0,0,
                         0,1,0,
@@ -51,6 +78,11 @@ namespace GPM
 
         Matrix3<T>& Transpose();
         static Matrix3<T> Transpose(const Matrix3& p_matrix3);
+
+        constexpr Vector3<T> GetColumn(const int p_column);
+        constexpr void SetColumn(const int p_column, const Vector3<T>& p_vector);
+        constexpr Vector3<T> GetRow(const int p_row);
+        constexpr void SetRow(const int p_row, const Vector3<T>& p_vector);
          
 #pragma endregion
 
@@ -156,35 +188,29 @@ namespace GPM
         constexpr static Matrix3<T> Multiply(const Matrix3<T>& p_left, U p_scalar);
 
         /**
-         * @brief Return the multiplication of scalar and current matrix
-         * @param p_scalar : Multiply this scalar to the current matrix
+         * @brief Multiply scalar to matrix left
+         * @param p_left : Multiply this matrix by the other parameter
+         * @param p_right : Multiply this matrix to the other parameter
          * @return The copy of the Matrix operation result
          */
         template<typename U>
-        constexpr Matrix3<T> operator*(U p_scalar) const;
-
-        /**
-         * @brief Multiply scalar to the current matrix
-         * @param p_scalar : Multiply this scalar to the current matrix
-         * @return The current Matrix modified
-         */
-        template<typename U>
-        Matrix3<T>& operator*=(U p_scalar);
-
+        constexpr static Matrix3<T> Multiply(const Matrix3<T>& p_left, const Matrix3<U>& p_right);
 
         /**
         * @brief Multiply matrix to the current matrix
         * @param p_other : Multiply this matrix to the current one
         * @return The copy of the Matrix operation result
         */
-        template<class U> constexpr Matrix3<T> operator*(const Matrix3<U>& p_other) const;
-
+        template<class U>
+        constexpr Matrix3<T> operator*(const Matrix3<U>& p_other) const;
+        
         /**
         * @brief Multiply matrix to the current matrix
         * @param p_other : Multiply this matrix to the current one
         * @return The current Matrix modified
         */
-        template<class U> Matrix3<T>& operator*=(const Matrix3<U>& p_other);
+        template<class U>
+        Matrix3<T>& operator*=(const Matrix3<U>& p_other);
 
 #pragma endregion
 

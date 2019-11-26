@@ -18,6 +18,7 @@ Matrix3<T> Matrix3<T>::zero = { 0,0,0,
 #pragma endregion
 
 #pragma region Constructors & Assignment
+
 template<typename T>
 constexpr Matrix3<T>::Matrix3()
 {
@@ -42,11 +43,47 @@ constexpr Matrix3<T>::Matrix3(const Matrix3& p_other)
     memcpy(m_data, p_other.m_data, 9 * sizeof(T));
 }
 
+template<typename T> template<typename U> constexpr Matrix3<T>::Matrix3(const Matrix3<U>& p_other)
+{
+    for (unsigned int i = 0; i < 9; ++i)
+        m_data[i] = p_other.m_data[i];
+}
+
 template<typename T>
 constexpr Matrix3<T>::Matrix3(Matrix3&& p_other) noexcept
 {
     memcpy(m_data, p_other.m_data, 9 * sizeof(T));
 }
+
+template<typename T> constexpr Matrix3<T>& Matrix3<T>::operator=(const Matrix3<T>& p_other)
+{
+    for (unsigned int i = 0; i < 9; ++i)
+        m_data[i] = p_other.m_data[i];
+
+    return *this;
+}
+
+template<typename T>
+template<typename U>
+constexpr Matrix3<T>& Matrix3<T>::operator=(const Matrix3<U>& p_other)
+{
+    for (unsigned int i = 0; i < 9; ++i)
+        m_data[i] = p_other.m_data[i];
+
+    return *this;
+}
+
+template<typename T>
+template<typename U>
+constexpr Matrix3<T>& Matrix3<T>::operator=(Matrix3<U>&& p_other) noexcept
+{
+    for (unsigned int i = 0; i < 9; ++i)
+        m_data[i] = p_other.m_data[i];
+
+    return *this;
+}
+
+
 #pragma endregion
 
 #pragma region Properties
@@ -110,6 +147,42 @@ Matrix3<T>& Matrix3<T>::Add(const Matrix3<U>& p_other)
         m_data[i] += p_other.m_data[i];
 
     return { *this };
+}
+
+template<typename T> constexpr Vector3<T> Matrix3<T>::GetColumn(const int p_column)
+{
+    if (p_column < 0 || p_column > 3)
+        return identity;
+
+    return { m_data[p_column], m_data[p_column + 3], m_data[p_column + 6] };
+}
+
+template<typename T> constexpr void Matrix3<T>::SetColumn(const int p_column, const Vector3<T>& p_vector)
+{
+    if (p_column < 0 || p_column > 3)
+        return;
+
+    m_data[p_column] = p_vector.x;
+    m_data[p_column + 3] = p_vector.y;
+    m_data[p_column + 6] = p_vector.z;
+}
+
+template<typename T> constexpr Vector3<T> Matrix3<T>::GetRow(const int p_row)
+{
+    if (p_row < 0 || p_row > 3)
+        return identity;
+
+    return { m_data[4 * p_row], m_data[(4 * p_row) + 1], m_data[(4 * p_row) + 2] };
+}
+
+template<typename T> constexpr void Matrix3<T>::SetRow(const int p_row, const Vector3<T>& p_vector)
+{
+    if (p_row < 0 || p_row > 3)
+        return;
+
+    m_data[p_row] = p_vector.x;
+    m_data[p_row + 1] = p_vector.y;
+    m_data[p_row + 2] = p_vector.z;
 }
 
 template<typename T>
@@ -184,8 +257,8 @@ Matrix3<T>& Matrix3<T>::Multiply(const Matrix3<U>& p_other)
         for (unsigned int j = 0; j < 3; j++)
         {
             m_data[i + j] = (tmpMat.m_data[i] * p_other.m_data[j])
-                + (tmpMat.m_data[i + 1] * p_other.m_data[j + 3])
-                + (tmpMat.m_data[i + 2] * p_other.m_data[j + 6]);
+                      + (tmpMat.m_data[i + 1] * p_other.m_data[j + 3])
+                      + (tmpMat.m_data[i + 2] * p_other.m_data[j + 6]);
         }
     }
     return { *this };
@@ -200,17 +273,9 @@ constexpr Matrix3<T> Matrix3<T>::Multiply(const Matrix3<T>& p_left, U p_scalar)
 
 template<typename T>
 template<typename U>
-constexpr Matrix3<T> Matrix3<T>::operator*(U p_scalar) const
+constexpr Matrix3<T> Matrix3<T>::Multiply(const Matrix3<T>& p_left, const Matrix3<U>& p_right)
 {
-    return Multiply(this, p_scalar);
-}
-
-
-template<typename T>
-template<typename U>
-Matrix3<T>& Matrix3<T>::operator*=(U p_scalar)
-{
-    return Multiply(p_scalar);
+    return Matrix3<T>(p_left).Multiply(p_right);
 }
 
 template<typename T>
@@ -219,7 +284,6 @@ constexpr Matrix3<T> Matrix3<T>::operator*(const Matrix3<U>& p_other) const
 {
     return Multiply(p_other);
 }
-
 
 template<typename T>
 template<typename U>
