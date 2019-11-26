@@ -14,48 +14,184 @@ namespace GPM
 		T x;
 		T y;
 
+		/**
+		 * @brief Default Constructor
+		 */
 		constexpr Vector2();
-		constexpr Vector2(const T p_x, const T p_y);
+		
+		/**
+		 * @brief Destructor
+		 */
 		~Vector2() = default;
+
+		/**
+		 * @brief Constructor with parameters
+		 * @param p_x x coordinate
+		 * @param p_y y coordinate
+		 */
+		constexpr Vector2(const T p_x, const T p_y);
+
+		/**
+		 * @brief Copy Constructor
+		 * @param p_other The vector to construct from
+		 */
 		constexpr Vector2(const Vector2& p_other);
 
+		/**
+		 * @brief Move Constructor
+		 * @param p_other The vector to construct from
+		 */
+		constexpr Vector2(Vector2<T>&& p_other) noexcept;
+
+		/**
+		 * @brief Set this Vector's values x, y to p_x, p_y
+		 * @param p_x x coordinate
+		 * @param p_y y coordinate
+		 * */
 		constexpr void Set(T p_x, T p_y);
+		
+
+		/**
+		 * @brief Creates a string representing this Vector
+		 * @return this Vector in string format
+		 */
+		constexpr std::string ToString() const;
 		
 		static const Vector2<T> zero;
 		static const Vector2<T> up ;
 		static const Vector2<T> right;
-
-		constexpr std::string ToString() const;
 		
 #pragma region Member Operator Overloads
-		
+
+		/**
+		 * @brief Return true if the two vectors are identical
+		 * @param p_other The vector used for the checkup
+		 * @return True or false
+		 */
 		constexpr bool operator==(Vector2<T> const& p_other);
+		
+		 /**
+		 * @brief Return false if the two vectors are identical
+		 * @param p_other The vector used for the checkup
+		 * @return True or false
+		 */
 		constexpr bool operator!=(Vector2<T> const& p_other);
+
+		/**
+		 * @brief Overload = operator by move
+		 * @param p_other The vector to construct from
+		 * @return The current vector modified
+		 */
 		constexpr Vector2<T>& operator=(const Vector2<T>& p_other);
 		
 #pragma endregion
 
 #pragma region Vector Operations
 #pragma region Non-Static
-		
+
+		/**
+		 * @brief Modifies this vector to make its norm (magnitude) == 1
+		 */
 		constexpr void Normalize();
+
+		/**
+		 * @brief Returns normalized version of this vector without modifying it
+		 * @return A new Vector2<T> made from this Vector2 with Magnitude == 1
+		 */
 		constexpr GPM::Vector2<T> normalized() const;
+
+		/**
+		 * @brief Returns length of this Vector2
+		 * @return Vector2 length
+		 */
 		constexpr T Magnitude() const;
-		constexpr T Dot(const Vector2<T>& p_other) const;
-		constexpr T Distance(const Vector2<T>& p_other) const;
+
+		/**
+		 * @brief Calculates Dot Product between this Vector and another
+		 * @param p_other Vector to calculate Dot Product with
+		 * @return Dot Product
+		 */
+		template <typename U>
+		constexpr T Dot(const Vector2<U>& p_other) const;
+
+		/**
+		 * @brief Calculate the distance between this vector and another one
+		 * @param p_other The vector to compare distance with
+		 * @return The distance
+		 */
+		template <typename U>
+		constexpr T Distance(const Vector2<U>& p_other) const;
+
+		/**
+		 * @brief Returns a Vector2<T> that is perpendicular to this Vector2
+		 */
 		constexpr Vector2<T> Perpendicular() const;
+
+		/**
+		 * @brief Multiplies this Vector2's x,y values by a given scalar
+		 * @param p_scalar Scalar with which to multiply this Vector's x,y values
+		 */
 		constexpr void Scale(T p_scalar);
 		
 #pragma endregion
 #pragma region Static
-		
+
+		/**
+		 * @brief Calculates a normalized version of Vector given by parameter
+		 * @param p_vector2 Vector from which normal is calculated
+		 * @return Vector2<T> that is a normalized version of Vector given by parameter
+		 */	
 		static constexpr Vector2<T> normalized(const Vector2<T>& p_vector2);
+
+		/**
+		 * @brief Normalizes Vector given as parameter (Magnitude will now equal 1)
+		 * @param p_vector2 Vector to modify
+		 */
 		static constexpr void Normalize(Vector2<T>& p_vector2);
-		static constexpr T Dot(const Vector2<T>& p_vector2Left, const Vector2<T>& p_vector2Right);
-		static constexpr T Angle(const Vector2<T>& p_vector2Left, const Vector2<T>& p_vector2Right);
-		static constexpr T Distance(const Vector2<T>& p_vector2Left, const Vector2<T>& p_vector2Right);
-		static constexpr Vector2<T> Lerp(const Vector2<T>& p_vector2Start, const Vector2<T>& p_vector2End, const float p_alpha);
-		static constexpr Vector2<T> Perpendicular(const Vector2<T>& p_vector2);
+
+		/**
+		 * @brief Calculates Dot Product between 2 given Vectors
+		 * @param p_vector2Left First Vector
+		 * @param p_vector2Right Second Vector
+		 * @return Result of Dot Product
+		 */
+		template <typename U>
+		static constexpr T Dot(const Vector2<T>& p_vector2Left, const Vector2<U>& p_vector2Right);
+
+		/**
+		 * @brief Calculates Angle between 2 Vectors
+		 * @param p_vector2Left First Vector
+		 * @param p_vector2Right Second Vector
+		 * @return Angle in radians
+		 */
+		template <typename U>
+		static constexpr T Angle(const Vector2<T>& p_vector2Left, const Vector2<U>& p_vector2Right);
+
+		/**
+		 * @Brief Calculates Distance between 2 given Vectors
+		 * @param p_vector2Left First Vector
+		 * @param p_vector2Right Second Vector
+		 * @return Distance between 2 Vectors
+		 */
+		template <typename U>
+		static constexpr T Distance(const Vector2<T>& p_vector2Left, const Vector2<U>& p_vector2Right);
+
+		/**
+		* @brief Returns the start Vector moving to the end Vector at step alpha
+		* @param p_vector2Start The beginning vector
+		* @param p_vector2End The ending vector
+		* @param p_alpha Between 0 and 1, 0 is start, 1 is end
+		* @return The result vector
+		*/
+		template <typename U>
+		static constexpr Vector2<T> Lerp(const Vector2<T>& p_vector2Start, const Vector2<U>& p_vector2End, const float p_alpha);
+
+		/**
+		 * @brief Returns a Vector2<T> that is perpendicular to Vector2 given by parameter
+		 * @return Perpendicular Vector2<T>
+		 */
+		template <typename U>
+		static constexpr Vector2<T> Perpendicular(const Vector2<U>& p_vector2);
 		
 #pragma endregion
 		
@@ -64,20 +200,92 @@ namespace GPM
 #pragma region Arithmetic Operations
 		
 #pragma region Non-Static
+
+		/**
+		 * @brief Add Vector given by parameter to this Vector
+		 * @param p_otherVector2 Vector to add
+		 */
 		constexpr void Add(const GPM::Vector2<T>& p_otherVector2);
+		
+		 /**
+		 * @brief Add Vector given by parameter to this Vector
+		 * @param p_otherVector2 Vector to add
+		 */
 		constexpr void Subtract(const GPM::Vector2<T>& p_otherVector2);
+
+		/**
+		 * @brief Divide this Vector's values by given scalar
+		 * @param p_scalar Scalar by which to divide this Vector's values
+		 */
 		constexpr void Divide(const T& p_scalar);
+		 /**
+		 * @brief Multiply this Vector's values by given scalar
+		 * @param p_scalar Scalar by which to multiply this Vector's values
+		 */
+
 		constexpr void Multiply(const T& p_scalar);
+
+		/**
+		 * @brief Check if this Vector has equal values to Vector given by parameter
+		 * @param p_otherVector2 Vector to compare this with
+		 */
 		constexpr bool Equals(const GPM::Vector2<T>& p_otherVector2) const;
 		
 #pragma endregion
 
 #pragma region Static
-		static constexpr GPM::Vector2<T> Add(const GPM::Vector2<T>& p_vector2Left, const GPM::Vector2<T>& p_vector2Right);
+
+
+		/**
+		 * @brief Adds two Vectors without modifying their values
+		 * @param p_vector2Left First Vector
+		 * @param p_vector2Right Second Vector
+		 * @return Vector2<T> Result of added 2 Vectors
+		 */
+
+		template <typename U>
+		static constexpr GPM::Vector2<T> Add(const GPM::Vector2<T>& p_vector2Left, const GPM::Vector2<U>& p_vector2Right);
+		
+		/**
+		 * @brief Add scalar to x and y of Vector given by parameter without modifying its values
+		 * @param p_vector2 Vector to add the scalar to
+		 * @param p_scalar The scalar
+		 * @return Result of scalar addition to Vector
+		 */
 		static constexpr GPM::Vector2<T> Add(const GPM::Vector2<T>& p_vector2, const T& p_scalar);
-		static constexpr GPM::Vector2<T> Subtract(const GPM::Vector2<T>& p_vector2Left, const GPM::Vector2<T>& p_vector2Right);
+		
+		 /**
+		 * @brief Subtracts two Vectors without modifying their values
+		 * @param p_vector2Left First Vector
+		 * @param p_vector2Right Second Vector
+		 * @return Vector2<T> Result of subtracted 2 Vectors
+		 */
+
+		template <typename U>
+		static constexpr GPM::Vector2<T> Subtract(const GPM::Vector2<T>& p_vector2Left, const GPM::Vector2<U>& p_vector2Right);
+		
+		 /**
+		 * @brief Subtract scalar to x and y of Vector given by parameter without modifying its values
+		 * @param p_vector2 Vector to subtract the scalar to
+		 * @param p_scalar The scalar
+		 * @return Result of scalar subtraction to Vector
+		 */
 		static constexpr GPM::Vector2<T> Subtract(const GPM::Vector2<T>& p_vector2, const T& p_scalar);
+		
+		 /**
+		 * @brief Multiply given Vector by a scalar without modifying it
+		 * @param p_vector2 Vector to multiply the scalar with
+		 * @param p_scalar The scalar
+		 * @return Result of scalar multiplication to Vector
+		 */
+		
 		static constexpr GPM::Vector2<T> Multiply(const GPM::Vector2<T>& p_vector2, const T& p_scalar);
+		 /**
+		 * @brief Divide given Vector by a scalar without modifying it
+		 * @param p_vector2 Vector to divide the scalar with
+		 * @param p_scalar The scalar
+		 * @return Result of scalar division to Vector
+		 */
 		static constexpr GPM::Vector2<T> Divide(const GPM::Vector2<T>& p_vector2, const T& p_scalar);
 
 #pragma endregion
@@ -85,11 +293,27 @@ namespace GPM
 	};
 	
 #pragma region Non-member Operator Overloads
+
+	template <typename T>
+	constexpr std::ostream& operator<<(std::ostream& p_stream, const Vector2<T>& p_vector);
+	
 	template<typename T, typename U>
 	constexpr Vector2<T> operator+(Vector2<T> const& p_vector2Left, Vector2<U> const& p_vector2Right);
+	
+	template<typename T>
+	constexpr Vector2<T> operator+(Vector2<T> const& p_vector2Left, Vector2<T> const& p_vector2Right);
+	
+	template<typename T, typename U>
+	constexpr Vector2<T> operator+(Vector2<T> const& p_vector2, U const& p_scalar);
 
+	template<typename T>
+	constexpr Vector2<T> operator-(Vector2<T> const& p_vector2Left, Vector2<T> const& p_vector2Right);
+	
 	template<typename T, typename U>
 	constexpr Vector2<T> operator-(Vector2<T> const& p_vector2Left, Vector2<U> const& p_vector2Right);
+
+	template<typename T, typename U>
+	constexpr Vector2<T> operator-(Vector2<T> const& p_vector2, U const& p_scalar);
 
 	template<typename T, typename U>
 	constexpr Vector2<U> operator*(const T & p_scalar, const Vector2<U>& p_vector2);
@@ -97,11 +321,6 @@ namespace GPM
 	template<typename T, typename U>
 	constexpr Vector2<T> operator*(const Vector2<T>& p_vector2, const U& p_scalar);
 
-	/**
-		 * Multiplies parameters of the 2 Vector2s individually (x * x, y * y)
-		 * @param p_vector2Left
-		 * @param p_vector2Right
-		 */
 	template<typename T, typename U>
 	constexpr Vector2<T> operator*(const Vector2<T>& p_vector2Left, const Vector2<U>& p_vector2Right);
 

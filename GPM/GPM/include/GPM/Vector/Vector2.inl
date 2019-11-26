@@ -1,7 +1,7 @@
 #pragma once
 
 #include <utility>
-#include <math.h>
+#include <GPM/Tools/Utils.h>
 #include "Vector2.h"
 
 //using namespace GPM;
@@ -14,6 +14,12 @@ inline constexpr GPM::Vector2<T>::Vector2(const T p_x, const T p_y): x{p_x}, y{p
 
 template<typename T>
 inline constexpr GPM::Vector2<T>::Vector2(const Vector2& p_other): x{ p_other.x }, y{ p_other.y } {}
+
+template<typename T>
+inline constexpr GPM::Vector2<T>::Vector2(Vector2<T>&& p_other) noexcept
+{
+	*this = p_other;
+}
 
 template<typename T>
 inline constexpr void GPM::Vector2<T>::Set(T p_x, T p_y)
@@ -80,7 +86,7 @@ inline constexpr GPM::Vector2<T> GPM::Vector2<T>::normalized() const
 	T magn = Magnitude();
 	
 	if (magn == 0)
-		throw std::logic_error("Vector2::Normalize() got a vector2 magnitude of 0");
+		throw std::logic_error("Vector2::normalized() got a vector2 magnitude of 0");
 	
 	return { x / magn, y / magn };
 }
@@ -88,7 +94,7 @@ inline constexpr GPM::Vector2<T> GPM::Vector2<T>::normalized() const
 template<typename T>
 constexpr T GPM::Vector2<T>::Magnitude() const
 {
-	return std::sqrt(std::pow(x, 2) + std::pow(y, 2));
+	return std::sqrt(GPM::Tools::Utils::Pow(x, 2) + GPM::Tools::Utils::Pow(y, 2));
 }
 
 #pragma endregion
@@ -105,34 +111,50 @@ template<typename T>
 inline constexpr void GPM::Vector2<T>::Normalize(Vector2<T>& p_vector2)
 {
 	T magn = p_vector2.Magnitude();
+
+	if (magn == 0)
+		throw std::logic_error("Vector2::Normalize(Vector2<T>& p_vector2) got a vector2 magnitude of 0");
+	
 	p_vector2.x /= magn;
 	p_vector2.y /= magn;
 }
 
 template<typename T>
-inline constexpr T GPM::Vector2<T>::Dot(const Vector2<T>& p_vector2Left, const Vector2<T>& p_vector2Right)
+template<typename U>
+inline constexpr T GPM::Vector2<T>::Dot(const Vector2<T>& p_vector2Left, const Vector2<U>& p_vector2Right)
 {
 	return (p_vector2Left.x * p_vector2Right.x) + (p_vector2Left.y * p_vector2Right.y);
 }
 
 template<typename T>
-inline constexpr T GPM::Vector2<T>::Angle(const Vector2<T>& p_vector2Left, const Vector2<T>& p_vector2Right)
+template<typename U>
+inline constexpr T GPM::Vector2<T>::Angle(const Vector2<T>& p_vector2Left, const Vector2<U>& p_vector2Right)
 {
 	T magn1 = p_vector2Left.Magnitude();
-	T magn2 = p_vector2Right.Magnitude();
+	T magn2 = static_cast<T>(p_vector2Right.Magnitude());
 
-	T dot = p_vector2Left.Dot(p_vector2Right);
-	return std::move(acos(dot / (magn1 * magn2)));
+	if (magn1 == 0 || magn2 == 0)
+		throw std::logic_error("Vector2::Angle(const Vector2<T>& p_vector2Left, const Vector2<T>& p_vector2Right) got a vector2 magnitude of 0");
+	
+	T dot = static_cast<T>(p_vector2Left.Dot(p_vector2Right));
+	T fraction = dot / (magn1 * magn2);
+	
+	if (fraction > -1 && fraction < 1)
+		return GPM::Tools::Utils::Arccos(dot / (magn1 * magn2));
+
+	return 0;
 }
 
 template<typename T>
-inline constexpr T GPM::Vector2<T>::Distance(const Vector2<T>& p_vector2Left, const Vector2<T>& p_vector2Right)
+template<typename U>
+inline constexpr T GPM::Vector2<T>::Distance(const Vector2<T>& p_vector2Left, const Vector2<U>& p_vector2Right)
 {
-	return std::move(std::sqrt(std::pow(p_vector2Left.x - p_vector2Right.x, 2) + std::pow(p_vector2Left.y - p_vector2Right.y, 2)));
+	return std::move(GPM::Tools::Utils::SquareRoot(GPM::Tools::Utils::Pow(p_vector2Left.x - p_vector2Right.x, 2) + GPM::Tools::Utils::Pow(p_vector2Left.y - p_vector2Right.y, 2)));
 }
 
 template<typename T>
-inline constexpr GPM::Vector2<T> GPM::Vector2<T>::Lerp(const Vector2<T>& p_vector2Start, const Vector2<T>& p_vector2End, const float p_alpha)
+template<typename U>
+inline constexpr GPM::Vector2<T> GPM::Vector2<T>::Lerp(const Vector2<T>& p_vector2Start, const Vector2<U>& p_vector2End, const float p_alpha)
 {
 	if (p_alpha >= 0 && p_alpha <= 1)
 	{
@@ -146,24 +168,27 @@ inline constexpr GPM::Vector2<T> GPM::Vector2<T>::Lerp(const Vector2<T>& p_vecto
 }
 
 template<typename T>
-inline constexpr GPM::Vector2<T> GPM::Vector2<T>::Perpendicular(const Vector2<T>& p_vector2)
+template<typename U>
+inline constexpr GPM::Vector2<T> GPM::Vector2<T>::Perpendicular(const Vector2<U>& p_vector2)
 {
 	return { p_vector2.y, -p_vector2.x };
 }
 
 template<typename T>
-inline constexpr T GPM::Vector2<T>::Dot(const Vector2<T>& p_other) const
+template<typename U>
+inline constexpr T GPM::Vector2<T>::Dot(const Vector2<U>& p_other) const
 {
-	return std::move((x * p_other.x) + (y * p_other.y));
+	return ((x * p_other.x) + (y * p_other.y));
 }
 
 template<typename T>
-inline constexpr T GPM::Vector2<T>::Distance(const Vector2<T>& p_other) const
+template<typename U>
+inline constexpr T GPM::Vector2<T>::Distance(const Vector2<U>& p_other) const
 {
 	T deltaX = x - p_other.x;
 	T deltaY = y - p_other.y;
 
-	return std::sqrt(std::pow(deltaX, 2) + (deltaY, 2));
+	return GPM::Tools::Utils::SquareRoot(GPM::Tools::Utils::Pow(deltaX, 2) + GPM::Tools::Utils::Pow(deltaY, 2));
 }
 
 template<typename T>
@@ -200,7 +225,7 @@ template<typename T, typename U>
 constexpr void GPM::operator/=(Vector2<T>& p_vector2Left, const U& p_scalar)
 {
 	if (p_scalar == 0)	
-		throw std::logic_error("Vector2::Normalize() got a vector2 magnitude of 0");
+		throw std::logic_error("Vector2::operator/= attempted division by zero");
 	
 	p_vector2Left.x /= p_scalar;
 	p_vector2Left.y /= p_scalar;
@@ -215,24 +240,54 @@ constexpr std::string GPM::Vector2<T>::ToString() const
 	return { stringStream.str() };
 }
 
+template<typename T>
+constexpr std::ostream& GPM::operator<<(std::ostream& p_stream, const Vector2<T>& p_vector)
+{
+	p_stream << "( " << p_vector.x << ", " << p_vector.y << " )";
+	return  { p_stream };
+}
+
 template<typename T, typename U>
 constexpr GPM::Vector2<T> GPM::operator+(Vector2<T> const& p_vector2Left, Vector2<U> const& p_vector2Right)
-{
-	
+{	
+	return GPM::Vector2<T>{p_vector2Left.x + static_cast<T>(p_vector2Right.x), p_vector2Left.y + static_cast<T>(p_vector2Right.y)};
+}
+
+template<typename T>
+constexpr GPM::Vector2<T> GPM::operator+(Vector2<T> const& p_vector2Left, Vector2<T> const& p_vector2Right)
+{	
 	return GPM::Vector2<T>{p_vector2Left.x + p_vector2Right.x, p_vector2Left.y + p_vector2Right.y};
+}
+
+template <typename T, typename U>
+constexpr GPM::Vector2<T> GPM::operator+(Vector2<T> const& p_vector2, U const& p_scalar)
+{
+	return GPM::Vector2<T>{p_vector2.x + static_cast<T>(p_scalar), p_vector2.y + static_cast<T>(p_scalar)};
 }
 
 template<typename T, typename U>
 constexpr void GPM::operator+=(Vector2<T>& p_vector2Left, Vector2<U> const& p_vector2Right)
 {
-	p_vector2Left.x += p_vector2Right.x;
-	p_vector2Left.y += p_vector2Right.y;
+	p_vector2Left.x += static_cast<T>(p_vector2Right.x);
+	p_vector2Left.y += static_cast<T>(p_vector2Right.y);
+}
+
+template<typename T>
+constexpr GPM::Vector2<T> GPM::operator-(Vector2<T> const& p_vector2Left, Vector2<T> const& p_vector2Right)
+{
+	return GPM::Vector2<T>::Subtract(p_vector2Left, p_vector2Right);
 }
 
 template<typename T, typename U>
 constexpr GPM::Vector2<T> GPM::operator-(Vector2<T> const& p_vector2Left, Vector2<U> const& p_vector2Right)
 {
 	return GPM::Vector2<T>::Subtract(p_vector2Left, p_vector2Right);
+}
+
+template<typename T, typename U>
+constexpr GPM::Vector2<T> GPM::operator-(Vector2<T> const& p_vector2, U const& p_scalar)
+{
+	return GPM::Vector2<T>{p_vector2.x - static_cast<T>(p_scalar), p_vector2.y - static_cast<T>(p_scalar)};
 }
 
 template<typename T, typename U>
@@ -244,7 +299,7 @@ constexpr GPM::Vector2<U> GPM::operator*(T const& p_scalar, Vector2<U> const& p_
 template<typename T, typename U>
 constexpr GPM::Vector2<T> GPM::operator*(Vector2<T> const& p_vector2, U const& p_scalar)
 {
-	return GPM::Vector2<T>::Multiply(p_vector2, p_scalar);
+	return GPM::Vector2<T>::Multiply(p_vector2, static_cast<T>(p_scalar));
 }
 
 template<typename T, typename U>
@@ -279,6 +334,8 @@ inline constexpr void GPM::Vector2<T>::Subtract(const GPM::Vector2<T>& p_otherVe
 template<typename T>
 inline constexpr void GPM::Vector2<T>::Divide(const T& p_scalar)
 {
+	if (p_scalar == 0)
+		throw std::logic_error("Vector2::Divide(const T& p_scalar) attempted division by zero");
 	x /= p_scalar;
 	y /= p_scalar;
 }
@@ -297,9 +354,10 @@ inline constexpr bool GPM::Vector2<T>::Equals(const GPM::Vector2<T>& p_otherVect
 	return false;
 }
 template<typename T>
-constexpr GPM::Vector2<T> GPM::Vector2<T>::Add(const GPM::Vector2<T>& p_vector2Left, const GPM::Vector2<T>& p_vector2Right)
+template<typename U>
+constexpr GPM::Vector2<T> GPM::Vector2<T>::Add(const GPM::Vector2<T>& p_vector2Left, const GPM::Vector2<U>& p_vector2Right)
 {
-	return GPM::Vector2<T>{p_vector2Right.x + p_vector2Left.x, p_vector2Right.y + p_vector2Left.y};
+	return GPM::Vector2<T>{static_cast<T>(p_vector2Right.x) + p_vector2Left.x, static_cast<T>(p_vector2Right.y) + p_vector2Left.y};
 }
 
 #pragma endregion
@@ -312,9 +370,10 @@ inline constexpr GPM::Vector2<T> GPM::Vector2<T>::Add(const GPM::Vector2<T>& p_v
 }
 
 template<typename T>
-constexpr GPM::Vector2<T> GPM::Vector2<T>::Subtract(const GPM::Vector2<T>& p_vector2Left, const GPM::Vector2<T>& p_vector2Right)
+template<typename U>
+constexpr GPM::Vector2<T> GPM::Vector2<T>::Subtract(const GPM::Vector2<T>& p_vector2Left, const GPM::Vector2<U>& p_vector2Right)
 {
-	return GPM::Vector2<T>{p_vector2Right.x - p_vector2Left.x, p_vector2Right.y - p_vector2Left.y};
+	return GPM::Vector2<T>{static_cast<T>(p_vector2Right.x) - p_vector2Left.x, static_cast<T>(p_vector2Right.y) - p_vector2Left.y};
 }
 
 template<typename T>
@@ -332,6 +391,9 @@ constexpr GPM::Vector2<T> GPM::Vector2<T>::Multiply(const GPM::Vector2<T>& p_vec
 template<typename T>
 constexpr GPM::Vector2<T> GPM::Vector2<T>::Divide(const GPM::Vector2<T>& p_vector2, const T& p_scalar)
 {
+	if (p_scalar == 0)
+		throw std::logic_error("Vector2::Divide(const GPM::Vector2<T>& p_vector2, const T& p_scalar) attempted division by zero");
+	
 	return Vector2<T>({ p_vector2.x / p_scalar, p_vector2.y / p_scalar });
 }
 
