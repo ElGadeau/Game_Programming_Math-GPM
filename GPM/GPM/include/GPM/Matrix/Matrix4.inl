@@ -1,25 +1,50 @@
 #pragma once
 
+#pragma region Static Properties
+
+template<typename T>
+Matrix4<T> Matrix4<T>::identity = { 1,0,0,0,
+                                    0,1,0,0,
+                                    0,0,1,0,
+                                    0,0,0,1};
+template<typename T>
+Matrix4<T> Matrix4<T>::zero = { 0,0,0,0,
+                                0,0,0,0,
+                                0,0,0,0,
+                                0,0,0,0 };
+#pragma endregion
+
 #pragma region Constuctor
 
-template<typename T> GPM::Matrix4<T>::Matrix4()
+template<typename T>
+constexpr GPM::Matrix4<T>::Matrix4()
 {
-    m_data = identity;
+    memcpy(m_data, identity.m_data, 16 * sizeof(T));
 }
 
-template<typename T> GPM::Matrix4<T>::Matrix4(const Matrix4<T>& p_matrix)
+template<typename T>
+constexpr GPM::Matrix4<T>::Matrix4(const Matrix4<T>& p_matrix)
 {
     memcpy(m_data, p_matrix.m_data, 16 * sizeof(T));
 }
 
-template<typename T> GPM::Matrix4<T>::Matrix4(const Vector3<T>& p_vector)
+
+template<typename T>
+constexpr GPM::Matrix4<T>::Matrix4(Matrix4<T>&& p_matrix) noexcept
+{
+    memcpy(m_data, p_matrix.m_data, 16 * sizeof(T));
+}
+
+template<typename T>
+constexpr GPM::Matrix4<T>::Matrix4(const Vector3<T>& p_vector)
 {
     m_data[0] = p_vector.x;
     m_data[5] = p_vector.y;
     m_data[10] = p_vector.z;
 }
 
-template<typename T> GPM::Matrix4<T>::Matrix4(const T* p_data)
+template<typename T>
+constexpr GPM::Matrix4<T>::Matrix4(const T p_data[16])
 {
     if (p_data == nullptr)
         return;
@@ -27,30 +52,68 @@ template<typename T> GPM::Matrix4<T>::Matrix4(const T* p_data)
     memcpy(m_data, p_data, 16 * sizeof(T));
 }
 
-template<typename T> GPM::Matrix4<T>::Matrix4(const T p_00, const T p_01, const T p_02, const T p_03,
+template<typename T>
+constexpr GPM::Matrix4<T>::Matrix4(const T p_00, const T p_01, const T p_02, const T p_03,
     const T p_10, const T p_11, const T p_12, const T p_13,
     const T p_20, const T p_21, const T p_22, const T p_23,
-    const T p_30, const T p_31, const T p_32, const T p_33) : m_data{p_00, p_01, p_02, p_03, p_10, p_11, p_12, p_13, p_20, p_21, p_22, p_23, p_30, p_31, p_32, p_33}
+    const T p_30, const T p_31, const T p_32, const T p_33)
+    : m_data{p_00, p_01, p_02, p_03, p_10, p_11, p_12, p_13, p_20, p_21, p_22, p_23, p_30, p_31, p_32, p_33}
 {
 }
 
+#pragma endregion
+
+#pragma region Properties
+
+template<typename T>
+T GPM::Matrix4<T>::Determinant()
+{
+    return ((m_data[0] * GetMinor({ m_data[5], m_data[6], m_data[7], m_data[9], m_data[10], m_data[11], m_data[13], m_data[14], m_data[15] }))
+          - (m_data[1] * GetMinor({ m_data[4], m_data[6], m_data[7], m_data[8], m_data[10], m_data[11], m_data[12], m_data[14], m_data[15] }))
+          + (m_data[2] * GetMinor({ m_data[4], m_data[5], m_data[7], m_data[8], m_data[9], m_data[11], m_data[12], m_data[13], m_data[15] }))
+          - (m_data[3] * GetMinor({ m_data[4], m_data[5], m_data[6], m_data[8], m_data[9], m_data[10], m_data[12], m_data[13], m_data[14] })));
+}
+
+template<typename T>
+T Matrix4<T>::Determinant(const Matrix4& p_matrix)
+{
+    return p_matrix.Determinant();
+}
+
+template<typename T>
+Matrix4<T>& Matrix4<T>::Transpose()
+{
+    Matrix4<T> tmpMat(this->m_data);
+
+    for (int n = 0; n < 16; n++)
+    {
+        int i = n / 4;
+        int j = n % 4;
+
+        m_data[n] = tmpMat.m_data[4 * j + i];
+    }
+
+    return { *this };
+}
+
+
+template<typename T>
+GPM::Matrix4<T> GPM::Matrix4<T>::Transpose(const Matrix4<T>& p_matrix)
+{
+    Matrix4<T> tmpMat = identity;
+
+    for (int n = 0; n < 16; n++)
+    {
+        int i = n / 4;
+        int j = n % 4;
+
+        tmpMat.m_data[n] = p_matrix.m_data[4 * j + i];
+    }
+
+    return tmpMat;
+}
+
 #pragma endregion 
-
-template<typename T>
-GPM::Matrix4<T> GPM::Matrix4<T>::identity({
-            1, 0, 0, 0,
-            0, 1, 0, 0,
-            0, 0, 1, 0,
-            0, 0, 0, 1
-});
-
-template<typename T>
-GPM::Matrix4<T> GPM::Matrix4<T>::zero({
-            0, 0, 0, 0,
-            0, 0, 0, 0,
-            0, 0, 0, 0,
-            0, 0, 0, 0
-});
 
 template<typename T>
 GPM::Matrix4<T> GPM::Matrix4<T>::ScaleMatrix4(const Vector3<T>& p_scale)
@@ -118,21 +181,7 @@ GPM::Matrix4<T> GPM::Matrix4<T>::TranslateMatrix4(const Vector3<T>& p_translate)
 }
 
 
-template<typename T>
-GPM::Matrix4<T> GPM::Matrix4<T>::Transpose(const Matrix4<T>& p_translate)
-{
-    Matrix4<T> tmpMat = identity;
 
-    for (int n = 0; n < 16; n++)
-    {
-        int i = n / 4;
-        int j = n % 4;
-
-        tmpMat.m_data[n]  = p_translate.m_data[4 * j + i];
-    }
-
-    return tmpMat;
-}
 
 template<typename T>
 constexpr void GPM::Matrix4<T>::ToString() noexcept
@@ -163,15 +212,7 @@ constexpr void GPM::Matrix4<T>::SetRow(int p_row, const Vector4<T>& p_vector)
     m_data[rowStart + 3] = p_vector.w;
 }
 
-template<typename T>
-T GPM::Matrix4<T>::Determinant()
-{
-    return ((m_data[0] * GetMinor({ m_data[5], m_data[6], m_data[7], m_data[9], m_data[10], m_data[11], m_data[13], m_data[14], m_data[15] }))
-          - (m_data[1] * GetMinor({ m_data[4], m_data[6], m_data[7], m_data[8], m_data[10], m_data[11], m_data[12], m_data[14], m_data[15] }))
-          + (m_data[2] * GetMinor({ m_data[4], m_data[5], m_data[7], m_data[8], m_data[9], m_data[11], m_data[12], m_data[13], m_data[15] }))
-          - (m_data[3] * GetMinor({ m_data[4], m_data[5], m_data[6], m_data[8], m_data[9], m_data[10], m_data[12], m_data[13], m_data[14] })));
 
-}
 
 template<typename T>
 T GPM::Matrix4<T>::GetMinor(Matrix3<T> p_minor)
@@ -210,50 +251,148 @@ void GPM::Matrix4<T>::Translate(const Vector3<T>& p_translate)
 
 #pragma region Arithmetic Operations
 
-template<typename T>
-GPM::Matrix4<T> GPM::Matrix4<T>::Add(const Matrix4<T>& p_matrix, const Matrix4<T>& p_other)
-{
-    Matrix4<T> tmpMat = zero;
+#pragma region Add
 
+template<typename T>
+template<typename U>
+GPM::Matrix4<T>& GPM::Matrix4<T>::Add(const Matrix4<U>& p_other)
+{
     for (int i = 0; i < 16; i++)
     {
-        tmpMat.m_data[i] = p_matrix.m_data[i] + p_other.m_data[i];
+        m_data[i] += p_other.m_data[i];
     }
 
-    return tmpMat;
+    return { *this };
 }
 
 template<typename T>
-GPM::Matrix4<T> GPM::Matrix4<T>::Subtract(const Matrix4<T>& p_matrix, const Matrix4<T>& p_other)
+template<typename U>
+constexpr  GPM::Matrix4<T> GPM::Matrix4<T>::Add(const Matrix4<T>& p_left, const Matrix4<U>& p_right)
 {
-    Matrix4<T> tmpMat = zero;
-
-    for (int i = 0; i < 16; i++)
-    {
-        tmpMat.m_data[i] = p_matrix.m_data[i] - p_other.m_data[i];
-    }
-
-    return tmpMat;
+    return Matrix4<T>(p_left).Add(p_right);
 }
 
 template<typename T>
-GPM::Matrix4<T> GPM::Matrix4<T>::Multiply(const Matrix4<T>& p_matrix, const Matrix4<T>& p_other)
+template<typename U>
+constexpr GPM::Matrix4<T> GPM::Matrix4<T>::operator+(const Matrix4<U>& p_other) const
 {
-    Matrix4<T> tmpMat = zero;
+    return Add(this, p_other);
+}
 
-    for (int i = 0; i <= 12; i += 4)
+template<typename T>
+template<typename U>
+GPM::Matrix4<T> GPM::Matrix4<T>::operator+=(const Matrix4<U>& p_other)
+{
+    return Add(p_other);
+}
+
+#pragma endregion
+
+#pragma region Subtract
+
+template<typename T>
+template<typename U>
+GPM::Matrix4<T> GPM::Matrix4<T>::Subtract(const Matrix4<U>& p_other)
+{
+    for (int i = 0; i < 16; i++)
+    {
+        m_data[i] -= p_other.m_data[i];
+    }
+
+    return { *this };
+}
+
+template<typename T>
+template<typename U>
+constexpr GPM::Matrix4<T> GPM::Matrix4<T>::Subtract(const Matrix4<T>& p_left, const Matrix4<U>& p_right)
+{
+    return Matrix4<T>(p_left).Subtract(p_right);
+}
+
+template<typename T>
+template<typename U>
+constexpr GPM::Matrix4<T> GPM::Matrix4<T>::operator-(const Matrix4<U>& p_other) const
+{
+    return Subtract(this, p_other);
+}
+
+template<typename T>
+template<typename U>
+GPM::Matrix4<T>& GPM::Matrix4<T>::operator-=(const Matrix4<U>& p_other)
+{
+    return Subtract(p_other);
+}
+
+
+#pragma endregion
+
+#pragma region Multiply
+
+template<typename T>
+template<typename U>
+Matrix4<T>& Matrix4<T>::Multiply(U p_scalar)
+{
+    for (unsigned int i = 0; i < 16; ++i)
+    {
+        m_data[i] *= p_scalar;
+    }
+
+    return { *this };
+}
+
+template<typename T>
+template<typename U>
+constexpr Matrix4<T> Matrix4<T>::Multiply(const Matrix4<T>& p_left, U p_right)
+{
+    return Matrix4<T>(p_left).Multiply(p_right);
+}
+
+
+template<typename T>
+template<typename U>
+GPM::Matrix4<T>& GPM::Matrix4<T>::Multiply(const Matrix4<U>& p_other)
+{
+    Matrix4<T> tmpMat(this->m_data);
+
+    for (int i = 0; i < 16; i += 4)
     {
         for (int j = 0; j < 4; j++)
         {
-            tmpMat.m_data[i + j] = (p_matrix.m_data[i] * p_other.m_data[j])
-                                 + (p_matrix.m_data[i + 1] * p_other.m_data[j + 4])
-                                 + (p_matrix.m_data[i + 2] * p_other.m_data[j + 8])
-                                 + (p_matrix.m_data[i + 3] * p_other.m_data[j + 12]);
+            m_data[i + j] = (tmpMat.m_data[i] * p_other.m_data[j])
+                          + (tmpMat.m_data[i + 1] * p_other.m_data[j + 4])
+                          + (tmpMat.m_data[i + 2] * p_other.m_data[j + 8])
+                          + (tmpMat.m_data[i + 3] * p_other.m_data[j + 12]);
         }
     }
 
-    return tmpMat;
+    return { *this };
 }
+
+template<typename T>
+template<typename U>
+constexpr Matrix4<T> Matrix4<T>::Multiply(const Matrix4<T>& p_left, const Matrix4<U>& p_right)
+{
+    return Matrix4<T>(p_left).Multiply(p_right);
+}
+
+template<typename T>
+template<typename U>
+constexpr Matrix4<T> Matrix4<T>::operator*(const Matrix4<U>& p_other) const
+{
+    return Multiply(this, p_other);
+}
+
+template<typename T>
+template<typename U>
+Matrix4<T>& Matrix4<T>::operator*=(const Matrix4<U>& p_other)
+{
+    return Multiply(p_other);
+}
+
+
+#pragma endregion
+
+
 
 template<typename T>
 GPM::Vector4<T> GPM::Matrix4<T>::Multiply(const Matrix4<T>& p_matrix, const Vector4<T>& p_vector)
@@ -305,41 +444,6 @@ void GPM::Matrix4<T>::Set(Matrix4<T>& p_matrix, const Matrix4<T>& p_other)
 #pragma region Operators
 //operators
 
-template<typename T>
-GPM::Matrix4<T> GPM::Matrix4<T>::operator+(const Matrix4<T>& p_matrix)
-{
-    return Add(*this, p_matrix);
-}
-
-template<typename T>
-void GPM::Matrix4<T>::operator+=(const Matrix4<T>& p_matrix)
-{
-    *this = Add(*this, p_matrix);
-}
-
-template<typename T>
-GPM::Matrix4<T> GPM::Matrix4<T>::operator-(const Matrix4<T>& p_matrix)
-{
-    return Subtract(*this, p_matrix);
-}
-
-template<typename T>
-void GPM::Matrix4<T>::operator-=(const Matrix4<T>& p_matrix)
-{
-    *this = Subtract(*this, p_matrix);
-}
-
-template<typename T>
-GPM::Matrix4<T> GPM::Matrix4<T>::operator*(const Matrix4<T>& p_matrix)
-{
-    return Multiply(*this, p_matrix);
-}
-
-template<typename T>
-void GPM::Matrix4<T>::operator*=(const Matrix4<T>& p_matrix)
-{
-    *this = Multiply(*this, p_matrix);
-}
 
 template<typename T>
 GPM::Vector4<T> GPM::Matrix4<T>::operator*(const Vector4<T>& p_vector)
