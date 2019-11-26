@@ -225,27 +225,11 @@ namespace GPM
 		constexpr Vector4<T> operator+(const T p_scalar) const;
 
 		/**
-		* @brief Return the summation of other vector and actual vector
-		* @param p_scalar The scalar
-		* @return The result vector
-		*/
-		template <typename U>
-		constexpr Vector4<T> operator+(const U p_scalar) const;
-
-		/**
 		* @brief Add other vector to the actual vector
 		* @param p_scalar The scalar
 		* @return The current vector modified
 		*/
 		Vector4<T>& operator+=(const T p_scalar);
-
-		/**
-		* @brief Add other vector to the actual vector
-		* @param p_scalar The scalar
-		* @return The current vector modified
-		*/
-		template <typename U>
-		Vector4<T>& operator+=(const U p_scalar);
 
 		/**
 		 * @brief Return the summation of other vector and actual vector
@@ -352,27 +336,11 @@ namespace GPM
 		constexpr Vector4<T> operator-(const T p_scalar) const;
 
 		/**
-		* @brief Return the subtraction of other vector and actual vector
-		* @param p_scalar The scalar
-		* @return The result vector
-		*/
-		template <typename U>
-		constexpr Vector4<T> operator-(const U p_scalar) const;
-
-		/**
 		* @brief Subtract other vector to the actual vector
 		* @param p_scalar The scalar
 		* @return The current vector modified
 		*/
 		Vector4<T>& operator-=(const T p_scalar);
-
-		/**
-		* @brief Subtract other vector to the actual vector
-		* @param p_scalar The scalar
-		* @return The current vector modified
-		*/
-		template <typename U>
-		Vector4<T>& operator-=(const U p_scalar);
 
 		/**
 		 * @brief Return the subtraction of other vector and actual vector
@@ -462,27 +430,11 @@ namespace GPM
 		constexpr Vector4<T> operator*(const T p_scalar) const;
 
 		/**
-		 * @brief Return the multiplication of scalar and actual vector
-		 * @param p_scalar The scalar
-		 * @return The result vector
-		 */
-		template <typename U>
-		constexpr Vector4<T> operator*(const U p_scalar) const;
-
-		/**
 		 * @brief Multiply scalar to the actual vector
 		 * @param p_scalar The scalar
 		 * @return The current vector modified
 		 */
 		Vector4<T>& operator*=(const T p_scalar);
-
-		/**
-		 * @brief Multiply scalar to the actual vector
-		 * @param p_scalar The scalar
-		 * @return The current vector modified
-		 */
-		template <typename U>
-		Vector4<T>& operator*=(const U p_scalar);
 
 		/**
 		 * @brief Return the multiplication of a vector and actual vector
@@ -572,28 +524,11 @@ namespace GPM
 		constexpr Vector4<T> operator/(const T p_scalar) const;
 
 		/**
-		 * @brief Return the division of scalar and actual vector
-		 * @param p_scalar The scalar
-		 * @return The result vector
-		 */
-		template <typename U>
-		constexpr Vector4<T> operator/(const U p_scalar) const;
-
-		/**
 		 * @brief Divide scalar to the actual vector
 		 * @param p_scalar The scalar
 		 * @return The current vector modified
 		 */
 		Vector4<T>& operator/=(const T p_scalar);
-
-		/**
-		 * @brief Divide scalar to the actual vector
-		 * @param p_scalar The scalar
-		 * @return The current vector modified
-		 */
-		template <typename U>
-		Vector4<T>& operator/=(const U p_scalar);
-
 
 		/**
 		 * @brief Return the division of a vector and actual vector

@@ -206,21 +206,7 @@ namespace GPM
 	}
 
 	template <typename T>
-	template <typename U>
-	constexpr Vector4<T> Vector4<T>::operator+(const U p_scalar) const
-	{
-		return { Vector4<T>(*this).Add(p_scalar) };
-	}
-
-	template <typename T>
 	Vector4<T>& Vector4<T>::operator+=(const T p_scalar)
-	{
-		return { Add(p_scalar) };
-	}
-
-	template <typename T>
-	template <typename U>
-	Vector4<T>& Vector4<T>::operator+=(const U p_scalar)
 	{
 		return { Add(p_scalar) };
 	}
@@ -329,21 +315,7 @@ namespace GPM
 	}
 
 	template <typename T>
-	template <typename U>
-	constexpr Vector4<T> Vector4<T>::operator-(const U p_scalar) const
-	{
-		return { Vector4<T>(*this).Subtract(p_scalar) };
-	}
-
-	template <typename T>
 	Vector4<T>& Vector4<T>::operator-=(const T p_scalar)
-	{
-		return { Subtract(p_scalar) };
-	}
-
-	template <typename T>
-	template <typename U>
-	Vector4<T>& Vector4<T>::operator-=(const U p_scalar)
 	{
 		return { Subtract(p_scalar) };
 	}
@@ -439,21 +411,7 @@ namespace GPM
 	}
 
 	template <typename T>
-	template <typename U>
-	constexpr Vector4<T> Vector4<T>::operator*(const U p_scalar) const
-	{
-		return { Vector4<T>(*this).Multiply(p_scalar) };
-	}
-
-	template <typename T>
 	Vector4<T>& Vector4<T>::operator*=(const T p_scalar)
-	{
-		return { Multiply(p_scalar) };
-	}
-
-	template <typename T>
-	template <typename U>
-	Vector4<T>& Vector4<T>::operator*=(const U p_scalar)
 	{
 		return { Multiply(p_scalar) };
 	}
@@ -561,21 +519,7 @@ namespace GPM
 	}
 
 	template <typename T>
-	template <typename U>
-	constexpr Vector4<T> Vector4<T>::operator/(const U p_scalar) const
-	{
-		return { Vector4<T>(*this).Divide(p_scalar) };
-	}
-
-	template <typename T>
 	Vector4<T>& Vector4<T>::operator/=(const T p_scalar)
-	{
-		return { Divide(p_scalar) };
-	}
-
-	template <typename T>
-	template <typename U>
-	Vector4<T>& Vector4<T>::operator/=(const U p_scalar)
 	{
 		return { Divide(p_scalar) };
 	}
