@@ -9,7 +9,7 @@ namespace GPM::Tools
 
 	/**
 	* Return the square root of a numeric value
-	* @param p_value
+	* @param n
 	*/
 	/*double inline __declspec (naked) __fastcall FastSquareRoot(const double n)
 	{
