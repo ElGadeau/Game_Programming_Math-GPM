@@ -68,7 +68,7 @@ template<typename U>
 constexpr Matrix3<T>& Matrix3<T>::operator=(const Matrix3<U>& p_other)
 {
     for (unsigned int i = 0; i < 9; ++i)
-        m_data[i] = p_other.m_data[i];
+        m_data[i] = static_cast<const T>(p_other.m_data[i]);
 
     return *this;
 }
@@ -97,7 +97,7 @@ T Matrix3<T>::Determinant()
 }
 
 template<typename T>
-T Matrix3<T>::Determinant(const Matrix3& p_matrix3)
+T Matrix3<T>::Determinant(const Matrix3<T>& p_matrix3)
 {
     return ((p_matrix3.m_data[0] * ((p_matrix3.m_data[4] * p_matrix3.m_data[8]) - (p_matrix3.m_data[5] * p_matrix3.m_data[7])))
           - (p_matrix3.m_data[1] * ((p_matrix3.m_data[3] * p_matrix3.m_data[8]) - (p_matrix3.m_data[5] * p_matrix3.m_data[6])))
@@ -105,7 +105,7 @@ T Matrix3<T>::Determinant(const Matrix3& p_matrix3)
 }
 
 template<typename T>
-Matrix3<T>& Matrix3<T>::Transpose()
+constexpr Matrix3<T>& Matrix3<T>::Transpose()
 {
     Matrix3<T> tmpMat(this->m_data);
 
@@ -120,7 +120,7 @@ Matrix3<T>& Matrix3<T>::Transpose()
 }
 
 template<typename T>
-Matrix3<T> Matrix3<T>::Transpose(const Matrix3& p_matrix3)
+constexpr Matrix3<T> Matrix3<T>::Transpose(const Matrix3<T>& p_matrix3)
 {
     Matrix3<T> tmpMat = identity;
 
@@ -135,6 +135,131 @@ Matrix3<T> Matrix3<T>::Transpose(const Matrix3& p_matrix3)
     return tmpMat;
 }
 
+
+template<typename T>
+constexpr Vector3<T> Matrix3<T>::GetColumn(const int p_column)
+{
+    if (p_column < 0 || p_column > 3)
+        return identity;
+
+    return { m_data[p_column], m_data[p_column + 3], m_data[p_column + 6] };
+}
+
+template<typename T>
+template<typename U>
+constexpr void Matrix3<T>::SetColumn(const int p_column, const Vector3<U>& p_vector)
+{
+    if (p_column < 0 || p_column > 3)
+        return;
+
+    m_data[p_column] = p_vector.x;
+    m_data[p_column + 3] = p_vector.y;
+    m_data[p_column + 6] = p_vector.z;
+}
+
+template<typename T>
+constexpr Vector3<T> Matrix3<T>::GetRow(const int p_row)
+{
+    if (p_row < 0 || p_row > 3)
+        return identity;
+
+    return { m_data[4 * p_row], m_data[(4 * p_row) + 1], m_data[(4 * p_row) + 2] };
+}
+
+template<typename T>
+template<typename U>
+constexpr void Matrix3<T>::SetRow(const int p_row, const Vector3<U>& p_vector)
+{
+    if (p_row < 0 || p_row > 3)
+        return;
+
+    m_data[p_row] = p_vector.x;
+    m_data[p_row + 1] = p_vector.y;
+    m_data[p_row + 2] = p_vector.z;
+}
+
+template<typename T>
+constexpr Matrix3<T>& Matrix3<T>::Normalize()
+{
+    return identity;
+}
+
+template<typename T>
+constexpr Matrix3<T> Matrix3<T>::Normalize(const Matrix3<T>& p_matrix)
+{
+    return identity;
+}
+
+template<typename T> template<typename U> constexpr Matrix3<T>& Matrix3<T>::Translate(
+    const Vector2<U>& p_vector)
+{
+    m_data[2] = p_vector.x;
+    m_data[5] = p_vector.y;
+    return { *this };
+}
+
+template<typename T>
+template<typename U>
+constexpr Matrix3<T> Matrix3<T>::CreateTranslation(const Vector2<U>& p_vector)
+{
+    Matrix3<T> tempMat = identity;
+    tempMat.m_data[2] = p_vector.x;
+    tempMat.m_data[5] = p_vector.y;
+    return tempMat;
+}
+
+template<typename T> constexpr Matrix3<T>& Matrix3<T>::Rotate(const float p_angle)
+{
+    m_data[0] = Tools::Utils::CosF(p_angle);
+    m_data[1] = Tools::Utils::SinF(p_angle);
+    m_data[3] = -Tools::Utils::SinF(p_angle);
+    m_data[4] = Tools::Utils::CosF(p_angle);
+    return { *this };
+}
+
+template<typename T>
+constexpr Matrix3<T> Matrix3<T>::CreateRotation(const float p_angle)
+{
+    Matrix3<T> tempMat = identity;
+    tempMat.m_data[0] = Tools::Utils::Cos(p_angle);
+    tempMat.m_data[1] = Tools::Utils::Sin(p_angle);
+    tempMat.m_data[3] = -Tools::Utils::Sin(p_angle);
+    tempMat.m_data[4] = Tools::Utils::Cos(p_angle);
+    return tempMat;
+}
+
+template<typename T>
+template<typename U>
+constexpr Matrix3<T>& Matrix3<T>::Scale(const Vector2<U>& p_vector)
+{
+    m_data[0] = p_vector.x;
+    m_data[4] = p_vector.y;
+    return { *this };
+}
+
+template<typename T>
+template<typename U>
+constexpr Matrix3<T> Matrix3<T>::CreateScaling(const Vector2<U>& p_vector)
+{
+    Matrix3<T> tempMat = identity;
+    tempMat.m_data[0] = p_vector.x;
+    tempMat.m_data[4] = p_vector.y;
+    return tempMat;
+}
+
+template<typename T>
+template<typename U>
+constexpr Matrix3<T> Matrix3<T>::CreateTransformation(const Vector2<U>& p_pos, const float p_angle, const Vector2<U>& p_scale)
+{
+    static_assert(!std::is_integral<T>::value, "Matrix3::CreateTransformation : Can't do Transform Matrices with Matrix3<int>, as values would be rounded to 0");
+    Matrix3<T> tempMat = identity;
+    Matrix3<T> t = CreateTranslation(p_pos);
+    Matrix3<T> r = CreateRotation(p_angle);
+    Matrix3<T> s = CreateScaling(p_scale);
+    tempMat = t * r * s;
+    return tempMat;
+}
+
 #pragma endregion
 
 #pragma region Arithmetic Operations
@@ -147,42 +272,6 @@ Matrix3<T>& Matrix3<T>::Add(const Matrix3<U>& p_other)
         m_data[i] += p_other.m_data[i];
 
     return { *this };
-}
-
-template<typename T> constexpr Vector3<T> Matrix3<T>::GetColumn(const int p_column)
-{
-    if (p_column < 0 || p_column > 3)
-        return identity;
-
-    return { m_data[p_column], m_data[p_column + 3], m_data[p_column + 6] };
-}
-
-template<typename T> constexpr void Matrix3<T>::SetColumn(const int p_column, const Vector3<T>& p_vector)
-{
-    if (p_column < 0 || p_column > 3)
-        return;
-
-    m_data[p_column] = p_vector.x;
-    m_data[p_column + 3] = p_vector.y;
-    m_data[p_column + 6] = p_vector.z;
-}
-
-template<typename T> constexpr Vector3<T> Matrix3<T>::GetRow(const int p_row)
-{
-    if (p_row < 0 || p_row > 3)
-        return identity;
-
-    return { m_data[4 * p_row], m_data[(4 * p_row) + 1], m_data[(4 * p_row) + 2] };
-}
-
-template<typename T> constexpr void Matrix3<T>::SetRow(const int p_row, const Vector3<T>& p_vector)
-{
-    if (p_row < 0 || p_row > 3)
-        return;
-
-    m_data[p_row] = p_vector.x;
-    m_data[p_row + 1] = p_vector.y;
-    m_data[p_row + 2] = p_vector.z;
 }
 
 template<typename T>
@@ -211,7 +300,7 @@ template<typename U>
 Matrix3<T>& Matrix3<T>::Subtract(const Matrix3<U>& p_other)
 {
     for (unsigned int i = 0; i < 9; ++i)
-        m_data[i] -= p_other.m_data[i];
+        m_data[i] -= static_cast<const T>(p_other.m_data[i]);
 
     return { *this };
 }
@@ -282,14 +371,21 @@ template<typename T>
 template<typename U>
 constexpr Matrix3<T> Matrix3<T>::operator*(const Matrix3<U>& p_other) const
 {
-    return Multiply(p_other);
+    return Matrix3<T>(*this).Multiply(p_other);
+}
+
+template<typename T>
+template<typename U>
+Matrix3<T>& Matrix3<T>::operator*=(const U p_other)
+{
+    return  { Multiply(p_other) };
 }
 
 template<typename T>
 template<typename U>
 Matrix3<T>& Matrix3<T>::operator*=(const Matrix3<U>& p_other)
 {
-    return Multiply(p_other);
+    return  { Multiply(p_other) };
 }
 
 #pragma endregion 
@@ -318,21 +414,39 @@ constexpr std::string Matrix3<T>::ToString(const Matrix3<T>& p_matrix)
 
 #pragma  endregion
 
+#pragma region Tests & Comparisons
+
+template<typename T>
+constexpr bool Matrix3<T>::Equals(const Matrix3<T>& p_other) const
+{
+    for (unsigned int i = 0; i < 9; i++)
+    {
+        if (m_data[i] != p_other.m_data[i])
+            return false;
+    }
+    return true;
+}
+
+template<typename T>
+constexpr bool Matrix3<T>::AreEqual(const Matrix3<T>& p_left, const Matrix3<T>& p_right)
+{
+    return p_left.Equals(p_right);
+}
+
+template<typename T>
+constexpr bool Matrix3<T>::operator==(const Matrix3<T>& p_other) const
+{
+    return Equals(p_other);
+}
+
+template<typename T>
+constexpr bool Matrix3<T>::operator!=(const Matrix3<T>& p_other) const
+{
+    return !Equals(p_other);
+}
+
+#pragma endregion
 
 #pragma region Outside Operators
-template<typename T, typename U>
-constexpr Matrix3<U> GPM::operator*(T p_scalar, const Matrix3<U>& p_matrix3)
-{
-    for (unsigned int i = 0; i < 9; ++i)
-        p_matrix3.m_data[i] *= p_scalar;
-    return p_matrix3;
-}
 
-template<typename T, typename U>
-constexpr Matrix3<U>& GPM::operator*=(T p_scalar, Matrix3<U>& p_matrix3)
-{
-    for (unsigned int i = 0; i < 9; ++i)
-        p_matrix3.m_data[i] *= p_scalar;
-    return p_matrix3;
-}
 #pragma endregion
