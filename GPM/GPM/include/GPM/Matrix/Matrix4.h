@@ -205,6 +205,9 @@ namespace GPM
         template<typename U>
         constexpr static Matrix4<T> Multiply(const Matrix4<T>& p_left, const Matrix4<U>& p_right);
 
+        template<typename U>
+        Vector4<U>& Multiply(const Vector4<U>& p_other);
+
         /**
         * @brief Multiply matrix to the current matrix
         * @param p_other : Multiply this matrix to the current one

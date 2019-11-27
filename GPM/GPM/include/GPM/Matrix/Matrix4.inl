@@ -408,6 +408,36 @@ constexpr Matrix4<T> Matrix4<T>::Multiply(const Matrix4<T>& p_left, const Matrix
 
 template<typename T>
 template<typename U>
+Vector4<U>& Matrix4<T>::Multiply(const Vector4<U>& p_other)
+{
+    Vector4<T> tmpVec = Vector4F::zero;
+
+    tmpVec.x = (m_data[0] * p_other.x)
+        + (m_data[1] * p_other.y)
+        + (m_data[2] * p_other.z)
+        + (m_data[3] * p_other.w);
+
+    tmpVec.y = (m_data[4] * p_other.x)
+        + (m_data[5] * p_other.y)
+        + (m_data[6] * p_other.z)
+        + (m_data[7] * p_other.w);
+
+    tmpVec.z = (m_data[8] * p_other.x)
+        + (m_data[9] * p_other.y)
+        + (m_data[10] * p_other.z)
+        + (m_data[11] * p_other.w);
+
+    tmpVec.w = (m_data[12] * p_other.x)
+        + (m_data[13] * p_other.y)
+        + (m_data[14] * p_other.z)
+        + (m_data[15] * p_other.w);
+
+    return tmpVec;
+}
+
+
+template<typename T>
+template<typename U>
 constexpr Matrix4<T> Matrix4<T>::operator*(const Matrix4<U>& p_other) const
 {
     return Matrix4<T>(*this).Multiply(p_other) ;
@@ -480,7 +510,7 @@ void Matrix4<T>::Set(Matrix4<T>& p_matrix, const Matrix4<T>& p_other)
 template<typename T>
 Vector4<T> Matrix4<T>::operator*(const Vector4<T>& p_vector)
 {
-    return Multiply(*this, p_vector);
+    return Matrix4<T>(*this).Multiply(p_vector);
 }
 
 template<typename T>
