@@ -230,7 +230,7 @@ namespace GPM
 
 
         template<class U>
-        constexpr Matrix3<T> operator*(U p_other) const;
+        constexpr Matrix3<T> operator*(const U p_other) const;
 
         template<class U>
         Matrix3<T>& operator*=(const U p_other);
@@ -242,6 +242,34 @@ namespace GPM
         */
         template<class U>
         Matrix3<T>& operator*=(const Matrix3<U>& p_other);
+
+#pragma endregion
+
+#pragma region Divide
+
+        /**
+         * @brief Multiply scalar to elements
+         * @param p_scalar : The value you want to scale the matrix with
+         * @return The current Matrix modified
+         */
+        template<typename U>
+        Matrix3<T>& Divide(U p_scalar);
+
+        /**
+         * @brief Multiply scalar to matrix left
+         * @param p_left : Multiply this matrix by the other parameter
+         * @param p_scalar : Multiply this scalar to the other parameter
+         * @return The copy of the Matrix operation result
+         */
+        template<typename U>
+        constexpr static Matrix3<T> Divide(const Matrix3<T>& p_left, const U p_scalar);
+
+
+        template<class U>
+        constexpr Matrix3<T> operator/(const U p_other) const;
+
+        template<class U>
+        Matrix3<T>& operator/=(const U p_other);
 
 #pragma endregion
 
