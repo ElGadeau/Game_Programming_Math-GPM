@@ -5,11 +5,11 @@
 
 namespace GPM
 {
-	Quaternion Quaternion::identity = Quaternion{ 1.0f, 0.0f, 0.0f, 0.0f };
+	Quaternion Quaternion::identity = Quaternion{ 0.0f, 0.0f, 0.0f, 1.0f };
 
 #pragma region Constructors & Assignment
 	inline Quaternion::Quaternion()
-		: axis{ 0.0f, 0.0f, 0.0f }, w{ 0.0f }
+		: axis{ 0.0f, 0.0f, 0.0f }, w{ 1.0f }
 	{	}
 
 	inline Quaternion::Quaternion(const float p_x, const float p_y, const float p_z,
@@ -30,6 +30,7 @@ namespace GPM
 	{	}
 
 	inline Quaternion::Quaternion(const Matrix3<float>& p_matrix)
+		: axis { 0.0f, 0.0f, 0.0f }, w { 1.0f }
 	{
 		const float trace = p_matrix.m_data[0] + p_matrix.m_data[4] + p_matrix.m_data[8];
 
@@ -76,6 +77,7 @@ namespace GPM
 	}
 
 	inline Quaternion::Quaternion(const Matrix4<float>& p_matrix)
+		: axis{ 0.0f, 0.0f, 0.0f }, w { 1.0f }
 	{
 		w = Tools::Utils::SquareRootF(std::max(0.0f, 1.0f + p_matrix.m_data[0] + p_matrix.m_data[5] + p_matrix.m_data[10])) / 2.0f;
 		axis.x = Tools::Utils::SquareRootF(std::max(0.0f, 1.0f + p_matrix.m_data[0] - p_matrix.m_data[5] - p_matrix.m_data[10])) / 2.0f;
@@ -216,11 +218,7 @@ namespace GPM
 
 	inline Quaternion Quaternion::operator*(const Quaternion& p_otherQuaternion) const
 	{
-		const float scalar = w * p_otherQuaternion.w - axis.Dot(p_otherQuaternion.axis);
-
-		const Vector3F imaginary = p_otherQuaternion.axis * w + axis * p_otherQuaternion.w + axis.Cross(p_otherQuaternion.axis);
-
-		return { Quaternion(scalar, imaginary) };
+		return { (*this).Multiply(p_otherQuaternion) };
 	}
 
 	inline Quaternion& Quaternion::operator*=(const Quaternion& p_otherQuaternion)
@@ -237,9 +235,7 @@ namespace GPM
 		const float yPart = w * p_toMultiply.y + axis.z * p_toMultiply.x - axis.x * p_toMultiply.z;
 		const float zPart = w * p_toMultiply.z + axis.x * p_toMultiply.y - axis.y * p_toMultiply.x;
 
-		const Vector3F vectorPart(xPart, yPart, zPart);
-
-		return { Quaternion{ sPart, vectorPart } };
+		return { Quaternion{ sPart, Vector3F { xPart, yPart, zPart } } };
 	}
 
 	inline Quaternion& Quaternion::operator*=(const Vector3<float>& p_toMultiply)
@@ -249,10 +245,8 @@ namespace GPM
 		const float yPart = w * p_toMultiply.y + axis.z * p_toMultiply.x - axis.x * p_toMultiply.z;
 		const float zPart = w * p_toMultiply.z + axis.x * p_toMultiply.y - axis.y * p_toMultiply.x;
 
-		const Vector3F vectorPart(xPart, yPart, zPart);
-
 		w = sPart;
-		axis = vectorPart;
+		axis = Vector3F{ xPart, yPart, zPart };
 
 		return { (*this) };
 	}
@@ -263,7 +257,7 @@ namespace GPM
 
 		const Vector3F imaginary = p_quaternion.axis * w + axis * p_quaternion.axis + axis.Cross(p_quaternion.axis);
 
-		return { Quaternion {scalar,imaginary} };
+		return { Quaternion { scalar,imaginary } };
 
 	}
 
@@ -295,10 +289,7 @@ namespace GPM
 
 		const Quaternion conjugateValue = Conjugate(p_quaternion);
 
-		const float scalar = conjugateValue.w * (absoluteValue);
-		const Vector3F imaginary = conjugateValue.axis * (absoluteValue);
-
-		return { Quaternion {scalar, imaginary} };
+		return { Quaternion {conjugateValue.w * absoluteValue, Vector3F {conjugateValue.axis * absoluteValue} } };
 	}
 
 	inline Quaternion& Quaternion::Conjugate()
@@ -406,10 +397,10 @@ namespace GPM
 		Quaternion result;
 
 		const float coefficient = 1.0f - p_alpha;
-		const float theta = acos(p_first.axis.x * p_second.axis.x + p_first.axis.y * p_second.axis.y + p_first.axis.z * p_second.axis.z + p_first.w * p_second.w);
-		const float sn = sin(theta);
-		const float wa = sin(coefficient * theta) / sn;
-		const float wb = sin(p_alpha * theta) / sn;
+		const float theta = Tools::Utils::ArccosF(p_first.axis.x * p_second.axis.x + p_first.axis.y * p_second.axis.y + p_first.axis.z * p_second.axis.z + p_first.w * p_second.w);
+		const float sn = Tools::Utils::SinF(theta);
+		const float wa = Tools::Utils::SinF(coefficient * theta) / sn;
+		const float wb = Tools::Utils::SinF(p_alpha * theta) / sn;
 
 		result.axis.x = wa * p_first.axis.x + wb * p_second.axis.x;
 		result.axis.y = wa * p_first.axis.y + wb * p_second.axis.y;
@@ -462,8 +453,6 @@ namespace GPM
 
 	inline Quaternion Quaternion::ToUnitNormQuaternion()
 	{
-		Quaternion result;
-
 		const float angle = Tools::Utils::ToRadians(w);
 
 		axis.Normalize();
@@ -473,7 +462,7 @@ namespace GPM
 
 	inline Vector3<float> Quaternion::ToEuler() const
 	{
-		Vector3<float> euler{ };
+		Vector3<float> euler{};
 
 		// roll (x-axis rotation)
 		const float sinr_cosp = 2.0f * (w * axis.x + axis.y * axis.z);
