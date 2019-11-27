@@ -216,7 +216,7 @@ namespace GPM
 		std::string ToString() const;
 		static std::string ToString(const Quaternion& p_quaternion);
 		Matrix3<float> ToMatrix3() const;
-		Matrix4<float> ToMatrix4();
+		Matrix4<float> ToMatrix4() const;
 #pragma endregion
 	};
 

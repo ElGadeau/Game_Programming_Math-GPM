@@ -483,7 +483,7 @@ namespace GPM
 		const float sinX = Tools::Utils::CosF(x);
 		const float sinY = Tools::Utils::CosF(y);
 		const float sinZ = Tools::Utils::CosF(z);
-		
+
 		result.w = cosZ * cosY * cosX + sinZ * sinY * sinX;
 		result.axis.x = cosZ * cosY * sinX - sinZ * sinY * cosX;
 		result.axis.y = cosZ * sinY * cosX + sinZ * cosY * sinX;
@@ -548,6 +548,14 @@ namespace GPM
 		result.m_data[8] = 2.0f * (w * w + axis.z * axis.z) - 1.0f;
 
 		return result;
+	}
+
+	inline Matrix4<float> Quaternion::ToMatrix4() const
+	{
+		return { Matrix4<float>{ w, -axis.x, -axis.y, -axis.z,
+								axis.x, w, -axis.z, axis.y,
+								axis.y, axis.z, w, -axis.x,
+								axis.z, -axis.y, axis.x, w } };
 	}
 
 	inline std::ostream& operator<<(std::ostream& p_stream,
