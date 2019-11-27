@@ -95,9 +95,11 @@ namespace GPM
 	{
 		w = Tools::Utils::CosF(p_angleInRadians / 2.0f);
 
-		axis.x = p_axis.x * Tools::Utils::SinF(p_angleInRadians / 2.0f);
-		axis.y = p_axis.y * Tools::Utils::SinF(p_angleInRadians / 2.0f);
-		axis.z = p_axis.z * Tools::Utils::SinF(p_angleInRadians / 2.0f);
+		const float sinAngle = Tools::Utils::SinF(p_angleInRadians / 2.0f);
+		
+		axis.x = sinAngle * p_axis.x;
+		axis.y = sinAngle * p_axis.y;
+		axis.z = sinAngle * p_axis.z;
 
 		std::cout << "w:" << w << "\t axis:" << axis.ToString() << "\n";
 	}
