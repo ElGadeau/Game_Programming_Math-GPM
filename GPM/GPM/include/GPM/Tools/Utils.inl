@@ -2,7 +2,6 @@
 
 #include <cmath>
 #include <type_traits>
-#include <numeric>
 #include <algorithm>
 
 namespace GPM::Tools
@@ -15,6 +14,17 @@ namespace GPM::Tools
 	inline float Utils::ToDegrees(const float p_angle)
 	{
 		return p_angle * (180.0f / static_cast<float>(M_PI));
+	}
+
+	inline float Utils::Lerp(const float p_a, const float p_b, const float p_alpha)
+	{
+		if (p_alpha >= 0.0f && p_alpha <= 1.0f)
+			return p_a + (p_b - p_a) * p_alpha;
+
+		if (p_alpha < 0.0f)
+			return p_a;
+
+		return p_b;
 	}
 
 	inline int Utils::GreatestCommonDivider(const int p_a, const int p_b)
@@ -92,7 +102,7 @@ namespace GPM::Tools
 	{
 		return std::atan(p_value);
 	}
-	
+
 	inline float Utils::ArctanF(const float p_value)
 	{
 		return std::atanf(p_value);
@@ -106,6 +116,13 @@ namespace GPM::Tools
 	inline float Utils::Arctan2F(const float p_valueYx, const float p_valueXx)
 	{
 		return std::atan2f(p_valueYx, p_valueXx);
+	}
+
+	template <typename T>
+	inline T Utils::Sign(const T p_value)
+	{
+		static_assert(std::is_arithmetic<T>::value, "Sign function should only be used with arithmetic types");
+		return (p_value > static_cast<T>(0)) ? static_cast<T>(1) : ((p_value < static_cast<T>(0)) ? static_cast<T>(-1) : static_cast<T>(0));
 	}
 
 	template<typename T>
@@ -126,14 +143,14 @@ namespace GPM::Tools
 	inline T Utils::SquareRoot(const T p_value)
 	{
 		static_assert(std::is_arithmetic<T>::value, "The value to root must be arithmetic");
-		return static_cast<T>(sqrt(p_value));
+		return static_cast<T>(std::sqrt(p_value));
 	}
 
 	template <typename T>
 	inline T Utils::SquareRootF(const T p_value)
 	{
 		static_assert(std::is_arithmetic<T>::value, "The value to root must be arithmetic");
-		return static_cast<T>(sqrtf(p_value));
+		return static_cast<T>(std::sqrtf(p_value));
 	}
 
 	template<typename T>

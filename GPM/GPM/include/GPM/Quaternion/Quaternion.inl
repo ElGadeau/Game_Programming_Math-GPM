@@ -54,7 +54,6 @@ namespace GPM
 			axis.y = X * (p_matrix.m_data[3] + p_matrix.m_data[1]);
 			axis.z = X * (p_matrix.m_data[6] + p_matrix.m_data[2]);
 			w = X * (p_matrix.m_data[5] - p_matrix.m_data[7]);
-
 		}
 		else if (p_matrix.m_data[4] > p_matrix.m_data[8])
 		{ //s=4*qy
@@ -79,37 +78,14 @@ namespace GPM
 
 	inline Quaternion::Quaternion(const Matrix4<float>& p_matrix)
 	{
-		const float trace = p_matrix.m_data[0] + p_matrix.m_data[5] + p_matrix.m_data[10]; // I removed + 1.0f; see discussion with Ethan
-		if (trace > 0) {// I changed M_EPSILON to 0
-			const float s = 0.5f / sqrtf(trace + 1.0f);
-			w = 0.25f / s;
-			axis.x = (p_matrix.m_data[9] - p_matrix.m_data[6]) * s;
-			axis.y = (p_matrix.m_data[2] - p_matrix.m_data[8]) * s;
-			axis.z = (p_matrix.m_data[4] - p_matrix.m_data[1]) * s;
-		}
-		else {
-			if (p_matrix.m_data[0] > p_matrix.m_data[5] && p_matrix.m_data[0] > p_matrix.m_data[10]) {
-				const float s = 2.0f * sqrtf(1.0f + p_matrix.m_data[0] - p_matrix.m_data[5] - p_matrix.m_data[10]);
-				w = (p_matrix.m_data[9] - p_matrix.m_data[6]) / s;
-				axis.x = 0.25f * s;
-				axis.y = (p_matrix.m_data[1] + p_matrix.m_data[4]) / s;
-				axis.z = (p_matrix.m_data[2] + p_matrix.m_data[8]) / s;
-			}
-			else if (p_matrix.m_data[5] > p_matrix.m_data[10]) {
-				const float s = 2.0f * sqrtf(1.0f + p_matrix.m_data[5] - p_matrix.m_data[0] - p_matrix.m_data[10]);
-				w = (p_matrix.m_data[2] - p_matrix.m_data[8]) / s;
-				axis.x = (p_matrix.m_data[1] + p_matrix.m_data[4]) / s;
-				axis.y = 0.25f * s;
-				axis.z = (p_matrix.m_data[6] + p_matrix.m_data[9]) / s;
-			}
-			else {
-				const float s = 2.0f * sqrtf(1.0f + p_matrix.m_data[10] - p_matrix.m_data[0] - p_matrix.m_data[5]);
-				w = (p_matrix.m_data[4] - p_matrix.m_data[1]) / s;
-				axis.x = (p_matrix.m_data[2] + p_matrix.m_data[8]) / s;
-				axis.y = (p_matrix.m_data[6] + p_matrix.m_data[9]) / s;
-				axis.z = 0.25f * s;
-			}
-		}
+		w = Tools::Utils::SquareRootF(std::max(0.0f, 1.0f + p_matrix.m_data[0] + p_matrix.m_data[5] + p_matrix.m_data[10])) / 2.0f;
+		axis.x = Tools::Utils::SquareRootF(std::max(0.0f, 1.0f + p_matrix.m_data[0] - p_matrix.m_data[5] - p_matrix.m_data[10])) / 2.0f;
+		axis.y = Tools::Utils::SquareRootF(std::max(0.0f, 1.0f - p_matrix.m_data[0] + p_matrix.m_data[5] - p_matrix.m_data[10])) / 2.0f;
+		axis.z = Tools::Utils::SquareRootF(std::max(0.0f, 1.0f - p_matrix.m_data[0] - p_matrix.m_data[5] + p_matrix.m_data[10])) / 2.0f;
+
+		axis.x *= Tools::Utils::Sign(axis.x * (p_matrix.m_data[9] - p_matrix.m_data[6]));
+		axis.y *= Tools::Utils::Sign(axis.y * (p_matrix.m_data[2] - p_matrix.m_data[8]));
+		axis.z *= Tools::Utils::Sign(axis.z * (p_matrix.m_data[4] - p_matrix.m_data[1]));
 	}
 
 	inline Quaternion::Quaternion(const Vector3<float>& p_axis,
@@ -527,30 +503,22 @@ namespace GPM
 		return { result };
 	}
 
-	inline Quaternion Quaternion::FromEulerToQuaternion(const float p_x, const float p_y, const float p_z)
+	inline Quaternion Quaternion::FromEulerToQuaternion(const float p_yaw, const float p_pitch, const float p_roll)
 	{
 		Quaternion result;
 
-		float x = Tools::Utils::ToRadians(p_x);
-		float y = Tools::Utils::ToRadians(p_y);
-		float z = Tools::Utils::ToRadians(p_z);
+		const float cosYaw = Tools::Utils::CosF(p_yaw * 0.5f);
+		const float sinYaw = Tools::Utils::SinF(p_yaw * 0.5f);
+		const float cosPitch = Tools::Utils::CosF(p_pitch * 0.5f);
+		const float sinPitch = Tools::Utils::SinF(p_pitch * 0.5f);
+		const float cosRoll = Tools::Utils::CosF(p_roll * 0.5f);
+		const float sinRoll = Tools::Utils::SinF(p_roll * 0.5f);
 
-		x = x / 2.0f;
-		y = y / 2.0f;
-		z = z / 2.0f;
-
-		const float cosX = Tools::Utils::CosF(x);
-		const float cosY = Tools::Utils::CosF(y);
-		const float cosZ = Tools::Utils::CosF(z);
-
-		const float sinX = Tools::Utils::CosF(x);
-		const float sinY = Tools::Utils::CosF(y);
-		const float sinZ = Tools::Utils::CosF(z);
-
-		result.w = cosZ * cosY * cosX + sinZ * sinY * sinX;
-		result.axis.x = cosZ * cosY * sinX - sinZ * sinY * cosX;
-		result.axis.y = cosZ * sinY * cosX + sinZ * cosY * sinX;
-		result.axis.z = sinZ * cosY * cosX - cosZ * sinY * sinX;
+		Quaternion q;
+		q.w = cosYaw * cosPitch * cosRoll + sinYaw * sinPitch * sinRoll;
+		q.axis.x = cosYaw * cosPitch * sinRoll - sinYaw * sinPitch * cosRoll;
+		q.axis.y = sinYaw * cosPitch * sinRoll + cosYaw * sinPitch * cosRoll;
+		q.axis.z = sinYaw * cosPitch * cosRoll - cosYaw * sinPitch * sinRoll;
 
 		return { result };
 	}
