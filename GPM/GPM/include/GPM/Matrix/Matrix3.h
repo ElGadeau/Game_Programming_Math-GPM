@@ -101,11 +101,13 @@ namespace GPM
         template<typename U>
         constexpr Matrix3<T>& Scale(const Vector2<U>& p_vector);
         template<typename U>
-        constexpr static Matrix3<T> CreateScale(const Vector2<U>& p_vector);
+        constexpr static Matrix3<T> CreateScaling(const Vector2<U>& p_vector);
 
         template<typename U>
         constexpr static Matrix3<T> CreateTransformation(const Vector2<U>& p_pos, const float p_angle, const Vector2<U>& p_scale);
-         
+
+        template<typename U>
+        constexpr Matrix3<T>& LookAt(const Vector3<U>& dir, const Vector3<U>& up, Matrix3<T>& m);
 #pragma endregion
 
 #pragma region Arithmetic Operations
@@ -256,6 +258,14 @@ namespace GPM
          * @return True or false
          */
         constexpr static bool AreEqual(const Matrix3<T>& p_left, const Matrix3<T>& p_right);
+
+        /**
+         * @brief Return true if the two matrices are identical
+         * @param p_left The left matrix
+         * @param p_right The right matrix
+         * @return True or false
+         */
+        constexpr static bool IsIdentity(const Matrix3<T>& p_other);
 
         /**
          * @brief Return true if the two matrices are identical

@@ -433,6 +433,11 @@ constexpr bool Matrix3<T>::AreEqual(const Matrix3<T>& p_left, const Matrix3<T>& 
     return p_left.Equals(p_right);
 }
 
+template<typename T> constexpr bool Matrix3<T>::IsIdentity(const Matrix3<T>& p_other)
+{
+    return p_other.Equals(identity);
+}
+
 template<typename T>
 constexpr bool Matrix3<T>::operator==(const Matrix3<T>& p_other) const
 {
