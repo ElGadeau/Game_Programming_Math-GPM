@@ -388,6 +388,44 @@ namespace GPM
 		w = p_realValue;
 	}
 
+	inline Quaternion Quaternion::Lerp(const Quaternion& p_first, const Quaternion& p_second,
+		const float p_alpha)
+	{
+		const float coefficient = 1.0f - p_alpha;
+
+		return  { Quaternion { coefficient * p_first.axis.x + p_alpha * p_second.axis.x,
+							coefficient * p_first.axis.y + p_alpha * p_second.axis.y,
+							coefficient * p_first.axis.z + p_alpha * p_second.axis.z,
+							coefficient * p_first.w + p_alpha * p_second.w }.Normalize() };
+	}
+
+	inline Quaternion Quaternion::Slerp(const Quaternion& p_first, const Quaternion& p_second,
+		const float p_alpha)
+	{
+		Quaternion result;
+
+		const float coefficient = 1.0f - p_alpha;
+		const float theta = acos(p_first.axis.x * p_second.axis.x + p_first.axis.y * p_second.axis.y + p_first.axis.z * p_second.axis.z + p_first.w * p_second.w);
+		const float sn = sin(theta);
+		const float wa = sin(coefficient * theta) / sn;
+		const float wb = sin(p_alpha * theta) / sn;
+
+		result.axis.x = wa * p_first.axis.x + wb * p_second.axis.x;
+		result.axis.y = wa * p_first.axis.y + wb * p_second.axis.y;
+		result.axis.z = wa * p_first.axis.z + wb * p_second.axis.z;
+		result.w = wa * p_first.w + wb * p_second.w;
+
+		result.Normalize();
+
+		return result;
+	}
+
+	inline Quaternion Quaternion::Nlerp(const Quaternion& p_first,
+		const Quaternion& p_second, const float p_alpha)
+	{
+		return Lerp(p_first, p_second, p_alpha).Normalize();
+	}
+
 	constexpr float Quaternion::NormSquare() const
 	{
 		return w * w + axis.x * axis.x + axis.y * axis.y + axis.z * axis.z;
@@ -434,76 +472,38 @@ namespace GPM
 
 	inline Vector3<float> Quaternion::ToEuler() const
 	{
-		// 3x3 matrix - column major. X vector is 0, 1, 2, etc. (openGL prefer way)
-		//	0	3	6
-		//	1	4	7
-		//	2	5	8
+		Vector3<float> euler{ };
 
-		float x = 0.0f;
-		float y = 0.0f;
-		float z = 0.0f;
+		// roll (x-axis rotation)
+		const float sinr_cosp = 2.0f * (w * axis.x + axis.y * axis.z);
+		const float cosr_cosp = 1.0f - 2.0f * (axis.x * axis.x + axis.y * axis.y);
+		euler.x = Tools::Utils::Arctan2F(sinr_cosp, cosr_cosp);
 
-		const float test = 2.0f * (axis.x * axis.z - w * axis.y);
+		// pitch (y-axis rotation)
+		const float sinp = 2.0f * (w * axis.y - axis.z * axis.x);
+		if (std::abs(sinp) >= 1.0f)
+			euler.y = std::copysign(static_cast<float>(Tools::M_PI) / 2.0f, sinp); // use 90 degrees if out of range
+		else
+			euler.y = Tools::Utils::Arcsin(sinp);
 
-		if (test != 1.0f && test != -1.0f) {
+		// yaw (z-axis rotation)
+		const float siny_cosp = 2.0f * (w * axis.z + axis.x * axis.y);
+		const float cosy_cosp = 1.0f - 2.0f * (axis.y * axis.y + axis.z * axis.z);
+		euler.z = Tools::Utils::Arctan2F(siny_cosp, cosy_cosp);
 
-			x = atan2(axis.y * axis.z + w * axis.x, 0.5f - (axis.x * axis.x + axis.y * axis.y));
-			y = asin(-2.0f * (axis.x * axis.z - w * axis.y));
-			z = atan2(axis.x * axis.y + w * axis.z, 0.5f - (axis.y * axis.y + axis.z * axis.z));
-
-		}
-		else if (test == 1.0f) {
-			z = atan2(axis.x * axis.y + w * axis.z, 0.5f - (axis.y * axis.y + axis.z * axis.z));
-			y = static_cast<float>(-Tools::M_PI) / 2.0f;
-			x = -z + atan2(axis.x * axis.y - w * axis.z, axis.x * axis.z + w * axis.y);
-
-		}
-		else if (test == -1.0f) {
-
-			z = atan2(axis.x * axis.y + w * axis.z, 0.5f - (axis.y * axis.y + axis.z * axis.z));
-			y = static_cast<float>(Tools::M_PI) / 2.0f;
-			x = z + atan2(axis.x * axis.y - w * axis.z, axis.x * axis.z + w * axis.y);
-
-		}
-
-		x = Tools::Utils::ToDegrees(x);
-		y = Tools::Utils::ToDegrees(y);
-		z = Tools::Utils::ToDegrees(z);
-
-		const Vector3<float> euler{ x, y, z };
+		euler.x = Tools::Utils::ToDegrees(euler.x);
+		euler.y = Tools::Utils::ToDegrees(euler.y);
+		euler.z = Tools::Utils::ToDegrees(euler.z);
 
 		return euler;
 	}
 
-	inline Quaternion Quaternion::FromEulerToQuaternion(const Vector3F& p_euler)
+	inline Quaternion Quaternion::ToQuaternion(const Vector3F& p_euler)
 	{
-		Quaternion result;
-
-		float x = Tools::Utils::ToRadians(p_euler.x);
-		float y = Tools::Utils::ToRadians(p_euler.y);
-		float z = Tools::Utils::ToRadians(p_euler.z);
-
-		x = x / 2.0f;
-		y = y / 2.0f;
-		z = z / 2.0f;
-
-		const float cosX = Tools::Utils::CosF(x);
-		const float cosY = Tools::Utils::CosF(y);
-		const float cosZ = Tools::Utils::CosF(z);
-
-		const float sinX = Tools::Utils::CosF(x);
-		const float sinY = Tools::Utils::CosF(y);
-		const float sinZ = Tools::Utils::CosF(z);
-
-		result.w = cosZ * cosY * cosX + sinZ * sinY * sinX;
-		result.axis.x = cosZ * cosY * sinX - sinZ * sinY * cosX;
-		result.axis.y = cosZ * sinY * cosX + sinZ * cosY * sinX;
-		result.axis.z = sinZ * cosY * cosX - cosZ * sinY * sinX;
-
-		return { result };
+		return { ToQuaternion(p_euler.x, p_euler.y, p_euler.z) };
 	}
 
-	inline Quaternion Quaternion::FromEulerToQuaternion(const float p_yaw, const float p_pitch, const float p_roll)
+	inline Quaternion Quaternion::ToQuaternion(const float p_yaw, const float p_pitch, const float p_roll)
 	{
 		Quaternion result;
 
@@ -514,11 +514,10 @@ namespace GPM
 		const float cosRoll = Tools::Utils::CosF(p_roll * 0.5f);
 		const float sinRoll = Tools::Utils::SinF(p_roll * 0.5f);
 
-		Quaternion q;
-		q.w = cosYaw * cosPitch * cosRoll + sinYaw * sinPitch * sinRoll;
-		q.axis.x = cosYaw * cosPitch * sinRoll - sinYaw * sinPitch * cosRoll;
-		q.axis.y = sinYaw * cosPitch * sinRoll + cosYaw * sinPitch * cosRoll;
-		q.axis.z = sinYaw * cosPitch * cosRoll - cosYaw * sinPitch * sinRoll;
+		result.w = cosYaw * cosPitch * cosRoll + sinYaw * sinPitch * sinRoll;
+		result.axis.x = cosYaw * cosPitch * sinRoll - sinYaw * sinPitch * cosRoll;
+		result.axis.y = sinYaw * cosPitch * sinRoll + cosYaw * sinPitch * cosRoll;
+		result.axis.z = sinYaw * cosPitch * cosRoll - cosYaw * sinPitch * sinRoll;
 
 		return { result };
 	}

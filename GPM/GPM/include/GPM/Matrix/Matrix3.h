@@ -93,10 +93,10 @@ namespace GPM
         template<typename U>
         constexpr Matrix3<T>& Translate(const Vector2<U>& p_vector);
         template<typename U>
-        constexpr static Matrix3<T> CreateTranslate(const Vector2<U>& p_vector);
+        constexpr static Matrix3<T> CreateTranslation(const Vector2<U>& p_vector);
 
         constexpr Matrix3<T>& Rotate(const float p_angle);
-        constexpr static Matrix3<T> CreateRotate(const float p_angle);
+        constexpr static Matrix3<T> CreateRotation(const float p_angle);
 
         template<typename U>
         constexpr Matrix3<T>& Scale(const Vector2<U>& p_vector);
@@ -104,7 +104,7 @@ namespace GPM
         constexpr static Matrix3<T> CreateScale(const Vector2<U>& p_vector);
 
         template<typename U>
-        constexpr static Matrix3<T> CreateTransform(const Vector2<U>& p_pos, const float p_angle, const Vector2<U>& p_scale);
+        constexpr static Matrix3<T> CreateTransformation(const Vector2<U>& p_pos, const float p_angle, const Vector2<U>& p_scale);
          
 #pragma endregion
 
