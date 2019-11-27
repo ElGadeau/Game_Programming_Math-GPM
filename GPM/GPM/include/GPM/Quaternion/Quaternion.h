@@ -17,49 +17,49 @@ namespace GPM
 #pragma region Constructors & Assignment
 		inline Quaternion();
 		/**
-		 * Constructor using all values
+		 * @brief Constructor using all values
 		 * @param p_x Vector part of Quaternion
 		 * @param p_y Vector part of Quaternion
 		 * @param p_z Vector part of Quaternion
 		 * @param p_w Real value of Quaternion
 		 *
-		 * In pure/applied Maths, we write W (or real), (Xi + Yj + Zk) (or Vector)
+		 * @note In pure/applied Maths, we write W (or real), (Xi + Yj + Zk) (or Vector)
 		 */
 		inline Quaternion(const float p_x, const float p_y, const float p_z, const float p_w);
 
 		/**
-		 * Constructor using a scalar and a vector
+		 * @brief Constructor using a scalar and a vector
 		 * @param p_scalar The scalar
 		 * @param p_vector The vector
 		 */
 		inline Quaternion(const float p_scalar, const Vector3F& p_vector);
 
 		/**
-		 * Copy Constructor
+		 * @brief Copy Constructor
 		 * @param p_other
 		 */
 		inline Quaternion(const Quaternion& p_other);
 
 		/**
-		 * Move Constructor
+		 * @brief Move Constructor
 		 * @param p_other
 		 */
 		inline Quaternion(Quaternion&& p_other) noexcept;
 		
 		/**
-		 * Construct from rotation matrix
+		 * @brief Construct from rotation matrix
 		 * @param p_matrix Rotation matrix
 		 */
 		inline Quaternion(const Matrix3<float>& p_matrix);
 		
 		/**
-		 * Construct from rotation matrix
+		 * @brief Construct from rotation matrix
 		 * @param p_matrix Rotation matrix
 		 */
 		inline Quaternion(const Matrix4<float>& p_matrix);
 
 		/**
-		 * Constuct a quaternion from axis and angle in radian
+		 * @brief Constuct a quaternion from axis and angle in radian
 		 * @param p_axis
 		 * @param p_angleInRadians
 		 */
@@ -68,12 +68,23 @@ namespace GPM
 		~Quaternion() = default;
 		
 		/**
-		 * Construct from euler angles
+		 * @brief Construct from euler angles
 		 */
 		inline void MakeFromEuler(const Vector3<float>& p_euler);
 		inline void MakeFromEuler(const float p_x, const float p_y, const float p_z);
 
+		/**
+		 * @brief Copy assignment
+		 * @param p_other The quaternion
+		 * @return The current quaternion modified
+		 */
 		inline Quaternion& operator=(const Quaternion& p_other) = default;
+
+		/**
+		 * @brief Move assigment
+		 * @param p_other The quaternion
+		 * @return The current quaternion modified 
+		 */
 		inline Quaternion& operator=(Quaternion&& p_other) noexcept;
 #pragma endregion
 
@@ -169,19 +180,22 @@ namespace GPM
 		 * @param p_second
 		 * @param p_alpha
 		 */
-		static Quaternion Lerp(Quaternion& p_first, Quaternion& p_second, const float p_alpha);
+		static Quaternion Lerp(const Quaternion& p_first, const Quaternion& p_second, const float p_alpha);
 
 		/**
 		 * @param p_first
 		 * @param p_second
 		 * @param p_alpha
 		 */
-		static Quaternion Slerp(Quaternion& p_first, Quaternion& p_second, const float p_alpha);
-		static Quaternion Nlerp(Quaternion& p_first, Quaternion& p_second, const float p_alpha);
+		static Quaternion Slerp(const Quaternion& p_first, const Quaternion& p_second, const float p_alpha);
+		
+		static Quaternion Nlerp(const Quaternion& p_first, const Quaternion& p_second, const float p_alpha);
+		
 		/**
 		 * @param p_position
 		 * @param p_pivot
 		 */
+		
 		Vector3<float> RotateRelativeToPivot(const Vector3<float>& p_position, const Vector3<float>& p_pivot) const;
 		/**
 		 * @param p_position
@@ -207,8 +221,8 @@ namespace GPM
 #pragma region Conversions
 		Quaternion ToUnitNormQuaternion();
 		Vector3<float> ToEuler() const;
-		static Quaternion FromEulerToQuaternion(const Vector3F& p_euler);
-		static Quaternion FromEulerToQuaternion(const float p_yaw, const float p_pitch, const float p_roll);
+		static Quaternion ToQuaternion(const Vector3F& p_euler);
+		static Quaternion ToQuaternion(const float p_yaw, const float p_pitch, const float p_roll);
 		std::string ToString() const;
 		static std::string ToString(const Quaternion& p_quaternion);
 		Matrix3<float> ToMatrix3() const;
