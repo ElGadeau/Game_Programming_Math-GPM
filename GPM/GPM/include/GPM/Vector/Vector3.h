@@ -110,7 +110,11 @@ namespace GPM
         constexpr inline bool operator==(const Vector3<U>& p_vector) const;
         template<typename U>
         constexpr inline bool operator!=(const Vector3<U>& p_vector) const;
+
 	};
+
+    template <typename T>
+    constexpr std::ostream& operator<<(std::ostream & p_stream, const Vector3<T> & p_vector);
 
     using Vector3F = GPM::Vector3<float>;
     using Vector3L = GPM::Vector3<long>;

@@ -346,5 +346,13 @@ namespace GPM
 
 		return std::string(std::to_string(x) + "/" + std::to_string(y) + "/" + std::to_string(z) + "\n");
 	}
+
+    template <typename T>
+    constexpr std::ostream& operator<<(std::ostream& p_stream, const Vector3<T>& p_vector)
+    {
+        p_stream << "x : " << p_vector.x << " y : " << p_vector.y <<
+            " z : " << p_vector.z;
+        return  { p_stream };
+    }
 #pragma endregion
 }

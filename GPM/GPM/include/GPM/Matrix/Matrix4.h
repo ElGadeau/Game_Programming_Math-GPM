@@ -2,8 +2,10 @@
 // Make your .inl here in include folder.
 // #include <GPM/Quaternion/Quaternion.h>
 
+
 namespace GPM
 {
+    struct Quaternion;
     /**
      * A standard 4 by 4 Matrix. Default value is an identity matrix
      */
@@ -204,6 +206,9 @@ namespace GPM
          */
         template<typename U>
         constexpr static Matrix4<T> Multiply(const Matrix4<T>& p_left, const Matrix4<U>& p_right);
+
+        template<typename U>
+        Vector4<U>& Multiply(const Vector4<U>& p_other);
 
         /**
         * @brief Multiply matrix to the current matrix

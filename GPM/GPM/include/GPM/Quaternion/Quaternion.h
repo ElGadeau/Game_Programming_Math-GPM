@@ -1,8 +1,5 @@
 #pragma once
 #include <string>
-#include <GPM/Vector/Vector3.h>
-#include <GPM/Matrix/Matrix3.h>
-#include <GPM/Matrix/Matrix4.h>
 
 namespace GPM
 {

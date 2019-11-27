@@ -1,6 +1,5 @@
 #pragma once
 
-#include <complex>
 #include <utility>
 #include <GPM/Tools/Utils.h>
 
@@ -97,6 +96,8 @@ namespace GPM
 		axis.x = p_axis.x * Tools::Utils::SinF(p_angleInRadians / 2.0f);
 		axis.y = p_axis.y * Tools::Utils::SinF(p_angleInRadians / 2.0f);
 		axis.z = p_axis.z * Tools::Utils::SinF(p_angleInRadians / 2.0f);
+
+		std::cout << "w:" << w << "\t axis:" << axis.ToString() << "\n";
 	}
 
 	inline void Quaternion::MakeFromEuler(const Vector3<float>& p_euler)
