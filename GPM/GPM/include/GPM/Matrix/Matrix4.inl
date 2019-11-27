@@ -164,7 +164,7 @@ constexpr Matrix4<T>& Matrix4<T>::Rotate(const Quaternion& p_rotation)
 }
 
 template<typename T>
-constexpr Matrix4<T> Matrix4<T>::CreateRotate(const Quaternion& p_rotation)
+constexpr Matrix4<T> Matrix4<T>::CreateRotation(const Quaternion& p_rotation)
 {
     return p_rotation.ToMatrix4();
 }
@@ -180,7 +180,7 @@ constexpr Matrix4<T>& Matrix4<T>::Translate(const Vector3<U>& p_translate)
 
 template<typename T>
 template<typename U>
-constexpr Matrix4<T> Matrix4<T>::CreateTranslate(const Vector3<U>& p_translate)
+constexpr Matrix4<T> Matrix4<T>::CreateTranslation(const Vector3<U>& p_translate)
 {
     Matrix4<T> tmpTrans = identity;
 
@@ -202,16 +202,16 @@ constexpr Matrix4<T>& Matrix4<T>::Transform(const Vector3<U>& p_translate, const
 
 template<typename T>
 template<typename U>
-constexpr Matrix4<T> Matrix4<T>::CreateTransform(const Vector3<U>& p_translate, const Quaternion& p_rotation, const Vector3<U>& p_scale)
+constexpr Matrix4<T> Matrix4<T>::CreateTransformation(const Vector3<U>& p_translate, const Quaternion& p_rotation, const Vector3<U>& p_scale)
 {
-    Matrix4<T> tmpTrans = CreateTranslate(p_translate);
-    Matrix4<T> tmpRot = CreateRotate(p_rotation);
+    Matrix4<T> tmpTrans = CreateTranslation(p_translate);
+    Matrix4<T> tmpRot = CreateRotation(p_rotation);
     Matrix4<T> tmpScale = CreateScale(p_scale);
 
-    Matrix4<T> tmpMat = tmpTrans * tmpRot;
+    Matrix4<T> tmpMat = tmpTrans * tmpRot * tmpScale;
 
     // tmpTrans *= tmpRot;
-    tmpMat *= tmpScale;
+    //tmpMat *= tmpScale;
 
     return tmpMat;
 }
@@ -410,7 +410,7 @@ template<typename T>
 template<typename U>
 constexpr Matrix4<T> Matrix4<T>::operator*(const Matrix4<U>& p_other) const
 {
-    return Multiply(p_other);
+    return Matrix4<T>(*this).Multiply(p_other) ;
 }
 
 template<typename T>
@@ -426,7 +426,8 @@ Matrix4<T>& Matrix4<T>::operator*=(const Matrix4<U>& p_other)
 
 
 template<typename T>
-Vector4<T> Matrix4<T>::Multiply(const Matrix4<T>& p_matrix, const Vector4<T>& p_vector)
+template<typename U>
+Vector4<T> Matrix4<T>::Multiply(const Matrix4<U>& p_matrix, const Vector4<T>& p_vector)
 {
     Vector4<T> tmpVec = Vector4F::zero;
 

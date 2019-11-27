@@ -64,19 +64,20 @@ namespace GPM
         template<typename U>
         constexpr static Matrix4<T> CreateScale(const Vector3<U>& p_scale);
 
-        constexpr Matrix4<T>& Rotate(const GPM::Quaternion& p_rotation);
-        constexpr static Matrix4<T> CreateRotate(const GPM::Quaternion& p_rotation);
+        constexpr Matrix4<T>& Rotate(const Quaternion& p_rotation);
+        constexpr static Matrix4<T> CreateRotation(const Quaternion& p_rotation);
         
         template<typename U>
         constexpr Matrix4<T>& Translate(const Vector3<U>& p_translate);
         template<typename U>
-        constexpr static Matrix4<T> CreateTranslate(const Vector3<U>& p_translate);
+        constexpr static Matrix4<T> CreateTranslation(const Vector3<U>& p_translate);
         
         template<typename U>
-        constexpr Matrix4<T>& Transform(const Vector3<U>& p_translate, const GPM::Quaternion& p_rotation, const Vector3<U>& p_scale);
+        constexpr Matrix4<T>& Transform(const Vector3<U>& p_translate, const Quaternion& p_rotation, const Vector3<U>& p_scale);
         template<typename U>
-        constexpr static Matrix4<T> CreateTransform(const Vector3<U>& p_translate, const GPM::Quaternion& p_rotation, const Vector3<U>& p_scale);
+        constexpr static Matrix4<T> CreateTransformation(const Vector3<U>& p_translate, const Quaternion& p_rotation, const Vector3<U>& p_scale);
 
+        static Matrix4<T> LookAt(const Vector3<T>& p_from, const Vector3<T>& p_to, const Vector3<T>& p_up = { 0,1,0 });
 #pragma endregion
 
         //TODO clean these
@@ -87,6 +88,7 @@ namespace GPM
         T GetMinor(Matrix3<T> p_minor);
 
         Matrix4<T> Inverse();
+
 
 #pragma region Conversions
 
@@ -224,7 +226,8 @@ namespace GPM
 #pragma endregion 
 
         // static Matrix4<T> Multiply(const Matrix4<T>& p_matrix, const Matrix4<T>& p_other);
-        static Vector4<T> Multiply(const Matrix4<T>& p_matrix, const Vector4<T>& p_vector);
+        template<typename U>
+        static Vector4<T> Multiply(const Matrix4<U>& p_matrix, const Vector4<T>& p_vector);
         static bool Equals(const Matrix4<T>& p_matrix, const Matrix4<T>& p_other);
         static void Set(Matrix4<T>& p_matrix, const Matrix4<T>& p_other);
 
