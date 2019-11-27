@@ -2,6 +2,8 @@
 
 #include <cmath>
 #include <type_traits>
+#include <numeric>
+#include <algorithm>
 
 namespace GPM::Tools
 {
@@ -13,6 +15,27 @@ namespace GPM::Tools
 	inline float Utils::ToDegrees(const float p_angle)
 	{
 		return p_angle * (180.0f / static_cast<float>(M_PI));
+	}
+
+	inline int Utils::GreatestCommonDivider(const int p_a, const int p_b)
+	{
+		for (int divisor = std::min(p_a, p_b); divisor > 0; divisor--) {
+			if (0 == p_a % divisor && 0 == p_b % divisor) {
+				return divisor;
+			}
+		}
+
+		return p_b;
+	}
+
+	inline int Utils::LeastCommonMultiple(const int p_a, const int p_b)
+	{
+		return p_a * p_b / GreatestCommonDivider(p_a, p_b);
+	}
+
+	inline float Utils::GetDecimalPart(const float p_value)
+	{
+		return fmod(p_value, 1.0f);
 	}
 
 	inline float Utils::Sin(const float p_value)

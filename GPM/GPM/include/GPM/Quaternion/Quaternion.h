@@ -211,8 +211,8 @@ namespace GPM
 #pragma region Conversions
 		Quaternion ToUnitNormQuaternion();
 		Vector3<float> ToEuler() const;
-		Quaternion FromEulerToQuaternion(const Vector3F& p_euler) const;
-		Quaternion FromEulerToQuaternion(const float p_x, const float p_y, const float p_z) const;
+		static Quaternion FromEulerToQuaternion(const Vector3F& p_euler);
+		static Quaternion FromEulerToQuaternion(const float p_x, const float p_y, const float p_z);
 		std::string ToString() const;
 		static std::string ToString(const Quaternion& p_quaternion);
 		Matrix3<float> ToMatrix3() const;

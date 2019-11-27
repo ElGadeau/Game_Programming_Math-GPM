@@ -262,8 +262,7 @@ namespace GPM
 
 	inline Quaternion& Quaternion::Inverse()
 	{
-		float absoluteValue = Norm();
-		absoluteValue *= absoluteValue;
+		float absoluteValue = NormSquare();
 		absoluteValue = 1.0f / absoluteValue;
 
 		const Quaternion conjugateValue = Conjugate();
@@ -279,8 +278,7 @@ namespace GPM
 
 	inline Quaternion Quaternion::Inverse(const Quaternion& p_quaternion)
 	{
-		float absoluteValue = p_quaternion.Norm();
-		absoluteValue *= absoluteValue;
+		float absoluteValue = p_quaternion.NormSquare();
 		absoluteValue = 1 / absoluteValue;
 
 		const Quaternion conjugateValue = Conjugate(p_quaternion);
@@ -419,10 +417,8 @@ namespace GPM
 		const float angle = Tools::Utils::ToRadians(w);
 
 		axis.Normalize();
-		result.w = Tools::Utils::CosF(angle * 0.5f);
-		result.axis = axis * Tools::Utils::SinF(angle * 0.5f);
 
-		return { result };
+		return { Quaternion { Tools::Utils::CosF(angle * 0.5f), axis * Tools::Utils::SinF(angle * 0.5f)} };
 	}
 
 	inline Vector3<float> Quaternion::ToEuler() const
@@ -463,12 +459,12 @@ namespace GPM
 		y = Tools::Utils::ToDegrees(y);
 		z = Tools::Utils::ToDegrees(z);
 
-		Vector3<float> euler(x, y, z);
+		const Vector3<float> euler{ x, y, z };
 
 		return euler;
 	}
 
-	inline Quaternion Quaternion::FromEulerToQuaternion(const Vector3F& p_euler) const
+	inline Quaternion Quaternion::FromEulerToQuaternion(const Vector3F& p_euler)
 	{
 		Quaternion result;
 
@@ -480,15 +476,23 @@ namespace GPM
 		y = y / 2.0f;
 		z = z / 2.0f;
 
-		result.w = cos(z) * cos(y) * cos(x) + sin(z) * sin(y) * sin(x);
-		result.axis.x = cos(z) * cos(y) * sin(x) - sin(z) * sin(y) * cos(x);
-		result.axis.y = cos(z) * sin(y) * cos(x) + sin(z) * cos(y) * sin(x);
-		result.axis.z = sin(z) * cos(y) * cos(x) - cos(z) * sin(y) * sin(x);
+		const float cosX = Tools::Utils::CosF(x);
+		const float cosY = Tools::Utils::CosF(y);
+		const float cosZ = Tools::Utils::CosF(z);
+
+		const float sinX = Tools::Utils::CosF(x);
+		const float sinY = Tools::Utils::CosF(y);
+		const float sinZ = Tools::Utils::CosF(z);
+		
+		result.w = cosZ * cosY * cosX + sinZ * sinY * sinX;
+		result.axis.x = cosZ * cosY * sinX - sinZ * sinY * cosX;
+		result.axis.y = cosZ * sinY * cosX + sinZ * cosY * sinX;
+		result.axis.z = sinZ * cosY * cosX - cosZ * sinY * sinX;
 
 		return { result };
 	}
 
-	inline Quaternion Quaternion::FromEulerToQuaternion(const float p_x, const float p_y, const float p_z) const
+	inline Quaternion Quaternion::FromEulerToQuaternion(const float p_x, const float p_y, const float p_z)
 	{
 		Quaternion result;
 
@@ -500,10 +504,18 @@ namespace GPM
 		y = y / 2.0f;
 		z = z / 2.0f;
 
-		result.w = cos(z) * cos(y) * cos(x) + sin(z) * sin(y) * sin(x);
-		result.axis.x = cos(z) * cos(y) * sin(x) - sin(z) * sin(y) * cos(x);
-		result.axis.y = cos(z) * sin(y) * cos(x) + sin(z) * cos(y) * sin(x);
-		result.axis.z = sin(z) * cos(y) * cos(x) - cos(z) * sin(y) * sin(x);
+		const float cosX = Tools::Utils::CosF(x);
+		const float cosY = Tools::Utils::CosF(y);
+		const float cosZ = Tools::Utils::CosF(z);
+
+		const float sinX = Tools::Utils::CosF(x);
+		const float sinY = Tools::Utils::CosF(y);
+		const float sinZ = Tools::Utils::CosF(z);
+
+		result.w = cosZ * cosY * cosX + sinZ * sinY * sinX;
+		result.axis.x = cosZ * cosY * sinX - sinZ * sinY * cosX;
+		result.axis.y = cosZ * sinY * cosX + sinZ * cosY * sinX;
+		result.axis.z = sinZ * cosY * cosX - cosZ * sinY * sinX;
 
 		return { result };
 	}
