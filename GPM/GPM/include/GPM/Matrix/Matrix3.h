@@ -263,6 +263,13 @@ namespace GPM
          * @return True or false
          */
         constexpr bool operator==(const Matrix3<T>& p_other) const;
+
+        /**
+         * @brief Return true if the two matrices are different
+         * @param p_other The matrix used for the checkup
+         * @return True or false
+         */
+        constexpr bool operator!=(const Matrix3<T>& p_other) const;
 #pragma endregion
 
 #pragma region Conversions

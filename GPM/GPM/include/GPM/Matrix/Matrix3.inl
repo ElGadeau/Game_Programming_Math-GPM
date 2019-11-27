@@ -439,6 +439,12 @@ constexpr bool Matrix3<T>::operator==(const Matrix3<T>& p_other) const
     return Equals(p_other);
 }
 
+template<typename T>
+constexpr bool Matrix3<T>::operator!=(const Matrix3<T>& p_other) const
+{
+    return !Equals(p_other);
+}
+
 #pragma endregion
 
 #pragma region Outside Operators
