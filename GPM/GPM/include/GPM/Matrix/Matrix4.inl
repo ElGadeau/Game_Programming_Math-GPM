@@ -1,6 +1,8 @@
 #pragma once
 #include <GPM/Quaternion/Quaternion.h>
 
+// struct GPM::Quaternion;
+
 #pragma region Static Properties
 
 template<typename T>

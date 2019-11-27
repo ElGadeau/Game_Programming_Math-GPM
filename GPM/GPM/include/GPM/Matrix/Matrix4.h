@@ -2,8 +2,10 @@
 // Make your .inl here in include folder.
 // #include <GPM/Quaternion/Quaternion.h>
 
+
 namespace GPM
 {
+    struct Quaternion;
     /**
      * A standard 4 by 4 Matrix. Default value is an identity matrix
      */
