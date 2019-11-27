@@ -228,6 +228,10 @@ namespace GPM
         template<class U>
         constexpr Matrix3<T> operator*(const Matrix3<U>& p_other) const;
 
+
+        template<class U>
+        constexpr Matrix3<T> operator*(U p_other) const;
+
         template<class U>
         Matrix3<T>& operator*=(const U p_other);
         
@@ -302,15 +306,12 @@ namespace GPM
 
     template <typename T>
     constexpr std::ostream& operator<<(std::ostream& p_stream, const Matrix3<T>& p_matrix3);
-
 #pragma endregion
 
     using Matrix3F = Matrix3<float>;
     using Matrix3L = Matrix3<long>;
     using Matrix3I = Matrix3<int>;
     using Matrix3D = Matrix3<double>;
-
-
 }// end Namespace GPM
 
 #include <GPM/Matrix/Matrix3.inl>

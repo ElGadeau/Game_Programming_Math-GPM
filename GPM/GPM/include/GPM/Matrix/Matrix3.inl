@@ -140,7 +140,8 @@ template<typename T>
 constexpr Vector3<T> Matrix3<T>::GetColumn(const int p_column)
 {
     if (p_column < 0 || p_column > 3)
-        return identity;
+        throw std::logic_error("Matrix3::GetColumn() p_column is inferior to 0 or superior to 3. There are no columns at those indexes");
+
 
     return { m_data[p_column], m_data[p_column + 3], m_data[p_column + 6] };
 }
@@ -150,7 +151,8 @@ template<typename U>
 constexpr void Matrix3<T>::SetColumn(const int p_column, const Vector3<U>& p_vector)
 {
     if (p_column < 0 || p_column > 3)
-        return;
+        throw std::logic_error("Matrix3::SetColumn() p_column is inferior to 0 or superior to 3. There are no columns at those indexes");
+    
 
     m_data[p_column] = p_vector.x;
     m_data[p_column + 3] = p_vector.y;
@@ -161,7 +163,7 @@ template<typename T>
 constexpr Vector3<T> Matrix3<T>::GetRow(const int p_row)
 {
     if (p_row < 0 || p_row > 3)
-        return identity;
+        throw std::logic_error("Matrix3::GetRow() p_row is inferior to 0 or superior to 3. There are no rows at those indexes");
 
     return { m_data[4 * p_row], m_data[(4 * p_row) + 1], m_data[(4 * p_row) + 2] };
 }
@@ -171,7 +173,7 @@ template<typename U>
 constexpr void Matrix3<T>::SetRow(const int p_row, const Vector3<U>& p_vector)
 {
     if (p_row < 0 || p_row > 3)
-        return;
+        throw std::logic_error("Matrix3::SetRow() p_row is inferior to 0 or superior to 3. There are no rows at those indexes");
 
     m_data[p_row] = p_vector.x;
     m_data[p_row + 1] = p_vector.y;
@@ -181,17 +183,25 @@ constexpr void Matrix3<T>::SetRow(const int p_row, const Vector3<U>& p_vector)
 template<typename T>
 constexpr Matrix3<T>& Matrix3<T>::Normalize()
 {
-    return identity;
+    T determinant = Determinant();
+
+    if (determinant == 0)
+        throw std::logic_error("Matrix3::Normalize() : Cannot divide by 0. Determinant was 0");
+
+    for (auto& i : m_data)
+    {
+        i /= determinant;
+    }
+    return {*this};
 }
 
 template<typename T>
 constexpr Matrix3<T> Matrix3<T>::Normalize(const Matrix3<T>& p_matrix)
 {
-    return identity;
+    return p_matrix.Normalize();
 }
 
-template<typename T> template<typename U> constexpr Matrix3<T>& Matrix3<T>::Translate(
-    const Vector2<U>& p_vector)
+template<typename T> template<typename U> constexpr Matrix3<T>& Matrix3<T>::Translate(const Vector2<U>& p_vector)
 {
     m_data[2] = p_vector.x;
     m_data[5] = p_vector.y;
@@ -370,6 +380,13 @@ constexpr Matrix3<T> Matrix3<T>::Multiply(const Matrix3<T>& p_left, const Matrix
 template<typename T>
 template<typename U>
 constexpr Matrix3<T> Matrix3<T>::operator*(const Matrix3<U>& p_other) const
+{
+    return Matrix3<T>(*this).Multiply(p_other);
+}
+
+template<typename T>
+template<typename U>
+constexpr Matrix3<T> Matrix3<T>::operator*(const U p_other) const
 {
     return Matrix3<T>(*this).Multiply(p_other);
 }
