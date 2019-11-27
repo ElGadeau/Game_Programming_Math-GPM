@@ -274,6 +274,8 @@ constexpr Matrix3<T> Matrix3<T>::CreateTransformation(const Vector2<U>& p_pos, c
 
 #pragma region Arithmetic Operations
 
+#pragma region Add
+
 template<typename T>
 template<typename U>
 Matrix3<T>& Matrix3<T>::Add(const Matrix3<U>& p_other)
@@ -305,6 +307,10 @@ Matrix3<T>& Matrix3<T>::operator+=(const Matrix3<U>& p_other)
     return Add(p_other);
 }
 
+#pragma endregion 
+
+#pragma region Subtract
+
 template<typename T>
 template<typename U>
 Matrix3<T>& Matrix3<T>::Subtract(const Matrix3<U>& p_other)
@@ -335,12 +341,17 @@ Matrix3<T>& Matrix3<T>::operator-=(const Matrix3<U>& p_other)
 {
     return Subtract(p_other);
 }
+
+#pragma endregion
+
+#pragma region Multiply
+
 template<typename T>
 template<typename U>
 Matrix3<T>& Matrix3<T>::Multiply(U p_scalar)
 {
-    for (unsigned int i = 0; i < 9; ++i)
-        m_data[i] *= p_scalar;
+    for (auto& val : m_data)
+        val *= p_scalar;
 
     return { *this };
 }
@@ -405,6 +416,44 @@ Matrix3<T>& Matrix3<T>::operator*=(const Matrix3<U>& p_other)
     return  { Multiply(p_other) };
 }
 
+#pragma endregion
+
+#pragma region Divide
+
+template<typename T>
+template<typename U>
+Matrix3<T>& Matrix3<T>::Divide(U p_scalar)
+{
+    for (auto& val : m_data)
+        val /= p_scalar;
+
+    return { *this };
+}
+
+template<typename T> 
+template<typename U>
+ constexpr Matrix3<T> Matrix3<T>::Divide(const Matrix3<T>& p_left, const U p_scalar)
+{
+     return p_left.Divide(p_scalar);
+}
+
+template<typename T> 
+template<class U>
+ constexpr Matrix3<T> Matrix3<T>::operator/(const U p_other) const
+{
+     return Matrix3<T>(*this).Divide(p_other);
+}
+
+template<typename T> 
+template<class U>
+ Matrix3<T>& Matrix3<T>::operator/=(const U p_other)
+{
+     return { Divide(p_other) };
+}
+
+
+#pragma endregion
+
 #pragma endregion 
 
 #pragma region Conversions
@@ -432,6 +481,7 @@ constexpr std::string Matrix3<T>::ToString(const Matrix3<T>& p_matrix)
 #pragma  endregion
 
 #pragma region Tests & Comparisons
+
 
 template<typename T>
 constexpr bool Matrix3<T>::Equals(const Matrix3<T>& p_other) const
