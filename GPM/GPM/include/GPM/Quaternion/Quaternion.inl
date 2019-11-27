@@ -77,6 +77,41 @@ namespace GPM
 		}
 	}
 
+	inline Quaternion::Quaternion(const Matrix4<float>& p_matrix)
+	{
+		const float trace = p_matrix.m_data[0] + p_matrix.m_data[5] + p_matrix.m_data[10]; // I removed + 1.0f; see discussion with Ethan
+		if (trace > 0) {// I changed M_EPSILON to 0
+			const float s = 0.5f / sqrtf(trace + 1.0f);
+			w = 0.25f / s;
+			axis.x = (p_matrix.m_data[9] - p_matrix.m_data[6]) * s;
+			axis.y = (p_matrix.m_data[2] - p_matrix.m_data[8]) * s;
+			axis.z = (p_matrix.m_data[4] - p_matrix.m_data[1]) * s;
+		}
+		else {
+			if (p_matrix.m_data[0] > p_matrix.m_data[5] && p_matrix.m_data[0] > p_matrix.m_data[10]) {
+				const float s = 2.0f * sqrtf(1.0f + p_matrix.m_data[0] - p_matrix.m_data[5] - p_matrix.m_data[10]);
+				w = (p_matrix.m_data[9] - p_matrix.m_data[6]) / s;
+				axis.x = 0.25f * s;
+				axis.y = (p_matrix.m_data[1] + p_matrix.m_data[4]) / s;
+				axis.z = (p_matrix.m_data[2] + p_matrix.m_data[8]) / s;
+			}
+			else if (p_matrix.m_data[5] > p_matrix.m_data[10]) {
+				const float s = 2.0f * sqrtf(1.0f + p_matrix.m_data[5] - p_matrix.m_data[0] - p_matrix.m_data[10]);
+				w = (p_matrix.m_data[2] - p_matrix.m_data[8]) / s;
+				axis.x = (p_matrix.m_data[1] + p_matrix.m_data[4]) / s;
+				axis.y = 0.25f * s;
+				axis.z = (p_matrix.m_data[6] + p_matrix.m_data[9]) / s;
+			}
+			else {
+				const float s = 2.0f * sqrtf(1.0f + p_matrix.m_data[10] - p_matrix.m_data[0] - p_matrix.m_data[5]);
+				w = (p_matrix.m_data[4] - p_matrix.m_data[1]) / s;
+				axis.x = (p_matrix.m_data[2] + p_matrix.m_data[8]) / s;
+				axis.y = (p_matrix.m_data[6] + p_matrix.m_data[9]) / s;
+				axis.z = 0.25f * s;
+			}
+		}
+	}
+
 	inline Quaternion::Quaternion(const Vector3<float>& p_axis,
 		const float p_angleInRadians)
 		: axis{ 0.0f, 0.0f, 0.0f }
