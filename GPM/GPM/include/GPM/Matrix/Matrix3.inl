@@ -200,7 +200,7 @@ template<typename T> template<typename U> constexpr Matrix3<T>& Matrix3<T>::Tran
 
 template<typename T>
 template<typename U>
-constexpr Matrix3<T> Matrix3<T>::CreateTranslate(const Vector2<U>& p_vector)
+constexpr Matrix3<T> Matrix3<T>::CreateTranslation(const Vector2<U>& p_vector)
 {
     Matrix3<T> tempMat = identity;
     tempMat.m_data[2] = p_vector.x;
@@ -218,7 +218,7 @@ template<typename T> constexpr Matrix3<T>& Matrix3<T>::Rotate(const float p_angl
 }
 
 template<typename T>
-constexpr Matrix3<T> Matrix3<T>::CreateRotate(const float p_angle)
+constexpr Matrix3<T> Matrix3<T>::CreateRotation(const float p_angle)
 {
     Matrix3<T> tempMat = identity;
     tempMat.m_data[0] = Tools::Utils::Cos(p_angle);
@@ -239,7 +239,7 @@ constexpr Matrix3<T>& Matrix3<T>::Scale(const Vector2<U>& p_vector)
 
 template<typename T>
 template<typename U>
-constexpr Matrix3<T> Matrix3<T>::CreateScale(const Vector2<U>& p_vector)
+constexpr Matrix3<T> Matrix3<T>::CreateScaling(const Vector2<U>& p_vector)
 {
     Matrix3<T> tempMat = identity;
     tempMat.m_data[0] = p_vector.x;
@@ -249,13 +249,13 @@ constexpr Matrix3<T> Matrix3<T>::CreateScale(const Vector2<U>& p_vector)
 
 template<typename T>
 template<typename U>
-constexpr Matrix3<T> Matrix3<T>::CreateTransform(const Vector2<U>& p_pos, const float p_angle, const Vector2<U>& p_scale)
+constexpr Matrix3<T> Matrix3<T>::CreateTransformation(const Vector2<U>& p_pos, const float p_angle, const Vector2<U>& p_scale)
 {
-    static_assert(!std::is_integral<T>::value, "Matrix3::CreateTransform : Can't do Transform Matrices with Matrix3<int>, as values would be rounded to 0");
+    static_assert(!std::is_integral<T>::value, "Matrix3::CreateTransformation : Can't do Transform Matrices with Matrix3<int>, as values would be rounded to 0");
     Matrix3<T> tempMat = identity;
-    Matrix3<T> t = CreateTranslate(p_pos);
-    Matrix3<T> r = CreateRotate(p_angle);
-    Matrix3<T> s = CreateScale(p_scale);
+    Matrix3<T> t = CreateTranslation(p_pos);
+    Matrix3<T> r = CreateRotation(p_angle);
+    Matrix3<T> s = CreateScaling(p_scale);
     tempMat = t * r * s;
     return tempMat;
 }
