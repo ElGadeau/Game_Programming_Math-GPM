@@ -1,5 +1,6 @@
 #pragma once
 // Make your .inl here in include folder.
+// #include <GPM/Quaternion/Quaternion.h>
 
 namespace GPM
 {
@@ -49,24 +50,37 @@ namespace GPM
 
 #pragma region Properties
 
-        T Determinant();
-        static T Determinant(const Matrix4& p_matrix);
+        constexpr T Determinant();
+        constexpr static T Determinant(const Matrix4& p_matrix);
+        
+        constexpr Matrix4<T>& Transpose();
+        constexpr static Matrix4<T> Transpose(const Matrix4& p_matrix);
+        
+        constexpr Matrix4<T>& Normalize();
+        constexpr static Matrix4<T> Normalize(const Matrix4<T>& p_matrix);
+        
+        template<typename U>
+        constexpr Matrix4<T>& Scale(const Vector3<U>& p_scale);
+        template<typename U>
+        constexpr static Matrix4<T> CreateScale(const Vector3<U>& p_scale);
 
-        Matrix4<T>& Transpose();
-        static Matrix4<T> Transpose(const Matrix4& p_matrix);
+        constexpr Matrix4<T>& Rotate(const GPM::Quaternion& p_rotation);
+        constexpr static Matrix4<T> CreateRotate(const GPM::Quaternion& p_rotation);
+        
+        template<typename U>
+        constexpr Matrix4<T>& Translate(const Vector3<U>& p_translate);
+        template<typename U>
+        constexpr static Matrix4<T> CreateTranslate(const Vector3<U>& p_translate);
+        
+        template<typename U>
+        constexpr Matrix4<T>& Transform(const Vector3<U>& p_translate, const GPM::Quaternion& p_rotation, const Vector3<U>& p_scale);
+        template<typename U>
+        constexpr static Matrix4<T> CreateTransform(const Vector3<U>& p_translate, const GPM::Quaternion& p_rotation, const Vector3<U>& p_scale);
 
 #pragma endregion
 
-
         //TODO clean these
-        static Matrix4<T> ScaleMatrix4(const Vector3<T>& p_scale);
-        static Matrix4<T> RotationMatrix4(const Vector3<T>& p_rotation);
-        static Matrix4<T> TranslateMatrix4(const Vector3<T>& p_translate);
-
-        // static Matrix4<T> Transpose(const Matrix4<T>& p_transpose);
-
         //methods
-        constexpr void ToString() noexcept;
         constexpr void SetColumn(int p_column, const Vector4<T>& p_vector);
         constexpr void SetRow(int p_row, const Vector4<T>& p_vector);
 
@@ -74,11 +88,12 @@ namespace GPM
 
         Matrix4<T> Inverse();
 
-        void Scale(const Vector3<T>& p_scale);
-        void Rotation(const Vector3<T>& p_rotation);
-        void Translate(const Vector3<T>& p_translate);
-        
+#pragma region Conversions
 
+        constexpr std::string ToString() noexcept;
+        constexpr static std::string ToString(const Matrix4<T>& p_matrix);
+
+#pragma endregion
 
 #pragma region Arithmetic Operations
 
@@ -218,8 +233,6 @@ namespace GPM
 #pragma region Operators
 
         //operators
-
-
         Vector4<T> operator*(const Vector4<T>& p_vector);
 
         bool operator==(const Matrix4<T>& p_matrix);
