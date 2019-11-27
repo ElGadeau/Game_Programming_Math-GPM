@@ -51,6 +51,7 @@ namespace GPM
 		 * @param p_matrix Rotation matrix
 		 */
 		inline Quaternion(const Matrix3<float>& p_matrix);
+		
 		/**
 		 * Construct from rotation matrix
 		 * @param p_matrix Rotation matrix
@@ -109,8 +110,6 @@ namespace GPM
 #pragma region Multiply
 		float DotProduct(const Quaternion& p_otherQuaternion) const;
 		static float DotProduct(const Quaternion& p_left, const Quaternion& p_right);
-		
-		float operator|(const Quaternion& p_otherQuaternion) const;
 
 		inline Quaternion operator*(const float p_scale) const;
 		inline Quaternion& operator*=(const float p_scale);
@@ -146,9 +145,6 @@ namespace GPM
 
 		Quaternion& Conjugate();
 		static Quaternion Conjugate(const Quaternion& p_quaternion);
-
-		Quaternion& Square();
-		static Quaternion Square(const Quaternion& p_quaternion);
 
 		Quaternion& ConvertToUnitNormQuaternion();
 
@@ -212,7 +208,7 @@ namespace GPM
 		Quaternion ToUnitNormQuaternion();
 		Vector3<float> ToEuler() const;
 		static Quaternion FromEulerToQuaternion(const Vector3F& p_euler);
-		static Quaternion FromEulerToQuaternion(const float p_x, const float p_y, const float p_z);
+		static Quaternion FromEulerToQuaternion(const float p_yaw, const float p_pitch, const float p_roll);
 		std::string ToString() const;
 		static std::string ToString(const Quaternion& p_quaternion);
 		Matrix3<float> ToMatrix3() const;

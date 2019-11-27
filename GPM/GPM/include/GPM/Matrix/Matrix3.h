@@ -12,6 +12,9 @@ namespace GPM
     {
         static_assert(std::is_arithmetic<T>::value, "Matrix3 should only be used with arithmetic types");
 
+        T m_data[9] = { 1,0,0,
+                        0,1,0,
+                        0,0,1 };
 #pragma region Constructors & Assignment
 
         constexpr Matrix3();
@@ -52,12 +55,6 @@ namespace GPM
 
 #pragma endregion
 
-        T m_data[9] = { 1,0,0,
-                        0,1,0,
-                        0,0,1 };
-
-        
-
 #pragma region Static Properties
         /**
          * @brief This is a const matrix that has 1 in the diagonal and 0 elsewhere
@@ -74,15 +71,40 @@ namespace GPM
 
         T Determinant();
 
-        static T Determinant(const Matrix3& p_matrix);
+        static T Determinant(const Matrix3<T>& p_matrix3);
 
-        Matrix3<T>& Transpose();
-        static Matrix3<T> Transpose(const Matrix3& p_matrix3);
+        constexpr Matrix3<T>& Transpose();
+        constexpr static Matrix3<T> Transpose(const Matrix3<T>& p_matrix3);
 
         constexpr Vector3<T> GetColumn(const int p_column);
-        constexpr void SetColumn(const int p_column, const Vector3<T>& p_vector);
+
+        template<typename U>
+        constexpr void SetColumn(const int p_column, const Vector3<U>& p_vector);
+
+
         constexpr Vector3<T> GetRow(const int p_row);
-        constexpr void SetRow(const int p_row, const Vector3<T>& p_vector);
+        template<typename U>
+        constexpr void SetRow(const int p_row, const Vector3<U>& p_vector);
+
+        constexpr Matrix3<T>& Normalize();
+        constexpr static Matrix3<T> Normalize(const Matrix3<T>& p_matrix);
+
+
+        template<typename U>
+        constexpr Matrix3<T>& Translate(const Vector2<U>& p_vector);
+        template<typename U>
+        constexpr static Matrix3<T> CreateTranslate(const Vector2<U>& p_vector);
+
+        constexpr Matrix3<T>& Rotate(const float p_angle);
+        constexpr static Matrix3<T> CreateRotate(const float p_angle);
+
+        template<typename U>
+        constexpr Matrix3<T>& Scale(const Vector2<U>& p_vector);
+        template<typename U>
+        constexpr static Matrix3<T> CreateScale(const Vector2<U>& p_vector);
+
+        template<typename U>
+        constexpr static Matrix3<T> CreateTransform(const Vector2<U>& p_pos, const float p_angle, const Vector2<U>& p_scale);
          
 #pragma endregion
 
@@ -203,6 +225,9 @@ namespace GPM
         */
         template<class U>
         constexpr Matrix3<T> operator*(const Matrix3<U>& p_other) const;
+
+        template<class U>
+        Matrix3<T>& operator*=(const U p_other);
         
         /**
         * @brief Multiply matrix to the current matrix
@@ -214,6 +239,37 @@ namespace GPM
 
 #pragma endregion
 
+#pragma endregion
+
+#pragma region Tests & Comparisons
+        /**
+         * @brief Return true if the two matrices are identical
+         * @param p_other The matrix used for the checkup
+         * @return True or false
+         */
+        constexpr bool Equals(const Matrix3<T>& p_other) const;
+
+        /**
+         * @brief Return true if the two matrices are identical
+         * @param p_left The left matrix
+         * @param p_right The right matrix
+         * @return True or false
+         */
+        constexpr static bool AreEqual(const Matrix3<T>& p_left, const Matrix3<T>& p_right);
+
+        /**
+         * @brief Return true if the two matrices are identical
+         * @param p_other The matrix used for the checkup
+         * @return True or false
+         */
+        constexpr bool operator==(const Matrix3<T>& p_other) const;
+
+        /**
+         * @brief Return true if the two matrices are different
+         * @param p_other The matrix used for the checkup
+         * @return True or false
+         */
+        constexpr bool operator!=(const Matrix3<T>& p_other) const;
 #pragma endregion
 
 #pragma region Conversions
@@ -229,31 +285,13 @@ namespace GPM
         constexpr static std::string ToString(const Matrix3<T>& p_matrix);
 
 #pragma endregion
-    };
+    };// end struct Matrix3
 
     
 #pragma region Outside Operators
 
     template <typename T>
     constexpr std::ostream& operator<<(std::ostream& p_stream, const Matrix3<T>& p_matrix3);
-
-    template <typename T>
-    constexpr Matrix3<T> operator+(const T p_scalar, const Matrix3<T>& p_matrix3);
-
-    template <typename T>
-    constexpr Matrix3<T>& operator+=(const T p_scalar, Matrix3<T>& p_matrix3);
-
-    template <typename T>
-    constexpr Matrix3<T> operator-(const T p_scalar, const Matrix3<T>& p_matrix3);
-
-    template <typename T>
-    constexpr Matrix3<T>& operator-=(const T p_scalar, Matrix3<T>& p_matrix3);
-
-    template <typename T, typename U>
-    constexpr Matrix3<U> operator*(T p_scalar, const Matrix3<U>& p_matrix3);
-
-    template <typename T, typename U>
-    constexpr Matrix3<U>& operator*=(T p_scalar, Matrix3<U>& p_matrix3);
 
 #pragma endregion
 
@@ -263,6 +301,6 @@ namespace GPM
     using Matrix3D = Matrix3<double>;
 
 
-}
+}// end Namespace GPM
 
 #include <GPM/Matrix/Matrix3.inl>

@@ -10,13 +10,13 @@ template<typename T>
 inline constexpr GPM::Vector2<T>::Vector2() : x{ 0 }, y{ 0 } {}
 
 template<typename T>
-inline constexpr GPM::Vector2<T>::Vector2(const T p_x, const T p_y): x{p_x}, y{p_y} {}
+inline constexpr GPM::Vector2<T>::Vector2(const T p_x, const T p_y): x{ p_x }, y{ p_y } {}
 
 template<typename T>
 inline constexpr GPM::Vector2<T>::Vector2(const Vector2& p_other): x{ p_other.x }, y{ p_other.y } {}
 
 template<typename T>
-inline constexpr GPM::Vector2<T>::Vector2(Vector2<T>&& p_other) noexcept
+inline constexpr GPM::Vector2<T>::Vector2(Vector2&& p_other) noexcept
 {
 	*this = p_other;
 }
@@ -31,13 +31,14 @@ inline constexpr void GPM::Vector2<T>::Set(T p_x, T p_y)
 template <typename T>
 const GPM::Vector2<T> GPM::Vector2<T>::zero = Vector2<T>{ 0, 0 };
 template <typename T>
-const GPM::Vector2<T> GPM::Vector2<T>::up = Vector2<T>{0, 1};
+const GPM::Vector2<T> GPM::Vector2<T>::up = Vector2<T>{ 0, 1 };
 template <typename T>
 const GPM::Vector2<T> GPM::Vector2<T>::right = Vector2<T>{ 1, 0 };
 
 #pragma region Member Operator Overloads
+
 template<typename T>
-inline constexpr bool GPM::Vector2<T>::operator==(Vector2<T> const& p_other)
+inline constexpr bool GPM::Vector2<T>::operator==(const Vector2<T>& p_other)
 {
 	if (x == p_other.x && y == p_other.y)
 		return true;
@@ -46,7 +47,7 @@ inline constexpr bool GPM::Vector2<T>::operator==(Vector2<T> const& p_other)
 }
 
 template<typename T>
-inline constexpr bool GPM::Vector2<T>::operator!=(Vector2<T> const& p_other)
+inline constexpr bool GPM::Vector2<T>::operator!=(const Vector2<T>& p_other)
 {
 	if (x == p_other.x && y == p_other.y)
 		return false;
@@ -55,7 +56,8 @@ inline constexpr bool GPM::Vector2<T>::operator!=(Vector2<T> const& p_other)
 }
 
 template<typename T>
-inline constexpr GPM::Vector2<T>& GPM::Vector2<T>::operator=(const Vector2<T>& p_other)
+template<typename U>
+inline constexpr GPM::Vector2<T>& GPM::Vector2<T>::operator=(const Vector2<U>& p_other)
 {
 	x = p_other.x;
 	y = p_other.y;
@@ -266,6 +268,12 @@ constexpr GPM::Vector2<T> GPM::operator+(Vector2<T> const& p_vector2, U const& p
 }
 
 template<typename T, typename U>
+constexpr GPM::Vector2<T> GPM::operator+(U const& p_scalar, Vector2<T> const& p_vector2)
+{
+	return GPM::Vector2<T>{p_vector2.x + static_cast<T>(p_scalar), p_vector2.y + static_cast<T>(p_scalar)};
+}
+
+template<typename T, typename U>
 constexpr void GPM::operator+=(Vector2<T>& p_vector2Left, Vector2<U> const& p_vector2Right)
 {
 	p_vector2Left.x += static_cast<T>(p_vector2Right.x);
@@ -275,13 +283,13 @@ constexpr void GPM::operator+=(Vector2<T>& p_vector2Left, Vector2<U> const& p_ve
 template<typename T>
 constexpr GPM::Vector2<T> GPM::operator-(Vector2<T> const& p_vector2Left, Vector2<T> const& p_vector2Right)
 {
-	return GPM::Vector2<T>::Subtract(p_vector2Left, p_vector2Right);
+	return GPM::Vector2<T>::Subtract{ p_vector2Left, p_vector2Right };
 }
 
 template<typename T, typename U>
 constexpr GPM::Vector2<T> GPM::operator-(Vector2<T> const& p_vector2Left, Vector2<U> const& p_vector2Right)
 {
-	return GPM::Vector2<T>::Subtract(p_vector2Left, p_vector2Right);
+	return GPM::Vector2<T>::Subtract{ p_vector2Left, p_vector2Right };
 }
 
 template<typename T, typename U>
@@ -291,15 +299,21 @@ constexpr GPM::Vector2<T> GPM::operator-(Vector2<T> const& p_vector2, U const& p
 }
 
 template<typename T, typename U>
+constexpr GPM::Vector2<T> GPM::operator-(U const& p_scalar, Vector2<T> const& p_vector2)
+{
+	return GPM::Vector2<T>{p_vector2.x - static_cast<T>(p_scalar), p_vector2.y - static_cast<T>(p_scalar)};
+}
+
+template<typename T, typename U>
 constexpr GPM::Vector2<U> GPM::operator*(T const& p_scalar, Vector2<U> const& p_vector2)
 {
-	return Vector2<T>::Multiply(p_vector2, p_scalar);
+	return Vector2<T>::Multiply{ p_vector2, p_scalar };
 }
 
 template<typename T, typename U>
 constexpr GPM::Vector2<T> GPM::operator*(Vector2<T> const& p_vector2, U const& p_scalar)
 {
-	return GPM::Vector2<T>::Multiply(p_vector2, static_cast<T>(p_scalar));
+	return GPM::Vector2<T>::Multiply{ p_vector2, static_cast<T>(p_scalar) };
 }
 
 template<typename T, typename U>
@@ -314,7 +328,7 @@ constexpr GPM::Vector2<T> GPM::operator/(Vector2<T> const& p_vector2, const U& p
 	if (p_scalar == 0)
 		throw std::logic_error("Vector2::operator/ attempted division by zero");
 	
-	return GPM::Vector2<T>::Divide(p_vector2, p_scalar);
+	return GPM::Vector2<T>::Divide{ p_vector2, p_scalar };
 }
 
 #pragma region Arithmetic Operations
@@ -336,6 +350,7 @@ inline constexpr void GPM::Vector2<T>::Divide(const T& p_scalar)
 {
 	if (p_scalar == 0)
 		throw std::logic_error("Vector2::Divide(const T& p_scalar) attempted division by zero");
+	
 	x /= p_scalar;
 	y /= p_scalar;
 }
@@ -346,9 +361,13 @@ inline constexpr void GPM::Vector2<T>::Multiply(const T& p_scalar)
 	y *= p_scalar;
 }
 template<typename T>
-inline constexpr bool GPM::Vector2<T>::Equals(const GPM::Vector2<T>& p_otherVector2) const
+template<typename U>
+inline constexpr bool GPM::Vector2<T>::Equals(const GPM::Vector2<U>& p_otherVector2) const
 {
-	if (GPM::Vector2<T>{ x, y } == p_otherVector2)
+	if (typeid(*this) != typeid(p_otherVector2))
+		throw std::logic_error("Vector2::Equals(const GPM::Vector2<U>& p_otherVector2) const attempted to compare 2 Vector2s of different types");
+	
+	if (*this == p_otherVector2)
 		return true;
 
 	return false;
