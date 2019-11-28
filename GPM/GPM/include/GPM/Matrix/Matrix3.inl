@@ -540,7 +540,8 @@ constexpr bool Matrix3<T>::operator!=(const Matrix3<T>& p_other) const
 template<typename T>
 constexpr std::ostream& GPM::operator<<(std::ostream& p_stream, const Matrix3<T>& p_matrix3)
 {
-    return Matrix3<T>::ToString(p_matrix3);
+    p_stream << Matrix3<T>::ToString(p_matrix3);
+    return p_stream;
 }
 
 #pragma endregion
