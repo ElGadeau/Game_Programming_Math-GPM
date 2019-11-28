@@ -91,16 +91,24 @@ namespace GPM
 
 	inline Quaternion::Quaternion(const Vector3<float>& p_axis,
 		const float p_angleInRadians)
-		: axis{ 0.0f, 0.0f, 0.0f }
+		: axis{ 0.0f, 0.0f, 0.0f }, w { 1.0f }
 	{
-		w = Tools::Utils::CosF(p_angleInRadians / 2.0f);
-
-		const float sinAngle = Tools::Utils::SinF(p_angleInRadians / 2.0f);
+		std::cout << "angle iun radian: " << p_angleInRadians << "\n";
+		const float angleDivided = p_angleInRadians / 2.0f;
+		std::cout << "angle divided: " << angleDivided << "\n";
+		
+		w = std::cos(angleDivided);
+		std::cout << "cos w:" << w << "\n";
+		
+		const float sinAngle = std::sin(angleDivided);
+		std::cout << "sinAngle: " << sinAngle << "\n";
 		
 		axis.x = sinAngle * p_axis.x;
 		axis.y = sinAngle * p_axis.y;
 		axis.z = sinAngle * p_axis.z;
 
+		//Normalize();
+		
 		std::cout << "w:" << w << "\t axis:" << axis.ToString() << "\n";
 	}
 
