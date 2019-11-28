@@ -235,12 +235,14 @@ namespace GPM
         template<typename U>
         constexpr static Matrix3<T> CreateTransformation(const Vector2<U>& p_pos, const float p_angle, const Vector2<U>& p_scale);
 
-        /** /!\ W.I.P. NOT FUNCTIONAL AS OF NOW /!\
+        /**
          * @brief Computes a transformation matrix that looks at a target
          * @param 
          * @param 
          * @param
          * @return the modified matrix looking at the target
+         *
+         * @warning /!\ W.I.P. NOT FUNCTIONAL AS OF NOW /!\
          */
         template<typename U>
         constexpr Matrix3<T>& LookAt(const Vector3<U>& p_dir, const Vector3<U>& p_up, Matrix3<T>& p_matrix);
