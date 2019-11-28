@@ -1,0 +1,13 @@
+digraph "GPM::Quaternion::Inverse"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node103 [label="GPM::Quaternion::Inverse",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Inverse the quaternion in parameter."];
+  Node103 -> Node104 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node104 [label="GPM::Quaternion::Conjugate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_quaternion.html#a63b343621082e15ab8f9a5cb494daba8",tooltip="Conjugate the current quaternion."];
+  Node103 -> Node105 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node105 [label="GPM::Quaternion::NormSquare",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_quaternion.html#a2ba2a76024b87ab2e38f69ea16d3bdb4",tooltip="Norm square of a quaternion, alias magnitude square."];
+}

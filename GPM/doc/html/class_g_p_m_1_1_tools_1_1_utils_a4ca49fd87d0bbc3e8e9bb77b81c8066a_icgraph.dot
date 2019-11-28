@@ -1,0 +1,21 @@
+digraph "GPM::Tools::Utils::Arccos"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node10 [label="GPM::Tools::Utils::\lArccos",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="GPM::Vector2::Angle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_vector2.html#aff9205416ef51125773b7feccbee0467",tooltip="Calculates Angle between 2 Vectors."];
+  Node10 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="GPM::Vector4::Angle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_vector4.html#a3654f155d9ca1a07a13ba4e522b857d5",tooltip="Calculate the angle between two vectors in radiant."];
+  Node12 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="GPM::Vector4::Angle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_vector4.html#a2b7e05db7d60ae33caaaa9cf1c42a98c",tooltip="Calculate the angle between two vectors in radiant."];
+  Node12 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="GPM::Vector4::Slerp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_vector4.html#a63b37e497566e5ae18ec1d684ff8012d",tooltip="Return the start vector moving to the end vector at step interpolationCoefficient."];
+  Node10 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="GPM::Quaternion::LookRotation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_quaternion.html#a80f64a9e24b3ee84483d66692f62303f",tooltip="Creates a rotation with the specified forward and upwards directions."];
+  Node10 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="GPM::Quaternion::Slerp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_quaternion.html#a998a28ddd5cf611d1809ce36cacd285a",tooltip="Smoothly interpolate between two quaternions."];
+}

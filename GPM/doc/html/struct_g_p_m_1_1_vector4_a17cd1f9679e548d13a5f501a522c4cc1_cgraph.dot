@@ -1,0 +1,11 @@
+digraph "GPM::Vector4::MagnitudeSquare"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node227 [label="GPM::Vector4::MagnitudeSquare",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Calculate the squared length of the vector."];
+  Node227 -> Node228 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node228 [label="GPM::Vector4::MagnitudeSquare",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_vector4.html#ab9382bcd0af664a24ceb88df1e4d8b12",tooltip="Calculate the squared length of the vector."];
+}

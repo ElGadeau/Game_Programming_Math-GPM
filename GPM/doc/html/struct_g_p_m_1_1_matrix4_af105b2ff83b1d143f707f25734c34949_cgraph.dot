@@ -1,0 +1,11 @@
+digraph "GPM::Matrix4::Subtract"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node305 [label="GPM::Matrix4::Subtract",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node305 -> Node306 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node306 [label="GPM::Matrix4::Subtract",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_matrix4.html#a1c217093eec2707aa0ef44f2bb2ac43e",tooltip="Subtract other matrix to the current matrix."];
+}

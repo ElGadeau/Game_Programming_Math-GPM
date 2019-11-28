@@ -1,0 +1,13 @@
+digraph "GPM::Quaternion::ToMatrix4"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node319 [label="GPM::Quaternion::ToMatrix4",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Return a Matrix4 of double out of the quaternion."];
+  Node319 -> Node320 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node320 [label="GPM::Matrix4::CreateRotation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_matrix4.html#a5afea3f92d52eb8ed0b438936c5fc9e5",tooltip=" "];
+  Node319 -> Node321 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node321 [label="GPM::Matrix4::Rotate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_matrix4.html#a9d20deb10c9656e81fcc00283ba50204",tooltip=" "];
+}
