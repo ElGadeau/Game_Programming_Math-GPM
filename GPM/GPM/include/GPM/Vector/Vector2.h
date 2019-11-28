@@ -5,6 +5,9 @@
 
 namespace GPM
 {
+	/**
+	 * Vector structure containing x, y coordinates
+	 */
 	template<typename T>
 	struct Vector2
 	{
