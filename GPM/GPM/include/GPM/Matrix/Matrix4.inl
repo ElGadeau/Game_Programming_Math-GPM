@@ -127,9 +127,9 @@ constexpr Matrix4<T>& Matrix4<T>::Normalize()
 {
     T det = Determinant();
 
-    for(unsigned int i = 0; i < 16; ++i)
+    for (auto& i : m_data)
     {
-        m_data[i] /= det;
+        i /= det;
     }
 
     return { *this };
@@ -218,9 +218,6 @@ constexpr Matrix4<T> Matrix4<T>::CreateTransformation(const Vector3<U>& p_transl
 
     Matrix4<T> tmpMat = tmpTrans * tmpRot * tmpScale;
 
-    // tmpTrans *= tmpRot;
-    //tmpMat *= tmpScale;
-
     return tmpMat;
 }
 
@@ -265,28 +262,13 @@ constexpr Matrix4<T> Matrix4<T>::Inverse(const Matrix4<T>& p_matrix)
     static_assert(!std::is_integral<T>::value, "Matrix3::CreateTransformation : Can't do Transform Matrices with Matrix3<int>, as values would be rounded to 0");
 
     Matrix4<T> tmpMat;
-    Matrix4<T> Adj = CreateAdjugate(p_matrix);
-    T Det = Determinant(p_matrix);
-    
-    tmpMat.m_data[0] = Adj.m_data[0] / Det;
-    tmpMat.m_data[1] = Adj.m_data[1] / Det;
-    tmpMat.m_data[2] = Adj.m_data[2] / Det;
-    tmpMat.m_data[3] = Adj.m_data[3] / Det;
-    
-    tmpMat.m_data[4] = Adj.m_data[4] / Det;
-    tmpMat.m_data[5] = Adj.m_data[5] / Det;
-    tmpMat.m_data[6] = Adj.m_data[6] / Det;
-    tmpMat.m_data[7] = Adj.m_data[7] / Det;
-    
-    tmpMat.m_data[8] = Adj.m_data[8] / Det;
-    tmpMat.m_data[9] = Adj.m_data[9] / Det;
-    tmpMat.m_data[10] = Adj.m_data[10] / Det;
-    tmpMat.m_data[11] = Adj.m_data[11] / Det;
-    
-    tmpMat.m_data[12] = Adj.m_data[12] / Det;
-    tmpMat.m_data[13] = Adj.m_data[13] / Det;
-    tmpMat.m_data[14] = Adj.m_data[14] / Det;
-    tmpMat.m_data[15] = Adj.m_data[15] / Det;
+    const Matrix4<T> Adj = CreateAdjugate(p_matrix);
+    const T Det = Determinant(p_matrix);
+
+    for (int i = 0; i < 16; ++i)
+    {
+        tmpMat.m_data[i] = Adj.m_data[i] / Det;
+    }
 
     return tmpMat;
 }
@@ -304,11 +286,10 @@ Matrix4<T> Matrix4<T>::LookAt(const Vector3<T>& p_from, const Vector3<T>& p_to, 
 template<typename T>
 constexpr void Matrix4<T>::SetColumn(int p_column, const Vector4<T>& p_vector)
 {
-    int columnStart = p_column;
-    m_data[columnStart] = p_vector.x;
-    m_data[columnStart + 4] = p_vector.y;
-    m_data[columnStart + 8] = p_vector.z;
-    m_data[columnStart + 12] = p_vector.w;
+    m_data[p_column] = p_vector.x;
+    m_data[p_column + 4] = p_vector.y;
+    m_data[p_column + 8] = p_vector.z;
+    m_data[p_column + 12] = p_vector.w;
 }
 
 template<typename T>
