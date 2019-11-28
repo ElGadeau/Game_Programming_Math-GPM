@@ -31,14 +31,17 @@ namespace GPM::Tools
 		 * @param p_angle (In degrees)
 		 * @return The angle in radians
 		 */
-		static float ToRadians(const float p_angle);
+		template <typename T>
+		static T ToRadians(const T p_angle);
+
 
 		/**
-		 * @brief Convert the given angle to degrees
+		 * @brief Convert the given angle to degrees in float precision
 		 * @param p_angle (In radians)
 		 * @return The result in degrees
 		 */
-		static float ToDegrees(const float p_angle);
+		template <typename T>
+		static T ToDegrees(const T p_angle);
 
 		/**
 		 * @brief Linearly interpolates between two values
@@ -47,7 +50,8 @@ namespace GPM::Tools
 		 * @param p_alpha Coefficient
 		 * @return The interpolated value
 		 */
-		static float Lerp(const float p_a, const float p_b, const float p_alpha);
+		template <typename T>
+		static T Lerp(const T p_a, const T p_b, const T p_alpha);
 
 		/**
 		 * @brief Return the pow of a numeric value with an integer exponent
@@ -114,7 +118,8 @@ namespace GPM::Tools
 		 * @param p_value The value from which we take the decimal part
 		 * @return The decimal part
 		 */
-		static float GetDecimalPart(const float p_value);
+		template<typename T>
+		static T GetDecimalPart(const T p_value);
 
 		/**
 		 * @brief Return the absolute value of a numeric value
@@ -129,7 +134,7 @@ namespace GPM::Tools
 		 * @param p_value Value
 		 * @return The result in radians
 		 */
-		static float Sin(const float p_value);
+		static double Sin(const double p_value);
 
 		/**
 		* @brief Mathematics sinus implementation with float precision
@@ -143,7 +148,7 @@ namespace GPM::Tools
 		 * @param p_value Value
 		 * @return The result in radians
 		 */
-		static float Cos(const float p_value);
+		static double Cos(const double p_value);
 
 		/**
 		* @brief Mathematics co-sinus implementation with float precision
@@ -157,7 +162,7 @@ namespace GPM::Tools
 		 * @param p_value Value
 		 * @return The result in radians
 		 */
-		static float Tan(const float p_value);
+		static double Tan(const double p_value);
 
 		/**
 		 * @brief Mathematics tangent implementation with float precision
@@ -171,7 +176,7 @@ namespace GPM::Tools
 		 * @param p_value Value
 		 * @return The result in radians
 		 */
-		static float Arccos(const float p_value);
+		static double Arccos(const double p_value);
 
 		/**
 		 * @brief Mathematics arc co-sinus implementation with float precision
@@ -185,7 +190,7 @@ namespace GPM::Tools
 		 * @param p_value Value
 		 * @return The result in radians
 		 */
-		static float Arcsin(const float p_value);
+		static double Arcsin(const double p_value);
 
 		/**
 		 * Mathematics arc sinus implementation with float precision
@@ -199,7 +204,7 @@ namespace GPM::Tools
 		 * @param p_value Value
 		 * @return The result in radians
 		 */
-		static float Arctan(const float p_value);
+		static double Arctan(const double p_value);
 
 		/**
 		 * @brief Mathematics arc tangent implementation with float precision
@@ -214,7 +219,7 @@ namespace GPM::Tools
 		* @param p_valueXx Right value
 		* @return The result in radians
 		*/
-		static float Arctan2(const float p_valueYx, const float p_valueXx);
+		static double Arctan2(const double p_valueYx, const double p_valueXx);
 
 		/**
 		* @brief Mathematics arc tangent implementation with float precision

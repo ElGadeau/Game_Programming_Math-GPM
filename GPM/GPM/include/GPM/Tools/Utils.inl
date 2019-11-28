@@ -6,22 +6,31 @@
 
 namespace GPM::Tools
 {
-	inline float Utils::ToRadians(const float p_angle)
+	template <typename T>
+	inline T Utils::ToRadians(const T p_angle)
 	{
-		return p_angle * (static_cast<float>(M_PI) / 180.0f);
+		static_assert(std::is_arithmetic<T>::value, "ToRadians function should only be used with arithmetic types");
+
+		return p_angle * (static_cast<T>(M_PI) / T(180.0));
 	}
 
-	inline float Utils::ToDegrees(const float p_angle)
+	template <typename T>
+	inline T Utils::ToDegrees(const T p_angle)
 	{
-		return p_angle * (180.0f / static_cast<float>(M_PI));
+		static_assert(std::is_arithmetic<T>::value, "ToDegrees function should only be used with arithmetic types");
+
+		return p_angle * (T(180.0) / static_cast<T>(M_PI));
 	}
 
-	inline float Utils::Lerp(const float p_a, const float p_b, const float p_alpha)
+	template <typename T>
+	inline T Utils::Lerp(const T p_a, const T p_b, const T p_alpha)
 	{
-		if (p_alpha >= 0.0f && p_alpha <= 1.0f)
+		static_assert(std::is_arithmetic<T>::value, "Lerp function should only be used with arithmetic types");
+
+		if (p_alpha >= T(0.0) && p_alpha <= T(1.0))
 			return p_a + (p_b - p_a) * p_alpha;
 
-		if (p_alpha < 0.0f)
+		if (p_alpha < T(0.0))
 			return p_a;
 
 		return p_b;
@@ -43,12 +52,14 @@ namespace GPM::Tools
 		return p_a * p_b / GreatestCommonDivider(p_a, p_b);
 	}
 
-	inline float Utils::GetDecimalPart(const float p_value)
+	template<typename T>
+	inline T Utils::GetDecimalPart(const T p_value)
 	{
-		return fmod(p_value, 1.0f);
+		static_assert(std::is_arithmetic<T>::value, "Sign function should only be used with arithmetic types");
+		return mod(p_value, T(1.0));
 	}
 
-	inline float Utils::Sin(const float p_value)
+	inline double Utils::Sin(const double p_value)
 	{
 		return std::sin(p_value);
 	}
@@ -58,7 +69,7 @@ namespace GPM::Tools
 		return std::sinf(p_value);
 	}
 
-	inline float Utils::Cos(const float p_value)
+	inline double Utils::Cos(const double p_value)
 	{
 		return std::cos(p_value);
 	}
@@ -68,7 +79,7 @@ namespace GPM::Tools
 		return std::cosf(p_value);
 	}
 
-	inline float Utils::Tan(const float p_value)
+	inline double  Utils::Tan(const double p_value)
 	{
 		return std::tan(p_value);
 	}
@@ -78,7 +89,7 @@ namespace GPM::Tools
 		return std::tanf(p_value);
 	}
 
-	inline float Utils::Arccos(const float p_value)
+	inline double Utils::Arccos(const double p_value)
 	{
 		return std::acos(p_value);
 	}
@@ -88,7 +99,7 @@ namespace GPM::Tools
 		return std::acosf(p_value);
 	}
 
-	inline float Utils::Arcsin(const float p_value)
+	inline double Utils::Arcsin(const double p_value)
 	{
 		return std::asin(p_value);
 	}
@@ -98,7 +109,7 @@ namespace GPM::Tools
 		return std::asinf(p_value);
 	}
 
-	inline float Utils::Arctan(const float p_value)
+	inline double Utils::Arctan(const double p_value)
 	{
 		return std::atan(p_value);
 	}
@@ -108,7 +119,7 @@ namespace GPM::Tools
 		return std::atanf(p_value);
 	}
 
-	inline float Utils::Arctan2(const float p_valueYx, const float p_valueXx)
+	inline double Utils::Arctan2(const double p_valueYx, const double p_valueXx)
 	{
 		return std::atan2(p_valueYx, p_valueXx);
 	}

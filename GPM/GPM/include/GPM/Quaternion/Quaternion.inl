@@ -5,19 +5,19 @@
 
 namespace GPM
 {
-	Quaternion Quaternion::identity = Quaternion{ 0.0f, 0.0f, 0.0f, 1.0f };
+	Quaternion Quaternion::identity = Quaternion{ 0.0, 0.0, 0.0, 1.0 };
 
 #pragma region Constructors & Assignment
 	inline Quaternion::Quaternion()
-		: axis{ 0.0f, 0.0f, 0.0f }, w{ 1.0f }
+		: axis{ 0.0, 0.0, 0.0 }, w{ 1.0 }
 	{	}
 
-	inline Quaternion::Quaternion(const float p_x, const float p_y, const float p_z,
-		const float p_w)
+	inline Quaternion::Quaternion(const double p_x, const double p_y, const double p_z,
+		const double p_w)
 		: axis{ p_x, p_y, p_z }, w{ p_w }
 	{	}
 
-	inline Quaternion::Quaternion(const float p_scalar, const Vector3F& p_vector)
+	inline Quaternion::Quaternion(const double p_scalar, const Vector3<double>& p_vector)
 		: axis{ p_vector }, w{ p_scalar }
 	{	}
 
@@ -29,16 +29,16 @@ namespace GPM
 		: axis{ std::move(p_other.axis) }, w{ p_other.w }
 	{	}
 
-	inline Quaternion::Quaternion(const Matrix3<float>& p_matrix)
-		: axis { 0.0f, 0.0f, 0.0f }, w { 1.0f }
+	inline Quaternion::Quaternion(const Matrix3<double>& p_matrix)
+		: axis{ 0.0, 0.0, 0.0 }, w{ 1.0 }
 	{
-		const float trace = p_matrix.m_data[0] + p_matrix.m_data[4] + p_matrix.m_data[8];
+		const double trace = p_matrix.m_data[0] + p_matrix.m_data[4] + p_matrix.m_data[8];
 
 		if (trace > 0.0f)
 		{      //s=4*qw
 
-			w = 0.5f * Tools::Utils::SquareRootF(1.0f + trace);
-			const float S = 0.25f / w;
+			w = 0.5 * Tools::Utils::SquareRoot(1.0 + trace);
+			const double S = 0.25 / w;
 
 			axis.x = S * (p_matrix.m_data[5] - p_matrix.m_data[7]);
 			axis.y = S * (p_matrix.m_data[6] - p_matrix.m_data[2]);
@@ -48,8 +48,8 @@ namespace GPM
 		else if (p_matrix.m_data[0] > p_matrix.m_data[4] && p_matrix.m_data[0] > p_matrix.m_data[8])
 		{ //s=4*qx
 
-			axis.x = 0.5f * Tools::Utils::SquareRootF(1.0f + p_matrix.m_data[0] - p_matrix.m_data[4] - p_matrix.m_data[8]);
-			const float X = 0.25f / axis.x;
+			axis.x = 0.5 * Tools::Utils::SquareRoot(1.0 + p_matrix.m_data[0] - p_matrix.m_data[4] - p_matrix.m_data[8]);
+			const double X = 0.25 / axis.x;
 
 			axis.y = X * (p_matrix.m_data[3] + p_matrix.m_data[1]);
 			axis.z = X * (p_matrix.m_data[6] + p_matrix.m_data[2]);
@@ -58,8 +58,8 @@ namespace GPM
 		else if (p_matrix.m_data[4] > p_matrix.m_data[8])
 		{ //s=4*qy
 
-			axis.y = 0.5f * Tools::Utils::SquareRootF(1.0f - p_matrix.m_data[0] + p_matrix.m_data[4] - p_matrix.m_data[8]);
-			const float Y = 0.25f / axis.y;
+			axis.y = 0.5 * Tools::Utils::SquareRoot(1.0 - p_matrix.m_data[0] + p_matrix.m_data[4] - p_matrix.m_data[8]);
+			const double Y = 0.25 / axis.y;
 			axis.x = Y * (p_matrix.m_data[3] + p_matrix.m_data[1]);
 			axis.z = Y * (p_matrix.m_data[7] + p_matrix.m_data[5]);
 			w = Y * (p_matrix.m_data[6] - p_matrix.m_data[2]);
@@ -68,59 +68,59 @@ namespace GPM
 		else
 		{ //s=4*qz
 
-			axis.z = 0.5f * Tools::Utils::SquareRootF(1.0f - p_matrix.m_data[0] - p_matrix.m_data[4] + p_matrix.m_data[8]);
-			const float Z = 0.25f / axis.z;
+			axis.z = 0.5 * Tools::Utils::SquareRoot(1.0 - p_matrix.m_data[0] - p_matrix.m_data[4] + p_matrix.m_data[8]);
+			const double Z = 0.25 / axis.z;
 			axis.x = Z * (p_matrix.m_data[6] + p_matrix.m_data[2]);
 			axis.y = Z * (p_matrix.m_data[7] + p_matrix.m_data[5]);
 			w = Z * (p_matrix.m_data[1] - p_matrix.m_data[3]);
 		}
 	}
 
-	inline Quaternion::Quaternion(const Matrix4<float>& p_matrix)
-		: axis{ 0.0f, 0.0f, 0.0f }, w { 1.0f }
+	inline Quaternion::Quaternion(const Matrix4<double>& p_matrix)
+		: axis{ 0.0, 0.0, 0.0 }, w{ 1.0 }
 	{
-		w = Tools::Utils::SquareRootF(std::max(0.0f, 1.0f + p_matrix.m_data[0] + p_matrix.m_data[5] + p_matrix.m_data[10])) / 2.0f;
-		axis.x = Tools::Utils::SquareRootF(std::max(0.0f, 1.0f + p_matrix.m_data[0] - p_matrix.m_data[5] - p_matrix.m_data[10])) / 2.0f;
-		axis.y = Tools::Utils::SquareRootF(std::max(0.0f, 1.0f - p_matrix.m_data[0] + p_matrix.m_data[5] - p_matrix.m_data[10])) / 2.0f;
-		axis.z = Tools::Utils::SquareRootF(std::max(0.0f, 1.0f - p_matrix.m_data[0] - p_matrix.m_data[5] + p_matrix.m_data[10])) / 2.0f;
+		w = Tools::Utils::SquareRoot(std::max(0.0, 1.0 + p_matrix.m_data[0] + p_matrix.m_data[5] + p_matrix.m_data[10])) / 2.0;
+		axis.x = Tools::Utils::SquareRoot(std::max(0.0, 1.0 + p_matrix.m_data[0] - p_matrix.m_data[5] - p_matrix.m_data[10])) / 2.0;
+		axis.y = Tools::Utils::SquareRoot(std::max(0.0, 1.0 - p_matrix.m_data[0] + p_matrix.m_data[5] - p_matrix.m_data[10])) / 2.0;
+		axis.z = Tools::Utils::SquareRoot(std::max(0.0, 1.0 - p_matrix.m_data[0] - p_matrix.m_data[5] + p_matrix.m_data[10])) / 2.0;
 
 		axis.x *= Tools::Utils::Sign(axis.x * (p_matrix.m_data[9] - p_matrix.m_data[6]));
 		axis.y *= Tools::Utils::Sign(axis.y * (p_matrix.m_data[2] - p_matrix.m_data[8]));
 		axis.z *= Tools::Utils::Sign(axis.z * (p_matrix.m_data[4] - p_matrix.m_data[1]));
 	}
 
-	inline Quaternion::Quaternion(const Vector3<float>& p_axis,
-		const float p_angleInRadians)
-		: axis{ 0.0f, 0.0f, 0.0f }, w { 1.0f }
+	inline Quaternion::Quaternion(const Vector3<double>& p_axis,
+		const double p_angleInRadians)
+		: axis{ 0.0, 0.0, 0.0 }, w{ 1.0 }
 	{
 		std::cout << "angle iun radian: " << p_angleInRadians << "\n";
-		const float angleDivided = p_angleInRadians / 2.0f;
+		const double angleDivided = p_angleInRadians / 2.0;
 		std::cout << "angle divided: " << angleDivided << "\n";
-		
+
 		w = std::cos(angleDivided);
 		std::cout << "cos w:" << w << "\n";
-		
-		const float sinAngle = std::sin(angleDivided);
+
+		const double sinAngle = std::sin(angleDivided);
 		std::cout << "sinAngle: " << sinAngle << "\n";
-		
+
 		axis.x = sinAngle * p_axis.x;
 		axis.y = sinAngle * p_axis.y;
 		axis.z = sinAngle * p_axis.z;
 
 		//Normalize();
-		
+
 		std::cout << "w:" << w << "\t axis:" << axis.ToString() << "\n";
 	}
 
-	inline void Quaternion::MakeFromEuler(const Vector3<float>& p_euler)
+	inline void Quaternion::MakeFromEuler(const Vector3<double>& p_euler)
 	{
-		float x = Tools::Utils::ToRadians(p_euler.x);
-		float y = Tools::Utils::ToRadians(p_euler.y);
-		float z = Tools::Utils::ToRadians(p_euler.z);
+		double x = Tools::Utils::ToRadians(p_euler.x);
+		double y = Tools::Utils::ToRadians(p_euler.y);
+		double z = Tools::Utils::ToRadians(p_euler.z);
 
-		x = x / 2.0f;
-		y = y / 2.0f;
-		z = z / 2.0f;
+		x = x / 2.0;
+		y = y / 2.0;
+		z = z / 2.0;
 
 		w = cos(z) * cos(y) * cos(x) + sin(z) * sin(y) * sin(x);
 		axis.x = cos(z) * cos(y) * sin(x) - sin(z) * sin(y) * cos(x);
@@ -128,15 +128,15 @@ namespace GPM
 		axis.z = sin(z) * cos(y) * cos(x) - cos(z) * sin(y) * sin(x);
 	}
 
-	inline void Quaternion::MakeFromEuler(const float p_x, const float p_y, const float p_z)
+	inline void Quaternion::MakeFromEuler(const double p_x, const double p_y, const double p_z)
 	{
-		float x = Tools::Utils::ToRadians(p_x);
-		float y = Tools::Utils::ToRadians(p_y);
-		float z = Tools::Utils::ToRadians(p_z);
+		double x = Tools::Utils::ToRadians(p_x);
+		double y = Tools::Utils::ToRadians(p_y);
+		double z = Tools::Utils::ToRadians(p_z);
 
-		x = x / 2.0f;
-		y = y / 2.0f;
-		z = z / 2.0f;
+		x = x / 2.0;
+		y = y / 2.0;
+		z = z / 2.0;
 
 		w = cos(z) * cos(y) * cos(x) + sin(z) * sin(y) * sin(x);
 		axis.x = cos(z) * cos(y) * sin(x) - sin(z) * sin(y) * cos(x);
@@ -154,17 +154,17 @@ namespace GPM
 
 	inline bool Quaternion::IsIdentity() const
 	{
-		return axis.x == 0.0f && axis.y == 0.0f && axis.z == 0.0f;
+		return axis.x == 0.0 && axis.y == 0.0 && axis.z == 0.0;
 	}
 
 	inline bool Quaternion::IsPure() const
 	{
-		return w == 0.0f;
+		return w == 0.0;
 	}
 
 	inline bool Quaternion::IsNormalized() const
 	{
-		return Norm() == 1.0f;
+		return Norm() == 1.0;
 	}
 
 	inline bool Quaternion::operator==(const Quaternion& p_otherQuaternion) const
@@ -203,17 +203,17 @@ namespace GPM
 		return { *this };
 	}
 
-	inline float Quaternion::DotProduct(const Quaternion& p_otherQuaternion) const
+	inline double Quaternion::DotProduct(const Quaternion& p_otherQuaternion) const
 	{
 		return w * p_otherQuaternion.w + axis.x * p_otherQuaternion.axis.x + axis.y * p_otherQuaternion.axis.y + axis.z * p_otherQuaternion.axis.z;
 	}
 
-	inline float Quaternion::DotProduct(const Quaternion& p_left, const Quaternion& p_right)
+	inline double Quaternion::DotProduct(const Quaternion& p_left, const Quaternion& p_right)
 	{
 		return p_left.w * p_right.w + p_left.axis.x * p_right.axis.x + p_left.axis.y * p_right.axis.y + p_left.axis.z * p_right.axis.z;
 	}
 
-	inline Quaternion& Quaternion::operator*=(const float p_scale)
+	inline Quaternion& Quaternion::operator*=(const double p_scale)
 	{
 		w *= p_scale;
 		axis *= p_scale;
@@ -221,7 +221,7 @@ namespace GPM
 		return { *this };
 	}
 
-	inline Quaternion Quaternion::operator*(const float p_scale) const
+	inline Quaternion Quaternion::operator*(const double p_scale) const
 	{
 		return { Quaternion{w * p_scale, axis * p_scale} };
 	}
@@ -238,53 +238,53 @@ namespace GPM
 		return { (*this) };
 	}
 
-	inline Quaternion Quaternion::operator*(const Vector3<float>& p_toMultiply) const
+	inline Quaternion Quaternion::operator*(const Vector3<double>& p_toMultiply) const
 	{
-		const float sPart = -(axis.x * p_toMultiply.x + axis.y * p_toMultiply.y + axis.z * p_toMultiply.z);
-		const float xPart = w * p_toMultiply.x + axis.y * p_toMultiply.z - axis.z * p_toMultiply.y;
-		const float yPart = w * p_toMultiply.y + axis.z * p_toMultiply.x - axis.x * p_toMultiply.z;
-		const float zPart = w * p_toMultiply.z + axis.x * p_toMultiply.y - axis.y * p_toMultiply.x;
+		const double sPart = -(axis.x * p_toMultiply.x + axis.y * p_toMultiply.y + axis.z * p_toMultiply.z);
+		const double xPart = w * p_toMultiply.x + axis.y * p_toMultiply.z - axis.z * p_toMultiply.y;
+		const double yPart = w * p_toMultiply.y + axis.z * p_toMultiply.x - axis.x * p_toMultiply.z;
+		const double zPart = w * p_toMultiply.z + axis.x * p_toMultiply.y - axis.y * p_toMultiply.x;
 
-		return { Quaternion{ sPart, Vector3F { xPart, yPart, zPart } } };
+		return { Quaternion{ sPart, Vector3<double> { xPart, yPart, zPart } } };
 	}
 
-	inline Quaternion& Quaternion::operator*=(const Vector3<float>& p_toMultiply)
+	inline Quaternion& Quaternion::operator*=(const Vector3<double>& p_toMultiply)
 	{
-		const float sPart = -(axis.x * p_toMultiply.x + axis.y * p_toMultiply.y + axis.z * p_toMultiply.z);
-		const float xPart = w * p_toMultiply.x + axis.y * p_toMultiply.z - axis.z * p_toMultiply.y;
-		const float yPart = w * p_toMultiply.y + axis.z * p_toMultiply.x - axis.x * p_toMultiply.z;
-		const float zPart = w * p_toMultiply.z + axis.x * p_toMultiply.y - axis.y * p_toMultiply.x;
+		const double sPart = -(axis.x * p_toMultiply.x + axis.y * p_toMultiply.y + axis.z * p_toMultiply.z);
+		const double xPart = w * p_toMultiply.x + axis.y * p_toMultiply.z - axis.z * p_toMultiply.y;
+		const double yPart = w * p_toMultiply.y + axis.z * p_toMultiply.x - axis.x * p_toMultiply.z;
+		const double zPart = w * p_toMultiply.z + axis.x * p_toMultiply.y - axis.y * p_toMultiply.x;
 
 		w = sPart;
-		axis = Vector3F{ xPart, yPart, zPart };
+		axis = Vector3<double>{ xPart, yPart, zPart };
 
 		return { (*this) };
 	}
 
 	inline Quaternion Quaternion::Multiply(const Quaternion& p_quaternion) const
 	{
-		const float scalar = w * p_quaternion.w - axis.Dot(p_quaternion.axis);
+		const double scalar = w * p_quaternion.w - axis.Dot(p_quaternion.axis);
 
-		const Vector3F imaginary = p_quaternion.axis * w + axis * p_quaternion.axis + axis.Cross(p_quaternion.axis);
+		const Vector3<double> imaginary = p_quaternion.axis * w + axis * p_quaternion.axis + axis.Cross(p_quaternion.axis);
 
 		return { Quaternion { scalar,imaginary } };
 
 	}
 
-	inline float Quaternion::Norm() const
+	inline double Quaternion::Norm() const
 	{
-		return Tools::Utils::SquareRootF(w * w + axis.x * axis.x + axis.y * axis.y + axis.z * axis.z);
+		return Tools::Utils::SquareRoot(w * w + axis.x * axis.x + axis.y * axis.y + axis.z * axis.z);
 	}
 
 	inline Quaternion& Quaternion::Inverse()
 	{
-		float absoluteValue = NormSquare();
-		absoluteValue = 1.0f / absoluteValue;
+		double absoluteValue = NormSquare();
+		absoluteValue = 1.0 / absoluteValue;
 
 		const Quaternion conjugateValue = Conjugate();
 
-		const float scalar = conjugateValue.w * (absoluteValue);
-		const Vector3F imaginary = conjugateValue.axis * (absoluteValue);
+		const double scalar = conjugateValue.w * (absoluteValue);
+		const Vector3<double> imaginary = conjugateValue.axis * (absoluteValue);
 
 		w = scalar;
 		axis = imaginary;
@@ -294,43 +294,43 @@ namespace GPM
 
 	inline Quaternion Quaternion::Inverse(const Quaternion& p_quaternion)
 	{
-		float absoluteValue = p_quaternion.NormSquare();
-		absoluteValue = 1 / absoluteValue;
+		double absoluteValue = p_quaternion.NormSquare();
+		absoluteValue = 1.0 / absoluteValue;
 
 		const Quaternion conjugateValue = Conjugate(p_quaternion);
 
-		return { Quaternion {conjugateValue.w * absoluteValue, Vector3F {conjugateValue.axis * absoluteValue} } };
+		return { Quaternion {conjugateValue.w * absoluteValue, Vector3<double> {conjugateValue.axis * absoluteValue} } };
 	}
 
 	inline Quaternion& Quaternion::Conjugate()
 	{
-		axis *= -1.0f;
+		axis *= -1.0;
 
 		return { (*this) };
 	}
 
 	inline Quaternion Quaternion::Conjugate(const Quaternion& p_quaternion)
 	{
-		return { Quaternion { p_quaternion.w, p_quaternion.axis * -1.0f } };
+		return { Quaternion { p_quaternion.w, p_quaternion.axis * -1.0 } };
 	}
 
 	inline Quaternion& Quaternion::ConvertToUnitNormQuaternion()
 	{
-		const float angle = Tools::Utils::ToRadians(w);
+		const double angle = Tools::Utils::ToRadians(w);
 
 		axis.Normalize();
-		w = Tools::Utils::CosF(angle * 0.5f);
-		axis = axis * Tools::Utils::SinF(angle * 0.5f);
+		w = Tools::Utils::Cos(angle * 0.5);
+		axis = axis * Tools::Utils::Sin(angle * 0.5);
 
 		return { (*this) };
 	}
 
-	inline Vector3F Quaternion::RotateVectorAboutAngleAndAxis(const float p_angle, const Vector3F& p_axis, const Vector3F& p_vectorToRotate)
+	inline Vector3<double> Quaternion::RotateVectorAboutAngleAndAxis(const double p_angle, const Vector3<double>& p_axis, const Vector3<double>& p_vectorToRotate)
 	{
 		const Quaternion p{ 0, p_vectorToRotate };
 
 		//normalize the axis
-		const Vector3F uAxis = p_axis.Normalized();
+		const Vector3<double> uAxis = p_axis.Normalized();
 
 		//create the real quaternion
 		Quaternion q{ p_angle, uAxis };
@@ -345,90 +345,126 @@ namespace GPM
 		return rotatedVector.axis;
 	}
 
-	inline Vector3<float> Quaternion::GetRotationAxis() const
+	inline Vector3<double> Quaternion::GetRotationAxis() const
 	{
 		return axis;
 	}
 
-	inline float Quaternion::GetXAxisValue() const
+	inline double Quaternion::GetXAxisValue() const
 	{
 		return axis.x;
 	}
 
-	inline float Quaternion::GetYAxisValue() const
+	inline double Quaternion::GetYAxisValue() const
 	{
 		return axis.y;
 	}
 
-	inline float Quaternion::GetZAxisValue() const
+	inline double Quaternion::GetZAxisValue() const
 	{
 		return axis.z;
 	}
 
-	inline float Quaternion::GetRealValue() const
+	inline double Quaternion::GetRealValue() const
 	{
 		return w;
 	}
 
-	inline void Quaternion::SetXAxisValue(const float p_xValue)
+	inline void Quaternion::SetXAxisValue(const double p_xValue)
 	{
 		axis.x = p_xValue;
 	}
 
-	inline void Quaternion::SetYAxisValue(const float p_yValue)
+	inline void Quaternion::SetYAxisValue(const double p_yValue)
 	{
 		axis.y = p_yValue;
 	}
 
-	inline void Quaternion::SetZAxisValue(const float p_zValue)
+	inline void Quaternion::SetZAxisValue(const double p_zValue)
 	{
 		axis.z = p_zValue;
 	}
 
-	inline void Quaternion::SetRealValue(const float p_realValue)
+	inline void Quaternion::SetRealValue(const double p_realValue)
 	{
 		w = p_realValue;
 	}
 
-	inline Quaternion Quaternion::Lerp(const Quaternion& p_first, const Quaternion& p_second,
-		const float p_alpha)
+	inline Quaternion Quaternion::LookRotation(const Vector3<double>& p_forward, const Vector3<double>& p_upwards) const
 	{
-		const float coefficient = 1.0f - p_alpha;
+		const Vector3<double> forwardVector = (p_upwards - p_forward).Normalized();
 
-		return  { Quaternion { coefficient * p_first.axis.x + p_alpha * p_second.axis.x,
-							coefficient * p_first.axis.y + p_alpha * p_second.axis.y,
-							coefficient * p_first.axis.z + p_alpha * p_second.axis.z,
-							coefficient * p_first.w + p_alpha * p_second.w }.Normalize() };
+		const double dot = Vector3<double>::forward.Dot(forwardVector);
+
+		if (Tools::Utils::Abs<double>(dot - (-1.0)) < 0.000001)
+		{
+			return Quaternion(Vector3<double>::up.x, Vector3<double>::up.y, Vector3<double>::up.z, static_cast<double>(Tools::M_PI));
+		}
+		if (Tools::Utils::Abs<double>(dot - (1.0)) < 0.000001)
+		{
+			return identity;
+		}
+
+		const double rotAngle = std::acos(dot);
+		Vector3<double> rotAxis = Vector3<double>::Cross(Vector3<double>::forward, forwardVector);
+		rotAxis = rotAxis.Normalized();
+		return CreateFromAxisAngle(rotAxis, rotAngle);
 	}
 
-	inline Quaternion Quaternion::Slerp(const Quaternion& p_first, const Quaternion& p_second,
-		const float p_alpha)
+	inline Quaternion Quaternion::CreateFromAxisAngle(const Vector3<double>& p_axis,
+		const double p_angle)
+	{
+		const double halfAngle = p_angle * 0.5;
+		const double s = Tools::Utils::Sin(halfAngle);
+
+		Quaternion q;
+		q.axis.x = p_axis.x * s;
+		q.axis.y = p_axis.y * s;
+		q.axis.z = p_axis.z * s;
+		q.w = Tools::Utils::Cos(halfAngle);
+
+		return q;
+	}
+
+	inline Quaternion Quaternion::Lerp(const Quaternion& p_start, const Quaternion& p_end,
+		const double p_alpha)
+	{
+		const double coefficient = 1.0 - p_alpha;
+
+		return  { Quaternion { coefficient * p_start.axis.x + p_alpha * p_end.axis.x,
+							coefficient * p_start.axis.y + p_alpha * p_end.axis.y,
+							coefficient * p_start.axis.z + p_alpha * p_end.axis.z,
+							coefficient * p_start.w + p_alpha * p_end.w }.Normalize() };
+	}
+
+	inline Quaternion Quaternion::Slerp(const Quaternion& p_start, const Quaternion& p_end,
+		const double p_alpha)
 	{
 		Quaternion result;
 
-		const float coefficient = 1.0f - p_alpha;
-		const float theta = Tools::Utils::ArccosF(p_first.axis.x * p_second.axis.x + p_first.axis.y * p_second.axis.y + p_first.axis.z * p_second.axis.z + p_first.w * p_second.w);
-		const float sn = Tools::Utils::SinF(theta);
-		const float wa = Tools::Utils::SinF(coefficient * theta) / sn;
-		const float wb = Tools::Utils::SinF(p_alpha * theta) / sn;
+		const double coefficient = 1.0 - p_alpha;
+		const double theta = Tools::Utils::Arccos(p_start.axis.x * p_end.axis.x + p_start.axis.y * p_end.axis.y + p_start.axis.z * p_end.axis.z + p_start.w * p_end.w);
+		const double sn = Tools::Utils::Sin(theta);
+		const double wa = Tools::Utils::Sin(coefficient * theta) / sn;
+		const double wb = Tools::Utils::Sin(p_alpha * theta) / sn;
 
-		result.axis.x = wa * p_first.axis.x + wb * p_second.axis.x;
-		result.axis.y = wa * p_first.axis.y + wb * p_second.axis.y;
-		result.axis.z = wa * p_first.axis.z + wb * p_second.axis.z;
-		result.w = wa * p_first.w + wb * p_second.w;
+		result.axis.x = wa * p_start.axis.x + wb * p_end.axis.x;
+		result.axis.y = wa * p_start.axis.y + wb * p_end.axis.y;
+		result.axis.z = wa * p_start.axis.z + wb * p_end.axis.z;
+		result.w = wa * p_start.w + wb * p_end.w;
 
 		result.Normalize();
 
 		return result;
 	}
 
-	inline Quaternion Quaternion::Nlerp(const Quaternion& p_first,
-		const Quaternion& p_second, const float p_alpha)
+	inline Quaternion Quaternion::Nlerp(const Quaternion& p_start,
+		const Quaternion& p_end, const double p_alpha)
 	{
-		return Lerp(p_first, p_second, p_alpha).Normalize();
+		return Lerp(p_start, p_end, p_alpha).Normalize();
 	}
 
-	constexpr float Quaternion::NormSquare() const
+	constexpr double Quaternion::NormSquare() const
 	{
 		return w * w + axis.x * axis.x + axis.y * axis.y + axis.z * axis.z;
 	}
@@ -436,7 +472,7 @@ namespace GPM
 	inline Quaternion& Quaternion::Normalize()
 	{
 		if (Norm() != 0) {
-			const float normValue = 1 / Norm();
+			const double normValue = 1.0 / Norm();
 
 			w *= normValue;
 			axis *= normValue;
@@ -447,12 +483,12 @@ namespace GPM
 
 	inline Quaternion Quaternion::Normalize(const Quaternion& p_quaternion)
 	{
-		float scalar = 0.0f;
+		double scalar = 0.0;
 
-		Vector3F vector;
+		Vector3<double> vector{};
 
-		if (p_quaternion.Norm() != 0.0f) {
-			const float normValue = 1.0f / p_quaternion.Norm();
+		if (p_quaternion.Norm() != 0.0) {
+			const double normValue = 1.0 / p_quaternion.Norm();
 
 			scalar = p_quaternion.w * normValue;
 			vector = p_quaternion.axis * normValue;
@@ -463,33 +499,33 @@ namespace GPM
 
 	inline Quaternion Quaternion::ToUnitNormQuaternion()
 	{
-		const float angle = Tools::Utils::ToRadians(w);
+		const double angle = Tools::Utils::ToRadians(w);
 
 		axis.Normalize();
 
-		return { Quaternion { Tools::Utils::CosF(angle * 0.5f), axis * Tools::Utils::SinF(angle * 0.5f)} };
+		return { Quaternion { Tools::Utils::Cos(angle * 0.5), axis * Tools::Utils::Sin(angle * 0.5)} };
 	}
 
-	inline Vector3<float> Quaternion::ToEuler() const
+	inline Vector3<double> Quaternion::ToEuler() const
 	{
-		Vector3<float> euler{};
+		Vector3<double> euler{};
 
 		// roll (x-axis rotation)
-		const float sinr_cosp = 2.0f * (w * axis.x + axis.y * axis.z);
-		const float cosr_cosp = 1.0f - 2.0f * (axis.x * axis.x + axis.y * axis.y);
-		euler.x = Tools::Utils::Arctan2F(sinr_cosp, cosr_cosp);
+		const double sinr_cosp = 2.0 * (w * axis.x + axis.y * axis.z);
+		const double cosr_cosp = 1.0 - 2.0 * (axis.x * axis.x + axis.y * axis.y);
+		euler.x = Tools::Utils::Arctan2(sinr_cosp, cosr_cosp);
 
 		// pitch (y-axis rotation)
-		const float sinp = 2.0f * (w * axis.y - axis.z * axis.x);
-		if (std::abs(sinp) >= 1.0f)
-			euler.y = std::copysign(static_cast<float>(Tools::M_PI) / 2.0f, sinp); // use 90 degrees if out of range
+		const double sinp = 2.0 * (w * axis.y - axis.z * axis.x);
+		if (std::abs(sinp) >= 1.0)
+			euler.y = std::copysign(Tools::M_PI / 2.0, sinp); // use 90 degrees if out of range
 		else
 			euler.y = Tools::Utils::Arcsin(sinp);
 
 		// yaw (z-axis rotation)
-		const float siny_cosp = 2.0f * (w * axis.z + axis.x * axis.y);
-		const float cosy_cosp = 1.0f - 2.0f * (axis.y * axis.y + axis.z * axis.z);
-		euler.z = Tools::Utils::Arctan2F(siny_cosp, cosy_cosp);
+		const double siny_cosp = 2.0 * (w * axis.z + axis.x * axis.y);
+		const double cosy_cosp = 1.0 - 2.0 * (axis.y * axis.y + axis.z * axis.z);
+		euler.z = Tools::Utils::Arctan2(siny_cosp, cosy_cosp);
 
 		euler.x = Tools::Utils::ToDegrees(euler.x);
 		euler.y = Tools::Utils::ToDegrees(euler.y);
@@ -498,21 +534,21 @@ namespace GPM
 		return euler;
 	}
 
-	inline Quaternion Quaternion::ToQuaternion(const Vector3F& p_euler)
+	inline Quaternion Quaternion::ToQuaternion(const Vector3<double>& p_euler)
 	{
 		return { ToQuaternion(p_euler.x, p_euler.y, p_euler.z) };
 	}
 
-	inline Quaternion Quaternion::ToQuaternion(const float p_yaw, const float p_pitch, const float p_roll)
+	inline Quaternion Quaternion::ToQuaternion(const double p_yaw, const double p_pitch, const double p_roll)
 	{
 		Quaternion result;
 
-		const float cosYaw = Tools::Utils::CosF(p_yaw * 0.5f);
-		const float sinYaw = Tools::Utils::SinF(p_yaw * 0.5f);
-		const float cosPitch = Tools::Utils::CosF(p_pitch * 0.5f);
-		const float sinPitch = Tools::Utils::SinF(p_pitch * 0.5f);
-		const float cosRoll = Tools::Utils::CosF(p_roll * 0.5f);
-		const float sinRoll = Tools::Utils::SinF(p_roll * 0.5f);
+		const double cosYaw = Tools::Utils::Cos(p_yaw * 0.5);
+		const double sinYaw = Tools::Utils::Sin(p_yaw * 0.5);
+		const double cosPitch = Tools::Utils::Cos(p_pitch * 0.5);
+		const double sinPitch = Tools::Utils::Sin(p_pitch * 0.5);
+		const double cosRoll = Tools::Utils::Cos(p_roll * 0.5);
+		const double sinRoll = Tools::Utils::Sin(p_roll * 0.5);
 
 		result.w = cosYaw * cosPitch * cosRoll + sinYaw * sinPitch * sinRoll;
 		result.axis.x = cosYaw * cosPitch * sinRoll - sinYaw * sinPitch * cosRoll;
@@ -533,28 +569,28 @@ namespace GPM
 		return { p_quaternion.ToString() };
 	}
 
-	inline Matrix3<float> Quaternion::ToMatrix3() const
+	inline Matrix3<double> Quaternion::ToMatrix3() const
 	{
-		Matrix3<float> result;
+		Matrix3<double> result;
 
-		result.m_data[0] = 2.0f * (w * w + axis.x * axis.x) - 1.0f;
-		result.m_data[3] = 2.0f * (axis.x * axis.y - w * axis.z);
-		result.m_data[6] = 2.0f * (axis.x * axis.z + w * axis.y);
+		result.m_data[0] = 2.0 * (w * w + axis.x * axis.x) - 1.0;
+		result.m_data[3] = 2.0 * (axis.x * axis.y - w * axis.z);
+		result.m_data[6] = 2.0 * (axis.x * axis.z + w * axis.y);
 
-		result.m_data[1] = 2.0f * (axis.x * axis.y + w * axis.z);
-		result.m_data[4] = 2.0f * (w * w + axis.y * axis.y) - 1.0f;
-		result.m_data[7] = 2.0f * (axis.y * axis.z - w * axis.x);
+		result.m_data[1] = 2.0 * (axis.x * axis.y + w * axis.z);
+		result.m_data[4] = 2.0 * (w * w + axis.y * axis.y) - 1.0;
+		result.m_data[7] = 2.0 * (axis.y * axis.z - w * axis.x);
 
-		result.m_data[2] = 2.0f * (axis.x * axis.z - w * axis.y);
-		result.m_data[5] = 2.0f * (axis.y * axis.z + w * axis.x);
-		result.m_data[8] = 2.0f * (w * w + axis.z * axis.z) - 1.0f;
+		result.m_data[2] = 2.0 * (axis.x * axis.z - w * axis.y);
+		result.m_data[5] = 2.0 * (axis.y * axis.z + w * axis.x);
+		result.m_data[8] = 2.0 * (w * w + axis.z * axis.z) - 1.0;
 
 		return result;
 	}
 
-	inline Matrix4<float> Quaternion::ToMatrix4() const
+	inline Matrix4<double> Quaternion::ToMatrix4() const
 	{
-		return { Matrix4<float>{ w, -axis.x, -axis.y, -axis.z,
+		return { Matrix4<double>{ w, -axis.x, -axis.y, -axis.z,
 								axis.x, w, -axis.z, axis.y,
 								axis.y, axis.z, w, -axis.x,
 								axis.z, -axis.y, axis.x, w } };
