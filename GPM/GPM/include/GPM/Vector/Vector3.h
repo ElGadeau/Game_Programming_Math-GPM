@@ -40,11 +40,11 @@ namespace GPM
 
         /**
          * @brief Add other vector to the current vector
-         * @param p_vector : The other vector you want to add to the current one
+         * @param p_other : The other vector you want to add to the current one
          * @return The current vector modified
          */
         template<typename U>
-        constexpr Vector3<T> Add(const Vector3<U>& p_vector);
+        constexpr Vector3<T> Add(const Vector3<U>& p_other);
 
         /**
          * @brief Add left vector to the right vector
@@ -55,26 +55,26 @@ namespace GPM
         template<typename U>
         constexpr Vector3<T> Add(const Vector3<T>& p_left, const Vector3<U>& p_right);
         /**
-         * @brief Substract other vector to the current vector
-         * @param p_vector : The other vector you want to substract to the current one
+         * @brief Subtract other vector to the current vector
+         * @param p_other : The other vector you want to subtract to the current one
          * @return The current vector modified
          */
         template<typename U>
-        constexpr void Substract(const Vector3<U>& p_vector);
+        constexpr void Subtract(const Vector3<U>& p_other);
         /**
          * @brief Multiply other vector to the current vector
-         * @param p_vector : The other vector you want to Multiply to the current one
+         * @param p_other : The other vector you want to Multiply to the current one
          * @return The current vector modified
          */
         template<typename U>
-        constexpr void Multiply(const Vector3<U>& p_vector);
+        constexpr void Multiply(const Vector3<U>& p_other);
         /**
          * @brief Divide other vector to the current vector
-         * @param p_vector : The other vector you want to Divide to the current one
+         * @param p_other : The other vector you want to Divide to the current one
          * @return The current vector modified
          */
         template<typename U>
-        constexpr void Divide(const Vector3<U>& p_vector);
+        constexpr void Divide(const Vector3<U>& p_other);
         /**
          * @brief Set current vector
          * @param p_x : The x value
@@ -98,7 +98,7 @@ namespace GPM
          * @brief Normalized 
          * @return the copy of Normalized vector
          */
-        constexpr Vector3<T> Normalized() const;
+        [[nodiscard]] constexpr Vector3<T> Normalized() const;
         /**
          * @brief ToString
          * @return string format of the vector
@@ -107,25 +107,25 @@ namespace GPM
 
         /**
          * @brief DotProduct other vector to the current vector
-         * @param p_vector : The other vector you want calculate the Dot with
+         * @param p_other : The other vector you want calculate the Dot with
          * @return The dot result
          */
         template<typename U>
-        constexpr T Dot(const Vector3<U>& p_vector) const;
+        constexpr T Dot(const Vector3<U>& p_other) const;
 
         /**
          * @brief Calculate the Angle between other vector and the current vector
-         * @param p_vector : The other vector you want calculate the Angle with
+         * @param p_other : The other vector you want calculate the Angle with
          * @return The angle result
          */
         template<typename U>
-        constexpr T Angle(const Vector3<U>& p_vector) const;
+        constexpr T Angle(const Vector3<U>& p_other) const;
 
         /**
          * @brief Calculate the Magnitude of the current vector
          * @return The Magnitude
          */
-        constexpr T Magnitude() const;
+        [[nodiscard]] constexpr T Magnitude() const;
 
         /**
          * @brief forward unit vector
@@ -155,7 +155,7 @@ namespace GPM
 
         /**
          * @brief Cross other vector to the current vector
-         * @param p_vector : The other vector you want to calculate the Cross with
+         * @param p_other : The other vector you want to calculate the Cross with
          * @return The copy of Cross result
          */
         template<typename U>
@@ -205,87 +205,87 @@ namespace GPM
 
         /**
         * @brief Add vector to the current vector
-        * @param p_vector : Add this vector to the p_vector
+        * @param p_other : Add this vector to the p_vector
         * @return The current vector modified
         */
         template<typename U>
-        constexpr inline Vector3<T>& operator +=(const Vector3<U> p_vector);
+        constexpr Vector3<T>& operator +=(const Vector3<U> p_other);
 
         /**
-        * @brief Substract vector to the current vector
-        * @param p_vector : Substract this vector to the p_vector
+        * @brief Subtract vector to the current vector
+        * @param p_other : Subtract this vector to the p_vector
         * @return The current vector modified
         */
         template<typename U>
-        constexpr inline Vector3<T>& operator -=(const Vector3<U> p_vector);
+        constexpr Vector3<T>& operator -=(const Vector3<U> p_other);
 
         /**
         * @brief Divide vector to the current vector
-        * @param p_vector : Divide this vector to the p_vector
+        * @param p_other : Divide this vector to the p_vector
         * @return The current vector modified
         */
         template<typename U>
-        constexpr inline Vector3<T>& operator *=(const Vector3<U> p_vector);
+        constexpr Vector3<T>& operator *=(const Vector3<U> p_other);
 
         /**
         * @brief Divide vector to the current vector
         * @param p_scalar : Divide this vector to the p_scalar
         * @return The current vector modified
         */
-		constexpr inline Vector3<T>& operator *=(const T p_scalar);
+		constexpr Vector3<T>& operator *=(const T p_scalar);
 
         /**
         * @brief Divide vector to the current vector
-        * @param p_vector : Divide this vector to the p_vector
+        * @param p_other : Divide this vector to the p_vector
         * @return The current vector modified
         */
         template<typename U>
-        constexpr inline Vector3<T>& operator /=(const Vector3<U> p_vector);
+        constexpr Vector3<T>& operator /=(const Vector3<U> p_other);
 
         /**
          * @brief Add vector p_left by an other vector
-         * @param p_vector : the other vector
+         * @param p_other : the other vector
          * @return The copy of the vector operation result
          */
         template<typename U>
-        constexpr inline Vector3<T> operator+(const Vector3<U>& p_other) const;
+        constexpr Vector3<T> operator+(const Vector3<U>& p_other) const;
 
         /**
-         * @brief Substract vector p_left by an other vector
-         * @param p_vector : the other vector
+         * @brief Subtract vector p_left by an other vector
+         * @param p_other : the other vector
          * @return The copy of the vector operation result
          */
         template<typename U>
-        constexpr inline Vector3<T> operator-(const Vector3<U>& p_vector) const;
+        constexpr Vector3<T> operator-(const Vector3<U>& p_other) const;
         /**
         * @brief Assignment operator for Vector3
         * @param p_other The Vector to construct from
         */
         template<typename U>
-        constexpr inline Vector3<T>& operator=(const Vector3<U>& p_other);
+        constexpr Vector3<T>& operator=(const Vector3<U>& p_other);
 
         /**
          * @brief Divide vector p_left by an other vector
-         * @param p_vector : the other vector
+         * @param p_other : the other vector
          * @return The copy of the vector operation result
          */
         template<typename U>
-        constexpr inline Vector3<T> operator/(const Vector3<U>& p_vector) const;
+        constexpr Vector3<T> operator/(const Vector3<U>& p_other) const;
 
         /**
          * @brief Multiply vector p_left by an other vector
-         * @param p_vector : the other vector
+         * @param p_other : the other vector
          * @return The copy of the vector operation result
          */
         template<typename U>
-        constexpr inline Vector3<T> operator *(const Vector3<U>& p_vector) const;
+        constexpr Vector3<T> operator *(const Vector3<U>& p_other) const;
 
         /**
          * @brief Multiply vector p_left by scalar
          * @param p_scalar : the scalar to divide
          * @return The copy of the vector operation result
          */
-        constexpr inline Vector3<T> operator *(const T& p_scalar) const;
+        constexpr Vector3<T> operator *(const T& p_scalar) const;
 
         /**
          * @brief Return true if the two vectors are identical
@@ -293,7 +293,7 @@ namespace GPM
          * @return True or false
          */
         template<typename U>
-        constexpr inline bool operator==(const Vector3<U>& p_vector) const;
+        constexpr bool operator==(const Vector3<U>& p_other) const;
 
         /**
          * @brief Return false if the two vectors are identical
@@ -301,18 +301,18 @@ namespace GPM
          * @return True or false
          */
         template<typename U>
-        constexpr inline bool operator!=(const Vector3<U>& p_vector) const;
+        constexpr bool operator!=(const Vector3<U>& p_other) const;
 
 	};
 
     template <typename T>
     constexpr std::ostream& operator<<(std::ostream & p_stream, const Vector3<T> & p_vector);
 
-    using Vector3F = GPM::Vector3<float>;
-    using Vector3L = GPM::Vector3<long>;
-    using Vector3U = GPM::Vector3<unsigned int>;
-    using Vector3I = GPM::Vector3<int>;
-    using Vector3D = GPM::Vector3<double>;
+    using Vector3F = Vector3<float>;
+    using Vector3L = Vector3<long>;
+    using Vector3U = Vector3<unsigned int>;
+    using Vector3I = Vector3<int>;
+    using Vector3D = Vector3<double>;
 }
 
 #include <GPM/Vector/Vector3.inl>
