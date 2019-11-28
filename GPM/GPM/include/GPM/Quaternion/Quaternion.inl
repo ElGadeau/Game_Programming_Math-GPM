@@ -561,31 +561,43 @@ namespace GPM
 		return { p_quaternion.ToString() };
 	}
 
-	inline Matrix3<double> Quaternion::ToMatrix3() const
+	inline Matrix3<float> Quaternion::ToMatrix3() const
 	{
-		Matrix3<double> result;
+		Matrix3<float> result;
 
-		result.m_data[0] = 2.0 * (w * w + axis.x * axis.x) - 1.0;
-		result.m_data[3] = 2.0 * (axis.x * axis.y - w * axis.z);
-		result.m_data[6] = 2.0 * (axis.x * axis.z + w * axis.y);
+		const float fw = static_cast<float>(w);
+		Vector3<float> faxis{};
+		faxis.x = static_cast<float>(axis.x);
+		faxis.y = static_cast<float>(axis.y);
+		faxis.z = static_cast<float>(axis.z);
+		
+		result.m_data[0] = 2.0f * (fw * fw + faxis.x * faxis.x) - 1.0f;
+		result.m_data[3] = 2.0f * (faxis.x * faxis.y - fw * faxis.z);
+		result.m_data[6] = 2.0f * (faxis.x * faxis.z + fw * faxis.y);
 
-		result.m_data[1] = 2.0 * (axis.x * axis.y + w * axis.z);
-		result.m_data[4] = 2.0 * (w * w + axis.y * axis.y) - 1.0;
-		result.m_data[7] = 2.0 * (axis.y * axis.z - w * axis.x);
+		result.m_data[1] = 2.0f * (faxis.x * faxis.y + fw * faxis.z);
+		result.m_data[4] = 2.0f * (fw * fw + faxis.y * faxis.y) - 1.0f;
+		result.m_data[7] = 2.0f * (faxis.y * faxis.z - fw * faxis.x);
 
-		result.m_data[2] = 2.0 * (axis.x * axis.z - w * axis.y);
-		result.m_data[5] = 2.0 * (axis.y * axis.z + w * axis.x);
-		result.m_data[8] = 2.0 * (w * w + axis.z * axis.z) - 1.0;
+		result.m_data[2] = 2.0f * (faxis.x * faxis.z - fw * faxis.y);
+		result.m_data[5] = 2.0f * (faxis.y * faxis.z + fw * faxis.x);
+		result.m_data[8] = 2.0f * (fw * fw + faxis.z * faxis.z) - 1.0f;
 
 		return result;
 	}
 
-	inline Matrix4<double> Quaternion::ToMatrix4() const
+	inline Matrix4<float> Quaternion::ToMatrix4() const
 	{
-		return { Matrix4<double>{ w, -axis.x, -axis.y, -axis.z,
-								axis.x, w, -axis.z, axis.y,
-								axis.y, axis.z, w, -axis.x,
-								axis.z, -axis.y, axis.x, w } };
+		const float fw = static_cast<float>(w);
+		Vector3<float> faxis{};
+		faxis.x = static_cast<float>(axis.x);
+		faxis.y = static_cast<float>(axis.y);
+		faxis.z = static_cast<float>(axis.z);
+		
+		return { Matrix4<float>{ fw, -faxis.x, -faxis.y, -faxis.z,
+								faxis.x, fw, -faxis.z, faxis.y,
+								faxis.y, faxis.z, fw, -faxis.x,
+								faxis.z, -faxis.y, faxis.x, fw } };
 	}
 
 	inline std::ostream& operator<<(std::ostream& p_stream,
