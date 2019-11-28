@@ -93,23 +93,15 @@ namespace GPM
 		const double p_angleInRadians)
 		: axis{ 0.0, 0.0, 0.0 }, w{ 1.0 }
 	{
-		std::cout << "angle iun radian: " << p_angleInRadians << "\n";
 		const double angleDivided = p_angleInRadians / 2.0;
-		std::cout << "angle divided: " << angleDivided << "\n";
 
-		w = std::cos(angleDivided);
-		std::cout << "cos w:" << w << "\n";
+		w = Tools::Utils::Cos(angleDivided);
 
-		const double sinAngle = std::sin(angleDivided);
-		std::cout << "sinAngle: " << sinAngle << "\n";
+		const double sinAngle = Tools::Utils::Sin(angleDivided);
 
 		axis.x = sinAngle * p_axis.x;
 		axis.y = sinAngle * p_axis.y;
 		axis.z = sinAngle * p_axis.z;
-
-		//Normalize();
-
-		std::cout << "w:" << w << "\t axis:" << axis.ToString() << "\n";
 	}
 
 	inline void Quaternion::MakeFromEuler(const Vector3<double>& p_euler)
@@ -405,7 +397,7 @@ namespace GPM
 			return identity;
 		}
 
-		const double rotAngle = std::acos(dot);
+		const double rotAngle = Tools::Utils::Arccos(dot);
 		Vector3<double> rotAxis = Vector3<double>::Cross(Vector3<double>::forward, forwardVector);
 		rotAxis = rotAxis.Normalized();
 		return CreateFromAxisAngle(rotAxis, rotAngle);
@@ -517,7 +509,7 @@ namespace GPM
 
 		// pitch (y-axis rotation)
 		const double sinp = 2.0 * (w * axis.y - axis.z * axis.x);
-		if (std::abs(sinp) >= 1.0)
+		if (Tools::Utils::Abs(sinp) >= 1.0)
 			euler.y = std::copysign(Tools::M_PI / 2.0, sinp); // use 90 degrees if out of range
 		else
 			euler.y = Tools::Utils::Arcsin(sinp);
