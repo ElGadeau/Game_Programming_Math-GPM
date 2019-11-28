@@ -90,7 +90,7 @@ namespace GPM
         constexpr inline Vector3<T>& operator -=(const Vector3<U> p_vector);
         template<typename U>
         constexpr inline Vector3<T>& operator *=(const Vector3<U> p_vector);
-		constexpr inline Vector3<T>& operator *=(const float p_scalar);
+		constexpr inline Vector3<T>& operator *=(const T p_scalar);
         template<typename U>
         constexpr inline Vector3<T>& operator /=(const Vector3<U> p_vector);
 

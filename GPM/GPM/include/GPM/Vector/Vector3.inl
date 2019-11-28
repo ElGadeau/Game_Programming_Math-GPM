@@ -16,9 +16,9 @@ namespace GPM
     template <typename U>
 	constexpr Vector3<T>::Vector3(Vector3<U>&& p_other) noexcept
 	{
-		x = p_other.x;
-		y = p_other.y;
-		z = p_other.z;
+		x = static_cast<T>(p_other.x);
+		y = static_cast<T>(p_other.y);
+		z = static_cast<T>(p_other.z);
 	}
 
 	template<typename T>
@@ -299,7 +299,7 @@ namespace GPM
 	}
 
 	template <typename T>
-	constexpr Vector3<T>& Vector3<T>::operator*=(const float p_scalar)
+	constexpr Vector3<T>& Vector3<T>::operator*=(const T p_scalar)
 	{
 		x *= p_scalar;
 		y *= p_scalar;
