@@ -300,12 +300,12 @@ namespace GPM
 		/**
 		 * @brief Return a Matrix3 of double out of the quaternion
 		 */
-		Matrix3<double> ToMatrix3() const;
+		Matrix3<float> ToMatrix3() const;
 
 		/**
 		 * @brief Return a Matrix4 of double out of the quaternion
 		 */
-		Matrix4<double> ToMatrix4() const;
+		Matrix4<float> ToMatrix4() const;
 #pragma endregion
 	};
 
