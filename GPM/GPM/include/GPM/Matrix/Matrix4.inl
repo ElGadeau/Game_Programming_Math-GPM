@@ -69,6 +69,12 @@ constexpr Matrix4<T>::Matrix4(const T p_00, const T p_01, const T p_02, const T 
 #pragma region Properties
 
 template<typename T>
+constexpr bool Matrix4<T>::isIdentity()
+{
+    return Equals(identity);
+}
+
+template<typename T>
 constexpr T Matrix4<T>::Determinant()
 {
     return ((m_data[0] * GetMinor({ m_data[5], m_data[6], m_data[7], m_data[9], m_data[10], m_data[11], m_data[13], m_data[14], m_data[15] }))
@@ -78,9 +84,9 @@ constexpr T Matrix4<T>::Determinant()
 }
 
 template<typename T>
-constexpr T Matrix4<T>::Determinant(const Matrix4& p_matrix)
+constexpr T Matrix4<T>::Determinant(const Matrix4<T>& p_matrix)
 {
-    return p_matrix.Determinant();
+    return Matrix4<T>(p_matrix).Determinant();
 }
 
 template<typename T>
@@ -218,6 +224,79 @@ constexpr Matrix4<T> Matrix4<T>::CreateTransformation(const Vector3<U>& p_transl
     return tmpMat;
 }
 
+template<typename T>
+constexpr Matrix4<T> Matrix4<T>::Adjugate()
+{
+    Matrix4<T> tmpMat(m_data);
+
+    tmpMat.m_data[0] =   GetMinor({ m_data[5], m_data[6], m_data[7], m_data[9], m_data[10], m_data[11], m_data[13], m_data[14], m_data[15] });
+    tmpMat.m_data[4] =  -GetMinor({ m_data[4], m_data[6], m_data[7], m_data[8], m_data[10], m_data[11], m_data[12], m_data[14], m_data[15] });
+    tmpMat.m_data[8] =   GetMinor({ m_data[4], m_data[5], m_data[7], m_data[8], m_data[9], m_data[11], m_data[12], m_data[13], m_data[15] });
+    tmpMat.m_data[12] = -GetMinor({ m_data[4], m_data[5], m_data[6], m_data[8], m_data[9], m_data[10], m_data[12], m_data[13], m_data[14] });
+    
+    tmpMat.m_data[1] =  -GetMinor({ m_data[1], m_data[2], m_data[3], m_data[9], m_data[10], m_data[11], m_data[13], m_data[14], m_data[15] });
+    tmpMat.m_data[5] =   GetMinor({ m_data[0], m_data[2], m_data[3], m_data[8], m_data[10], m_data[11], m_data[12], m_data[14], m_data[15] });
+    tmpMat.m_data[9] =  -GetMinor({ m_data[0], m_data[1], m_data[3], m_data[8], m_data[9], m_data[11], m_data[12], m_data[13], m_data[15] });
+    tmpMat.m_data[13] =  GetMinor({ m_data[0], m_data[1], m_data[2], m_data[8], m_data[9], m_data[10], m_data[12], m_data[13], m_data[14] });
+    
+    tmpMat.m_data[2] =   GetMinor({ m_data[1], m_data[2], m_data[3], m_data[5], m_data[6], m_data[7], m_data[13], m_data[14], m_data[15] });
+    tmpMat.m_data[6] =  -GetMinor({ m_data[0], m_data[2], m_data[3], m_data[4], m_data[6], m_data[7], m_data[12], m_data[14], m_data[15] });
+    tmpMat.m_data[10] =  GetMinor({ m_data[0], m_data[1], m_data[3], m_data[4], m_data[5], m_data[7], m_data[12], m_data[13], m_data[15] });
+    tmpMat.m_data[14] = -GetMinor({ m_data[0], m_data[1], m_data[2], m_data[4], m_data[5], m_data[6], m_data[12], m_data[13], m_data[14] });
+    
+    tmpMat.m_data[3] =  -GetMinor({ m_data[1], m_data[2], m_data[3], m_data[5], m_data[6], m_data[7], m_data[9], m_data[10], m_data[11] });
+    tmpMat.m_data[7] =   GetMinor({ m_data[0], m_data[2], m_data[3], m_data[4], m_data[6], m_data[7], m_data[8], m_data[10], m_data[11] });
+    tmpMat.m_data[11] = -GetMinor({ m_data[0], m_data[1], m_data[3], m_data[4], m_data[5], m_data[7], m_data[8], m_data[9], m_data[11] });
+    tmpMat.m_data[15] =  GetMinor({ m_data[0], m_data[1], m_data[2], m_data[4], m_data[5], m_data[6], m_data[8], m_data[9], m_data[10] });
+
+    return { tmpMat};
+}
+
+template<typename T>
+constexpr Matrix4<T> Matrix4<T>::CreateAdjugate(const Matrix4<T>& p_matrix)
+{
+    return Matrix4<T>(p_matrix).Adjugate();
+}
+
+
+template<typename T>
+constexpr Matrix4<T> Matrix4<T>::Inverse(const Matrix4<T>& p_matrix)
+{
+    static_assert(!std::is_integral<T>::value, "Matrix3::CreateTransformation : Can't do Transform Matrices with Matrix3<int>, as values would be rounded to 0");
+
+    Matrix4<T> tmpMat;
+    Matrix4<T> Adj = CreateAdjugate(p_matrix);
+    T Det = Determinant(p_matrix);
+    
+    tmpMat.m_data[0] = Adj.m_data[0] / Det;
+    tmpMat.m_data[1] = Adj.m_data[1] / Det;
+    tmpMat.m_data[2] = Adj.m_data[2] / Det;
+    tmpMat.m_data[3] = Adj.m_data[3] / Det;
+    
+    tmpMat.m_data[4] = Adj.m_data[4] / Det;
+    tmpMat.m_data[5] = Adj.m_data[5] / Det;
+    tmpMat.m_data[6] = Adj.m_data[6] / Det;
+    tmpMat.m_data[7] = Adj.m_data[7] / Det;
+    
+    tmpMat.m_data[8] = Adj.m_data[8] / Det;
+    tmpMat.m_data[9] = Adj.m_data[9] / Det;
+    tmpMat.m_data[10] = Adj.m_data[10] / Det;
+    tmpMat.m_data[11] = Adj.m_data[11] / Det;
+    
+    tmpMat.m_data[12] = Adj.m_data[12] / Det;
+    tmpMat.m_data[13] = Adj.m_data[13] / Det;
+    tmpMat.m_data[14] = Adj.m_data[14] / Det;
+    tmpMat.m_data[15] = Adj.m_data[15] / Det;
+
+    return tmpMat;
+}
+
+template<typename T>
+Matrix4<T> Matrix4<T>::LookAt(const Vector3<T>& p_from, const Vector3<T>& p_to, const Vector3<T>& p_up)
+{
+    
+}
+
 
 #pragma endregion 
 
@@ -248,12 +327,6 @@ T Matrix4<T>::GetMinor(Matrix3<T> p_minor)
     return ((p_minor.m_data[0] * ((p_minor.m_data[4] * p_minor.m_data[8]) - (p_minor.m_data[5] * p_minor.m_data[7])))
           - (p_minor.m_data[1] * ((p_minor.m_data[3] * p_minor.m_data[8]) - (p_minor.m_data[5] * p_minor.m_data[6])))
           + (p_minor.m_data[2] * ((p_minor.m_data[3] * p_minor.m_data[7]) - (p_minor.m_data[4] * p_minor.m_data[6]))));
-}
-
-template<typename T>
-Matrix4<T> Matrix4<T>::Inverse()
-{
-    //TODO need determinant to complete
 }
 
 #pragma region Conversions
@@ -487,20 +560,21 @@ Vector4<T> Matrix4<T>::Multiply(const Matrix4<U>& p_matrix, const Vector4<T>& p_
 }
 
 template<typename T>
-bool Matrix4<T>::Equals(const Matrix4<T>& p_matrix, const Matrix4<T>& p_other)
+bool Matrix4<T>::Equals(const Matrix4<T>& p_other)
 {
     for (int i = 0; i < 16; i++)
     {
-        if (p_matrix.m_data[i] != p_other.m_data[i])
+        if (m_data[i] != p_other.m_data[i])
             return false;
     }
     return true;
 }
 
 template<typename T>
-void Matrix4<T>::Set(Matrix4<T>& p_matrix, const Matrix4<T>& p_other)
+template<typename U>
+void Matrix4<T>::Set(Matrix4<T>& p_matrix, const Matrix4<U>& p_other)
 {
-    memcpy(p_matrix.m_data, p_other.m_data, sizeof(T) * 16);
+    memcpy(p_matrix.m_data, p_other.m_data, sizeof(U) * 16);
 }
 
 #pragma endregion 
@@ -518,17 +592,18 @@ Vector4<T> Matrix4<T>::operator*(const Vector4<T>& p_vector)
 template<typename T>
 bool Matrix4<T>::operator==(const Matrix4<T>& p_matrix)
 {
-    return Equals(*this, p_matrix);
+    return Equals(p_matrix);
 }
 
 template<typename T>
 bool Matrix4<T>::operator!=(const Matrix4<T>& p_matrix)
 {
-    return !Equals(*this, p_matrix);
+    return !Equals(p_matrix);
 }
 
 template<typename T>
-void Matrix4<T>::operator=(const Matrix4<T>& p_matrix)
+template<typename U>
+void Matrix4<T>::operator=(const Matrix4<U>& p_matrix)
 {
     Set(*this, p_matrix);
 }
