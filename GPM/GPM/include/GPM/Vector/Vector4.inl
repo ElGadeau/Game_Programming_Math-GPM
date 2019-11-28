@@ -504,7 +504,7 @@ namespace GPM
 	{
 		if (p_other.x == 0 || p_other.y == 0 || p_other.z == 0)
 			throw std::logic_error("Division by 0");
-		
+
 		x /= p_other.x;
 		y /= p_other.y;
 		z /= p_other.z;
@@ -658,8 +658,7 @@ namespace GPM
 	constexpr T Vector4<T>::TripleProduct(const Vector4<T>& p_left, const Vector4<T>& p_middle,
 		const Vector4<T>& p_right)
 	{
-		const Vector4<T> resultCross = p_middle.Cross(p_right);
-		return p_left.Dot(resultCross);
+		return p_middle * (Vector4<T>::Dot(p_left, p_right)) - p_right * (Vector4<T>::Dot(p_left, p_middle));
 	}
 
 	template <typename T>
