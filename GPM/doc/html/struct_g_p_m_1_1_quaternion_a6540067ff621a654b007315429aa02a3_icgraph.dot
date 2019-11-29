@@ -1,17 +1,14 @@
 digraph "GPM::Quaternion::Norm"
 {
- // INTERACTIVE_SVG=YES
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="RL";
-  Node168 [label="GPM::Quaternion::Norm",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Norm of a quaternion, alias magnitude."];
-  Node168 -> Node169 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node169 [label="GPM::Quaternion::IsNormalized",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_quaternion.html#a94dceaa6ef3a308796f68ba4a4074acf",tooltip="Check if the quaternion is normalized."];
-  Node168 -> Node170 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node170 [label="GPM::Quaternion::Normalize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_quaternion.html#a31901682c3179662db46bf6f7ac57126",tooltip="Normalize the current quaternion."];
-  Node170 -> Node171 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node171 [label="GPM::Quaternion::Slerp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_quaternion.html#a998a28ddd5cf611d1809ce36cacd285a",tooltip="Smoothly interpolate between two quaternions."];
-  Node170 -> Node172 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node172 [label="GPM::Quaternion::Nlerp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_quaternion.html#af85f9a13557293294b2ddff0ddac4b24",tooltip="Normalized interpolate between two quaternions."];
+  Node1 [label="GPM::Quaternion::Norm",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Norm of a quaternion, alias magnitude."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GPM::Quaternion::IsNormalized",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_quaternion.html#a94dceaa6ef3a308796f68ba4a4074acf",tooltip="Check if the quaternion is normalized."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GPM::Quaternion::Normalize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_quaternion.html#a31901682c3179662db46bf6f7ac57126",tooltip="Normalize the current quaternion."];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="GPM::Quaternion::Nlerp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_quaternion.html#af85f9a13557293294b2ddff0ddac4b24",tooltip="Normalized interpolate between two quaternions."];
 }

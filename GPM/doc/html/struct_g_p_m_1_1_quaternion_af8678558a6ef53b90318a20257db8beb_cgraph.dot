@@ -1,13 +1,12 @@
 digraph "GPM::Quaternion::CreateFromAxisAngle"
 {
- // INTERACTIVE_SVG=YES
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node59 [label="GPM::Quaternion::CreateFrom\lAxisAngle",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Create a quaternion out of an axis and angle."];
-  Node59 -> Node60 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node60 [label="GPM::Tools::Utils::Cos",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_g_p_m_1_1_tools_1_1_utils.html#a78ee00d0935076bfaf086803bcaa450d",tooltip="Mathematics co-sinus implementation."];
-  Node59 -> Node61 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node61 [label="GPM::Tools::Utils::Sin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_g_p_m_1_1_tools_1_1_utils.html#a7443b72a971353b6db74863b125d00fd",tooltip="Mathematics sinus implementation."];
+  Node1 [label="GPM::Quaternion::CreateFrom\lAxisAngle",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Create a quaternion out of an axis and angle."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GPM::Tools::Utils::Cos",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_g_p_m_1_1_tools_1_1_utils.html#a78ee00d0935076bfaf086803bcaa450d",tooltip="Mathematics co-sinus implementation."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GPM::Tools::Utils::Sin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_g_p_m_1_1_tools_1_1_utils.html#a7443b72a971353b6db74863b125d00fd",tooltip="Mathematics sinus implementation."];
 }

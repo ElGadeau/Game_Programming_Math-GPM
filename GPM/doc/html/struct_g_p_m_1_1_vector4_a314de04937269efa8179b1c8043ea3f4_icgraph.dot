@@ -1,23 +1,22 @@
 digraph "GPM::Vector4::Homogenize"
 {
- // INTERACTIVE_SVG=YES
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="RL";
-  Node166 [label="GPM::Vector4::Homogenize",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Homogenize the vector."];
-  Node166 -> Node167 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node167 [label="GPM::Vector4::Cross",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_vector4.html#a17d6b299853f3350d18f80ab333aa692",tooltip="Calculate the cross product with other vector."];
-  Node167 -> Node168 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node168 [label="GPM::Vector4::Cross",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_vector4.html#ad2618f44a7997d0517905c0422e19def",tooltip="Calculate the cross product between two vectors."];
-  Node166 -> Node169 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node169 [label="GPM::Vector4::Dot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_vector4.html#ac50c90697eb147f8b04afeb674aa544e",tooltip="Calculate the dot product with other vector."];
-  Node169 -> Node170 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node170 [label="GPM::Vector4::Dot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_vector4.html#ac0094e1bfbf4f703cf67760744b2c5c2",tooltip="Calculate the dot product between two vectors."];
-  Node169 -> Node171 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node171 [label="GPM::Vector4::Slerp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_vector4.html#a63b37e497566e5ae18ec1d684ff8012d",tooltip="Return the start vector moving to the end vector at step interpolationCoefficient."];
-  Node169 -> Node172 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node172 [label="GPM::Vector4::TripleProduct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_vector4.html#ab590c7bacf1cc22aeb7223d5b81e165e",tooltip="Calculate the dot product between left and the result of cross product between middle and right."];
-  Node166 -> Node173 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node173 [label="GPM::Vector4::Homogenize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_vector4.html#a20c7e9679b0a6ecd7a50ef49d6146b67",tooltip="Return the homogenized vector."];
+  Node1 [label="GPM::Vector4::Homogenize",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Homogenize the vector."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GPM::Vector4::Cross",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_vector4.html#a17d6b299853f3350d18f80ab333aa692",tooltip="Calculate the cross product with other vector."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GPM::Vector4::Cross",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_vector4.html#ad2618f44a7997d0517905c0422e19def",tooltip="Calculate the cross product between two vectors."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="GPM::Vector4::Dot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_vector4.html#ac50c90697eb147f8b04afeb674aa544e",tooltip="Calculate the dot product with other vector."];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="GPM::Vector4::Dot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_vector4.html#ac0094e1bfbf4f703cf67760744b2c5c2",tooltip="Calculate the dot product between two vectors."];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="GPM::Vector4::Slerp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_vector4.html#a63b37e497566e5ae18ec1d684ff8012d",tooltip="Return the start vector moving to the end vector at step interpolationCoefficient."];
+  Node4 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="GPM::Vector4::TripleProduct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_vector4.html#ab590c7bacf1cc22aeb7223d5b81e165e",tooltip="Calculate the dot product between left and the result of cross product between middle and right."];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="GPM::Vector4::Homogenize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_vector4.html#a20c7e9679b0a6ecd7a50ef49d6146b67",tooltip="Return the homogenized vector."];
 }

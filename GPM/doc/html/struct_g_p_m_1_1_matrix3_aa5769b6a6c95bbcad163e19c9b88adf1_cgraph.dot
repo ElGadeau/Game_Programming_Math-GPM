@@ -1,13 +1,12 @@
 digraph "GPM::Matrix3::Rotate"
 {
- // INTERACTIVE_SVG=YES
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node200 [label="GPM::Matrix3::Rotate",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Rotate the current matrix with an angle in degrees."];
-  Node200 -> Node201 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node201 [label="GPM::Tools::Utils::CosF",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_g_p_m_1_1_tools_1_1_utils.html#aa6e9f34082eb741de10142faf5b90f4d",tooltip="Mathematics co-sinus implementation with float precision."];
-  Node200 -> Node202 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node202 [label="GPM::Tools::Utils::SinF",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_g_p_m_1_1_tools_1_1_utils.html#a0f3d4065795e6821a5ee311947402f0e",tooltip="Mathematics sinus implementation with float precision."];
+  Node1 [label="GPM::Matrix3::Rotate",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Rotate the current matrix with an angle in degrees."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GPM::Tools::Utils::CosF",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_g_p_m_1_1_tools_1_1_utils.html#aa6e9f34082eb741de10142faf5b90f4d",tooltip="Mathematics co-sinus implementation with float precision."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GPM::Tools::Utils::SinF",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_g_p_m_1_1_tools_1_1_utils.html#a0f3d4065795e6821a5ee311947402f0e",tooltip="Mathematics sinus implementation with float precision."];
 }

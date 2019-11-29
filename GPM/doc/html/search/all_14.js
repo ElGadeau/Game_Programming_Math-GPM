@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['x',['x',['../struct_g_p_m_1_1_vector2.html#a568c52c5e05a44f5e5cdd3c27e6dd0bd',1,'GPM::Vector2::x()'],['../struct_g_p_m_1_1_vector3.html#a8a5dcb0c060aec93dddc57183e58ce0d',1,'GPM::Vector3::x()'],['../struct_g_p_m_1_1_vector4.html#ae71c165a6161d9c8626cd6a10550059c',1,'GPM::Vector4::x()']]],
-  ['xaxis',['xAxis',['../struct_g_p_m_1_1_vector4.html#af785768b21295b32d835db945758583a',1,'GPM::Vector4']]]
+  ['_7ematrix3_124',['~Matrix3',['../struct_g_p_m_1_1_matrix3.html#a4b790792f7b19af26d3dc453a55db7ad',1,'GPM::Matrix3']]],
+  ['_7evector2_125',['~Vector2',['../struct_g_p_m_1_1_vector2.html#a6c426301cf984acc9b6fc40371f8260a',1,'GPM::Vector2']]],
+  ['_7evector4_126',['~Vector4',['../struct_g_p_m_1_1_vector4.html#a5cf40c39755dab3178c5234fa7c2e90e',1,'GPM::Vector4']]]
 ];

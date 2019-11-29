@@ -1,17 +1,16 @@
 digraph "GPM::Quaternion::ToEuler"
 {
- // INTERACTIVE_SVG=YES
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node306 [label="GPM::Quaternion::ToEuler",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Transform the current quaternion to euler angles in degrees."];
-  Node306 -> Node307 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node307 [label="GPM::Tools::Utils::Abs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_g_p_m_1_1_tools_1_1_utils.html#a6bda13b3bf16826929bf53634851b210",tooltip="Return the absolute value of a numeric value."];
-  Node306 -> Node308 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node308 [label="GPM::Tools::Utils::\lArcsin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_g_p_m_1_1_tools_1_1_utils.html#a6517f9a7b3881010dbec3bb47cdad33f",tooltip="Mathematics arc sinus implementation."];
-  Node306 -> Node309 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node309 [label="GPM::Tools::Utils::\lArctan2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_g_p_m_1_1_tools_1_1_utils.html#a86ccaa1296f3cc684dfebc41141c501f",tooltip="Mathematics arc tangent implementation."];
-  Node306 -> Node310 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node310 [label="GPM::Tools::Utils::\lToDegrees",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_g_p_m_1_1_tools_1_1_utils.html#a49cf5fe0d1934f98f1dc142d929bee40",tooltip="Convert the given angle to degrees in float precision."];
+  Node1 [label="GPM::Quaternion::ToEuler",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Transform the current quaternion to euler angles in degrees."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GPM::Tools::Utils::Abs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_g_p_m_1_1_tools_1_1_utils.html#a6bda13b3bf16826929bf53634851b210",tooltip="Return the absolute value of a numeric value."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GPM::Tools::Utils::\lArcsin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_g_p_m_1_1_tools_1_1_utils.html#a6517f9a7b3881010dbec3bb47cdad33f",tooltip="Mathematics arc sinus implementation."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="GPM::Tools::Utils::\lArctan2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_g_p_m_1_1_tools_1_1_utils.html#a86ccaa1296f3cc684dfebc41141c501f",tooltip="Mathematics arc tangent implementation."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="GPM::Tools::Utils::\lToDegrees",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_g_p_m_1_1_tools_1_1_utils.html#a49cf5fe0d1934f98f1dc142d929bee40",tooltip="Convert the given angle to degrees in float precision."];
 }

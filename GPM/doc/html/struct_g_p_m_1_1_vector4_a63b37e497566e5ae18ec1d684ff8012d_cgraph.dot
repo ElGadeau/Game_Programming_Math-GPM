@@ -1,29 +1,28 @@
 digraph "GPM::Vector4::Slerp"
 {
- // INTERACTIVE_SVG=YES
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node405 [label="GPM::Vector4::Slerp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Return the start vector moving to the end vector at step interpolationCoefficient."];
-  Node405 -> Node406 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node406 [label="GPM::Vector4::Angle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_vector4.html#a3654f155d9ca1a07a13ba4e522b857d5",tooltip="Calculate the angle between two vectors in radiant."];
-  Node406 -> Node407 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node407 [label="GPM::Tools::Utils::\lArccos",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_g_p_m_1_1_tools_1_1_utils.html#a4ca49fd87d0bbc3e8e9bb77b81c8066a",tooltip=" "];
-  Node406 -> Node408 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node408 [label="GPM::Vector4::Magnitude",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_vector4.html#ae9e4e3e51a8a5131e1e88eaa348ea523",tooltip="Calculate the length of the vector."];
-  Node408 -> Node409 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node409 [label="GPM::Tools::Utils::\lSquareRootF",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_g_p_m_1_1_tools_1_1_utils.html#ac02dd6b4a5f4275ca20e53fdda56f434",tooltip="Return the square root of a numeric value with float precision."];
-  Node405 -> Node410 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node410 [label="GPM::Tools::Utils::Cos",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_g_p_m_1_1_tools_1_1_utils.html#a78ee00d0935076bfaf086803bcaa450d",tooltip="Mathematics co-sinus implementation."];
-  Node405 -> Node411 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node411 [label="GPM::Vector4::Dot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_vector4.html#ac50c90697eb147f8b04afeb674aa544e",tooltip="Calculate the dot product with other vector."];
-  Node411 -> Node412 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node412 [label="GPM::Vector4::Homogenize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_vector4.html#a314de04937269efa8179b1c8043ea3f4",tooltip="Homogenize the vector."];
-  Node405 -> Node413 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node413 [label="GPM::Vector4::Normalize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_vector4.html#a03b38ee62c9126f4cb10f4dae0b4d26f",tooltip="Normalize the vector."];
-  Node405 -> Node414 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node414 [label="GPM::Tools::Utils::Sin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_g_p_m_1_1_tools_1_1_utils.html#a7443b72a971353b6db74863b125d00fd",tooltip="Mathematics sinus implementation."];
-  Node405 -> Node415 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node415 [label="GPM::Tools::Utils::\lToRadians",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_g_p_m_1_1_tools_1_1_utils.html#a70b429d76d22e49647c88de1089e7312",tooltip="Convert the given angle to radians."];
+  Node1 [label="GPM::Vector4::Slerp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Return the start vector moving to the end vector at step interpolationCoefficient."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GPM::Vector4::Angle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_vector4.html#a3654f155d9ca1a07a13ba4e522b857d5",tooltip="Calculate the angle between two vectors in radiant."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GPM::Tools::Utils::\lArccos",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_g_p_m_1_1_tools_1_1_utils.html#a4ca49fd87d0bbc3e8e9bb77b81c8066a",tooltip=" "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="GPM::Vector4::Magnitude",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_vector4.html#ae9e4e3e51a8a5131e1e88eaa348ea523",tooltip="Calculate the length of the vector."];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="GPM::Tools::Utils::\lSquareRootF",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_g_p_m_1_1_tools_1_1_utils.html#ac02dd6b4a5f4275ca20e53fdda56f434",tooltip="Return the square root of a numeric value with float precision."];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="GPM::Tools::Utils::CosF",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_g_p_m_1_1_tools_1_1_utils.html#aa6e9f34082eb741de10142faf5b90f4d",tooltip="Mathematics co-sinus implementation with float precision."];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="GPM::Vector4::Dot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_vector4.html#ac50c90697eb147f8b04afeb674aa544e",tooltip="Calculate the dot product with other vector."];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="GPM::Vector4::Homogenize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_vector4.html#a314de04937269efa8179b1c8043ea3f4",tooltip="Homogenize the vector."];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="GPM::Vector4::Normalize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_g_p_m_1_1_vector4.html#a03b38ee62c9126f4cb10f4dae0b4d26f",tooltip="Normalize the vector."];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="GPM::Tools::Utils::SinF",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_g_p_m_1_1_tools_1_1_utils.html#a0f3d4065795e6821a5ee311947402f0e",tooltip="Mathematics sinus implementation with float precision."];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="GPM::Tools::Utils::\lToRadians",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_g_p_m_1_1_tools_1_1_utils.html#a70b429d76d22e49647c88de1089e7312",tooltip="Convert the given angle to radians."];
 }
