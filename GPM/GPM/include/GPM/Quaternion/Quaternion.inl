@@ -291,7 +291,7 @@ namespace GPM
 
 		const Quaternion conjugateValue = Conjugate(p_quaternion);
 
-		return { Quaternion {conjugateValue.w * absoluteValue, Vector3<double> {conjugateValue.axis * absoluteValue} } };
+		return { Quaternion {conjugateValue.w * absoluteValue, Vector3<double> {conjugateValue.axis* absoluteValue} } };
 	}
 
 	inline Quaternion& Quaternion::Conjugate()
@@ -426,7 +426,8 @@ namespace GPM
 		return  { Quaternion { coefficient * p_start.axis.x + p_alpha * p_end.axis.x,
 							coefficient * p_start.axis.y + p_alpha * p_end.axis.y,
 							coefficient * p_start.axis.z + p_alpha * p_end.axis.z,
-							coefficient * p_start.w + p_alpha * p_end.w }.Normalize() };
+							coefficient * p_start.w + p_alpha * p_end.w } // .Normalize(); // Cancel the interpolation ?
+		};
 	}
 
 	inline Quaternion Quaternion::Slerp(const Quaternion& p_start, const Quaternion& p_end,
@@ -439,13 +440,12 @@ namespace GPM
 		const double sn = Tools::Utils::Sin(theta);
 		const double wa = Tools::Utils::Sin(coefficient * theta) / sn;
 		const double wb = Tools::Utils::Sin(p_alpha * theta) / sn;
-
 		result.axis.x = wa * p_start.axis.x + wb * p_end.axis.x;
 		result.axis.y = wa * p_start.axis.y + wb * p_end.axis.y;
 		result.axis.z = wa * p_start.axis.z + wb * p_end.axis.z;
 		result.w = wa * p_start.w + wb * p_end.w;
 
-		result.Normalize();
+		// result.Normalize(); // Cancel the interpolation
 
 		return result;
 	}
@@ -463,7 +463,7 @@ namespace GPM
 
 	inline Quaternion& Quaternion::Normalize()
 	{
-		if (Norm() != 0) {
+		if (Norm() > 0.0) {
 			const double normValue = 1.0 / Norm();
 
 			w *= normValue;
@@ -570,7 +570,7 @@ namespace GPM
 		faxis.x = static_cast<float>(axis.x);
 		faxis.y = static_cast<float>(axis.y);
 		faxis.z = static_cast<float>(axis.z);
-		
+
 		result.m_data[0] = 2.0f * (fw * fw + faxis.x * faxis.x) - 1.0f;
 		result.m_data[3] = 2.0f * (faxis.x * faxis.y - fw * faxis.z);
 		result.m_data[6] = 2.0f * (faxis.x * faxis.z + fw * faxis.y);
@@ -593,7 +593,7 @@ namespace GPM
 		faxis.x = static_cast<float>(axis.x);
 		faxis.y = static_cast<float>(axis.y);
 		faxis.z = static_cast<float>(axis.z);
-		
+
 		return { Matrix4<float>{ fw, -faxis.x, -faxis.y, -faxis.z,
 								faxis.x, fw, -faxis.z, faxis.y,
 								faxis.y, faxis.z, fw, -faxis.x,
