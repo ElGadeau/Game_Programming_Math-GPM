@@ -3,8 +3,6 @@
 
 namespace GPM
 {
-    struct Quaternion;
-
 	template<typename T>
 	struct Vector3
 	{

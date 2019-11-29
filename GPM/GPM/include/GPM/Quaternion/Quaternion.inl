@@ -3,9 +3,10 @@
 #include <utility>
 #include <GPM/Tools/Utils.h>
 
+// const Quaternion Quaternion::identity = Quaternion{ 0.0, 0.0, 0.0, 1.0 };
+
 namespace GPM
 {
-	Quaternion Quaternion::identity = Quaternion{ 0.0, 0.0, 0.0, 1.0 };
 
 #pragma region Constructors & Assignment
 	inline Quaternion::Quaternion()
@@ -394,7 +395,7 @@ namespace GPM
 		}
 		if (Tools::Utils::Abs<double>(dot - (1.0)) < 0.000001)
 		{
-			return identity;
+			return Quaternion{ 0.0, 0.0, 0.0, 1.0 };
 		}
 
 		const double rotAngle = Tools::Utils::Arccos(dot);
