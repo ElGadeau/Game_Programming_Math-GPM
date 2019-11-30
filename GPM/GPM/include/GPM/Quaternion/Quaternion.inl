@@ -256,11 +256,12 @@ namespace GPM
 
 	inline Quaternion Quaternion::Multiply(const Quaternion& p_quaternion) const
 	{
-		const double scalar = w * p_quaternion.w - axis.Dot(p_quaternion.axis);
-
-		const Vector3<double> imaginary = p_quaternion.axis * w + axis * p_quaternion.axis + axis.Cross(p_quaternion.axis);
-
-		return { Quaternion { scalar,imaginary } };
+		Quaternion result;
+		result.axis.x = axis.x * p_quaternion.w + axis.y * p_quaternion.axis.z - axis.z * p_quaternion.axis.y + w * p_quaternion.axis.x;
+		result.axis.y = -axis.x * p_quaternion.axis.z + axis.y * p_quaternion.w + axis.z * p_quaternion.axis.x + w * p_quaternion.axis.y;
+		result.axis.z = axis.x * p_quaternion.axis.y - axis.y * p_quaternion.axis.x + axis.z * p_quaternion.w + w * p_quaternion.axis.z;
+		result.w = -axis.x * p_quaternion.axis.x - axis.y * p_quaternion.axis.y - axis.z * p_quaternion.axis.z + w * p_quaternion.w;
+		return { result };
 
 	}
 
