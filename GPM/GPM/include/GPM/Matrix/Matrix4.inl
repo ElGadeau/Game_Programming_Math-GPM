@@ -146,7 +146,7 @@ template<typename T>
 template<typename U>
 constexpr Matrix4<T>& Matrix4<T>::Scale(const Vector3<U>& p_scale)
 {
-    this *= CreateScale(p_scale);
+    *this *= CreateScale(p_scale);
 
     return { *this };
 }
@@ -166,7 +166,7 @@ constexpr Matrix4<T> Matrix4<T>::CreateScale(const Vector3<U>& p_scale)
 template<typename T>
 constexpr Matrix4<T>& Matrix4<T>::Rotate(const Quaternion& p_rotation)
 {
-    this *= p_rotation.ToMatrix4();
+    *this *= p_rotation.ToMatrix4();
 
     return { *this };
 }
@@ -181,7 +181,7 @@ template<typename T>
 template<typename U>
 constexpr Matrix4<T>& Matrix4<T>::Translate(const Vector3<U>& p_translate)
 {
-    this *= CreateTranslate(p_translate);
+    *this *= CreateTranslate(p_translate);
 
     return { *this };
 }
@@ -203,7 +203,7 @@ template<typename T>
 template<typename U>
 constexpr Matrix4<T>& Matrix4<T>::Transform(const Vector3<U>& p_translate, const Quaternion& p_rotation, const Vector3<U>& p_scale)
 {
-    this *= CreateTransform(p_translate, p_rotation, p_scale);
+    *this *= CreateTransform(p_translate, p_rotation, p_scale);
 
     return { *this };
 }
@@ -363,7 +363,7 @@ template<typename T>
 template<typename U>
 constexpr Matrix4<T> Matrix4<T>::operator+(const Matrix4<U>& p_other) const
 {
-    return Add(this, p_other);
+    return Add(*this, p_other);
 }
 
 template<typename T>
@@ -400,7 +400,7 @@ template<typename T>
 template<typename U>
 constexpr Matrix4<T> Matrix4<T>::operator-(const Matrix4<U>& p_other) const
 {
-    return Subtract(this, p_other);
+    return Subtract(*this, p_other);
 }
 
 template<typename T>
