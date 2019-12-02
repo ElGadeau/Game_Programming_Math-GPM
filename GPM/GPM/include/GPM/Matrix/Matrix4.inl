@@ -583,10 +583,20 @@ bool Matrix4<T>::operator!=(const Matrix4<T>& p_matrix)
 }
 
 template<typename T>
-template<typename U>
-void Matrix4<T>::operator=(const Matrix4<U>& p_matrix)
+Matrix4<T>& Matrix4<T>::operator=(const Matrix4<T>& p_matrix)
 {
-    Set(*this, p_matrix);
+	Set(*this, p_matrix);
+
+	return { (*this) };
+}
+
+template<typename T>
+template<typename U>
+Matrix4<T>& Matrix4<T>::operator=(const Matrix4<U>& p_matrix)
+{
+	Set(*this, p_matrix);
+
+	return { (*this) };
 }
 
 template<typename T>
