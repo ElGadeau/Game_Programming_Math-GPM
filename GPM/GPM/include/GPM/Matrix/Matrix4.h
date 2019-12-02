@@ -100,7 +100,7 @@ namespace GPM
 
 #pragma region Conversions
 
-        constexpr std::string ToString() noexcept;
+        constexpr std::string ToString() const noexcept;
         constexpr static std::string ToString(const Matrix4<T>& p_matrix);
 
 #pragma endregion
@@ -257,12 +257,15 @@ namespace GPM
     	
         template<typename U>
         Matrix4<T>& operator=(const Matrix4<U>& p_matrix);
-
+    	
         T operator[](int p_position);
 
 #pragma endregion
 
     };
+
+	template<typename T>
+	constexpr std::ostream& operator<<(std::ostream& p_os, const Matrix4<T>& p_matrix);
 
     using Matrix4F = Matrix4<float>;
     using Matrix4L = Matrix4<long>;
