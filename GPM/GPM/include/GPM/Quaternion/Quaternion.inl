@@ -600,7 +600,7 @@ namespace GPM
 		const float invs = 1.0f / (sqx + sqy + sqz + sqw);
 		result.m_data[0] = (sqx - sqy - sqz + sqw) * invs; // since sqw + sqx + sqy + sqz =1/invs*invs
 		result.m_data[5] = (-sqx + sqy - sqz + sqw) * invs;
-		result.m_data[13] = (-sqx - sqy + sqz + sqw) * invs;
+		result.m_data[10] = (-sqx - sqy + sqz + sqw) * invs;
 
 		float tmp1 = static_cast<float>(axis.x * axis.y);
 		float tmp2 = static_cast<float>(axis.z * w);
