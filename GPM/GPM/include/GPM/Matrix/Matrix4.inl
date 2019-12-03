@@ -464,7 +464,7 @@ constexpr Matrix4<T> Matrix4<T>::Multiply(const Matrix4<T>& p_left, const Matrix
 
 template<typename T>
 template<typename U>
-Vector4<U>& Matrix4<T>::Multiply(const Vector4<U>& p_other)
+Vector4<U> Matrix4<T>::Multiply(const Vector4<U>& p_other)
 {
     Vector4<T> tmpVec = Vector4F::zero;
 
