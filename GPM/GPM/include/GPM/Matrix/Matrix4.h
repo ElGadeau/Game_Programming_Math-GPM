@@ -239,7 +239,7 @@ namespace GPM
         // static Matrix4<T> Multiply(const Matrix4<T>& p_matrix, const Matrix4<T>& p_other);
         template<typename U>
         static Vector4<T> Multiply(const Matrix4<U>& p_matrix, const Vector4<T>& p_vector);
-        bool Equals(const Matrix4<T>& p_other);
+        bool Equals(const Matrix4<T>& p_other) const;
         template<typename U>
         static void Set(Matrix4<T>& p_matrix, const Matrix4<U>& p_other);
 
@@ -250,8 +250,8 @@ namespace GPM
         //operators
         Vector4<T> operator*(const Vector4<T>& p_vector);
 
-        bool operator==(const Matrix4<T>& p_matrix);
-        bool operator!=(const Matrix4<T>& p_matrix);
+        bool operator==(const Matrix4<T>& p_matrix) const;
+        bool operator!=(const Matrix4<T>& p_matrix) const;
 
 		Matrix4<T>& operator=(const Matrix4<T>& p_matrix);
     	
