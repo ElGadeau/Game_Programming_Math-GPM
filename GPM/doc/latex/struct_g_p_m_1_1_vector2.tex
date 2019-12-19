@@ -1,0 +1,1720 @@
+\hypertarget{struct_g_p_m_1_1_vector2}{}\doxysection{G\+PM\+::Vector2$<$ T $>$ Struct Template Reference}
+\label{struct_g_p_m_1_1_vector2}\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Vector2.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a0f7a1d4e359f9852a008bc2e781d66c8}{Vector2}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_vector2_a6c426301cf984acc9b6fc40371f8260a}{$\sim$\+Vector2}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a7e5f80d99b65d9b935ec7c3cd1805518}{Vector2}} (const T p\+\_\+x, const T p\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Constructor with parameters. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2_ad6d3e985c5740f2b5939db9397c4b1f8}{Vector2}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}} \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Copy Constructor. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a72df3ee52a03dd0060d47a542fe2897f}{Vector2}} (\mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}} \&\&p\+\_\+other) noexcept
+\begin{DoxyCompactList}\small\item\em Move Constructor. \end{DoxyCompactList}\item 
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2_aa976c5a7afa257fa2c4c80839ab2bc6e}{Set}} (T p\+\_\+x, T p\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Set this Vector\textquotesingle{}s values x, y to p\+\_\+x, p\+\_\+y. \end{DoxyCompactList}\item 
+constexpr std\+::string \mbox{\hyperlink{struct_g_p_m_1_1_vector2_acae715eb2137e70e991e23be8554f1d6}{To\+String}} () const
+\begin{DoxyCompactList}\small\item\em Creates a string representing this Vector. \end{DoxyCompactList}\item 
+constexpr bool \mbox{\hyperlink{struct_g_p_m_1_1_vector2_ae4b760e1642d9614f9131b6770810a37}{operator==}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Return true if the two vectors are identical. \end{DoxyCompactList}\item 
+constexpr bool \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a1ff26c9035a354d45e319a04e30da0e8}{operator!=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Return false if the two vectors are identical. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_vector2_af423b1302ac581fc1bfbdd2588a4403b}{operator=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Overload = operator by move. \end{DoxyCompactList}\item 
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2_ae9bd09ff95c7758f30be7ee4012826a6}{Normalize}} ()
+\begin{DoxyCompactList}\small\item\em Modifies this vector to make its norm (magnitude) == 1. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a3943bc803eb5f7a083d6f160867ca26b}{normalized}} () const
+\begin{DoxyCompactList}\small\item\em Returns normalized version of this vector without modifying it. \end{DoxyCompactList}\item 
+constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a7cd524285bd87b45c38ee215d455f12e}{Magnitude}} () const
+\begin{DoxyCompactList}\small\item\em Returns length of this \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_vector2_ab8174cf97443f36dda34bd88b637c2fb}{Dot}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+other) const
+\begin{DoxyCompactList}\small\item\em Calculates Dot Product between this Vector and another. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a443e2850c4f9d3ee18190d8679ba623e}{Distance}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+other) const
+\begin{DoxyCompactList}\small\item\em Calculate the distance between this vector and another one. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2_af92ea5f7ab33b000d6bb64551cdb7d80}{Perpendicular}} () const
+\begin{DoxyCompactList}\small\item\em Returns a Vector2$<$\+T$>$ that is perpendicular to this \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}. \end{DoxyCompactList}\item 
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a1af904d3ad6797c67e171f53e33f0d10}{Scale}} (T p\+\_\+scalar)
+\begin{DoxyCompactList}\small\item\em Multiplies this \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}\textquotesingle{}s x,y values by a given scalar. \end{DoxyCompactList}\item 
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2_ae7e54615fb77b560973f93e3557f4ccc}{Add}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&p\+\_\+other\+Vector2)
+\begin{DoxyCompactList}\small\item\em Add Vector given by parameter to this Vector. \end{DoxyCompactList}\item 
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a949fd4a6e4604ac5847ed043bfeff40b}{Subtract}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&p\+\_\+other\+Vector2)
+\begin{DoxyCompactList}\small\item\em Add Vector given by parameter to this Vector. \end{DoxyCompactList}\item 
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a352236117dbaeb3b5e9e09340306948e}{Divide}} (const T \&p\+\_\+scalar)
+\begin{DoxyCompactList}\small\item\em Divide this Vector\textquotesingle{}s values by given scalar. \end{DoxyCompactList}\item 
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2_af4813dd1f5c339b607726649bdbaef9a}{Multiply}} (const T \&p\+\_\+scalar)
+\begin{DoxyCompactList}\small\item\em Multiply this Vector\textquotesingle{}s values by given scalar. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr bool \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a02e1e2460065c7f4896202179e2c2f18}{Equals}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ U $>$ \&p\+\_\+other\+Vector2) const
+\begin{DoxyCompactList}\small\item\em Check if this Vector has equal values to Vector given by parameter. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a3913058b8e8c1a52071080f9aed35603}{operator struct Vector2$<$ U $>$}} () const
+\item 
+constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a34882aee3c59865b7786a7ae78aa9d17}{operator\mbox{[}$\,$\mbox{]}}} (const int p\+\_\+index) const
+\begin{DoxyCompactList}\small\item\em Return the value aliased with index, just like arrays. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a0f7a1d4e359f9852a008bc2e781d66c8}{Vector2}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_vector2_a6c426301cf984acc9b6fc40371f8260a}{$\sim$\+Vector2}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a7e5f80d99b65d9b935ec7c3cd1805518}{Vector2}} (const T p\+\_\+x, const T p\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Constructor with parameters. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2_ad6d3e985c5740f2b5939db9397c4b1f8}{Vector2}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}} \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Copy Constructor. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a72df3ee52a03dd0060d47a542fe2897f}{Vector2}} (\mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}} \&\&p\+\_\+other) noexcept
+\begin{DoxyCompactList}\small\item\em Move Constructor. \end{DoxyCompactList}\item 
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2_aa976c5a7afa257fa2c4c80839ab2bc6e}{Set}} (T p\+\_\+x, T p\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Set this Vector\textquotesingle{}s values x, y to p\+\_\+x, p\+\_\+y. \end{DoxyCompactList}\item 
+constexpr std\+::string \mbox{\hyperlink{struct_g_p_m_1_1_vector2_acae715eb2137e70e991e23be8554f1d6}{To\+String}} () const
+\begin{DoxyCompactList}\small\item\em Creates a string representing this Vector. \end{DoxyCompactList}\item 
+constexpr bool \mbox{\hyperlink{struct_g_p_m_1_1_vector2_ae4b760e1642d9614f9131b6770810a37}{operator==}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Return true if the two vectors are identical. \end{DoxyCompactList}\item 
+constexpr bool \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a1ff26c9035a354d45e319a04e30da0e8}{operator!=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Return false if the two vectors are identical. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_vector2_af423b1302ac581fc1bfbdd2588a4403b}{operator=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Overload = operator by move. \end{DoxyCompactList}\item 
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2_ae9bd09ff95c7758f30be7ee4012826a6}{Normalize}} ()
+\begin{DoxyCompactList}\small\item\em Modifies this vector to make its norm (magnitude) == 1. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2_af5acab97f57687604e67db1e3a2fda2d}{normalized}} () const
+\begin{DoxyCompactList}\small\item\em Returns normalized version of this vector without modifying it. \end{DoxyCompactList}\item 
+constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a7cd524285bd87b45c38ee215d455f12e}{Magnitude}} () const
+\begin{DoxyCompactList}\small\item\em Returns length of this \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_vector2_ab8174cf97443f36dda34bd88b637c2fb}{Dot}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+other) const
+\begin{DoxyCompactList}\small\item\em Calculates Dot Product between this Vector and another. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a443e2850c4f9d3ee18190d8679ba623e}{Distance}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+other) const
+\begin{DoxyCompactList}\small\item\em Calculate the distance between this vector and another one. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a64c262241dcb5706b8e7195494badb70}{Perpendicular}} () const
+\begin{DoxyCompactList}\small\item\em Returns a Vector2$<$\+T$>$ that is perpendicular to this \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}. \end{DoxyCompactList}\item 
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a1af904d3ad6797c67e171f53e33f0d10}{Scale}} (T p\+\_\+scalar)
+\begin{DoxyCompactList}\small\item\em Multiplies this \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}\textquotesingle{}s x,y values by a given scalar. \end{DoxyCompactList}\item 
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2_ae7e54615fb77b560973f93e3557f4ccc}{Add}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&p\+\_\+other\+Vector2)
+\begin{DoxyCompactList}\small\item\em Add Vector given by parameter to this Vector. \end{DoxyCompactList}\item 
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a949fd4a6e4604ac5847ed043bfeff40b}{Subtract}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&p\+\_\+other\+Vector2)
+\begin{DoxyCompactList}\small\item\em Add Vector given by parameter to this Vector. \end{DoxyCompactList}\item 
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a352236117dbaeb3b5e9e09340306948e}{Divide}} (const T \&p\+\_\+scalar)
+\begin{DoxyCompactList}\small\item\em Divide this Vector\textquotesingle{}s values by given scalar. \end{DoxyCompactList}\item 
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2_af4813dd1f5c339b607726649bdbaef9a}{Multiply}} (const T \&p\+\_\+scalar)
+\begin{DoxyCompactList}\small\item\em Multiply this Vector\textquotesingle{}s values by given scalar. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr bool \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a02e1e2460065c7f4896202179e2c2f18}{Equals}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ U $>$ \&p\+\_\+other\+Vector2) const
+\begin{DoxyCompactList}\small\item\em Check if this Vector has equal values to Vector given by parameter. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a3913058b8e8c1a52071080f9aed35603}{operator struct Vector2$<$ U $>$}} () const
+\item 
+constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a34882aee3c59865b7786a7ae78aa9d17}{operator\mbox{[}$\,$\mbox{]}}} (const int p\+\_\+index) const
+\begin{DoxyCompactList}\small\item\em Return the value aliased with index, just like arrays. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a8c16c4d2796629068b79c01f7906fa1a}{operator=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a53f7eaa4b4419c4f80606b1b0ea03189}{normalized}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&p\+\_\+vector2)
+\begin{DoxyCompactList}\small\item\em Calculates a normalized version of Vector given by parameter. \end{DoxyCompactList}\item 
+static constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2_aea3e51051599b8a629d0973a9b4b9a63}{Normalize}} (\mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&p\+\_\+vector2)
+\begin{DoxyCompactList}\small\item\em Normalizes Vector given as parameter (Magnitude will now equal 1) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\static constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_vector2_ad1225a85feb51e019815cc8561524ea3}{Dot}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&p\+\_\+vector2\+Left, const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+vector2\+Right)
+\begin{DoxyCompactList}\small\item\em Calculates Dot Product between 2 given Vectors. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\static constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_vector2_aff9205416ef51125773b7feccbee0467}{Angle}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&p\+\_\+vector2\+Left, const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+vector2\+Right)
+\begin{DoxyCompactList}\small\item\em Calculates Angle between 2 Vectors. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\static constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a62e3df0df82712c3d648d50b24b6c4e0}{Distance}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&p\+\_\+vector2\+Left, const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+vector2\+Right)
+\item 
+{\footnotesize template$<$typename U $>$ }\\static constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a71d5b1d595b008257ff201a2779920bd}{Lerp}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&p\+\_\+vector2\+Start, const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+vector2\+End, const float p\+\_\+alpha)
+\begin{DoxyCompactList}\small\item\em Returns the start Vector moving to the end Vector at step alpha. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\static constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a6f2743dbdb97b154d410963f2fb00aa0}{Perpendicular}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+vector2)
+\begin{DoxyCompactList}\small\item\em Returns a Vector2$<$\+T$>$ that is perpendicular to \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}} given by parameter. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\static constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a1f09627ef5507124c8ab9bbee4a0f91a}{Add}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&p\+\_\+vector2\+Left, const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ U $>$ \&p\+\_\+vector2\+Right)
+\begin{DoxyCompactList}\small\item\em Adds two Vectors without modifying their values. \end{DoxyCompactList}\item 
+static constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a36fe7773173521df7777f80a526c81b8}{Add}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&p\+\_\+vector2, const T \&p\+\_\+scalar)
+\begin{DoxyCompactList}\small\item\em Add scalar to x and y of Vector given by parameter without modifying its values. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\static constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2_ab0140fcd7b4c105cb125fdb0131e00be}{Subtract}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&p\+\_\+vector2\+Left, const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ U $>$ \&p\+\_\+vector2\+Right)
+\begin{DoxyCompactList}\small\item\em Subtracts two Vectors without modifying their values. \end{DoxyCompactList}\item 
+static constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2_aeb2e0155c034e08a609d281ffc31d45f}{Subtract}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&p\+\_\+vector2, const T \&p\+\_\+scalar)
+\begin{DoxyCompactList}\small\item\em Subtract scalar to x and y of Vector given by parameter without modifying its values. \end{DoxyCompactList}\item 
+static constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2_af7690b43a63889ce52ef99f8b467b53b}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&p\+\_\+vector2, const T \&p\+\_\+scalar)
+\begin{DoxyCompactList}\small\item\em Multiply given Vector by a scalar without modifying it. \end{DoxyCompactList}\item 
+static constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2_af9a271a99eecf1ecdea1c49bcf7b73db}{Divide}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&p\+\_\+vector2, const T \&p\+\_\+scalar)
+\begin{DoxyCompactList}\small\item\em Divide given Vector by a scalar without modifying it. \end{DoxyCompactList}\item 
+static constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a897ffcc329a800e3a1a284ec92ea9ff6}{normalized}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&p\+\_\+vector2)
+\begin{DoxyCompactList}\small\item\em Calculates a normalized version of Vector given by parameter. \end{DoxyCompactList}\item 
+static constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2_ae0c8ff91a90b7feee98e64d94d77d663}{Normalize}} (\mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&p\+\_\+vector2)
+\begin{DoxyCompactList}\small\item\em Normalizes Vector given as parameter (Magnitude will now equal 1) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\static constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a1c8a7c353057a8dd4c7b3416a930a501}{Dot}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&p\+\_\+vector2\+Left, const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+vector2\+Right)
+\begin{DoxyCompactList}\small\item\em Calculates Dot Product between 2 given Vectors. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\static constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a12de5318dc5edab4a9441741e1d0cb34}{Angle}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&p\+\_\+vector2\+Left, const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+vector2\+Right)
+\begin{DoxyCompactList}\small\item\em Calculates Angle between 2 Vectors. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\static constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a47e07e4c30a2e90e88ef9ff01aaff96a}{Distance}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&p\+\_\+vector2\+Left, const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+vector2\+Right)
+\item 
+{\footnotesize template$<$typename U $>$ }\\static constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a71d5b1d595b008257ff201a2779920bd}{Lerp}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&p\+\_\+vector2\+Start, const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+vector2\+End, const float p\+\_\+alpha)
+\begin{DoxyCompactList}\small\item\em Returns the start Vector moving to the end Vector at step alpha. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\static constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a6f2743dbdb97b154d410963f2fb00aa0}{Perpendicular}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+vector2)
+\begin{DoxyCompactList}\small\item\em Returns a Vector2$<$\+T$>$ that is perpendicular to \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}} given by parameter. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\static constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2_ae54563d5e1d7aaa5f616b5603923257d}{Add}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&p\+\_\+vector2\+Left, const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ U $>$ \&p\+\_\+vector2\+Right)
+\begin{DoxyCompactList}\small\item\em Adds two Vectors without modifying their values. \end{DoxyCompactList}\item 
+static constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2_af7d1240d7ca2e9dfcecbb38c3dca1daf}{Add}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&p\+\_\+vector2, const T \&p\+\_\+scalar)
+\begin{DoxyCompactList}\small\item\em Add scalar to x and y of Vector given by parameter without modifying its values. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\static constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a53fa6d2948568e4347837f9c3e1f676c}{Subtract}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&p\+\_\+vector2\+Left, const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ U $>$ \&p\+\_\+vector2\+Right)
+\begin{DoxyCompactList}\small\item\em Subtracts two Vectors without modifying their values. \end{DoxyCompactList}\item 
+static constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2_ad845856bd0761dabf5d6affd1fc3f8f0}{Subtract}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&p\+\_\+vector2, const T \&p\+\_\+scalar)
+\begin{DoxyCompactList}\small\item\em Subtract scalar to x and y of Vector given by parameter without modifying its values. \end{DoxyCompactList}\item 
+static constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2_aa1682072fef1ab98ddf324f256bb79b6}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&p\+\_\+vector2, const T \&p\+\_\+scalar)
+\begin{DoxyCompactList}\small\item\em Multiply given Vector by a scalar without modifying it. \end{DoxyCompactList}\item 
+static constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2_ae4e212a90db631e7eed8c1af09848398}{Divide}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&p\+\_\+vector2, const T \&p\+\_\+scalar)
+\begin{DoxyCompactList}\small\item\em Divide given Vector by a scalar without modifying it. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a4b8df7beb0603f966949b313a98d3d14}{Lerp}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&p\+\_\+vector2\+Start, const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+vector2\+End, const float p\+\_\+alpha)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2_ad5152ab4fd735760b95d37f62057fd4c}{Perpendicular}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+vector2)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a568c52c5e05a44f5e5cdd3c27e6dd0bd}{x}}
+\item 
+T \mbox{\hyperlink{struct_g_p_m_1_1_vector2_ab8fdf86744aa64643272507394c288c2}{y}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a28615536fe6d665f390edb676fc3e240}{zero}} = \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$T$>$\{ 0, 0 \}
+\item 
+static const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a30afea9b82514ab93318eaed253268e6}{up}} = \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$T$>$\{ 0, 1 \}
+\item 
+static const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2_a21f63f8ba335825db8422a65446789ef}{right}} = \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$T$>$\{ 1, 0 \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+struct G\+P\+M\+::\+Vector2$<$ T $>$}
+
+Vector structure containing x, y coordinates 
+
+Definition at line 11 of file Vector2.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a0f7a1d4e359f9852a008bc2e781d66c8}\label{struct_g_p_m_1_1_vector2_a0f7a1d4e359f9852a008bc2e781d66c8}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Vector2@{Vector2}}
+\index{Vector2@{Vector2}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Vector2()}{Vector2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::\mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Default Constructor. 
+
+
+
+Definition at line 9 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a6c426301cf984acc9b6fc40371f8260a}\label{struct_g_p_m_1_1_vector2_a6c426301cf984acc9b6fc40371f8260a}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!````~Vector2@{$\sim$Vector2}}
+\index{````~Vector2@{$\sim$Vector2}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Vector2()}{~Vector2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destructor. 
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a7e5f80d99b65d9b935ec7c3cd1805518}\label{struct_g_p_m_1_1_vector2_a7e5f80d99b65d9b935ec7c3cd1805518}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Vector2@{Vector2}}
+\index{Vector2@{Vector2}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Vector2()}{Vector2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::\mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}} (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+x,  }\item[{const T}]{p\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Constructor with parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+x} & x coordinate \\
+\hline
+{\em p\+\_\+y} & y coordinate \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 12 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_ad6d3e985c5740f2b5939db9397c4b1f8}\label{struct_g_p_m_1_1_vector2_ad6d3e985c5740f2b5939db9397c4b1f8}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Vector2@{Vector2}}
+\index{Vector2@{Vector2}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Vector2()}{Vector2()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::\mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Copy Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The vector to construct from \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 15 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a72df3ee52a03dd0060d47a542fe2897f}\label{struct_g_p_m_1_1_vector2_a72df3ee52a03dd0060d47a542fe2897f}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Vector2@{Vector2}}
+\index{Vector2@{Vector2}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Vector2()}{Vector2()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::\mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&\&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Move Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The vector to construct from \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 18 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a0f7a1d4e359f9852a008bc2e781d66c8}\label{struct_g_p_m_1_1_vector2_a0f7a1d4e359f9852a008bc2e781d66c8}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Vector2@{Vector2}}
+\index{Vector2@{Vector2}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Vector2()}{Vector2()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::\mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Default Constructor. 
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a6c426301cf984acc9b6fc40371f8260a}\label{struct_g_p_m_1_1_vector2_a6c426301cf984acc9b6fc40371f8260a}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!````~Vector2@{$\sim$Vector2}}
+\index{````~Vector2@{$\sim$Vector2}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Vector2()}{~Vector2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destructor. 
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a7e5f80d99b65d9b935ec7c3cd1805518}\label{struct_g_p_m_1_1_vector2_a7e5f80d99b65d9b935ec7c3cd1805518}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Vector2@{Vector2}}
+\index{Vector2@{Vector2}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Vector2()}{Vector2()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::\mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}} (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+x,  }\item[{const T}]{p\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Constructor with parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+x} & x coordinate \\
+\hline
+{\em p\+\_\+y} & y coordinate \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_ad6d3e985c5740f2b5939db9397c4b1f8}\label{struct_g_p_m_1_1_vector2_ad6d3e985c5740f2b5939db9397c4b1f8}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Vector2@{Vector2}}
+\index{Vector2@{Vector2}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Vector2()}{Vector2()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::\mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Copy Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The vector to construct from \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a72df3ee52a03dd0060d47a542fe2897f}\label{struct_g_p_m_1_1_vector2_a72df3ee52a03dd0060d47a542fe2897f}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Vector2@{Vector2}}
+\index{Vector2@{Vector2}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Vector2()}{Vector2()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::\mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&\&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Move Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The vector to construct from \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_ae7e54615fb77b560973f93e3557f4ccc}\label{struct_g_p_m_1_1_vector2_ae7e54615fb77b560973f93e3557f4ccc}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&}]{p\+\_\+other\+Vector2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Add Vector given by parameter to this Vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other\+Vector2} & Vector to add \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 351 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_ae7e54615fb77b560973f93e3557f4ccc}\label{struct_g_p_m_1_1_vector2_ae7e54615fb77b560973f93e3557f4ccc}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&}]{p\+\_\+other\+Vector2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Add Vector given by parameter to this Vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other\+Vector2} & Vector to add \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a36fe7773173521df7777f80a526c81b8}\label{struct_g_p_m_1_1_vector2_a36fe7773173521df7777f80a526c81b8}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&}]{p\+\_\+vector2,  }\item[{const T \&}]{p\+\_\+scalar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Add scalar to x and y of Vector given by parameter without modifying its values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector2} & Vector to add the scalar to \\
+\hline
+{\em p\+\_\+scalar} & The scalar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of scalar addition to Vector 
+\end{DoxyReturn}
+
+
+Definition at line 399 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_af7d1240d7ca2e9dfcecbb38c3dca1daf}\label{struct_g_p_m_1_1_vector2_af7d1240d7ca2e9dfcecbb38c3dca1daf}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+static constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&}]{p\+\_\+vector2,  }\item[{const T \&}]{p\+\_\+scalar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Add scalar to x and y of Vector given by parameter without modifying its values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector2} & Vector to add the scalar to \\
+\hline
+{\em p\+\_\+scalar} & The scalar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of scalar addition to Vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a1f09627ef5507124c8ab9bbee4a0f91a}\label{struct_g_p_m_1_1_vector2_a1f09627ef5507124c8ab9bbee4a0f91a}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&}]{p\+\_\+vector2\+Left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ U $>$ \&}]{p\+\_\+vector2\+Right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Adds two Vectors without modifying their values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector2\+Left} & First Vector \\
+\hline
+{\em p\+\_\+vector2\+Right} & Second Vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector2$<$\+T$>$ Result of added 2 Vectors 
+\end{DoxyReturn}
+
+
+Definition at line 390 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_ae54563d5e1d7aaa5f616b5603923257d}\label{struct_g_p_m_1_1_vector2_ae54563d5e1d7aaa5f616b5603923257d}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+static constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&}]{p\+\_\+vector2\+Left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ U $>$ \&}]{p\+\_\+vector2\+Right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Adds two Vectors without modifying their values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector2\+Left} & First Vector \\
+\hline
+{\em p\+\_\+vector2\+Right} & Second Vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector2$<$\+T$>$ Result of added 2 Vectors 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_aff9205416ef51125773b7feccbee0467}\label{struct_g_p_m_1_1_vector2_aff9205416ef51125773b7feccbee0467}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Angle@{Angle}}
+\index{Angle@{Angle}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Angle()}{Angle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Angle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&}]{p\+\_\+vector2\+Left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+vector2\+Right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Calculates Angle between 2 Vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector2\+Left} & First Vector \\
+\hline
+{\em p\+\_\+vector2\+Right} & Second Vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Angle in radians 
+\end{DoxyReturn}
+
+
+Definition at line 132 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a12de5318dc5edab4a9441741e1d0cb34}\label{struct_g_p_m_1_1_vector2_a12de5318dc5edab4a9441741e1d0cb34}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Angle@{Angle}}
+\index{Angle@{Angle}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Angle()}{Angle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+static constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Angle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&}]{p\+\_\+vector2\+Left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+vector2\+Right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Calculates Angle between 2 Vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector2\+Left} & First Vector \\
+\hline
+{\em p\+\_\+vector2\+Right} & Second Vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Angle in radians 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a62e3df0df82712c3d648d50b24b6c4e0}\label{struct_g_p_m_1_1_vector2_a62e3df0df82712c3d648d50b24b6c4e0}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Distance@{Distance}}
+\index{Distance@{Distance}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Distance()}{Distance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Distance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&}]{p\+\_\+vector2\+Left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+vector2\+Right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+@\+Brief Calculates Distance between 2 given Vectors 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector2\+Left} & First Vector \\
+\hline
+{\em p\+\_\+vector2\+Right} & Second Vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Distance between 2 Vectors 
+\end{DoxyReturn}
+
+
+Definition at line 151 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a47e07e4c30a2e90e88ef9ff01aaff96a}\label{struct_g_p_m_1_1_vector2_a47e07e4c30a2e90e88ef9ff01aaff96a}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Distance@{Distance}}
+\index{Distance@{Distance}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Distance()}{Distance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+static constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Distance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&}]{p\+\_\+vector2\+Left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+vector2\+Right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+@\+Brief Calculates Distance between 2 given Vectors 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector2\+Left} & First Vector \\
+\hline
+{\em p\+\_\+vector2\+Right} & Second Vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Distance between 2 Vectors 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a443e2850c4f9d3ee18190d8679ba623e}\label{struct_g_p_m_1_1_vector2_a443e2850c4f9d3ee18190d8679ba623e}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Distance@{Distance}}
+\index{Distance@{Distance}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Distance()}{Distance()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Distance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Calculate the distance between this vector and another one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The vector to compare distance with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The distance 
+\end{DoxyReturn}
+
+
+Definition at line 187 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a443e2850c4f9d3ee18190d8679ba623e}\label{struct_g_p_m_1_1_vector2_a443e2850c4f9d3ee18190d8679ba623e}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Distance@{Distance}}
+\index{Distance@{Distance}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Distance()}{Distance()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Distance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Calculate the distance between this vector and another one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The vector to compare distance with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The distance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_af9a271a99eecf1ecdea1c49bcf7b73db}\label{struct_g_p_m_1_1_vector2_af9a271a99eecf1ecdea1c49bcf7b73db}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Divide@{Divide}}
+\index{Divide@{Divide}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Divide()}{Divide()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Divide (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&}]{p\+\_\+vector2,  }\item[{const T \&}]{p\+\_\+scalar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Divide given Vector by a scalar without modifying it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector2} & Vector to divide the scalar with \\
+\hline
+{\em p\+\_\+scalar} & The scalar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of scalar division to Vector 
+\end{DoxyReturn}
+
+
+Definition at line 424 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_ae4e212a90db631e7eed8c1af09848398}\label{struct_g_p_m_1_1_vector2_ae4e212a90db631e7eed8c1af09848398}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Divide@{Divide}}
+\index{Divide@{Divide}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Divide()}{Divide()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+static constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Divide (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&}]{p\+\_\+vector2,  }\item[{const T \&}]{p\+\_\+scalar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Divide given Vector by a scalar without modifying it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector2} & Vector to divide the scalar with \\
+\hline
+{\em p\+\_\+scalar} & The scalar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of scalar division to Vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a352236117dbaeb3b5e9e09340306948e}\label{struct_g_p_m_1_1_vector2_a352236117dbaeb3b5e9e09340306948e}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Divide@{Divide}}
+\index{Divide@{Divide}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Divide()}{Divide()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Divide (\begin{DoxyParamCaption}\item[{const T \&}]{p\+\_\+scalar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Divide this Vector\textquotesingle{}s values by given scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+scalar} & Scalar by which to divide this Vector\textquotesingle{}s values \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 362 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a352236117dbaeb3b5e9e09340306948e}\label{struct_g_p_m_1_1_vector2_a352236117dbaeb3b5e9e09340306948e}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Divide@{Divide}}
+\index{Divide@{Divide}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Divide()}{Divide()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Divide (\begin{DoxyParamCaption}\item[{const T \&}]{p\+\_\+scalar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Divide this Vector\textquotesingle{}s values by given scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+scalar} & Scalar by which to divide this Vector\textquotesingle{}s values \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a1c8a7c353057a8dd4c7b3416a930a501}\label{struct_g_p_m_1_1_vector2_a1c8a7c353057a8dd4c7b3416a930a501}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Dot@{Dot}}
+\index{Dot@{Dot}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Dot()}{Dot()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+static constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Dot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&}]{p\+\_\+vector2\+Left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+vector2\+Right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Calculates Dot Product between 2 given Vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector2\+Left} & First Vector \\
+\hline
+{\em p\+\_\+vector2\+Right} & Second Vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of Dot Product 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_ad1225a85feb51e019815cc8561524ea3}\label{struct_g_p_m_1_1_vector2_ad1225a85feb51e019815cc8561524ea3}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Dot@{Dot}}
+\index{Dot@{Dot}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Dot()}{Dot()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Dot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&}]{p\+\_\+vector2\+Left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+vector2\+Right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Calculates Dot Product between 2 given Vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector2\+Left} & First Vector \\
+\hline
+{\em p\+\_\+vector2\+Right} & Second Vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of Dot Product 
+\end{DoxyReturn}
+
+
+Definition at line 125 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_ab8174cf97443f36dda34bd88b637c2fb}\label{struct_g_p_m_1_1_vector2_ab8174cf97443f36dda34bd88b637c2fb}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Dot@{Dot}}
+\index{Dot@{Dot}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Dot()}{Dot()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Dot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Calculates Dot Product between this Vector and another. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & Vector to calculate Dot Product with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Dot Product 
+\end{DoxyReturn}
+
+
+Definition at line 180 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_ab8174cf97443f36dda34bd88b637c2fb}\label{struct_g_p_m_1_1_vector2_ab8174cf97443f36dda34bd88b637c2fb}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Dot@{Dot}}
+\index{Dot@{Dot}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Dot()}{Dot()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Dot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Calculates Dot Product between this Vector and another. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & Vector to calculate Dot Product with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Dot Product 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a02e1e2460065c7f4896202179e2c2f18}\label{struct_g_p_m_1_1_vector2_a02e1e2460065c7f4896202179e2c2f18}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Equals@{Equals}}
+\index{Equals@{Equals}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Equals()}{Equals()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+constexpr bool \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Equals (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ U $>$ \&}]{p\+\_\+other\+Vector2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Check if this Vector has equal values to Vector given by parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other\+Vector2} & Vector to compare this with \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 378 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a02e1e2460065c7f4896202179e2c2f18}\label{struct_g_p_m_1_1_vector2_a02e1e2460065c7f4896202179e2c2f18}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Equals@{Equals}}
+\index{Equals@{Equals}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Equals()}{Equals()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr bool \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Equals (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ U $>$ \&}]{p\+\_\+other\+Vector2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Check if this Vector has equal values to Vector given by parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other\+Vector2} & Vector to compare this with \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a4b8df7beb0603f966949b313a98d3d14}\label{struct_g_p_m_1_1_vector2_a4b8df7beb0603f966949b313a98d3d14}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Lerp@{Lerp}}
+\index{Lerp@{Lerp}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Lerp()}{Lerp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Lerp (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&}]{p\+\_\+vector2\+Start,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+vector2\+End,  }\item[{const float}]{p\+\_\+alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 158 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a71d5b1d595b008257ff201a2779920bd}\label{struct_g_p_m_1_1_vector2_a71d5b1d595b008257ff201a2779920bd}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Lerp@{Lerp}}
+\index{Lerp@{Lerp}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Lerp()}{Lerp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+static constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Lerp (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&}]{p\+\_\+vector2\+Start,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+vector2\+End,  }\item[{const float}]{p\+\_\+alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Returns the start Vector moving to the end Vector at step alpha. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector2\+Start} & The beginning vector \\
+\hline
+{\em p\+\_\+vector2\+End} & The ending vector \\
+\hline
+{\em p\+\_\+alpha} & Between 0 and 1, 0 is start, 1 is end \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a71d5b1d595b008257ff201a2779920bd}\label{struct_g_p_m_1_1_vector2_a71d5b1d595b008257ff201a2779920bd}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Lerp@{Lerp}}
+\index{Lerp@{Lerp}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Lerp()}{Lerp()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+static constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Lerp (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&}]{p\+\_\+vector2\+Start,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+vector2\+End,  }\item[{const float}]{p\+\_\+alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Returns the start Vector moving to the end Vector at step alpha. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector2\+Start} & The beginning vector \\
+\hline
+{\em p\+\_\+vector2\+End} & The ending vector \\
+\hline
+{\em p\+\_\+alpha} & Between 0 and 1, 0 is start, 1 is end \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a7cd524285bd87b45c38ee215d455f12e}\label{struct_g_p_m_1_1_vector2_a7cd524285bd87b45c38ee215d455f12e}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Magnitude@{Magnitude}}
+\index{Magnitude@{Magnitude}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Magnitude()}{Magnitude()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Magnitude (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Returns length of this \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}} length 
+\end{DoxyReturn}
+
+
+Definition at line 96 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a7cd524285bd87b45c38ee215d455f12e}\label{struct_g_p_m_1_1_vector2_a7cd524285bd87b45c38ee215d455f12e}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Magnitude@{Magnitude}}
+\index{Magnitude@{Magnitude}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Magnitude()}{Magnitude()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Magnitude (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Returns length of this \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}} length 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_aa1682072fef1ab98ddf324f256bb79b6}\label{struct_g_p_m_1_1_vector2_aa1682072fef1ab98ddf324f256bb79b6}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+static constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&}]{p\+\_\+vector2,  }\item[{const T \&}]{p\+\_\+scalar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Multiply given Vector by a scalar without modifying it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector2} & Vector to multiply the scalar with \\
+\hline
+{\em p\+\_\+scalar} & The scalar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of scalar multiplication to Vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_af7690b43a63889ce52ef99f8b467b53b}\label{struct_g_p_m_1_1_vector2_af7690b43a63889ce52ef99f8b467b53b}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&}]{p\+\_\+vector2,  }\item[{const T \&}]{p\+\_\+scalar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Multiply given Vector by a scalar without modifying it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector2} & Vector to multiply the scalar with \\
+\hline
+{\em p\+\_\+scalar} & The scalar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of scalar multiplication to Vector 
+\end{DoxyReturn}
+
+
+Definition at line 418 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_af4813dd1f5c339b607726649bdbaef9a}\label{struct_g_p_m_1_1_vector2_af4813dd1f5c339b607726649bdbaef9a}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{const T \&}]{p\+\_\+scalar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Multiply this Vector\textquotesingle{}s values by given scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+scalar} & Scalar by which to multiply this Vector\textquotesingle{}s values \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 371 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_af4813dd1f5c339b607726649bdbaef9a}\label{struct_g_p_m_1_1_vector2_af4813dd1f5c339b607726649bdbaef9a}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{const T \&}]{p\+\_\+scalar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Multiply this Vector\textquotesingle{}s values by given scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+scalar} & Scalar by which to multiply this Vector\textquotesingle{}s values \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_ae9bd09ff95c7758f30be7ee4012826a6}\label{struct_g_p_m_1_1_vector2_ae9bd09ff95c7758f30be7ee4012826a6}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Normalize()}{Normalize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Normalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Modifies this vector to make its norm (magnitude) == 1. 
+
+
+
+Definition at line 74 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_ae9bd09ff95c7758f30be7ee4012826a6}\label{struct_g_p_m_1_1_vector2_ae9bd09ff95c7758f30be7ee4012826a6}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Normalize()}{Normalize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Normalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Modifies this vector to make its norm (magnitude) == 1. 
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_ae0c8ff91a90b7feee98e64d94d77d663}\label{struct_g_p_m_1_1_vector2_ae0c8ff91a90b7feee98e64d94d77d663}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Normalize()}{Normalize()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+static constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Normalize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&}]{p\+\_\+vector2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Normalizes Vector given as parameter (Magnitude will now equal 1) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector2} & Vector to modify \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_aea3e51051599b8a629d0973a9b4b9a63}\label{struct_g_p_m_1_1_vector2_aea3e51051599b8a629d0973a9b4b9a63}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Normalize()}{Normalize()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Normalize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&}]{p\+\_\+vector2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Normalizes Vector given as parameter (Magnitude will now equal 1) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector2} & Vector to modify \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 112 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_af5acab97f57687604e67db1e3a2fda2d}\label{struct_g_p_m_1_1_vector2_af5acab97f57687604e67db1e3a2fda2d}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!normalized@{normalized}}
+\index{normalized@{normalized}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{normalized()}{normalized()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::normalized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Returns normalized version of this vector without modifying it. 
+
+\begin{DoxyReturn}{Returns}
+A new Vector2$<$\+T$>$ made from this \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}} with Magnitude == 1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a3943bc803eb5f7a083d6f160867ca26b}\label{struct_g_p_m_1_1_vector2_a3943bc803eb5f7a083d6f160867ca26b}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!normalized@{normalized}}
+\index{normalized@{normalized}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{normalized()}{normalized()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::normalized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Returns normalized version of this vector without modifying it. 
+
+\begin{DoxyReturn}{Returns}
+A new Vector2$<$\+T$>$ made from this \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}} with Magnitude == 1 
+\end{DoxyReturn}
+
+
+Definition at line 85 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a897ffcc329a800e3a1a284ec92ea9ff6}\label{struct_g_p_m_1_1_vector2_a897ffcc329a800e3a1a284ec92ea9ff6}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!normalized@{normalized}}
+\index{normalized@{normalized}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{normalized()}{normalized()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+static constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::normalized (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&}]{p\+\_\+vector2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Calculates a normalized version of Vector given by parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector2} & Vector from which normal is calculated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector2$<$\+T$>$ that is a normalized version of Vector given by parameter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a53f7eaa4b4419c4f80606b1b0ea03189}\label{struct_g_p_m_1_1_vector2_a53f7eaa4b4419c4f80606b1b0ea03189}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!normalized@{normalized}}
+\index{normalized@{normalized}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{normalized()}{normalized()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::normalized (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&}]{p\+\_\+vector2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Calculates a normalized version of Vector given by parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector2} & Vector from which normal is calculated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector2$<$\+T$>$ that is a normalized version of Vector given by parameter 
+\end{DoxyReturn}
+
+
+Definition at line 105 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a3913058b8e8c1a52071080f9aed35603}\label{struct_g_p_m_1_1_vector2_a3913058b8e8c1a52071080f9aed35603}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!operator struct Vector2$<$ U $>$@{operator struct Vector2$<$ U $>$}}
+\index{operator struct Vector2$<$ U $>$@{operator struct Vector2$<$ U $>$}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator struct Vector2$<$ U $>$()}{operator struct Vector2< U >()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::operator struct \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 295 of file Vector2.\+h.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a3913058b8e8c1a52071080f9aed35603}\label{struct_g_p_m_1_1_vector2_a3913058b8e8c1a52071080f9aed35603}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!operator struct Vector2$<$ U $>$@{operator struct Vector2$<$ U $>$}}
+\index{operator struct Vector2$<$ U $>$@{operator struct Vector2$<$ U $>$}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator struct Vector2$<$ U $>$()}{operator struct Vector2< U >()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::operator struct \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 295 of file Vector2.\+h.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a1ff26c9035a354d45e319a04e30da0e8}\label{struct_g_p_m_1_1_vector2_a1ff26c9035a354d45e319a04e30da0e8}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr bool \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Return false if the two vectors are identical. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The vector used for the checkup \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a1ff26c9035a354d45e319a04e30da0e8}\label{struct_g_p_m_1_1_vector2_a1ff26c9035a354d45e319a04e30da0e8}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr bool \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Return false if the two vectors are identical. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The vector used for the checkup \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True or false 
+\end{DoxyReturn}
+
+
+Definition at line 49 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a8c16c4d2796629068b79c01f7906fa1a}\label{struct_g_p_m_1_1_vector2_a8c16c4d2796629068b79c01f7906fa1a}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 59 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_af423b1302ac581fc1bfbdd2588a4403b}\label{struct_g_p_m_1_1_vector2_af423b1302ac581fc1bfbdd2588a4403b}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Overload = operator by move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The vector to construct from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current vector modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_af423b1302ac581fc1bfbdd2588a4403b}\label{struct_g_p_m_1_1_vector2_af423b1302ac581fc1bfbdd2588a4403b}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Overload = operator by move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The vector to construct from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current vector modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_ae4b760e1642d9614f9131b6770810a37}\label{struct_g_p_m_1_1_vector2_ae4b760e1642d9614f9131b6770810a37}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr bool \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Return true if the two vectors are identical. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The vector used for the checkup \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_ae4b760e1642d9614f9131b6770810a37}\label{struct_g_p_m_1_1_vector2_ae4b760e1642d9614f9131b6770810a37}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr bool \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ T $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Return true if the two vectors are identical. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The vector used for the checkup \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True or false 
+\end{DoxyReturn}
+
+
+Definition at line 40 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a34882aee3c59865b7786a7ae78aa9d17}\label{struct_g_p_m_1_1_vector2_a34882aee3c59865b7786a7ae78aa9d17}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const int}]{p\+\_\+index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Return the value aliased with index, just like arrays. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+index} & The index to access. 0 = x, 1 = y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the value associated at the indicated index 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+\mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}} representation is as follow \+: \mbox{[}x, y\mbox{]} 
+\end{DoxyNote}
+
+
+Definition at line 245 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a34882aee3c59865b7786a7ae78aa9d17}\label{struct_g_p_m_1_1_vector2_a34882aee3c59865b7786a7ae78aa9d17}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const int}]{p\+\_\+index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Return the value aliased with index, just like arrays. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+index} & The index to access. 0 = x, 1 = y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the value associated at the indicated index 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+\mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}} representation is as follow \+: \mbox{[}x, y\mbox{]} 
+\end{DoxyNote}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_af92ea5f7ab33b000d6bb64551cdb7d80}\label{struct_g_p_m_1_1_vector2_af92ea5f7ab33b000d6bb64551cdb7d80}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Perpendicular@{Perpendicular}}
+\index{Perpendicular@{Perpendicular}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Perpendicular()}{Perpendicular()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Perpendicular (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Returns a Vector2$<$\+T$>$ that is perpendicular to this \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}. 
+
+
+
+Definition at line 196 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a64c262241dcb5706b8e7195494badb70}\label{struct_g_p_m_1_1_vector2_a64c262241dcb5706b8e7195494badb70}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Perpendicular@{Perpendicular}}
+\index{Perpendicular@{Perpendicular}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Perpendicular()}{Perpendicular()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Perpendicular (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Returns a Vector2$<$\+T$>$ that is perpendicular to this \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}. 
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_ad5152ab4fd735760b95d37f62057fd4c}\label{struct_g_p_m_1_1_vector2_ad5152ab4fd735760b95d37f62057fd4c}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Perpendicular@{Perpendicular}}
+\index{Perpendicular@{Perpendicular}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Perpendicular()}{Perpendicular()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Perpendicular (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+vector2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 173 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a6f2743dbdb97b154d410963f2fb00aa0}\label{struct_g_p_m_1_1_vector2_a6f2743dbdb97b154d410963f2fb00aa0}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Perpendicular@{Perpendicular}}
+\index{Perpendicular@{Perpendicular}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Perpendicular()}{Perpendicular()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+static constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Perpendicular (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+vector2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Returns a Vector2$<$\+T$>$ that is perpendicular to \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}} given by parameter. 
+
+\begin{DoxyReturn}{Returns}
+Perpendicular Vector2$<$\+T$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a6f2743dbdb97b154d410963f2fb00aa0}\label{struct_g_p_m_1_1_vector2_a6f2743dbdb97b154d410963f2fb00aa0}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Perpendicular@{Perpendicular}}
+\index{Perpendicular@{Perpendicular}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Perpendicular()}{Perpendicular()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+static constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Perpendicular (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+vector2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Returns a Vector2$<$\+T$>$ that is perpendicular to \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}} given by parameter. 
+
+\begin{DoxyReturn}{Returns}
+Perpendicular Vector2$<$\+T$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a1af904d3ad6797c67e171f53e33f0d10}\label{struct_g_p_m_1_1_vector2_a1af904d3ad6797c67e171f53e33f0d10}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Scale@{Scale}}
+\index{Scale@{Scale}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Scale()}{Scale()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Scale (\begin{DoxyParamCaption}\item[{T}]{p\+\_\+scalar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Multiplies this \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}\textquotesingle{}s x,y values by a given scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+scalar} & Scalar with which to multiply this Vector\textquotesingle{}s x,y values \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 202 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a1af904d3ad6797c67e171f53e33f0d10}\label{struct_g_p_m_1_1_vector2_a1af904d3ad6797c67e171f53e33f0d10}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Scale@{Scale}}
+\index{Scale@{Scale}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Scale()}{Scale()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Scale (\begin{DoxyParamCaption}\item[{T}]{p\+\_\+scalar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Multiplies this \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}\textquotesingle{}s x,y values by a given scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+scalar} & Scalar with which to multiply this Vector\textquotesingle{}s x,y values \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_aa976c5a7afa257fa2c4c80839ab2bc6e}\label{struct_g_p_m_1_1_vector2_aa976c5a7afa257fa2c4c80839ab2bc6e}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Set@{Set}}
+\index{Set@{Set}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Set (\begin{DoxyParamCaption}\item[{T}]{p\+\_\+x,  }\item[{T}]{p\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Set this Vector\textquotesingle{}s values x, y to p\+\_\+x, p\+\_\+y. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+x} & x coordinate \\
+\hline
+{\em p\+\_\+y} & y coordinate \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_aa976c5a7afa257fa2c4c80839ab2bc6e}\label{struct_g_p_m_1_1_vector2_aa976c5a7afa257fa2c4c80839ab2bc6e}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Set@{Set}}
+\index{Set@{Set}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Set (\begin{DoxyParamCaption}\item[{T}]{p\+\_\+x,  }\item[{T}]{p\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Set this Vector\textquotesingle{}s values x, y to p\+\_\+x, p\+\_\+y. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+x} & x coordinate \\
+\hline
+{\em p\+\_\+y} & y coordinate \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a949fd4a6e4604ac5847ed043bfeff40b}\label{struct_g_p_m_1_1_vector2_a949fd4a6e4604ac5847ed043bfeff40b}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Subtract@{Subtract}}
+\index{Subtract@{Subtract}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Subtract()}{Subtract()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Subtract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&}]{p\+\_\+other\+Vector2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Add Vector given by parameter to this Vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other\+Vector2} & Vector to add \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a949fd4a6e4604ac5847ed043bfeff40b}\label{struct_g_p_m_1_1_vector2_a949fd4a6e4604ac5847ed043bfeff40b}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Subtract@{Subtract}}
+\index{Subtract@{Subtract}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Subtract()}{Subtract()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Subtract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&}]{p\+\_\+other\+Vector2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Add Vector given by parameter to this Vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other\+Vector2} & Vector to add \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 357 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_ad845856bd0761dabf5d6affd1fc3f8f0}\label{struct_g_p_m_1_1_vector2_ad845856bd0761dabf5d6affd1fc3f8f0}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Subtract@{Subtract}}
+\index{Subtract@{Subtract}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Subtract()}{Subtract()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+static constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Subtract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&}]{p\+\_\+vector2,  }\item[{const T \&}]{p\+\_\+scalar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Subtract scalar to x and y of Vector given by parameter without modifying its values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector2} & Vector to subtract the scalar to \\
+\hline
+{\em p\+\_\+scalar} & The scalar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of scalar subtraction to Vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_aeb2e0155c034e08a609d281ffc31d45f}\label{struct_g_p_m_1_1_vector2_aeb2e0155c034e08a609d281ffc31d45f}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Subtract@{Subtract}}
+\index{Subtract@{Subtract}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Subtract()}{Subtract()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Subtract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&}]{p\+\_\+vector2,  }\item[{const T \&}]{p\+\_\+scalar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Subtract scalar to x and y of Vector given by parameter without modifying its values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector2} & Vector to subtract the scalar to \\
+\hline
+{\em p\+\_\+scalar} & The scalar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of scalar subtraction to Vector 
+\end{DoxyReturn}
+
+
+Definition at line 412 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_ab0140fcd7b4c105cb125fdb0131e00be}\label{struct_g_p_m_1_1_vector2_ab0140fcd7b4c105cb125fdb0131e00be}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Subtract@{Subtract}}
+\index{Subtract@{Subtract}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Subtract()}{Subtract()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Subtract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&}]{p\+\_\+vector2\+Left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ U $>$ \&}]{p\+\_\+vector2\+Right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Subtracts two Vectors without modifying their values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector2\+Left} & First Vector \\
+\hline
+{\em p\+\_\+vector2\+Right} & Second Vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector2$<$\+T$>$ Result of subtracted 2 Vectors 
+\end{DoxyReturn}
+
+
+Definition at line 406 of file Vector2.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a53fa6d2948568e4347837f9c3e1f676c}\label{struct_g_p_m_1_1_vector2_a53fa6d2948568e4347837f9c3e1f676c}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!Subtract@{Subtract}}
+\index{Subtract@{Subtract}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Subtract()}{Subtract()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+static constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::Subtract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \&}]{p\+\_\+vector2\+Left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ U $>$ \&}]{p\+\_\+vector2\+Right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Subtracts two Vectors without modifying their values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector2\+Left} & First Vector \\
+\hline
+{\em p\+\_\+vector2\+Right} & Second Vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector2$<$\+T$>$ Result of subtracted 2 Vectors 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_acae715eb2137e70e991e23be8554f1d6}\label{struct_g_p_m_1_1_vector2_acae715eb2137e70e991e23be8554f1d6}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!ToString@{ToString}}
+\index{ToString@{ToString}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr std\+::string \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Creates a string representing this Vector. 
+
+\begin{DoxyReturn}{Returns}
+this Vector in string format 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_acae715eb2137e70e991e23be8554f1d6}\label{struct_g_p_m_1_1_vector2_acae715eb2137e70e991e23be8554f1d6}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!ToString@{ToString}}
+\index{ToString@{ToString}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr std\+::string \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Creates a string representing this Vector. 
+
+\begin{DoxyReturn}{Returns}
+this Vector in string format 
+\end{DoxyReturn}
+
+
+Definition at line 237 of file Vector2.\+inl.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a21f63f8ba335825db8422a65446789ef}\label{struct_g_p_m_1_1_vector2_a21f63f8ba335825db8422a65446789ef}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!right@{right}}
+\index{right@{right}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{right}{right}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::right = \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$T$>$\{ 1, 0 \}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 63 of file Vector2.\+h.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a30afea9b82514ab93318eaed253268e6}\label{struct_g_p_m_1_1_vector2_a30afea9b82514ab93318eaed253268e6}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!up@{up}}
+\index{up@{up}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{up}{up}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::up = \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$T$>$\{ 0, 1 \}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 62 of file Vector2.\+h.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a568c52c5e05a44f5e5cdd3c27e6dd0bd}\label{struct_g_p_m_1_1_vector2_a568c52c5e05a44f5e5cdd3c27e6dd0bd}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!x@{x}}
+\index{x@{x}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+T \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::x}
+
+
+
+Definition at line 13 of file Vector2.\+h.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_ab8fdf86744aa64643272507394c288c2}\label{struct_g_p_m_1_1_vector2_ab8fdf86744aa64643272507394c288c2}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!y@{y}}
+\index{y@{y}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+T \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::y}
+
+
+
+Definition at line 16 of file Vector2.\+h.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_vector2_a28615536fe6d665f390edb676fc3e240}\label{struct_g_p_m_1_1_vector2_a28615536fe6d665f390edb676fc3e240}} 
+\index{GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}!zero@{zero}}
+\index{zero@{zero}!GPM::Vector2$<$ T $>$@{GPM::Vector2$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{zero}{zero}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{G\+P\+M\+::\+Vector2}}$<$ T $>$\+::zero = \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$T$>$\{ 0, 0 \}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 61 of file Vector2.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+G\+P\+M/include/\+G\+P\+M/\+Vector/\mbox{\hyperlink{_g_p_m_2include_2_g_p_m_2_vector_2_vector2_8h}{Vector2.\+h}}\item 
+G\+P\+M/include/\+G\+P\+M/\+Vector/\mbox{\hyperlink{_g_p_m_2include_2_g_p_m_2_vector_2_vector2_8inl}{Vector2.\+inl}}\end{DoxyCompactItemize}

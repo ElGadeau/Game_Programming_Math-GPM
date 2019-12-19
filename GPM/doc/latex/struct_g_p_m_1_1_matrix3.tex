@@ -1,0 +1,2771 @@
+\hypertarget{struct_g_p_m_1_1_matrix3}{}\doxysection{G\+PM\+::Matrix3$<$ T $>$ Struct Template Reference}
+\label{struct_g_p_m_1_1_matrix3}\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Matrix3.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_ab23f73fe9619081a8540682cd726e6df}{Matrix3}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a4b790792f7b19af26d3dc453a55db7ad}{$\sim$\+Matrix3}} ()=default
+\begin{DoxyCompactList}\small\item\em Default Destructor. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_aff38927e0673c1dc6644477c66706f2f}{Matrix3}} (const T p\+\_\+i0, const T p\+\_\+i1, const T p\+\_\+i2, const T p\+\_\+i3, const T p\+\_\+i4, const T p\+\_\+i5, const T p\+\_\+i6, const T p\+\_\+i7, const T p\+\_\+i8)
+\begin{DoxyCompactList}\small\item\em Constructor with parameters. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a7dbac54a9da64473359bc902ff48dafd}{Matrix3}} (const T p\+\_\+data\mbox{[}9\mbox{]})
+\begin{DoxyCompactList}\small\item\em Constructor from already created array. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a8194d2a51d6b8e2648b5ac4410b3c9c7}{Matrix3}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}} \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Copy Constructor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a736e1557f7ba5666d868af4589e2083a}{Matrix3}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Template Copy Constructor. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_aeab28ed5e33731e46680cb005abb05f9}{Matrix3}} (\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}} \&\&p\+\_\+other) noexcept
+\begin{DoxyCompactList}\small\item\em Move Constructor. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a5209c1269dc2d9cd5c942555aaad1980}{operator=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Assignment operator for \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_af6a5d5a4582e262f39cc74b1acb87220}{operator=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Assignment operator for \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a74840ad285c0d307a39502a2aa433525}{operator=}} (\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&\&p\+\_\+other) noexcept
+\begin{DoxyCompactList}\small\item\em Assignment move operator for \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a903bdb02c8d55e3bd0c3c1975dd99877}{operator=}} (\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&\&p\+\_\+other) noexcept
+\begin{DoxyCompactList}\small\item\em Assignment move operator for \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_afe475418065de54de70f0684c680dd8a}{Determinant}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the determinant of the matrix. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_af3ce04e7a65fc80d62364aa5e2a85c46}{Transpose}} ()
+\begin{DoxyCompactList}\small\item\em Returns this matrix transposed. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a799d3cad4e4b65a1eddd36f9d1820f55}{Get\+Column}} (const int p\+\_\+column)
+\begin{DoxyCompactList}\small\item\em Attempts to retrieve a column from the matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a30284748fd20ff089f98af29bbecf925}{Set\+Column}} (const int p\+\_\+column, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em Attempts to set a column in the matrix. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a34d82ea67b507edb7db4999b64cecf6b}{Get\+Row}} (const int p\+\_\+row)
+\begin{DoxyCompactList}\small\item\em Attempts to retrieve a row from the matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_ac658918d96b8937c04acec99fa657be9}{Set\+Row}} (const int p\+\_\+row, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em Attempts to set a row in the matrix. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a130720dc9fcfcd15c88fa024bbc33914}{Normalize}} ()
+\begin{DoxyCompactList}\small\item\em Returns this matrix with a magnitude of 1. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a0f695220f5522c10538b6259a4f81d06}{Translate}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em Translates the current matrix with a \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_aa5769b6a6c95bbcad163e19c9b88adf1}{Rotate}} (const float p\+\_\+angle)
+\begin{DoxyCompactList}\small\item\em Rotate the current matrix with an angle in degrees. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a86b184552e51a56b1e95859c212ebc1b}{Scale}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em Scale the current matrix with a \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a71673e0bd8819606d1d33fafa85a3169}{Look\+At}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+dir, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+up, \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+matrix)
+\begin{DoxyCompactList}\small\item\em Computes a transformation matrix that looks at a target. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a5006c6d5a7a98cf6a3135af76459c67a}{Add}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Add other matrix to the current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_af4e28ed6597cc45ec0a18b109dbc490e}{operator+}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+other) const
+\begin{DoxyCompactList}\small\item\em Return the summation of other matrix and current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_ae52eb0e3f515a6ac0b09e99b2f89d9ca}{operator+=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Add other matrix to the current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_acdc0a89007bc9cf043c5b97a767b8a99}{Subtract}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Subtract other matrix to the current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_aba112bc1f8914d1a67f100ebe2ea9d67}{operator-\/}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+other) const
+\begin{DoxyCompactList}\small\item\em Return the subtraction of other matrix and current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a866b0146d47a90d12e73481e1d233782}{operator-\/=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Subtract other matrix to the current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a708b2a010728cfcb8800fc058c3dd403}{Multiply}} (U p\+\_\+scalar)
+\begin{DoxyCompactList}\small\item\em Multiply scalar to elements. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a3a64f4ea04d0f60ad30be02fb5d11c19}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Multiply matrix with another matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_aff84576c749b4f55ec66464a2d98b282}{operator$\ast$}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+other) const
+\begin{DoxyCompactList}\small\item\em Multiply matrix to the current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_aa351ad8aa1804fc8e0ed9275a586d7f6}{operator$\ast$}} (const U p\+\_\+scalar) const
+\begin{DoxyCompactList}\small\item\em Multiply matrix to the current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_acac1ac7df7df3d5cbd191b597da3d049}{operator$\ast$=}} (const U p\+\_\+scalar)
+\begin{DoxyCompactList}\small\item\em Multiply matrix to the current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_aab484efe81e77abf0b62b3fbcc5b7ae3}{operator$\ast$=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Multiply matrix to the current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a67d3a94d0a13d313eac264abe3f43f46}{Divide}} (U p\+\_\+scalar)
+\begin{DoxyCompactList}\small\item\em Divide elements by scalar. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a4bb676ae89519cdcb917356b95e02597}{operator/}} (const U p\+\_\+scalar) const
+\begin{DoxyCompactList}\small\item\em Divide matrix p\+\_\+left by scalar. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a0eac2a2068f45d0de79d49b4ffdc00ae}{operator/=}} (const U p\+\_\+scalar)
+\begin{DoxyCompactList}\small\item\em Divide elements by scalar. \end{DoxyCompactList}\item 
+constexpr bool \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_aac0b37b6a7ccb82a7639d9ca51c29ca6}{Equals}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+other) const
+\begin{DoxyCompactList}\small\item\em Return true if the two matrices are identical. \end{DoxyCompactList}\item 
+constexpr bool \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a7d1913d60e183f8b7f397b5cd962fd98}{operator==}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+other) const
+\begin{DoxyCompactList}\small\item\em Return true if the two matrices are identical. \end{DoxyCompactList}\item 
+constexpr bool \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_af87115f286b4d13e5db9dedc1e99f256}{operator!=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+other) const
+\begin{DoxyCompactList}\small\item\em Return true if the two matrices are different. \end{DoxyCompactList}\item 
+constexpr std\+::string \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_af6e43ce53baf78788c8a1a694de5d82a}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em function used to debug values from the matrix \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_ab3435f334c5282a8aaffbacaa3217fd7}{operator\mbox{[}$\,$\mbox{]}}} (const int p\+\_\+index) const
+\item 
+T \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_adfd81336eeca5977842ae1325d36109e}{operator()}} (const int p\+\_\+row, const int p\+\_\+col) const
+\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_ad833a6166faca8469da0fe8c34a09031}{Matrix3}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a4b790792f7b19af26d3dc453a55db7ad}{$\sim$\+Matrix3}} ()=default
+\begin{DoxyCompactList}\small\item\em Default Destructor. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_add3f949198abf33858b4fb225ebaf03a}{Matrix3}} (const T p\+\_\+i0, const T p\+\_\+i1, const T p\+\_\+i2, const T p\+\_\+i3, const T p\+\_\+i4, const T p\+\_\+i5, const T p\+\_\+i6, const T p\+\_\+i7, const T p\+\_\+i8)
+\begin{DoxyCompactList}\small\item\em Constructor with parameters. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a78882e6089a756ca7a38bd956b4929f6}{Matrix3}} (const T p\+\_\+data\mbox{[}9\mbox{]})
+\begin{DoxyCompactList}\small\item\em Constructor from already created array. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a811e29ee9abe72ecfbcf854d0e147013}{Matrix3}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}} \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Copy Constructor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_ad1c46282f032416cdb128d0198ba2568}{Matrix3}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Template Copy Constructor. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_ab5071b948ff15fb903742a4bf9bfcba6}{Matrix3}} (\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}} \&\&p\+\_\+other) noexcept
+\begin{DoxyCompactList}\small\item\em Move Constructor. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_aab9323aff16d8daa2e5bed995b2ee1ac}{operator=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Assignment operator for \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a399f1a9b58d1800f748364688fb48ec8}{operator=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Assignment operator for \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a3758fac3929205db7df5a60abc113ba6}{operator=}} (\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&\&p\+\_\+other) noexcept
+\begin{DoxyCompactList}\small\item\em Assignment move operator for \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a2e2adc2e27054b21056ec9926b1508ed}{operator=}} (\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&\&p\+\_\+other) noexcept
+\begin{DoxyCompactList}\small\item\em Assignment move operator for \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a8b767e09d2a3a9bb859fbd62b87fa0e7}{Determinant}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the determinant of the matrix. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_ac9fde6f618197fb9246eb5fe348171b2}{Transpose}} ()
+\begin{DoxyCompactList}\small\item\em Returns this matrix transposed. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a1a7b91dafdabc0a61d8d022dec89c86e}{Get\+Column}} (const int p\+\_\+column)
+\begin{DoxyCompactList}\small\item\em Attempts to retrieve a column from the matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a08d489ed05f9aa1c6616946155cf5b51}{Set\+Column}} (const int p\+\_\+column, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em Attempts to set a column in the matrix. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_aaafcf3655d2612801643d0ddd51c822b}{Get\+Row}} (const int p\+\_\+row)
+\begin{DoxyCompactList}\small\item\em Attempts to retrieve a row from the matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_abcf9ba8b08e340b89deb0867f12484a6}{Set\+Row}} (const int p\+\_\+row, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em Attempts to set a row in the matrix. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a063cafbfbf07b56b4318d3ed0d549d11}{Normalize}} ()
+\begin{DoxyCompactList}\small\item\em Returns this matrix with a magnitude of 1. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a6fb48d7d3abe9787efb66b2da2b7480e}{Translate}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em Translates the current matrix with a \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a0f50ed94731ebf9ec39483633474da51}{Rotate}} (const float p\+\_\+angle)
+\begin{DoxyCompactList}\small\item\em Rotate the current matrix with an angle in degrees. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a08193ffe9b948db9d4d0f914cda27137}{Scale}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em Scale the current matrix with a \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a71673e0bd8819606d1d33fafa85a3169}{Look\+At}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+dir, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+up, \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+matrix)
+\begin{DoxyCompactList}\small\item\em Computes a transformation matrix that looks at a target. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a597adc3d5a035f2c975be2b0e0fe1275}{Add}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Add other matrix to the current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a71e10a456b8f2149004a1af1b1076af4}{operator+}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+other) const
+\begin{DoxyCompactList}\small\item\em Return the summation of other matrix and current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_acc5fcea13e9f2ff873a0fa4c1f365950}{operator+=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Add other matrix to the current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_ac5746f05996568ba108b30ee58df36ef}{Subtract}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Subtract other matrix to the current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_ad01d73cdf12e12574100762463350add}{operator-\/}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+other) const
+\begin{DoxyCompactList}\small\item\em Return the subtraction of other matrix and current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a941784b51d9e213a9ee1a692424f12af}{operator-\/=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Subtract other matrix to the current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a71dba0271720ac4761c5dc022042333d}{Multiply}} (U p\+\_\+scalar)
+\begin{DoxyCompactList}\small\item\em Multiply scalar to elements. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_ab2966ff9f28a82a785ebcaba6f723916}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Multiply matrix with another matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_aa99f12ee05dfeb5921353c7c2da0ea47}{operator$\ast$}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+other) const
+\begin{DoxyCompactList}\small\item\em Multiply matrix to the current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a6fcc8ba6a1b8596053f152dbcacdd270}{operator$\ast$}} (const U p\+\_\+scalar) const
+\begin{DoxyCompactList}\small\item\em Multiply matrix to the current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a14c89614f0fa48598bb9f3b108ab1b44}{operator$\ast$=}} (const U p\+\_\+scalar)
+\begin{DoxyCompactList}\small\item\em Multiply matrix to the current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a008523ea79b6f72d9e50b3a2f57c582f}{operator$\ast$=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Multiply matrix to the current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a53c013c005b558510f894716d952c4ca}{Divide}} (U p\+\_\+scalar)
+\begin{DoxyCompactList}\small\item\em Divide elements by scalar. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_ad7ca84a8c1cfeaac6e878329d139bbb0}{operator/}} (const U p\+\_\+scalar) const
+\begin{DoxyCompactList}\small\item\em Divide matrix p\+\_\+left by scalar. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a1f53a9b89c8a0c3b91e92bdec55b656c}{operator/=}} (const U p\+\_\+scalar)
+\begin{DoxyCompactList}\small\item\em Divide elements by scalar. \end{DoxyCompactList}\item 
+constexpr bool \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a141f9bd2fb8a6c19181f22eb73139358}{Equals}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+other) const
+\begin{DoxyCompactList}\small\item\em Return true if the two matrices are identical. \end{DoxyCompactList}\item 
+constexpr bool \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a0c5521f7f030b5642689c9fdbab79fec}{operator==}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+other) const
+\begin{DoxyCompactList}\small\item\em Return true if the two matrices are identical. \end{DoxyCompactList}\item 
+constexpr bool \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a7e8148bf685dba0c198c4735237518c8}{operator!=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+other) const
+\begin{DoxyCompactList}\small\item\em Return true if the two matrices are different. \end{DoxyCompactList}\item 
+constexpr std\+::string \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a1c3fbef860ea7e374635bbb13b7ec342}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em function used to debug values from the matrix \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a70888a92a34fce0bdd3d04aa64587d5c}{operator\mbox{[}$\,$\mbox{]}}} (const int p\+\_\+index) const
+\item 
+T \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a238ba87cb63ccde6b4071c0bfdb038bd}{operator()}} (const int p\+\_\+row, const int p\+\_\+col) const
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a54b56c07e876500d8552bb9e201a47e5}{Add}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+left, const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+right)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a85a5565f644d5a5c8cac2db1f30135d1}{Subtract}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+left, const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+right)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_ad310e68cfd75450c4fd23ab274cf3d46}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+left, U p\+\_\+scalar)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a51646c9958fbf74015d285d16636fbaf}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+left, const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+right)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_ac178e947740e705aabddef81aaf78925}{Divide}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+left, const U p\+\_\+scalar)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static T \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a3ba0fdaa88bbf7456a1c70c3905cc81a}{Determinant}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+matrix3)
+\begin{DoxyCompactList}\small\item\em Calculates the determinant of the matrix. \end{DoxyCompactList}\item 
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a9a5a2131a36edf2f68f9566bd7726897}{Transpose}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+matrix3)
+\begin{DoxyCompactList}\small\item\em Returns this matrix transposed. \end{DoxyCompactList}\item 
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a0d9c09ba078bb55bae080613175cff42}{Normalize}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+matrix)
+\begin{DoxyCompactList}\small\item\em Returns this matrix with a magnitude of 1. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_ac11673b7220188c0e83fc0a61507c7c0}{Create\+Translation}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em Creates a translation identity matrix with a \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}} offset. \end{DoxyCompactList}\item 
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_abad7b25219cbed06049decb4b1056c52}{Create\+Rotation}} (const float p\+\_\+angle)
+\begin{DoxyCompactList}\small\item\em Creates a rotation identity matrix with an angle in degrees. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a6f81249ef4ac7a5355b8a317f0f5941d}{Create\+Scaling}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em Creates a scaling identity matrix with a \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_ad629cb5d225bbc8e07fac64cf484e2fc}{Create\+Transformation}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+pos, const float p\+\_\+angle, const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+scale)
+\begin{DoxyCompactList}\small\item\em Creates a translation, rotation and scaling matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a96a2c4cf42639908277a9bda386b3af1}{Add}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+left, const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+right)
+\begin{DoxyCompactList}\small\item\em Add left matrix to the right matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a96f21ad9393460a4a24148ddda50e0b2}{Subtract}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+left, const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+right)
+\begin{DoxyCompactList}\small\item\em Subtract left matrix to the right matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_afeb7d76dc4dd1d69481c71490d71cb7b}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+left, U p\+\_\+scalar)
+\begin{DoxyCompactList}\small\item\em Multiply scalar to matrix left. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a864cf8a149de633d593cac9e1d1b5849}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+left, const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+right)
+\begin{DoxyCompactList}\small\item\em Multiply scalar to matrix left. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_ab72fae508852849716fca0c384fcd028}{Divide}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+left, const U p\+\_\+scalar)
+\begin{DoxyCompactList}\small\item\em Divide matrix p\+\_\+left by scalar. \end{DoxyCompactList}\item 
+constexpr static bool \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a80bd39e59e682172306aa120ba9750d2}{Are\+Equal}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+left, const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+right)
+\begin{DoxyCompactList}\small\item\em Return true if the two matrices are identical. \end{DoxyCompactList}\item 
+constexpr static bool \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_ab5ff3ab2ac55d0db8f9e5a6055718241}{Is\+Identity}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Return true if the two matrices are identical. \end{DoxyCompactList}\item 
+constexpr static std\+::string \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a975279c3639ff98f763d159201a7d696}{To\+String}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+matrix)
+\begin{DoxyCompactList}\small\item\em Function used to debug values from the matrix. \end{DoxyCompactList}\item 
+static T \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_ab01b26023638d8b6cbcf4e5357a96343}{Determinant}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+matrix3)
+\begin{DoxyCompactList}\small\item\em Calculates the determinant of the matrix. \end{DoxyCompactList}\item 
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a46469f5c645351f8aee39bf13eb466b5}{Transpose}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+matrix3)
+\begin{DoxyCompactList}\small\item\em Returns this matrix transposed. \end{DoxyCompactList}\item 
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a830ed6c14aea45c7364c67854074b6f1}{Normalize}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+matrix)
+\begin{DoxyCompactList}\small\item\em Returns this matrix with a magnitude of 1. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_ac11673b7220188c0e83fc0a61507c7c0}{Create\+Translation}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em Creates a translation identity matrix with a \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}} offset. \end{DoxyCompactList}\item 
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_aa4a147342d8421cbe440bc56bfca02f1}{Create\+Rotation}} (const float p\+\_\+angle)
+\begin{DoxyCompactList}\small\item\em Creates a rotation identity matrix with an angle in degrees. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a6f81249ef4ac7a5355b8a317f0f5941d}{Create\+Scaling}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em Creates a scaling identity matrix with a \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_ad629cb5d225bbc8e07fac64cf484e2fc}{Create\+Transformation}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+pos, const float p\+\_\+angle, const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+scale)
+\begin{DoxyCompactList}\small\item\em Creates a translation, rotation and scaling matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a96a2c4cf42639908277a9bda386b3af1}{Add}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+left, const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+right)
+\begin{DoxyCompactList}\small\item\em Add left matrix to the right matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a96f21ad9393460a4a24148ddda50e0b2}{Subtract}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+left, const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+right)
+\begin{DoxyCompactList}\small\item\em Subtract left matrix to the right matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_afeb7d76dc4dd1d69481c71490d71cb7b}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+left, U p\+\_\+scalar)
+\begin{DoxyCompactList}\small\item\em Multiply scalar to matrix left. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a864cf8a149de633d593cac9e1d1b5849}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+left, const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&p\+\_\+right)
+\begin{DoxyCompactList}\small\item\em Multiply scalar to matrix left. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_ab72fae508852849716fca0c384fcd028}{Divide}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+left, const U p\+\_\+scalar)
+\begin{DoxyCompactList}\small\item\em Divide matrix p\+\_\+left by scalar. \end{DoxyCompactList}\item 
+constexpr static bool \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a954b2cb4dcfd39be5ba50e84cb41cdd3}{Are\+Equal}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+left, const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+right)
+\begin{DoxyCompactList}\small\item\em Return true if the two matrices are identical. \end{DoxyCompactList}\item 
+constexpr static bool \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_a0a5c22cecc84b62021b191b68f2887f0}{Is\+Identity}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Return true if the two matrices are identical. \end{DoxyCompactList}\item 
+constexpr static std\+::string \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_ae95766f57617d3cd348e3058616ed62a}{To\+String}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&p\+\_\+matrix)
+\begin{DoxyCompactList}\small\item\em Function used to debug values from the matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_abfefafb4ac230a5bd3db98b7c3107525}{Create\+Translation}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+vector)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_ad1bd791cd9ef8eeab5771a254fe4d2e1}{Create\+Scaling}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+vector)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_acdeb3443a0ba2518971206c1b7df3e5b}{Create\+Transformation}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+pos, const float p\+\_\+angle, const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&p\+\_\+scale)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_ab94adb00a3d4baaface5535cbc9e4406}{m\+\_\+data}} \mbox{[}9\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_af5df0e017e1b6a1a41e3039a2f26cf02}{identity}}
+\begin{DoxyCompactList}\small\item\em This is a const matrix that has 1 in the diagonal and 0 elsewhere. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3_ad80f86cf442d6413c331b00530ead791}{zero}}
+\begin{DoxyCompactList}\small\item\em This is a const matrix that has 0 everywhere. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+struct G\+P\+M\+::\+Matrix3$<$ T $>$}
+
+A standard 3 by 3 Matrix. Default value is an identity matrix 
+
+Definition at line 11 of file Matrix3.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_ab23f73fe9619081a8540682cd726e6df}\label{struct_g_p_m_1_1_matrix3_ab23f73fe9619081a8540682cd726e6df}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Matrix3@{Matrix3}}
+\index{Matrix3@{Matrix3}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix3()}{Matrix3()}\hspace{0.1cm}{\footnotesize\ttfamily [1/12]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr Matrix3\+::\+Matrix3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Default Constructor. 
+
+
+
+Definition at line 23 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a4b790792f7b19af26d3dc453a55db7ad}\label{struct_g_p_m_1_1_matrix3_a4b790792f7b19af26d3dc453a55db7ad}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!````~Matrix3@{$\sim$Matrix3}}
+\index{````~Matrix3@{$\sim$Matrix3}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Matrix3()}{~Matrix3()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default Destructor. 
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_aff38927e0673c1dc6644477c66706f2f}\label{struct_g_p_m_1_1_matrix3_aff38927e0673c1dc6644477c66706f2f}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Matrix3@{Matrix3}}
+\index{Matrix3@{Matrix3}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix3()}{Matrix3()}\hspace{0.1cm}{\footnotesize\ttfamily [2/12]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr Matrix3\+::\+Matrix3 (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+i0,  }\item[{const T}]{p\+\_\+i1,  }\item[{const T}]{p\+\_\+i2,  }\item[{const T}]{p\+\_\+i3,  }\item[{const T}]{p\+\_\+i4,  }\item[{const T}]{p\+\_\+i5,  }\item[{const T}]{p\+\_\+i6,  }\item[{const T}]{p\+\_\+i7,  }\item[{const T}]{p\+\_\+i8 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Constructor with parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+i0} & 1st element \\
+\hline
+{\em p\+\_\+i1} & 2nd element \\
+\hline
+{\em p\+\_\+i2} & 3rd element \\
+\hline
+{\em p\+\_\+i3} & 4th element \\
+\hline
+{\em p\+\_\+i4} & 5th element \\
+\hline
+{\em p\+\_\+i5} & 6th element \\
+\hline
+{\em p\+\_\+i6} & 7th element \\
+\hline
+{\em p\+\_\+i7} & 8th element \\
+\hline
+{\em p\+\_\+i8} & 9th element \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 29 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a7dbac54a9da64473359bc902ff48dafd}\label{struct_g_p_m_1_1_matrix3_a7dbac54a9da64473359bc902ff48dafd}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Matrix3@{Matrix3}}
+\index{Matrix3@{Matrix3}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix3()}{Matrix3()}\hspace{0.1cm}{\footnotesize\ttfamily [3/12]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr Matrix3\+::\+Matrix3 (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+data\mbox{[}9\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Constructor from already created array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+data} & \+: Array with a size of 9 elements \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 37 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a8194d2a51d6b8e2648b5ac4410b3c9c7}\label{struct_g_p_m_1_1_matrix3_a8194d2a51d6b8e2648b5ac4410b3c9c7}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Matrix3@{Matrix3}}
+\index{Matrix3@{Matrix3}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix3()}{Matrix3()}\hspace{0.1cm}{\footnotesize\ttfamily [4/12]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr Matrix3\+::\+Matrix3 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Copy Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: Matrix to construct from \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 43 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a736e1557f7ba5666d868af4589e2083a}\label{struct_g_p_m_1_1_matrix3_a736e1557f7ba5666d868af4589e2083a}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Matrix3@{Matrix3}}
+\index{Matrix3@{Matrix3}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix3()}{Matrix3()}\hspace{0.1cm}{\footnotesize\ttfamily [5/12]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+constexpr Matrix3\+::\+Matrix3 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Template Copy Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: Matrix to construct from \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 50 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_aeab28ed5e33731e46680cb005abb05f9}\label{struct_g_p_m_1_1_matrix3_aeab28ed5e33731e46680cb005abb05f9}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Matrix3@{Matrix3}}
+\index{Matrix3@{Matrix3}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix3()}{Matrix3()}\hspace{0.1cm}{\footnotesize\ttfamily [6/12]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr Matrix3\+::\+Matrix3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&\&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Move Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: Matrix to construct from \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 57 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_ad833a6166faca8469da0fe8c34a09031}\label{struct_g_p_m_1_1_matrix3_ad833a6166faca8469da0fe8c34a09031}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Matrix3@{Matrix3}}
+\index{Matrix3@{Matrix3}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix3()}{Matrix3()}\hspace{0.1cm}{\footnotesize\ttfamily [7/12]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Default Constructor. 
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a4b790792f7b19af26d3dc453a55db7ad}\label{struct_g_p_m_1_1_matrix3_a4b790792f7b19af26d3dc453a55db7ad}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!````~Matrix3@{$\sim$Matrix3}}
+\index{````~Matrix3@{$\sim$Matrix3}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Matrix3()}{~Matrix3()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default Destructor. 
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_add3f949198abf33858b4fb225ebaf03a}\label{struct_g_p_m_1_1_matrix3_add3f949198abf33858b4fb225ebaf03a}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Matrix3@{Matrix3}}
+\index{Matrix3@{Matrix3}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix3()}{Matrix3()}\hspace{0.1cm}{\footnotesize\ttfamily [8/12]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}} (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+i0,  }\item[{const T}]{p\+\_\+i1,  }\item[{const T}]{p\+\_\+i2,  }\item[{const T}]{p\+\_\+i3,  }\item[{const T}]{p\+\_\+i4,  }\item[{const T}]{p\+\_\+i5,  }\item[{const T}]{p\+\_\+i6,  }\item[{const T}]{p\+\_\+i7,  }\item[{const T}]{p\+\_\+i8 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Constructor with parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+i0} & 1st element \\
+\hline
+{\em p\+\_\+i1} & 2nd element \\
+\hline
+{\em p\+\_\+i2} & 3rd element \\
+\hline
+{\em p\+\_\+i3} & 4th element \\
+\hline
+{\em p\+\_\+i4} & 5th element \\
+\hline
+{\em p\+\_\+i5} & 6th element \\
+\hline
+{\em p\+\_\+i6} & 7th element \\
+\hline
+{\em p\+\_\+i7} & 8th element \\
+\hline
+{\em p\+\_\+i8} & 9th element \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a78882e6089a756ca7a38bd956b4929f6}\label{struct_g_p_m_1_1_matrix3_a78882e6089a756ca7a38bd956b4929f6}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Matrix3@{Matrix3}}
+\index{Matrix3@{Matrix3}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix3()}{Matrix3()}\hspace{0.1cm}{\footnotesize\ttfamily [9/12]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}} (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+data\mbox{[}9\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Constructor from already created array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+data} & \+: Array with a size of 9 elements \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a811e29ee9abe72ecfbcf854d0e147013}\label{struct_g_p_m_1_1_matrix3_a811e29ee9abe72ecfbcf854d0e147013}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Matrix3@{Matrix3}}
+\index{Matrix3@{Matrix3}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix3()}{Matrix3()}\hspace{0.1cm}{\footnotesize\ttfamily [10/12]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Copy Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: Matrix to construct from \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_ad1c46282f032416cdb128d0198ba2568}\label{struct_g_p_m_1_1_matrix3_ad1c46282f032416cdb128d0198ba2568}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Matrix3@{Matrix3}}
+\index{Matrix3@{Matrix3}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix3()}{Matrix3()}\hspace{0.1cm}{\footnotesize\ttfamily [11/12]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Template Copy Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: Matrix to construct from \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_ab5071b948ff15fb903742a4bf9bfcba6}\label{struct_g_p_m_1_1_matrix3_ab5071b948ff15fb903742a4bf9bfcba6}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Matrix3@{Matrix3}}
+\index{Matrix3@{Matrix3}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix3()}{Matrix3()}\hspace{0.1cm}{\footnotesize\ttfamily [12/12]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&\&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Move Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: Matrix to construct from \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a96a2c4cf42639908277a9bda386b3af1}\label{struct_g_p_m_1_1_matrix3_a96a2c4cf42639908277a9bda386b3af1}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Add left matrix to the right matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+left} & \+: The first matrix you want to add \\
+\hline
+{\em p\+\_\+right} & \+: The second matrix to be added to the first one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a96a2c4cf42639908277a9bda386b3af1}\label{struct_g_p_m_1_1_matrix3_a96a2c4cf42639908277a9bda386b3af1}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Add left matrix to the right matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+left} & \+: The first matrix you want to add \\
+\hline
+{\em p\+\_\+right} & \+: The second matrix to be added to the first one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a54b56c07e876500d8552bb9e201a47e5}\label{struct_g_p_m_1_1_matrix3_a54b56c07e876500d8552bb9e201a47e5}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ Matrix3\+::\+Add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 306 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a597adc3d5a035f2c975be2b0e0fe1275}\label{struct_g_p_m_1_1_matrix3_a597adc3d5a035f2c975be2b0e0fe1275}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Add other matrix to the current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: The other matrix you want to add to the current one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a5006c6d5a7a98cf6a3135af76459c67a}\label{struct_g_p_m_1_1_matrix3_a5006c6d5a7a98cf6a3135af76459c67a}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& Matrix3\+::\+Add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Add other matrix to the current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: The other matrix you want to add to the current one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+
+
+Definition at line 296 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a80bd39e59e682172306aa120ba9750d2}\label{struct_g_p_m_1_1_matrix3_a80bd39e59e682172306aa120ba9750d2}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!AreEqual@{AreEqual}}
+\index{AreEqual@{AreEqual}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{AreEqual()}{AreEqual()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr bool Matrix3\+::\+Are\+Equal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Return true if the two matrices are identical. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+left} & The left matrix \\
+\hline
+{\em p\+\_\+right} & The right matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True or false 
+\end{DoxyReturn}
+
+
+Definition at line 533 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a954b2cb4dcfd39be5ba50e84cb41cdd3}\label{struct_g_p_m_1_1_matrix3_a954b2cb4dcfd39be5ba50e84cb41cdd3}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!AreEqual@{AreEqual}}
+\index{AreEqual@{AreEqual}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{AreEqual()}{AreEqual()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr static bool \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Are\+Equal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Return true if the two matrices are identical. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+left} & The left matrix \\
+\hline
+{\em p\+\_\+right} & The right matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_aa4a147342d8421cbe440bc56bfca02f1}\label{struct_g_p_m_1_1_matrix3_aa4a147342d8421cbe440bc56bfca02f1}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!CreateRotation@{CreateRotation}}
+\index{CreateRotation@{CreateRotation}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateRotation()}{CreateRotation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Create\+Rotation (\begin{DoxyParamCaption}\item[{const float}]{p\+\_\+angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Creates a rotation identity matrix with an angle in degrees. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+angle} & \+: The desired angle in degrees to rotate the matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The rotated identity matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_abad7b25219cbed06049decb4b1056c52}\label{struct_g_p_m_1_1_matrix3_abad7b25219cbed06049decb4b1056c52}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!CreateRotation@{CreateRotation}}
+\index{CreateRotation@{CreateRotation}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateRotation()}{CreateRotation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ Matrix3\+::\+Create\+Rotation (\begin{DoxyParamCaption}\item[{const float}]{p\+\_\+angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Creates a rotation identity matrix with an angle in degrees. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+angle} & \+: The desired angle in degrees to rotate the matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The rotated identity matrix 
+\end{DoxyReturn}
+
+
+Definition at line 246 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a6f81249ef4ac7a5355b8a317f0f5941d}\label{struct_g_p_m_1_1_matrix3_a6f81249ef4ac7a5355b8a317f0f5941d}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!CreateScaling@{CreateScaling}}
+\index{CreateScaling@{CreateScaling}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateScaling()}{CreateScaling()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Create\+Scaling (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Creates a scaling identity matrix with a \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector} & \+: the desired 2D scale \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The scaled identity matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a6f81249ef4ac7a5355b8a317f0f5941d}\label{struct_g_p_m_1_1_matrix3_a6f81249ef4ac7a5355b8a317f0f5941d}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!CreateScaling@{CreateScaling}}
+\index{CreateScaling@{CreateScaling}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateScaling()}{CreateScaling()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Create\+Scaling (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Creates a scaling identity matrix with a \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector} & \+: the desired 2D scale \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The scaled identity matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_ad1bd791cd9ef8eeab5771a254fe4d2e1}\label{struct_g_p_m_1_1_matrix3_ad1bd791cd9ef8eeab5771a254fe4d2e1}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!CreateScaling@{CreateScaling}}
+\index{CreateScaling@{CreateScaling}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateScaling()}{CreateScaling()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ Matrix3\+::\+Create\+Scaling (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 267 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_ad629cb5d225bbc8e07fac64cf484e2fc}\label{struct_g_p_m_1_1_matrix3_ad629cb5d225bbc8e07fac64cf484e2fc}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!CreateTransformation@{CreateTransformation}}
+\index{CreateTransformation@{CreateTransformation}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateTransformation()}{CreateTransformation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Create\+Transformation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+pos,  }\item[{const float}]{p\+\_\+angle,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Creates a translation, rotation and scaling matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+pos} & \+: The position to set the matrix to \\
+\hline
+{\em p\+\_\+angle} & \+: The rotation to orient the matrix to \\
+\hline
+{\em p\+\_\+scale} & \+: The scale to set the matrix to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A translation matrix set with the given parameters 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_ad629cb5d225bbc8e07fac64cf484e2fc}\label{struct_g_p_m_1_1_matrix3_ad629cb5d225bbc8e07fac64cf484e2fc}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!CreateTransformation@{CreateTransformation}}
+\index{CreateTransformation@{CreateTransformation}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateTransformation()}{CreateTransformation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Create\+Transformation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+pos,  }\item[{const float}]{p\+\_\+angle,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Creates a translation, rotation and scaling matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+pos} & \+: The position to set the matrix to \\
+\hline
+{\em p\+\_\+angle} & \+: The rotation to orient the matrix to \\
+\hline
+{\em p\+\_\+scale} & \+: The scale to set the matrix to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A translation matrix set with the given parameters 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_acdeb3443a0ba2518971206c1b7df3e5b}\label{struct_g_p_m_1_1_matrix3_acdeb3443a0ba2518971206c1b7df3e5b}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!CreateTransformation@{CreateTransformation}}
+\index{CreateTransformation@{CreateTransformation}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateTransformation()}{CreateTransformation()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ Matrix3\+::\+Create\+Transformation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+pos,  }\item[{const float}]{p\+\_\+angle,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 277 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_ac11673b7220188c0e83fc0a61507c7c0}\label{struct_g_p_m_1_1_matrix3_ac11673b7220188c0e83fc0a61507c7c0}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!CreateTranslation@{CreateTranslation}}
+\index{CreateTranslation@{CreateTranslation}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateTranslation()}{CreateTranslation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Create\+Translation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Creates a translation identity matrix with a \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}} offset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector} & \+: The desired 2D off-\/set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The translated identity matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_ac11673b7220188c0e83fc0a61507c7c0}\label{struct_g_p_m_1_1_matrix3_ac11673b7220188c0e83fc0a61507c7c0}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!CreateTranslation@{CreateTranslation}}
+\index{CreateTranslation@{CreateTranslation}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateTranslation()}{CreateTranslation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Create\+Translation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Creates a translation identity matrix with a \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}} offset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector} & \+: The desired 2D off-\/set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The translated identity matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_abfefafb4ac230a5bd3db98b7c3107525}\label{struct_g_p_m_1_1_matrix3_abfefafb4ac230a5bd3db98b7c3107525}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!CreateTranslation@{CreateTranslation}}
+\index{CreateTranslation@{CreateTranslation}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateTranslation()}{CreateTranslation()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ Matrix3\+::\+Create\+Translation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 228 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_afe475418065de54de70f0684c680dd8a}\label{struct_g_p_m_1_1_matrix3_afe475418065de54de70f0684c680dd8a}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Determinant@{Determinant}}
+\index{Determinant@{Determinant}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Determinant()}{Determinant()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T Matrix3\+::\+Determinant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculates the determinant of the matrix. 
+
+\begin{DoxyReturn}{Returns}
+The determinant in any arithmetic type you want 
+\end{DoxyReturn}
+
+
+Definition at line 105 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a8b767e09d2a3a9bb859fbd62b87fa0e7}\label{struct_g_p_m_1_1_matrix3_a8b767e09d2a3a9bb859fbd62b87fa0e7}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Determinant@{Determinant}}
+\index{Determinant@{Determinant}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Determinant()}{Determinant()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+T \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Determinant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculates the determinant of the matrix. 
+
+\begin{DoxyReturn}{Returns}
+The determinant in any arithmetic type you want 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a3ba0fdaa88bbf7456a1c70c3905cc81a}\label{struct_g_p_m_1_1_matrix3_a3ba0fdaa88bbf7456a1c70c3905cc81a}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Determinant@{Determinant}}
+\index{Determinant@{Determinant}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Determinant()}{Determinant()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T Matrix3\+::\+Determinant (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+matrix3 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Calculates the determinant of the matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+matrix3} & \+: The matrix to get the Determinant from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The determinant in any arithmetic type you want 
+\end{DoxyReturn}
+
+
+Definition at line 113 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_ab01b26023638d8b6cbcf4e5357a96343}\label{struct_g_p_m_1_1_matrix3_ab01b26023638d8b6cbcf4e5357a96343}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Determinant@{Determinant}}
+\index{Determinant@{Determinant}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Determinant()}{Determinant()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+static T \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Determinant (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+matrix3 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Calculates the determinant of the matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+matrix3} & \+: The matrix to get the Determinant from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The determinant in any arithmetic type you want 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_ab72fae508852849716fca0c384fcd028}\label{struct_g_p_m_1_1_matrix3_ab72fae508852849716fca0c384fcd028}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Divide@{Divide}}
+\index{Divide@{Divide}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Divide()}{Divide()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Divide (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{const U}]{p\+\_\+scalar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Divide matrix p\+\_\+left by scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+left} & \+: Multiply this matrix by the other parameter \\
+\hline
+{\em p\+\_\+scalar} & \+: Multiply this scalar to the other parameter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_ab72fae508852849716fca0c384fcd028}\label{struct_g_p_m_1_1_matrix3_ab72fae508852849716fca0c384fcd028}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Divide@{Divide}}
+\index{Divide@{Divide}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Divide()}{Divide()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Divide (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{const U}]{p\+\_\+scalar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Divide matrix p\+\_\+left by scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+left} & \+: Multiply this matrix by the other parameter \\
+\hline
+{\em p\+\_\+scalar} & \+: Multiply this scalar to the other parameter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_ac178e947740e705aabddef81aaf78925}\label{struct_g_p_m_1_1_matrix3_ac178e947740e705aabddef81aaf78925}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Divide@{Divide}}
+\index{Divide@{Divide}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Divide()}{Divide()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ Matrix3\+::\+Divide (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{const U}]{p\+\_\+scalar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 450 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a67d3a94d0a13d313eac264abe3f43f46}\label{struct_g_p_m_1_1_matrix3_a67d3a94d0a13d313eac264abe3f43f46}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Divide@{Divide}}
+\index{Divide@{Divide}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Divide()}{Divide()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& Matrix3\+::\+Divide (\begin{DoxyParamCaption}\item[{U}]{p\+\_\+scalar }\end{DoxyParamCaption})}
+
+
+
+Divide elements by scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+scalar} & \+: The value you want to scale the matrix with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+
+
+Definition at line 440 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a53c013c005b558510f894716d952c4ca}\label{struct_g_p_m_1_1_matrix3_a53c013c005b558510f894716d952c4ca}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Divide@{Divide}}
+\index{Divide@{Divide}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Divide()}{Divide()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Divide (\begin{DoxyParamCaption}\item[{U}]{p\+\_\+scalar }\end{DoxyParamCaption})}
+
+
+
+Divide elements by scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+scalar} & \+: The value you want to scale the matrix with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_aac0b37b6a7ccb82a7639d9ca51c29ca6}\label{struct_g_p_m_1_1_matrix3_aac0b37b6a7ccb82a7639d9ca51c29ca6}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Equals@{Equals}}
+\index{Equals@{Equals}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Equals()}{Equals()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr bool Matrix3\+::\+Equals (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Return true if the two matrices are identical. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The matrix used for the checkup \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True or false 
+\end{DoxyReturn}
+
+
+Definition at line 522 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a141f9bd2fb8a6c19181f22eb73139358}\label{struct_g_p_m_1_1_matrix3_a141f9bd2fb8a6c19181f22eb73139358}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Equals@{Equals}}
+\index{Equals@{Equals}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Equals()}{Equals()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr bool \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Equals (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Return true if the two matrices are identical. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The matrix used for the checkup \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a799d3cad4e4b65a1eddd36f9d1820f55}\label{struct_g_p_m_1_1_matrix3_a799d3cad4e4b65a1eddd36f9d1820f55}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!GetColumn@{GetColumn}}
+\index{GetColumn@{GetColumn}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetColumn()}{GetColumn()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ T $>$ Matrix3\+::\+Get\+Column (\begin{DoxyParamCaption}\item[{const int}]{p\+\_\+column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Attempts to retrieve a column from the matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+column} & \+: Which column to retrieve \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The column in a Vector type 
+\end{DoxyReturn}
+
+
+Definition at line 153 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a1a7b91dafdabc0a61d8d022dec89c86e}\label{struct_g_p_m_1_1_matrix3_a1a7b91dafdabc0a61d8d022dec89c86e}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!GetColumn@{GetColumn}}
+\index{GetColumn@{GetColumn}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetColumn()}{GetColumn()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Get\+Column (\begin{DoxyParamCaption}\item[{const int}]{p\+\_\+column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Attempts to retrieve a column from the matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+column} & \+: Which column to retrieve \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The column in a Vector type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a34d82ea67b507edb7db4999b64cecf6b}\label{struct_g_p_m_1_1_matrix3_a34d82ea67b507edb7db4999b64cecf6b}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!GetRow@{GetRow}}
+\index{GetRow@{GetRow}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetRow()}{GetRow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ T $>$ Matrix3\+::\+Get\+Row (\begin{DoxyParamCaption}\item[{const int}]{p\+\_\+row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Attempts to retrieve a row from the matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+row} & \+: Which row to retrieve \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The row in a Vector type 
+\end{DoxyReturn}
+
+
+Definition at line 176 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_aaafcf3655d2612801643d0ddd51c822b}\label{struct_g_p_m_1_1_matrix3_aaafcf3655d2612801643d0ddd51c822b}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!GetRow@{GetRow}}
+\index{GetRow@{GetRow}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetRow()}{GetRow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Get\+Row (\begin{DoxyParamCaption}\item[{const int}]{p\+\_\+row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Attempts to retrieve a row from the matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+row} & \+: Which row to retrieve \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The row in a Vector type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_ab5ff3ab2ac55d0db8f9e5a6055718241}\label{struct_g_p_m_1_1_matrix3_ab5ff3ab2ac55d0db8f9e5a6055718241}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!IsIdentity@{IsIdentity}}
+\index{IsIdentity@{IsIdentity}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{IsIdentity()}{IsIdentity()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr bool Matrix3\+::\+Is\+Identity (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Return true if the two matrices are identical. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The matrix used for the checkup \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True or false 
+\end{DoxyReturn}
+
+
+Definition at line 539 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a0a5c22cecc84b62021b191b68f2887f0}\label{struct_g_p_m_1_1_matrix3_a0a5c22cecc84b62021b191b68f2887f0}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!IsIdentity@{IsIdentity}}
+\index{IsIdentity@{IsIdentity}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{IsIdentity()}{IsIdentity()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr static bool \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Is\+Identity (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Return true if the two matrices are identical. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The matrix used for the checkup \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a71673e0bd8819606d1d33fafa85a3169}\label{struct_g_p_m_1_1_matrix3_a71673e0bd8819606d1d33fafa85a3169}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!LookAt@{LookAt}}
+\index{LookAt@{LookAt}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{LookAt()}{LookAt()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Look\+At (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+dir,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+up,  }\item[{\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Computes a transformation matrix that looks at a target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a71673e0bd8819606d1d33fafa85a3169}\label{struct_g_p_m_1_1_matrix3_a71673e0bd8819606d1d33fafa85a3169}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!LookAt@{LookAt}}
+\index{LookAt@{LookAt}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{LookAt()}{LookAt()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Look\+At (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+dir,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+up,  }\item[{\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Computes a transformation matrix that looks at a target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a864cf8a149de633d593cac9e1d1b5849}\label{struct_g_p_m_1_1_matrix3_a864cf8a149de633d593cac9e1d1b5849}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [1/10]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Multiply scalar to matrix left. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+left} & \+: Multiply this matrix by the other parameter \\
+\hline
+{\em p\+\_\+right} & \+: Multiply this matrix to the other parameter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a864cf8a149de633d593cac9e1d1b5849}\label{struct_g_p_m_1_1_matrix3_a864cf8a149de633d593cac9e1d1b5849}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [2/10]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Multiply scalar to matrix left. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+left} & \+: Multiply this matrix by the other parameter \\
+\hline
+{\em p\+\_\+right} & \+: Multiply this matrix to the other parameter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a51646c9958fbf74015d285d16636fbaf}\label{struct_g_p_m_1_1_matrix3_a51646c9958fbf74015d285d16636fbaf}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [3/10]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ Matrix3\+::\+Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 401 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_afeb7d76dc4dd1d69481c71490d71cb7b}\label{struct_g_p_m_1_1_matrix3_afeb7d76dc4dd1d69481c71490d71cb7b}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [4/10]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{U}]{p\+\_\+scalar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Multiply scalar to matrix left. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+left} & \+: Multiply this matrix by the other parameter \\
+\hline
+{\em p\+\_\+scalar} & \+: Multiply this scalar to the other parameter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_afeb7d76dc4dd1d69481c71490d71cb7b}\label{struct_g_p_m_1_1_matrix3_afeb7d76dc4dd1d69481c71490d71cb7b}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [5/10]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{U}]{p\+\_\+scalar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Multiply scalar to matrix left. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+left} & \+: Multiply this matrix by the other parameter \\
+\hline
+{\em p\+\_\+scalar} & \+: Multiply this scalar to the other parameter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_ad310e68cfd75450c4fd23ab274cf3d46}\label{struct_g_p_m_1_1_matrix3_ad310e68cfd75450c4fd23ab274cf3d46}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [6/10]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ Matrix3\+::\+Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{U}]{p\+\_\+scalar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 394 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a3a64f4ea04d0f60ad30be02fb5d11c19}\label{struct_g_p_m_1_1_matrix3_a3a64f4ea04d0f60ad30be02fb5d11c19}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [7/10]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& Matrix3\+::\+Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Multiply matrix with another matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: The matrix you want to use as a scalar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+
+
+Definition at line 376 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_ab2966ff9f28a82a785ebcaba6f723916}\label{struct_g_p_m_1_1_matrix3_ab2966ff9f28a82a785ebcaba6f723916}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [8/10]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Multiply matrix with another matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: The matrix you want to use as a scalar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a71dba0271720ac4761c5dc022042333d}\label{struct_g_p_m_1_1_matrix3_a71dba0271720ac4761c5dc022042333d}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [9/10]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{U}]{p\+\_\+scalar }\end{DoxyParamCaption})}
+
+
+
+Multiply scalar to elements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+scalar} & \+: The value you want to scale the matrix with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a708b2a010728cfcb8800fc058c3dd403}\label{struct_g_p_m_1_1_matrix3_a708b2a010728cfcb8800fc058c3dd403}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [10/10]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& Matrix3\+::\+Multiply (\begin{DoxyParamCaption}\item[{U}]{p\+\_\+scalar }\end{DoxyParamCaption})}
+
+
+
+Multiply scalar to elements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+scalar} & \+: The value you want to scale the matrix with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+
+
+Definition at line 366 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a063cafbfbf07b56b4318d3ed0d549d11}\label{struct_g_p_m_1_1_matrix3_a063cafbfbf07b56b4318d3ed0d549d11}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Normalize()}{Normalize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Normalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Returns this matrix with a magnitude of 1. 
+
+\begin{DoxyReturn}{Returns}
+The modified matrix with a magnitude of 1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a130720dc9fcfcd15c88fa024bbc33914}\label{struct_g_p_m_1_1_matrix3_a130720dc9fcfcd15c88fa024bbc33914}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Normalize()}{Normalize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& Matrix3\+::\+Normalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Returns this matrix with a magnitude of 1. 
+
+\begin{DoxyReturn}{Returns}
+The modified matrix with a magnitude of 1 
+\end{DoxyReturn}
+
+
+Definition at line 197 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a830ed6c14aea45c7364c67854074b6f1}\label{struct_g_p_m_1_1_matrix3_a830ed6c14aea45c7364c67854074b6f1}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Normalize()}{Normalize()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Normalize (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Returns this matrix with a magnitude of 1. 
+
+\begin{DoxyReturn}{Returns}
+The modified matrix with a magnitude of 1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a0d9c09ba078bb55bae080613175cff42}\label{struct_g_p_m_1_1_matrix3_a0d9c09ba078bb55bae080613175cff42}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Normalize()}{Normalize()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ Matrix3\+::\+Normalize (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Returns this matrix with a magnitude of 1. 
+
+\begin{DoxyReturn}{Returns}
+The modified matrix with a magnitude of 1 
+\end{DoxyReturn}
+
+
+Definition at line 212 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a7e8148bf685dba0c198c4735237518c8}\label{struct_g_p_m_1_1_matrix3_a7e8148bf685dba0c198c4735237518c8}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr bool \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Return true if the two matrices are different. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The matrix used for the checkup \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_af87115f286b4d13e5db9dedc1e99f256}\label{struct_g_p_m_1_1_matrix3_af87115f286b4d13e5db9dedc1e99f256}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr bool Matrix3\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Return true if the two matrices are different. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The matrix used for the checkup \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True or false 
+\end{DoxyReturn}
+
+
+Definition at line 551 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a238ba87cb63ccde6b4071c0bfdb038bd}\label{struct_g_p_m_1_1_matrix3_a238ba87cb63ccde6b4071c0bfdb038bd}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+T \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::operator() (\begin{DoxyParamCaption}\item[{const int}]{p\+\_\+row,  }\item[{const int}]{p\+\_\+col }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_adfd81336eeca5977842ae1325d36109e}\label{struct_g_p_m_1_1_matrix3_adfd81336eeca5977842ae1325d36109e}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T Matrix3\+::operator() (\begin{DoxyParamCaption}\item[{const int}]{p\+\_\+row,  }\item[{const int}]{p\+\_\+col }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 506 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_aff84576c749b4f55ec66464a2d98b282}\label{struct_g_p_m_1_1_matrix3_aff84576c749b4f55ec66464a2d98b282}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ Matrix3\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Multiply matrix to the current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: Multiply this matrix to the current one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+
+
+Definition at line 408 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_aa99f12ee05dfeb5921353c7c2da0ea47}\label{struct_g_p_m_1_1_matrix3_aa99f12ee05dfeb5921353c7c2da0ea47}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$class U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Multiply matrix to the current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: Multiply this matrix to the current one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_aa351ad8aa1804fc8e0ed9275a586d7f6}\label{struct_g_p_m_1_1_matrix3_aa351ad8aa1804fc8e0ed9275a586d7f6}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ Matrix3\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const U}]{p\+\_\+scalar }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Multiply matrix to the current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+scalar} & \+: Multiply this matrix to the scalar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+
+
+Definition at line 415 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a6fcc8ba6a1b8596053f152dbcacdd270}\label{struct_g_p_m_1_1_matrix3_a6fcc8ba6a1b8596053f152dbcacdd270}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$class U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const U}]{p\+\_\+scalar }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Multiply matrix to the current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+scalar} & \+: Multiply this matrix to the scalar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_aab484efe81e77abf0b62b3fbcc5b7ae3}\label{struct_g_p_m_1_1_matrix3_aab484efe81e77abf0b62b3fbcc5b7ae3}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& Matrix3\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Multiply matrix to the current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: Multiply this matrix to the current one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+
+
+Definition at line 429 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a008523ea79b6f72d9e50b3a2f57c582f}\label{struct_g_p_m_1_1_matrix3_a008523ea79b6f72d9e50b3a2f57c582f}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$class U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Multiply matrix to the current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: Multiply this matrix to the current one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_acac1ac7df7df3d5cbd191b597da3d049}\label{struct_g_p_m_1_1_matrix3_acac1ac7df7df3d5cbd191b597da3d049}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& Matrix3\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const U}]{p\+\_\+scalar }\end{DoxyParamCaption})}
+
+
+
+Multiply matrix to the current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+scalar} & \+: Multiply this matrix to the scalar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+
+
+Definition at line 422 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a14c89614f0fa48598bb9f3b108ab1b44}\label{struct_g_p_m_1_1_matrix3_a14c89614f0fa48598bb9f3b108ab1b44}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$class U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const U}]{p\+\_\+scalar }\end{DoxyParamCaption})}
+
+
+
+Multiply matrix to the current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+scalar} & \+: Multiply this matrix to the scalar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a71e10a456b8f2149004a1af1b1076af4}\label{struct_g_p_m_1_1_matrix3_a71e10a456b8f2149004a1af1b1076af4}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Return the summation of other matrix and current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: The other matrix you want to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_af4e28ed6597cc45ec0a18b109dbc490e}\label{struct_g_p_m_1_1_matrix3_af4e28ed6597cc45ec0a18b109dbc490e}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ Matrix3\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Return the summation of other matrix and current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: The other matrix you want to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+
+
+Definition at line 313 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_acc5fcea13e9f2ff873a0fa4c1f365950}\label{struct_g_p_m_1_1_matrix3_acc5fcea13e9f2ff873a0fa4c1f365950}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Add other matrix to the current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: The other matrix you want to add to the current one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_ae52eb0e3f515a6ac0b09e99b2f89d9ca}\label{struct_g_p_m_1_1_matrix3_ae52eb0e3f515a6ac0b09e99b2f89d9ca}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& Matrix3\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Add other matrix to the current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: The other matrix you want to add to the current one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+
+
+Definition at line 320 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_ad01d73cdf12e12574100762463350add}\label{struct_g_p_m_1_1_matrix3_ad01d73cdf12e12574100762463350add}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Return the subtraction of other matrix and current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: The matrix you want to subtract to the current one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_aba112bc1f8914d1a67f100ebe2ea9d67}\label{struct_g_p_m_1_1_matrix3_aba112bc1f8914d1a67f100ebe2ea9d67}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ Matrix3\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Return the subtraction of other matrix and current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: The matrix you want to subtract to the current one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+
+
+Definition at line 348 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a941784b51d9e213a9ee1a692424f12af}\label{struct_g_p_m_1_1_matrix3_a941784b51d9e213a9ee1a692424f12af}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Subtract other matrix to the current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: The matrix you want to subtract to the current one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a866b0146d47a90d12e73481e1d233782}\label{struct_g_p_m_1_1_matrix3_a866b0146d47a90d12e73481e1d233782}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& Matrix3\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Subtract other matrix to the current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: The matrix you want to subtract to the current one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+
+
+Definition at line 355 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_ad7ca84a8c1cfeaac6e878329d139bbb0}\label{struct_g_p_m_1_1_matrix3_ad7ca84a8c1cfeaac6e878329d139bbb0}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator/@{operator/}}
+\index{operator/@{operator/}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$class U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::operator/ (\begin{DoxyParamCaption}\item[{const U}]{p\+\_\+scalar }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Divide matrix p\+\_\+left by scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+scalar} & \+: the scalar to divide \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a4bb676ae89519cdcb917356b95e02597}\label{struct_g_p_m_1_1_matrix3_a4bb676ae89519cdcb917356b95e02597}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator/@{operator/}}
+\index{operator/@{operator/}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$class U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ Matrix3\+::operator/ (\begin{DoxyParamCaption}\item[{const U}]{p\+\_\+scalar }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Divide matrix p\+\_\+left by scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+scalar} & \+: the scalar to divide \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+
+
+Definition at line 457 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a0eac2a2068f45d0de79d49b4ffdc00ae}\label{struct_g_p_m_1_1_matrix3_a0eac2a2068f45d0de79d49b4ffdc00ae}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator/=()}{operator/=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$class U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& Matrix3\+::operator/= (\begin{DoxyParamCaption}\item[{const U}]{p\+\_\+scalar }\end{DoxyParamCaption})}
+
+
+
+Divide elements by scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+scalar} & \+: The value you want to divide the matrix by \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+
+
+Definition at line 464 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a1f53a9b89c8a0c3b91e92bdec55b656c}\label{struct_g_p_m_1_1_matrix3_a1f53a9b89c8a0c3b91e92bdec55b656c}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator/=()}{operator/=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$class U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::operator/= (\begin{DoxyParamCaption}\item[{const U}]{p\+\_\+scalar }\end{DoxyParamCaption})}
+
+
+
+Divide elements by scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+scalar} & \+: The value you want to divide the matrix by \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a5209c1269dc2d9cd5c942555aaad1980}\label{struct_g_p_m_1_1_matrix3_a5209c1269dc2d9cd5c942555aaad1980}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& Matrix3\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Assignment operator for \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The matrix to construct from \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 63 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_aab9323aff16d8daa2e5bed995b2ee1ac}\label{struct_g_p_m_1_1_matrix3_aab9323aff16d8daa2e5bed995b2ee1ac}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Assignment operator for \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The matrix to construct from \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_af6a5d5a4582e262f39cc74b1acb87220}\label{struct_g_p_m_1_1_matrix3_af6a5d5a4582e262f39cc74b1acb87220}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& Matrix3\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Assignment operator for \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The matrix to construct from \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 73 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a399f1a9b58d1800f748364688fb48ec8}\label{struct_g_p_m_1_1_matrix3_a399f1a9b58d1800f748364688fb48ec8}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Assignment operator for \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The matrix to construct from \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a74840ad285c0d307a39502a2aa433525}\label{struct_g_p_m_1_1_matrix3_a74840ad285c0d307a39502a2aa433525}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& Matrix3\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&\&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Assignment move operator for \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The matrix to construct from \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 81 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a3758fac3929205db7df5a60abc113ba6}\label{struct_g_p_m_1_1_matrix3_a3758fac3929205db7df5a60abc113ba6}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&\&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Assignment move operator for \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The matrix to construct from \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a2e2adc2e27054b21056ec9926b1508ed}\label{struct_g_p_m_1_1_matrix3_a2e2adc2e27054b21056ec9926b1508ed}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&\&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Assignment move operator for \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The matrix to construct from \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a903bdb02c8d55e3bd0c3c1975dd99877}\label{struct_g_p_m_1_1_matrix3_a903bdb02c8d55e3bd0c3c1975dd99877}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& Matrix3\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&\&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+Assignment move operator for \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The matrix to construct from \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 91 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a0c5521f7f030b5642689c9fdbab79fec}\label{struct_g_p_m_1_1_matrix3_a0c5521f7f030b5642689c9fdbab79fec}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr bool \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Return true if the two matrices are identical. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The matrix used for the checkup \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a7d1913d60e183f8b7f397b5cd962fd98}\label{struct_g_p_m_1_1_matrix3_a7d1913d60e183f8b7f397b5cd962fd98}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr bool Matrix3\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Return true if the two matrices are identical. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The matrix used for the checkup \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True or false 
+\end{DoxyReturn}
+
+
+Definition at line 545 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a70888a92a34fce0bdd3d04aa64587d5c}\label{struct_g_p_m_1_1_matrix3_a70888a92a34fce0bdd3d04aa64587d5c}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+T \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const int}]{p\+\_\+index }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_ab3435f334c5282a8aaffbacaa3217fd7}\label{struct_g_p_m_1_1_matrix3_ab3435f334c5282a8aaffbacaa3217fd7}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T Matrix3\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const int}]{p\+\_\+index }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 497 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a0f50ed94731ebf9ec39483633474da51}\label{struct_g_p_m_1_1_matrix3_a0f50ed94731ebf9ec39483633474da51}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Rotate (\begin{DoxyParamCaption}\item[{const float}]{p\+\_\+angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Rotate the current matrix with an angle in degrees. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+angle} & \+: The desired angle in degrees to rotate the matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current matrix rotated 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_aa5769b6a6c95bbcad163e19c9b88adf1}\label{struct_g_p_m_1_1_matrix3_aa5769b6a6c95bbcad163e19c9b88adf1}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& Matrix3\+::\+Rotate (\begin{DoxyParamCaption}\item[{const float}]{p\+\_\+angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Rotate the current matrix with an angle in degrees. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+angle} & \+: The desired angle in degrees to rotate the matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current matrix rotated 
+\end{DoxyReturn}
+
+
+Definition at line 236 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a86b184552e51a56b1e95859c212ebc1b}\label{struct_g_p_m_1_1_matrix3_a86b184552e51a56b1e95859c212ebc1b}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Scale@{Scale}}
+\index{Scale@{Scale}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Scale()}{Scale()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& Matrix3\+::\+Scale (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Scale the current matrix with a \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector} & \+: The desired 2D Scale \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current matrix scaled 
+\end{DoxyReturn}
+
+
+Definition at line 258 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a08193ffe9b948db9d4d0f914cda27137}\label{struct_g_p_m_1_1_matrix3_a08193ffe9b948db9d4d0f914cda27137}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Scale@{Scale}}
+\index{Scale@{Scale}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Scale()}{Scale()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Scale (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Scale the current matrix with a \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector} & \+: The desired 2D Scale \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current matrix scaled 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a08d489ed05f9aa1c6616946155cf5b51}\label{struct_g_p_m_1_1_matrix3_a08d489ed05f9aa1c6616946155cf5b51}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!SetColumn@{SetColumn}}
+\index{SetColumn@{SetColumn}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetColumn()}{SetColumn()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Set\+Column (\begin{DoxyParamCaption}\item[{const int}]{p\+\_\+column,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Attempts to set a column in the matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+column} & \+: Which column to retrieve \\
+\hline
+{\em p\+\_\+vector} & \+: The values to set in the column \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a30284748fd20ff089f98af29bbecf925}\label{struct_g_p_m_1_1_matrix3_a30284748fd20ff089f98af29bbecf925}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!SetColumn@{SetColumn}}
+\index{SetColumn@{SetColumn}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetColumn()}{SetColumn()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+constexpr void Matrix3\+::\+Set\+Column (\begin{DoxyParamCaption}\item[{const int}]{p\+\_\+column,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Attempts to set a column in the matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+column} & \+: Which column to retrieve \\
+\hline
+{\em p\+\_\+vector} & \+: The values to set in the column \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 164 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_ac658918d96b8937c04acec99fa657be9}\label{struct_g_p_m_1_1_matrix3_ac658918d96b8937c04acec99fa657be9}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!SetRow@{SetRow}}
+\index{SetRow@{SetRow}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetRow()}{SetRow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+constexpr void Matrix3\+::\+Set\+Row (\begin{DoxyParamCaption}\item[{const int}]{p\+\_\+row,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Attempts to set a row in the matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+row} & \+: Which row to retrieve \\
+\hline
+{\em p\+\_\+vector} & \+: The values to set in the row \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 186 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_abcf9ba8b08e340b89deb0867f12484a6}\label{struct_g_p_m_1_1_matrix3_abcf9ba8b08e340b89deb0867f12484a6}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!SetRow@{SetRow}}
+\index{SetRow@{SetRow}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetRow()}{SetRow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Set\+Row (\begin{DoxyParamCaption}\item[{const int}]{p\+\_\+row,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Attempts to set a row in the matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+row} & \+: Which row to retrieve \\
+\hline
+{\em p\+\_\+vector} & \+: The values to set in the row \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a96f21ad9393460a4a24148ddda50e0b2}\label{struct_g_p_m_1_1_matrix3_a96f21ad9393460a4a24148ddda50e0b2}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Subtract@{Subtract}}
+\index{Subtract@{Subtract}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Subtract()}{Subtract()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Subtract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Subtract left matrix to the right matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+left} & \+: The first matrix you want to subtract to \\
+\hline
+{\em p\+\_\+right} & \+: The second matrix to be subtracted from the first one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a96f21ad9393460a4a24148ddda50e0b2}\label{struct_g_p_m_1_1_matrix3_a96f21ad9393460a4a24148ddda50e0b2}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Subtract@{Subtract}}
+\index{Subtract@{Subtract}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Subtract()}{Subtract()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Subtract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Subtract left matrix to the right matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+left} & \+: The first matrix you want to subtract to \\
+\hline
+{\em p\+\_\+right} & \+: The second matrix to be subtracted from the first one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a85a5565f644d5a5c8cac2db1f30135d1}\label{struct_g_p_m_1_1_matrix3_a85a5565f644d5a5c8cac2db1f30135d1}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Subtract@{Subtract}}
+\index{Subtract@{Subtract}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Subtract()}{Subtract()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ Matrix3\+::\+Subtract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 341 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_acdc0a89007bc9cf043c5b97a767b8a99}\label{struct_g_p_m_1_1_matrix3_acdc0a89007bc9cf043c5b97a767b8a99}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Subtract@{Subtract}}
+\index{Subtract@{Subtract}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Subtract()}{Subtract()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& Matrix3\+::\+Subtract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Subtract other matrix to the current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: The matrix you want to subtract to the current one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+
+
+Definition at line 331 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_ac5746f05996568ba108b30ee58df36ef}\label{struct_g_p_m_1_1_matrix3_ac5746f05996568ba108b30ee58df36ef}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Subtract@{Subtract}}
+\index{Subtract@{Subtract}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Subtract()}{Subtract()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Subtract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Subtract other matrix to the current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: The matrix you want to subtract to the current one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_af6e43ce53baf78788c8a1a694de5d82a}\label{struct_g_p_m_1_1_matrix3_af6e43ce53baf78788c8a1a694de5d82a}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!ToString@{ToString}}
+\index{ToString@{ToString}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr std\+::string Matrix3\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+function used to debug values from the matrix 
+
+
+
+Definition at line 477 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a1c3fbef860ea7e374635bbb13b7ec342}\label{struct_g_p_m_1_1_matrix3_a1c3fbef860ea7e374635bbb13b7ec342}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!ToString@{ToString}}
+\index{ToString@{ToString}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr std\+::string \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+function used to debug values from the matrix 
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_ae95766f57617d3cd348e3058616ed62a}\label{struct_g_p_m_1_1_matrix3_ae95766f57617d3cd348e3058616ed62a}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!ToString@{ToString}}
+\index{ToString@{ToString}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr static std\+::string \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::To\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Function used to debug values from the matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+matrix} & The matrix to print \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a975279c3639ff98f763d159201a7d696}\label{struct_g_p_m_1_1_matrix3_a975279c3639ff98f763d159201a7d696}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!ToString@{ToString}}
+\index{ToString@{ToString}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr std\+::string Matrix3\+::\+To\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Function used to debug values from the matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+matrix} & The matrix to print \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 487 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a6fb48d7d3abe9787efb66b2da2b7480e}\label{struct_g_p_m_1_1_matrix3_a6fb48d7d3abe9787efb66b2da2b7480e}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Translate@{Translate}}
+\index{Translate@{Translate}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Translate()}{Translate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Translate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Translates the current matrix with a \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector} & \+: The desired 2D off-\/set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current matrix translated 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a0f695220f5522c10538b6259a4f81d06}\label{struct_g_p_m_1_1_matrix3_a0f695220f5522c10538b6259a4f81d06}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Translate@{Translate}}
+\index{Translate@{Translate}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Translate()}{Translate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& Matrix3\+::\+Translate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}$<$ U $>$ \&}]{p\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Translates the current matrix with a \mbox{\hyperlink{struct_g_p_m_1_1_vector2}{Vector2}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+vector} & \+: The desired 2D off-\/set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current matrix translated 
+\end{DoxyReturn}
+
+
+Definition at line 219 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_af3ce04e7a65fc80d62364aa5e2a85c46}\label{struct_g_p_m_1_1_matrix3_af3ce04e7a65fc80d62364aa5e2a85c46}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Transpose@{Transpose}}
+\index{Transpose@{Transpose}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Transpose()}{Transpose()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \& Matrix3\+::\+Transpose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Returns this matrix transposed. 
+
+\begin{DoxyReturn}{Returns}
+The same matrix that has its columns exchanged with its rows 
+\end{DoxyReturn}
+
+
+Definition at line 121 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_ac9fde6f618197fb9246eb5fe348171b2}\label{struct_g_p_m_1_1_matrix3_ac9fde6f618197fb9246eb5fe348171b2}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Transpose@{Transpose}}
+\index{Transpose@{Transpose}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Transpose()}{Transpose()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Transpose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Returns this matrix transposed. 
+
+\begin{DoxyReturn}{Returns}
+The same matrix that has its columns exchanged with its rows 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a9a5a2131a36edf2f68f9566bd7726897}\label{struct_g_p_m_1_1_matrix3_a9a5a2131a36edf2f68f9566bd7726897}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Transpose@{Transpose}}
+\index{Transpose@{Transpose}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Transpose()}{Transpose()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ Matrix3\+::\+Transpose (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+matrix3 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Returns this matrix transposed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+matrix3} & \+: The matrix to get the Transpose from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The same matrix that has its columns exchanged with its rows 
+\end{DoxyReturn}
+
+
+Definition at line 136 of file Matrix3.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_a46469f5c645351f8aee39bf13eb466b5}\label{struct_g_p_m_1_1_matrix3_a46469f5c645351f8aee39bf13eb466b5}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!Transpose@{Transpose}}
+\index{Transpose@{Transpose}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Transpose()}{Transpose()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::Transpose (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ \&}]{p\+\_\+matrix3 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Returns this matrix transposed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+matrix3} & \+: The matrix to get the Transpose from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The same matrix that has its columns exchanged with its rows 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_af5df0e017e1b6a1a41e3039a2f26cf02}\label{struct_g_p_m_1_1_matrix3_af5df0e017e1b6a1a41e3039a2f26cf02}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!identity@{identity}}
+\index{identity@{identity}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{identity}{identity}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ Matrix3\+::identity\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ 1,0,0,}
+\DoxyCodeLine{                                    0,1,0,}
+\DoxyCodeLine{                                    0,0,1 \}}
+
+\end{DoxyCode}
+
+
+This is a const matrix that has 1 in the diagonal and 0 elsewhere. 
+
+
+
+Definition at line 104 of file Matrix3.\+h.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_ab94adb00a3d4baaface5535cbc9e4406}\label{struct_g_p_m_1_1_matrix3_ab94adb00a3d4baaface5535cbc9e4406}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!m\_data@{m\_data}}
+\index{m\_data@{m\_data}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_data}{m\_data}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+T \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{G\+P\+M\+::\+Matrix3}}$<$ T $>$\+::m\+\_\+data}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ 1,0,0,}
+\DoxyCodeLine{                        0,1,0,}
+\DoxyCodeLine{                        0,0,1 \}}
+
+\end{DoxyCode}
+
+
+Definition at line 15 of file Matrix3.\+h.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix3_ad80f86cf442d6413c331b00530ead791}\label{struct_g_p_m_1_1_matrix3_ad80f86cf442d6413c331b00530ead791}} 
+\index{GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}!zero@{zero}}
+\index{zero@{zero}!GPM::Matrix3$<$ T $>$@{GPM::Matrix3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{zero}{zero}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ Matrix3\+::zero\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ 0,0,0,}
+\DoxyCodeLine{                                0,0,0,}
+\DoxyCodeLine{                                0,0,0 \}}
+
+\end{DoxyCode}
+
+
+This is a const matrix that has 0 everywhere. 
+
+
+
+Definition at line 109 of file Matrix3.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+G\+P\+M/include/\+G\+P\+M/\+Matrix/\mbox{\hyperlink{_g_p_m_2include_2_g_p_m_2_matrix_2_matrix3_8h}{Matrix3.\+h}}\item 
+G\+P\+M/include/\+G\+P\+M/\+Matrix/\mbox{\hyperlink{_g_p_m_2include_2_g_p_m_2_matrix_2_matrix3_8inl}{Matrix3.\+inl}}\end{DoxyCompactItemize}

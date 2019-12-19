@@ -1,0 +1,2356 @@
+\hypertarget{struct_g_p_m_1_1_matrix4}{}\doxysection{G\+PM\+::Matrix4$<$ T $>$ Struct Template Reference}
+\label{struct_g_p_m_1_1_matrix4}\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Matrix4.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_ad8be814de00c3f515022f62172d96816}{Matrix4}} ()
+\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a4f761d08e2ca5124f57d03f47a7098eb}{$\sim$\+Matrix4}} ()=default
+\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a6147f50f210993796e70f0cbc1b9af24}{Matrix4}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+matrix)
+\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a554eecba18db9bb22faa82a1d7aad4d4}{Matrix4}} (\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&\&p\+\_\+matrix) noexcept
+\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_ac9aeb3279750b761c57334a424e10a4e}{Matrix4}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ T $>$ \&p\+\_\+vector)
+\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a748e4cfa05bfb7fa94b3890104b48156}{Matrix4}} (const T p\+\_\+data\mbox{[}16\mbox{]})
+\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a86cbd8d00c25ede89970131ff330ef6f}{Matrix4}} (const T p\+\_\+00, const T p\+\_\+01, const T p\+\_\+02, const T p\+\_\+03, const T p\+\_\+10, const T p\+\_\+11, const T p\+\_\+12, const T p\+\_\+13, const T p\+\_\+20, const T p\+\_\+21, const T p\+\_\+22, const T p\+\_\+23, const T p\+\_\+30, const T p\+\_\+31, const T p\+\_\+32, const T p\+\_\+33)
+\item 
+constexpr bool \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a87b21d6499f9686167a1a1b6e1152d61}{is\+Identity}} ()
+\item 
+constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_ab3c6bb089d07887e12d8facad768aa12}{Determinant}} ()
+\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a5cf4c9a503207bf0920546e5243c3074}{Transpose}} ()
+\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a1b573f76c78ba46fa233d68f007b6215}{Normalize}} ()
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a7851999c53320272ef2b8a167f872e05}{Scale}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+scale)
+\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_acfd09f5d20e5be21a6b993aa74851ff2}{Rotate}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+rotation)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a28cc9b4fe6307d00c1fd5de5fdf073f8}{Translate}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+translate)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a6aa4793812526cbc367abc17b6981633}{Transform}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+translate, const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+rotation, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+scale)
+\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a7e4b87e4e00479a39ecc28e031aacfbb}{Adjugate}} ()
+\item 
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a11156f63bc102c186f41d57326fe74bf}{Set\+Column}} (int p\+\_\+column, const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \&p\+\_\+vector)
+\item 
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a929afa09fded5179d5095528c87a2d4b}{Set\+Row}} (int p\+\_\+row, const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \&p\+\_\+vector)
+\item 
+constexpr std\+::string \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a53af69f77e9620443606a78df9a45b50}{To\+String}} () const noexcept
+\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a66fda294e3a5fd5f4a9a2a13c3491ce8}{Add}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Add other matrix to the current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_ac9ee681d309559082ef0e63dc4e43a69}{operator+}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other) const
+\begin{DoxyCompactList}\small\item\em Return the summation of other matrix and current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a27f4bd420a713a7baa894cf7502ce089}{operator+=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Add other matrix to the current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a1c217093eec2707aa0ef44f2bb2ac43e}{Subtract}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Subtract other matrix to the current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_ae4f4b86adbdc9a024e55cc9637caeba3}{operator-\/}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other) const
+\begin{DoxyCompactList}\small\item\em Return the subtraction of other matrix and current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_add40b690e283f3edd7e4eea05beb23d5}{operator-\/=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Subtract other matrix to the current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a388af79504744031b5cf85c32d368a02}{Multiply}} (U p\+\_\+scalar)
+\begin{DoxyCompactList}\small\item\em Multiply scalar to elements. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a34a3a6e6a2215529c2d502c99bbc7e82}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Multiply matrix with another matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ U $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a746fb7beabd8bfba483372befc1605b3}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ U $>$ \&p\+\_\+other)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a5145816b388d594677e7ebb8bf02fea5}{operator$\ast$}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other) const
+\begin{DoxyCompactList}\small\item\em Multiply matrix to the current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_acdf572ddc46f999f5e097c8814c3138c}{operator$\ast$=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Multiply matrix to the current matrix. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a15723ff8ff37d61b0c4e6d8e093aee56}{Equals}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+other) const
+\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a69d2e8d71ace8ba843f61c23188bf704}{operator$\ast$}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \&p\+\_\+vector)
+\item 
+bool \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a234b53d0057f6c3d6a1f0a88216d00b8}{operator==}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+matrix) const
+\item 
+bool \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_af3b717f6f016dbc70306139725051946}{operator!=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+matrix) const
+\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a1f3f9ae555bd089ca1b03721288990c6}{operator=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+matrix)
+\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a05e3429f117a95bd389cbde4f06e2460}{operator=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+matrix)
+\item 
+T \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a8b1c76c0bd2942ff2164d03d1d3231c9}{operator\mbox{[}$\,$\mbox{]}}} (const int p\+\_\+index) const
+\item 
+T \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_ade1018c4ffaa1876346570ce35763471}{operator()}} (const int p\+\_\+row, const int p\+\_\+col) const
+\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a03a68f11dfd2eca94113f435091d1fd4}{Matrix4}} ()
+\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a4f761d08e2ca5124f57d03f47a7098eb}{$\sim$\+Matrix4}} ()=default
+\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a6d5f9ae3ba10344e856756370a06e2af}{Matrix4}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+matrix)
+\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a554eecba18db9bb22faa82a1d7aad4d4}{Matrix4}} (\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&\&p\+\_\+matrix) noexcept
+\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a5d3c5f93ece402f6ee13f439a5993d6c}{Matrix4}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ T $>$ \&p\+\_\+vector)
+\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a969219f58fe4c91ae94fd3ed9d2670ac}{Matrix4}} (const T p\+\_\+data\mbox{[}16\mbox{]})
+\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a706fb341e1450c077140d5cef02bf333}{Matrix4}} (const T p\+\_\+00, const T p\+\_\+01, const T p\+\_\+02, const T p\+\_\+03, const T p\+\_\+10, const T p\+\_\+11, const T p\+\_\+12, const T p\+\_\+13, const T p\+\_\+20, const T p\+\_\+21, const T p\+\_\+22, const T p\+\_\+23, const T p\+\_\+30, const T p\+\_\+31, const T p\+\_\+32, const T p\+\_\+33)
+\item 
+constexpr bool \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_aabf49ceda3fe7dd86a9d18e70d8a68a7}{is\+Identity}} ()
+\item 
+constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a95c1c229febcb2a4bfa45a9e9657cd55}{Determinant}} ()
+\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_abc2317facc5f2911ed4d4d01480db85d}{Transpose}} ()
+\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a2527a2a3630b95b7166d364d03c58e97}{Normalize}} ()
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a7851999c53320272ef2b8a167f872e05}{Scale}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+scale)
+\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a9d20deb10c9656e81fcc00283ba50204}{Rotate}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+rotation)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a28cc9b4fe6307d00c1fd5de5fdf073f8}{Translate}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+translate)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a6aa4793812526cbc367abc17b6981633}{Transform}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+translate, const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+rotation, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+scale)
+\item 
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a5820b6304c6b2d88e8a272fed737786e}{Adjugate}} ()
+\item 
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a333b35a3f4cf57021578314abd15e468}{Set\+Column}} (int p\+\_\+column, const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \&p\+\_\+vector)
+\item 
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_aea8561b4c4026808ba1e9f0a66611a04}{Set\+Row}} (int p\+\_\+row, const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \&p\+\_\+vector)
+\item 
+constexpr std\+::string \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a53af69f77e9620443606a78df9a45b50}{To\+String}} () const noexcept
+\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a66fda294e3a5fd5f4a9a2a13c3491ce8}{Add}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Add other matrix to the current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_ac9ee681d309559082ef0e63dc4e43a69}{operator+}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other) const
+\begin{DoxyCompactList}\small\item\em Return the summation of other matrix and current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a27f4bd420a713a7baa894cf7502ce089}{operator+=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Add other matrix to the current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a1c217093eec2707aa0ef44f2bb2ac43e}{Subtract}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Subtract other matrix to the current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_ae4f4b86adbdc9a024e55cc9637caeba3}{operator-\/}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other) const
+\begin{DoxyCompactList}\small\item\em Return the subtraction of other matrix and current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_add40b690e283f3edd7e4eea05beb23d5}{operator-\/=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Subtract other matrix to the current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a388af79504744031b5cf85c32d368a02}{Multiply}} (U p\+\_\+scalar)
+\begin{DoxyCompactList}\small\item\em Multiply scalar to elements. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a34a3a6e6a2215529c2d502c99bbc7e82}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Multiply matrix with another matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ U $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a746fb7beabd8bfba483372befc1605b3}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ U $>$ \&p\+\_\+other)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a5145816b388d594677e7ebb8bf02fea5}{operator$\ast$}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other) const
+\begin{DoxyCompactList}\small\item\em Multiply matrix to the current matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_acdf572ddc46f999f5e097c8814c3138c}{operator$\ast$=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Multiply matrix to the current matrix. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a5cc7224a057f9155bb18893fe55f597a}{Equals}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+other) const
+\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a69d2e8d71ace8ba843f61c23188bf704}{operator$\ast$}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \&p\+\_\+vector)
+\item 
+bool \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a1d653ce4b3e7786ebd165b304e81c3de}{operator==}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+matrix) const
+\item 
+bool \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_afc6a2b9011263f27b121d8836c747e14}{operator!=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+matrix) const
+\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a1f3f9ae555bd089ca1b03721288990c6}{operator=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+matrix)
+\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a05e3429f117a95bd389cbde4f06e2460}{operator=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+matrix)
+\item 
+T \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a4c8dc4d6e1b156a8f7996fedfdcfed68}{operator\mbox{[}$\,$\mbox{]}}} (const int p\+\_\+index) const
+\item 
+T \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a91c50590d5ea71428c2d483c40837178}{operator()}} (const int p\+\_\+row, const int p\+\_\+col) const
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a7851999c53320272ef2b8a167f872e05}{Scale}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+scale)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a28cc9b4fe6307d00c1fd5de5fdf073f8}{Translate}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+translate)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a6aa4793812526cbc367abc17b6981633}{Transform}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+translate, const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+rotation, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+scale)
+\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a66fda294e3a5fd5f4a9a2a13c3491ce8}{Add}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a15916b18c851d3e799cc8d5da210cbb9}{Add}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+left, const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+right)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_ac9ee681d309559082ef0e63dc4e43a69}{operator+}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other) const
+\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a27f4bd420a713a7baa894cf7502ce089}{operator+=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other)
+\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a1c217093eec2707aa0ef44f2bb2ac43e}{Subtract}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_af105b2ff83b1d143f707f25734c34949}{Subtract}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+left, const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+right)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_ae4f4b86adbdc9a024e55cc9637caeba3}{operator-\/}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other) const
+\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_add40b690e283f3edd7e4eea05beb23d5}{operator-\/=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other)
+\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a388af79504744031b5cf85c32d368a02}{Multiply}} (U p\+\_\+scalar)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a9476e02d65a7b21dad38449cd81cfe80}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+left, U p\+\_\+right)
+\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a34a3a6e6a2215529c2d502c99bbc7e82}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a4bd3d1f6b10a03cee9d96730f2582783}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+left, const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+right)
+\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ U $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a746fb7beabd8bfba483372befc1605b3}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ U $>$ \&p\+\_\+other)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a5145816b388d594677e7ebb8bf02fea5}{operator$\ast$}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other) const
+\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_acdf572ddc46f999f5e097c8814c3138c}{operator$\ast$=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other)
+\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a6a0dfd785fbf4bd9a5ac3dcda1ac9ae4}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+matrix, const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \&p\+\_\+vector)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_acbcc71aad30743b707ec06402d4333ed}{operator$\ast$}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \&p\+\_\+vector)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a8657d71b658cc689a1d97485cd614ca8}{operator=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+matrix)
+\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a05e3429f117a95bd389cbde4f06e2460}{operator=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+matrix)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a7851999c53320272ef2b8a167f872e05}{Scale}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+scale)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a28cc9b4fe6307d00c1fd5de5fdf073f8}{Translate}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+translate)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a6aa4793812526cbc367abc17b6981633}{Transform}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+translate, const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+rotation, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+scale)
+\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a66fda294e3a5fd5f4a9a2a13c3491ce8}{Add}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a15916b18c851d3e799cc8d5da210cbb9}{Add}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+left, const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+right)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_ac9ee681d309559082ef0e63dc4e43a69}{operator+}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other) const
+\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a27f4bd420a713a7baa894cf7502ce089}{operator+=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other)
+\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a1c217093eec2707aa0ef44f2bb2ac43e}{Subtract}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_af105b2ff83b1d143f707f25734c34949}{Subtract}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+left, const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+right)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_ae4f4b86adbdc9a024e55cc9637caeba3}{operator-\/}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other) const
+\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_add40b690e283f3edd7e4eea05beb23d5}{operator-\/=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other)
+\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a388af79504744031b5cf85c32d368a02}{Multiply}} (U p\+\_\+scalar)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a9476e02d65a7b21dad38449cd81cfe80}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+left, U p\+\_\+right)
+\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a34a3a6e6a2215529c2d502c99bbc7e82}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a4bd3d1f6b10a03cee9d96730f2582783}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+left, const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+right)
+\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ U $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a746fb7beabd8bfba483372befc1605b3}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ U $>$ \&p\+\_\+other)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a5145816b388d594677e7ebb8bf02fea5}{operator$\ast$}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other) const
+\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_acdf572ddc46f999f5e097c8814c3138c}{operator$\ast$=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other)
+\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a6a0dfd785fbf4bd9a5ac3dcda1ac9ae4}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+matrix, const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \&p\+\_\+vector)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_acbcc71aad30743b707ec06402d4333ed}{operator$\ast$}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \&p\+\_\+vector)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a8657d71b658cc689a1d97485cd614ca8}{operator=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+matrix)
+\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a05e3429f117a95bd389cbde4f06e2460}{operator=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+matrix)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr static T \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a2c1868b70b695e337df05acae0fe127c}{Determinant}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+matrix)
+\item 
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a437fcc04fa5717c6dfca875fe686d4ca}{Transpose}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+matrix)
+\item 
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_ae0a22ab69dbc11be8823adefe2f0c21d}{Normalize}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+matrix)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a04deca24d822b59fe867c6feff245be1}{Create\+Scale}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+scale)
+\item 
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_ab209dc3a9169b71cefe14bb6773c5ab1}{Create\+Rotation}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+rotation)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a375cdb7fb24adb53845ab920658b7505}{Create\+Translation}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+translate)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a6a707388a37a06e9ad30b8b44f207664}{Create\+Transformation}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+translate, const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+rotation, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+scale)
+\item 
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a9f23efe134031a3351fb0717e72332b6}{Create\+Adjugate}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+matrix)
+\item 
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_acbc45b38d2688ac0074a150073d4bcba}{Inverse}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+matrix)
+\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a5ef6442c3eb353f9e4df8da1ea5d8f52}{Look\+At}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ T $>$ \&p\+\_\+from, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ T $>$ \&p\+\_\+to, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ T $>$ \&p\+\_\+up=\{ 0, 1, 0 \})
+\item 
+static T \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_ab5f3756990532ed846a5e725d6c3995d}{Get\+Minor}} (\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ p\+\_\+minor)
+\item 
+constexpr static std\+::string \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_ad7cd2f11b84312762f03e59e744d66bc}{To\+String}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+matrix)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a8ab68c8fd6b48a98e75e91dc8460f1c7}{Add}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+left, const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+right)
+\begin{DoxyCompactList}\small\item\em Add left matrix to the right matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_adf915f88cd16391983f64014c88158ef}{Subtract}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+left, const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+right)
+\begin{DoxyCompactList}\small\item\em Subtract left matrix to the right matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a7c59dbdd863a29ac22bae53b98e5a316}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+left, U p\+\_\+right)
+\begin{DoxyCompactList}\small\item\em Multiply scalar to matrix left. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a3f9ca6af419a61005d6740a182c3feb5}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+left, const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+right)
+\begin{DoxyCompactList}\small\item\em Multiply matrix to matrix left. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\static \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a80661d46998aa421c3a3825e1a4c0b8f}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+matrix, const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \&p\+\_\+vector)
+\item 
+{\footnotesize template$<$typename U $>$ }\\static void \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_ad35678f3646d62d8820b7b95dbda61a1}{Set}} (\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+matrix, const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other)
+\item 
+constexpr static T \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_ad400e2423d7f9976dea0d9c3875114de}{Determinant}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+matrix)
+\item 
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_ab8405ff2d32cc0bc8903ee71f535c912}{Transpose}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+matrix)
+\item 
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a716388889a21db4e64d805a542f83ebe}{Normalize}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+matrix)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a04deca24d822b59fe867c6feff245be1}{Create\+Scale}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+scale)
+\item 
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a5afea3f92d52eb8ed0b438936c5fc9e5}{Create\+Rotation}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+rotation)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a375cdb7fb24adb53845ab920658b7505}{Create\+Translation}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+translate)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a6a707388a37a06e9ad30b8b44f207664}{Create\+Transformation}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+translate, const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+rotation, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+scale)
+\item 
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_ae1bc5e3bde1b6f58855fa6acf73553a6}{Create\+Adjugate}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+matrix)
+\item 
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_adb99725ecd1e3b5ed8254ee4b452fdd1}{Inverse}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+matrix)
+\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a5ef6442c3eb353f9e4df8da1ea5d8f52}{Look\+At}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ T $>$ \&p\+\_\+from, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ T $>$ \&p\+\_\+to, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ T $>$ \&p\+\_\+up=\{ 0, 1, 0 \})
+\item 
+static T \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a2df2372d3c70b5071cd7b35ad0807183}{Get\+Minor}} (\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$ p\+\_\+minor)
+\item 
+constexpr static std\+::string \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_ab44272fafb81f3578696c4156fcba11d}{To\+String}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+matrix)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a8ab68c8fd6b48a98e75e91dc8460f1c7}{Add}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+left, const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+right)
+\begin{DoxyCompactList}\small\item\em Add left matrix to the right matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_adf915f88cd16391983f64014c88158ef}{Subtract}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+left, const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+right)
+\begin{DoxyCompactList}\small\item\em Subtract left matrix to the right matrix. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a7c59dbdd863a29ac22bae53b98e5a316}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+left, U p\+\_\+right)
+\begin{DoxyCompactList}\small\item\em Multiply scalar to matrix left. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a3f9ca6af419a61005d6740a182c3feb5}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+left, const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+right)
+\begin{DoxyCompactList}\small\item\em Multiply matrix to matrix left. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\static \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a80661d46998aa421c3a3825e1a4c0b8f}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+matrix, const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \&p\+\_\+vector)
+\item 
+{\footnotesize template$<$typename U $>$ }\\static void \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_ad35678f3646d62d8820b7b95dbda61a1}{Set}} (\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+matrix, const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_ab499a7ca366dfe570dbb9338fd752243}{Create\+Scale}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+scale)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_ad960ee8147cda6859a363205c89285f8}{Create\+Translation}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+translate)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a072040dddc0431b0e987eff0f33ae010}{Create\+Transformation}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+translate, const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+rotation, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+scale)
+\item 
+{\footnotesize template$<$typename U $>$ }\\void \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_afc56c23baa1d869b787d664f11855186}{Set}} (\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+matrix, const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_ab499a7ca366dfe570dbb9338fd752243}{Create\+Scale}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+scale)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_ad960ee8147cda6859a363205c89285f8}{Create\+Translation}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+translate)
+\item 
+{\footnotesize template$<$typename U $>$ }\\constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a072040dddc0431b0e987eff0f33ae010}{Create\+Transformation}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+translate, const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+rotation, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&p\+\_\+scale)
+\item 
+{\footnotesize template$<$typename U $>$ }\\void \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_afc56c23baa1d869b787d664f11855186}{Set}} (\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&p\+\_\+matrix, const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&p\+\_\+other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_ac2f02145ca8760abee2730977a0e877f}{m\+\_\+data}} \mbox{[}16\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_afae332184627542e3e86da930a1f7004}{identity}}
+\begin{DoxyCompactList}\small\item\em This is a const matrix that has 1 in the diagonal and 0 elsewhere. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4_a473b1faf31ede957f8bba04e8b755f00}{zero}}
+\begin{DoxyCompactList}\small\item\em This is a const matrix that has 0 everywhere. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+struct G\+P\+M\+::\+Matrix4$<$ T $>$}
+
+A standard 4 by 4 Matrix. Default value is an identity matrix 
+
+Definition at line 14 of file Matrix4.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_ad8be814de00c3f515022f62172d96816}\label{struct_g_p_m_1_1_matrix4_ad8be814de00c3f515022f62172d96816}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Matrix4@{Matrix4}}
+\index{Matrix4@{Matrix4}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix4()}{Matrix4()}\hspace{0.1cm}{\footnotesize\ttfamily [1/12]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a4f761d08e2ca5124f57d03f47a7098eb}\label{struct_g_p_m_1_1_matrix4_a4f761d08e2ca5124f57d03f47a7098eb}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!````~Matrix4@{$\sim$Matrix4}}
+\index{````~Matrix4@{$\sim$Matrix4}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Matrix4()}{~Matrix4()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a6147f50f210993796e70f0cbc1b9af24}\label{struct_g_p_m_1_1_matrix4_a6147f50f210993796e70f0cbc1b9af24}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Matrix4@{Matrix4}}
+\index{Matrix4@{Matrix4}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix4()}{Matrix4()}\hspace{0.1cm}{\footnotesize\ttfamily [2/12]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a554eecba18db9bb22faa82a1d7aad4d4}\label{struct_g_p_m_1_1_matrix4_a554eecba18db9bb22faa82a1d7aad4d4}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Matrix4@{Matrix4}}
+\index{Matrix4@{Matrix4}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix4()}{Matrix4()}\hspace{0.1cm}{\footnotesize\ttfamily [3/12]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&\&}]{p\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_ac9aeb3279750b761c57334a424e10a4e}\label{struct_g_p_m_1_1_matrix4_ac9aeb3279750b761c57334a424e10a4e}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Matrix4@{Matrix4}}
+\index{Matrix4@{Matrix4}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix4()}{Matrix4()}\hspace{0.1cm}{\footnotesize\ttfamily [4/12]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ T $>$ \&}]{p\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a748e4cfa05bfb7fa94b3890104b48156}\label{struct_g_p_m_1_1_matrix4_a748e4cfa05bfb7fa94b3890104b48156}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Matrix4@{Matrix4}}
+\index{Matrix4@{Matrix4}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix4()}{Matrix4()}\hspace{0.1cm}{\footnotesize\ttfamily [5/12]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}} (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+data\mbox{[}16\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a86cbd8d00c25ede89970131ff330ef6f}\label{struct_g_p_m_1_1_matrix4_a86cbd8d00c25ede89970131ff330ef6f}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Matrix4@{Matrix4}}
+\index{Matrix4@{Matrix4}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix4()}{Matrix4()}\hspace{0.1cm}{\footnotesize\ttfamily [6/12]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}} (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+00,  }\item[{const T}]{p\+\_\+01,  }\item[{const T}]{p\+\_\+02,  }\item[{const T}]{p\+\_\+03,  }\item[{const T}]{p\+\_\+10,  }\item[{const T}]{p\+\_\+11,  }\item[{const T}]{p\+\_\+12,  }\item[{const T}]{p\+\_\+13,  }\item[{const T}]{p\+\_\+20,  }\item[{const T}]{p\+\_\+21,  }\item[{const T}]{p\+\_\+22,  }\item[{const T}]{p\+\_\+23,  }\item[{const T}]{p\+\_\+30,  }\item[{const T}]{p\+\_\+31,  }\item[{const T}]{p\+\_\+32,  }\item[{const T}]{p\+\_\+33 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a03a68f11dfd2eca94113f435091d1fd4}\label{struct_g_p_m_1_1_matrix4_a03a68f11dfd2eca94113f435091d1fd4}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Matrix4@{Matrix4}}
+\index{Matrix4@{Matrix4}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix4()}{Matrix4()}\hspace{0.1cm}{\footnotesize\ttfamily [7/12]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr Matrix4\+::\+Matrix4 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 24 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a4f761d08e2ca5124f57d03f47a7098eb}\label{struct_g_p_m_1_1_matrix4_a4f761d08e2ca5124f57d03f47a7098eb}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!````~Matrix4@{$\sim$Matrix4}}
+\index{````~Matrix4@{$\sim$Matrix4}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Matrix4()}{~Matrix4()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a6d5f9ae3ba10344e856756370a06e2af}\label{struct_g_p_m_1_1_matrix4_a6d5f9ae3ba10344e856756370a06e2af}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Matrix4@{Matrix4}}
+\index{Matrix4@{Matrix4}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix4()}{Matrix4()}\hspace{0.1cm}{\footnotesize\ttfamily [8/12]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr Matrix4\+::\+Matrix4 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 30 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a554eecba18db9bb22faa82a1d7aad4d4}\label{struct_g_p_m_1_1_matrix4_a554eecba18db9bb22faa82a1d7aad4d4}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Matrix4@{Matrix4}}
+\index{Matrix4@{Matrix4}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix4()}{Matrix4()}\hspace{0.1cm}{\footnotesize\ttfamily [9/12]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&\&}]{p\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a5d3c5f93ece402f6ee13f439a5993d6c}\label{struct_g_p_m_1_1_matrix4_a5d3c5f93ece402f6ee13f439a5993d6c}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Matrix4@{Matrix4}}
+\index{Matrix4@{Matrix4}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix4()}{Matrix4()}\hspace{0.1cm}{\footnotesize\ttfamily [10/12]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr Matrix4\+::\+Matrix4 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ T $>$ \&}]{p\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 43 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a969219f58fe4c91ae94fd3ed9d2670ac}\label{struct_g_p_m_1_1_matrix4_a969219f58fe4c91ae94fd3ed9d2670ac}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Matrix4@{Matrix4}}
+\index{Matrix4@{Matrix4}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix4()}{Matrix4()}\hspace{0.1cm}{\footnotesize\ttfamily [11/12]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr Matrix4\+::\+Matrix4 (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+data\mbox{[}16\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 51 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a706fb341e1450c077140d5cef02bf333}\label{struct_g_p_m_1_1_matrix4_a706fb341e1450c077140d5cef02bf333}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Matrix4@{Matrix4}}
+\index{Matrix4@{Matrix4}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix4()}{Matrix4()}\hspace{0.1cm}{\footnotesize\ttfamily [12/12]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr Matrix4\+::\+Matrix4 (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+00,  }\item[{const T}]{p\+\_\+01,  }\item[{const T}]{p\+\_\+02,  }\item[{const T}]{p\+\_\+03,  }\item[{const T}]{p\+\_\+10,  }\item[{const T}]{p\+\_\+11,  }\item[{const T}]{p\+\_\+12,  }\item[{const T}]{p\+\_\+13,  }\item[{const T}]{p\+\_\+20,  }\item[{const T}]{p\+\_\+21,  }\item[{const T}]{p\+\_\+22,  }\item[{const T}]{p\+\_\+23,  }\item[{const T}]{p\+\_\+30,  }\item[{const T}]{p\+\_\+31,  }\item[{const T}]{p\+\_\+32,  }\item[{const T}]{p\+\_\+33 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 60 of file Matrix4.\+inl.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a8ab68c8fd6b48a98e75e91dc8460f1c7}\label{struct_g_p_m_1_1_matrix4_a8ab68c8fd6b48a98e75e91dc8460f1c7}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Add left matrix to the right matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+left} & \+: The first matrix you want to add \\
+\hline
+{\em p\+\_\+right} & \+: The second matrix to be added to the first one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a8ab68c8fd6b48a98e75e91dc8460f1c7}\label{struct_g_p_m_1_1_matrix4_a8ab68c8fd6b48a98e75e91dc8460f1c7}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Add left matrix to the right matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+left} & \+: The first matrix you want to add \\
+\hline
+{\em p\+\_\+right} & \+: The second matrix to be added to the first one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a15916b18c851d3e799cc8d5da210cbb9}\label{struct_g_p_m_1_1_matrix4_a15916b18c851d3e799cc8d5da210cbb9}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 358 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a15916b18c851d3e799cc8d5da210cbb9}\label{struct_g_p_m_1_1_matrix4_a15916b18c851d3e799cc8d5da210cbb9}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 358 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a66fda294e3a5fd5f4a9a2a13c3491ce8}\label{struct_g_p_m_1_1_matrix4_a66fda294e3a5fd5f4a9a2a13c3491ce8}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Add other matrix to the current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: The other matrix you want to add to the current one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a66fda294e3a5fd5f4a9a2a13c3491ce8}\label{struct_g_p_m_1_1_matrix4_a66fda294e3a5fd5f4a9a2a13c3491ce8}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Add other matrix to the current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: The other matrix you want to add to the current one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a66fda294e3a5fd5f4a9a2a13c3491ce8}\label{struct_g_p_m_1_1_matrix4_a66fda294e3a5fd5f4a9a2a13c3491ce8}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Definition at line 346 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a66fda294e3a5fd5f4a9a2a13c3491ce8}\label{struct_g_p_m_1_1_matrix4_a66fda294e3a5fd5f4a9a2a13c3491ce8}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Definition at line 346 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a5820b6304c6b2d88e8a272fed737786e}\label{struct_g_p_m_1_1_matrix4_a5820b6304c6b2d88e8a272fed737786e}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Adjugate@{Adjugate}}
+\index{Adjugate@{Adjugate}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Adjugate()}{Adjugate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ Matrix4\+::\+Adjugate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 226 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a7e4b87e4e00479a39ecc28e031aacfbb}\label{struct_g_p_m_1_1_matrix4_a7e4b87e4e00479a39ecc28e031aacfbb}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Adjugate@{Adjugate}}
+\index{Adjugate@{Adjugate}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Adjugate()}{Adjugate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Adjugate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_ae1bc5e3bde1b6f58855fa6acf73553a6}\label{struct_g_p_m_1_1_matrix4_ae1bc5e3bde1b6f58855fa6acf73553a6}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!CreateAdjugate@{CreateAdjugate}}
+\index{CreateAdjugate@{CreateAdjugate}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateAdjugate()}{CreateAdjugate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ Matrix4\+::\+Create\+Adjugate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 254 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a9f23efe134031a3351fb0717e72332b6}\label{struct_g_p_m_1_1_matrix4_a9f23efe134031a3351fb0717e72332b6}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!CreateAdjugate@{CreateAdjugate}}
+\index{CreateAdjugate@{CreateAdjugate}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateAdjugate()}{CreateAdjugate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Create\+Adjugate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_ab209dc3a9169b71cefe14bb6773c5ab1}\label{struct_g_p_m_1_1_matrix4_ab209dc3a9169b71cefe14bb6773c5ab1}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!CreateRotation@{CreateRotation}}
+\index{CreateRotation@{CreateRotation}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateRotation()}{CreateRotation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Create\+Rotation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a5afea3f92d52eb8ed0b438936c5fc9e5}\label{struct_g_p_m_1_1_matrix4_a5afea3f92d52eb8ed0b438936c5fc9e5}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!CreateRotation@{CreateRotation}}
+\index{CreateRotation@{CreateRotation}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateRotation()}{CreateRotation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ Matrix4\+::\+Create\+Rotation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 176 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a04deca24d822b59fe867c6feff245be1}\label{struct_g_p_m_1_1_matrix4_a04deca24d822b59fe867c6feff245be1}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!CreateScale@{CreateScale}}
+\index{CreateScale@{CreateScale}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateScale()}{CreateScale()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Create\+Scale (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a04deca24d822b59fe867c6feff245be1}\label{struct_g_p_m_1_1_matrix4_a04deca24d822b59fe867c6feff245be1}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!CreateScale@{CreateScale}}
+\index{CreateScale@{CreateScale}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateScale()}{CreateScale()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Create\+Scale (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_ab499a7ca366dfe570dbb9338fd752243}\label{struct_g_p_m_1_1_matrix4_ab499a7ca366dfe570dbb9338fd752243}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!CreateScale@{CreateScale}}
+\index{CreateScale@{CreateScale}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateScale()}{CreateScale()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Create\+Scale (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 157 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_ab499a7ca366dfe570dbb9338fd752243}\label{struct_g_p_m_1_1_matrix4_ab499a7ca366dfe570dbb9338fd752243}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!CreateScale@{CreateScale}}
+\index{CreateScale@{CreateScale}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateScale()}{CreateScale()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Create\+Scale (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 157 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a6a707388a37a06e9ad30b8b44f207664}\label{struct_g_p_m_1_1_matrix4_a6a707388a37a06e9ad30b8b44f207664}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!CreateTransformation@{CreateTransformation}}
+\index{CreateTransformation@{CreateTransformation}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateTransformation()}{CreateTransformation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Create\+Transformation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+translate,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+rotation,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a6a707388a37a06e9ad30b8b44f207664}\label{struct_g_p_m_1_1_matrix4_a6a707388a37a06e9ad30b8b44f207664}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!CreateTransformation@{CreateTransformation}}
+\index{CreateTransformation@{CreateTransformation}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateTransformation()}{CreateTransformation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Create\+Transformation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+translate,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+rotation,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a072040dddc0431b0e987eff0f33ae010}\label{struct_g_p_m_1_1_matrix4_a072040dddc0431b0e987eff0f33ae010}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!CreateTransformation@{CreateTransformation}}
+\index{CreateTransformation@{CreateTransformation}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateTransformation()}{CreateTransformation()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Create\+Transformation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+translate,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+rotation,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 214 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a072040dddc0431b0e987eff0f33ae010}\label{struct_g_p_m_1_1_matrix4_a072040dddc0431b0e987eff0f33ae010}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!CreateTransformation@{CreateTransformation}}
+\index{CreateTransformation@{CreateTransformation}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateTransformation()}{CreateTransformation()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Create\+Transformation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+translate,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+rotation,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 214 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a375cdb7fb24adb53845ab920658b7505}\label{struct_g_p_m_1_1_matrix4_a375cdb7fb24adb53845ab920658b7505}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!CreateTranslation@{CreateTranslation}}
+\index{CreateTranslation@{CreateTranslation}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateTranslation()}{CreateTranslation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Create\+Translation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+translate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a375cdb7fb24adb53845ab920658b7505}\label{struct_g_p_m_1_1_matrix4_a375cdb7fb24adb53845ab920658b7505}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!CreateTranslation@{CreateTranslation}}
+\index{CreateTranslation@{CreateTranslation}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateTranslation()}{CreateTranslation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Create\+Translation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+translate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_ad960ee8147cda6859a363205c89285f8}\label{struct_g_p_m_1_1_matrix4_ad960ee8147cda6859a363205c89285f8}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!CreateTranslation@{CreateTranslation}}
+\index{CreateTranslation@{CreateTranslation}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateTranslation()}{CreateTranslation()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Create\+Translation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+translate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 192 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_ad960ee8147cda6859a363205c89285f8}\label{struct_g_p_m_1_1_matrix4_ad960ee8147cda6859a363205c89285f8}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!CreateTranslation@{CreateTranslation}}
+\index{CreateTranslation@{CreateTranslation}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateTranslation()}{CreateTranslation()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Create\+Translation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+translate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 192 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_ab3c6bb089d07887e12d8facad768aa12}\label{struct_g_p_m_1_1_matrix4_ab3c6bb089d07887e12d8facad768aa12}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Determinant@{Determinant}}
+\index{Determinant@{Determinant}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Determinant()}{Determinant()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr T \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Determinant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a95c1c229febcb2a4bfa45a9e9657cd55}\label{struct_g_p_m_1_1_matrix4_a95c1c229febcb2a4bfa45a9e9657cd55}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Determinant@{Determinant}}
+\index{Determinant@{Determinant}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Determinant()}{Determinant()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr T Matrix4\+::\+Determinant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 79 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a2c1868b70b695e337df05acae0fe127c}\label{struct_g_p_m_1_1_matrix4_a2c1868b70b695e337df05acae0fe127c}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Determinant@{Determinant}}
+\index{Determinant@{Determinant}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Determinant()}{Determinant()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr static T \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Determinant (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_ad400e2423d7f9976dea0d9c3875114de}\label{struct_g_p_m_1_1_matrix4_ad400e2423d7f9976dea0d9c3875114de}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Determinant@{Determinant}}
+\index{Determinant@{Determinant}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Determinant()}{Determinant()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr T Matrix4\+::\+Determinant (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 88 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a15723ff8ff37d61b0c4e6d8e093aee56}\label{struct_g_p_m_1_1_matrix4_a15723ff8ff37d61b0c4e6d8e093aee56}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Equals@{Equals}}
+\index{Equals@{Equals}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Equals()}{Equals()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+bool \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Equals (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a5cc7224a057f9155bb18893fe55f597a}\label{struct_g_p_m_1_1_matrix4_a5cc7224a057f9155bb18893fe55f597a}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Equals@{Equals}}
+\index{Equals@{Equals}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Equals()}{Equals()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+bool Matrix4\+::\+Equals (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 545 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a2df2372d3c70b5071cd7b35ad0807183}\label{struct_g_p_m_1_1_matrix4_a2df2372d3c70b5071cd7b35ad0807183}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!GetMinor@{GetMinor}}
+\index{GetMinor@{GetMinor}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetMinor()}{GetMinor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+T Matrix4\+::\+Get\+Minor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$}]{p\+\_\+minor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 307 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_ab5f3756990532ed846a5e725d6c3995d}\label{struct_g_p_m_1_1_matrix4_ab5f3756990532ed846a5e725d6c3995d}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!GetMinor@{GetMinor}}
+\index{GetMinor@{GetMinor}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetMinor()}{GetMinor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+static T \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Get\+Minor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ T $>$}]{p\+\_\+minor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_adb99725ecd1e3b5ed8254ee4b452fdd1}\label{struct_g_p_m_1_1_matrix4_adb99725ecd1e3b5ed8254ee4b452fdd1}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Inverse@{Inverse}}
+\index{Inverse@{Inverse}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Inverse()}{Inverse()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ Matrix4\+::\+Inverse (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 261 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_acbc45b38d2688ac0074a150073d4bcba}\label{struct_g_p_m_1_1_matrix4_acbc45b38d2688ac0074a150073d4bcba}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Inverse@{Inverse}}
+\index{Inverse@{Inverse}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Inverse()}{Inverse()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Inverse (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a87b21d6499f9686167a1a1b6e1152d61}\label{struct_g_p_m_1_1_matrix4_a87b21d6499f9686167a1a1b6e1152d61}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!isIdentity@{isIdentity}}
+\index{isIdentity@{isIdentity}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isIdentity()}{isIdentity()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr bool \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::is\+Identity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_aabf49ceda3fe7dd86a9d18e70d8a68a7}\label{struct_g_p_m_1_1_matrix4_aabf49ceda3fe7dd86a9d18e70d8a68a7}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!isIdentity@{isIdentity}}
+\index{isIdentity@{isIdentity}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isIdentity()}{isIdentity()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr bool Matrix4\+::is\+Identity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 73 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a5ef6442c3eb353f9e4df8da1ea5d8f52}\label{struct_g_p_m_1_1_matrix4_a5ef6442c3eb353f9e4df8da1ea5d8f52}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!LookAt@{LookAt}}
+\index{LookAt@{LookAt}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{LookAt()}{LookAt()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Look\+At (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ T $>$ \&}]{p\+\_\+from,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ T $>$ \&}]{p\+\_\+to,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ T $>$ \&}]{p\+\_\+up = {\ttfamily \{~0,~1,~0~\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a5ef6442c3eb353f9e4df8da1ea5d8f52}\label{struct_g_p_m_1_1_matrix4_a5ef6442c3eb353f9e4df8da1ea5d8f52}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!LookAt@{LookAt}}
+\index{LookAt@{LookAt}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{LookAt()}{LookAt()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Look\+At (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ T $>$ \&}]{p\+\_\+from,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ T $>$ \&}]{p\+\_\+to,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ T $>$ \&}]{p\+\_\+up = {\ttfamily \{~0,~1,~0~\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a3f9ca6af419a61005d6740a182c3feb5}\label{struct_g_p_m_1_1_matrix4_a3f9ca6af419a61005d6740a182c3feb5}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [1/24]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Multiply matrix to matrix left. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+left} & \+: Multiply this matrix by the other parameter \\
+\hline
+{\em p\+\_\+right} & \+: Multiply this matrix to the other parameter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a3f9ca6af419a61005d6740a182c3feb5}\label{struct_g_p_m_1_1_matrix4_a3f9ca6af419a61005d6740a182c3feb5}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [2/24]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Multiply matrix to matrix left. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+left} & \+: Multiply this matrix by the other parameter \\
+\hline
+{\em p\+\_\+right} & \+: Multiply this matrix to the other parameter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a4bd3d1f6b10a03cee9d96730f2582783}\label{struct_g_p_m_1_1_matrix4_a4bd3d1f6b10a03cee9d96730f2582783}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [3/24]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 461 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a4bd3d1f6b10a03cee9d96730f2582783}\label{struct_g_p_m_1_1_matrix4_a4bd3d1f6b10a03cee9d96730f2582783}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [4/24]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 461 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a7c59dbdd863a29ac22bae53b98e5a316}\label{struct_g_p_m_1_1_matrix4_a7c59dbdd863a29ac22bae53b98e5a316}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [5/24]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{U}]{p\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Multiply scalar to matrix left. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+left} & \+: Multiply this matrix by the other parameter \\
+\hline
+{\em p\+\_\+right} & \+: Multiply this scalar to the other parameter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a7c59dbdd863a29ac22bae53b98e5a316}\label{struct_g_p_m_1_1_matrix4_a7c59dbdd863a29ac22bae53b98e5a316}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [6/24]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{U}]{p\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Multiply scalar to matrix left. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+left} & \+: Multiply this matrix by the other parameter \\
+\hline
+{\em p\+\_\+right} & \+: Multiply this scalar to the other parameter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a9476e02d65a7b21dad38449cd81cfe80}\label{struct_g_p_m_1_1_matrix4_a9476e02d65a7b21dad38449cd81cfe80}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [7/24]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{U}]{p\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 433 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a9476e02d65a7b21dad38449cd81cfe80}\label{struct_g_p_m_1_1_matrix4_a9476e02d65a7b21dad38449cd81cfe80}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [8/24]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{U}]{p\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 433 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a80661d46998aa421c3a3825e1a4c0b8f}\label{struct_g_p_m_1_1_matrix4_a80661d46998aa421c3a3825e1a4c0b8f}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [9/24]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+static \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+matrix,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \&}]{p\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a80661d46998aa421c3a3825e1a4c0b8f}\label{struct_g_p_m_1_1_matrix4_a80661d46998aa421c3a3825e1a4c0b8f}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [10/24]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+static \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+matrix,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \&}]{p\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a6a0dfd785fbf4bd9a5ac3dcda1ac9ae4}\label{struct_g_p_m_1_1_matrix4_a6a0dfd785fbf4bd9a5ac3dcda1ac9ae4}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [11/24]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+matrix,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \&}]{p\+\_\+vector }\end{DoxyParamCaption})}
+
+
+
+Definition at line 517 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a6a0dfd785fbf4bd9a5ac3dcda1ac9ae4}\label{struct_g_p_m_1_1_matrix4_a6a0dfd785fbf4bd9a5ac3dcda1ac9ae4}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [12/24]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+matrix,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \&}]{p\+\_\+vector }\end{DoxyParamCaption})}
+
+
+
+Definition at line 517 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a34a3a6e6a2215529c2d502c99bbc7e82}\label{struct_g_p_m_1_1_matrix4_a34a3a6e6a2215529c2d502c99bbc7e82}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [13/24]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Multiply matrix with another matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: The matrix you want to use as a scalar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a34a3a6e6a2215529c2d502c99bbc7e82}\label{struct_g_p_m_1_1_matrix4_a34a3a6e6a2215529c2d502c99bbc7e82}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [14/24]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Multiply matrix with another matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: The matrix you want to use as a scalar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a34a3a6e6a2215529c2d502c99bbc7e82}\label{struct_g_p_m_1_1_matrix4_a34a3a6e6a2215529c2d502c99bbc7e82}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [15/24]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Definition at line 441 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a34a3a6e6a2215529c2d502c99bbc7e82}\label{struct_g_p_m_1_1_matrix4_a34a3a6e6a2215529c2d502c99bbc7e82}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [16/24]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Definition at line 441 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a746fb7beabd8bfba483372befc1605b3}\label{struct_g_p_m_1_1_matrix4_a746fb7beabd8bfba483372befc1605b3}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [17/24]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$U$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a746fb7beabd8bfba483372befc1605b3}\label{struct_g_p_m_1_1_matrix4_a746fb7beabd8bfba483372befc1605b3}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [18/24]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$U$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a746fb7beabd8bfba483372befc1605b3}\label{struct_g_p_m_1_1_matrix4_a746fb7beabd8bfba483372befc1605b3}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [19/24]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$U$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Definition at line 468 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a746fb7beabd8bfba483372befc1605b3}\label{struct_g_p_m_1_1_matrix4_a746fb7beabd8bfba483372befc1605b3}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [20/24]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$U$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Definition at line 468 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a388af79504744031b5cf85c32d368a02}\label{struct_g_p_m_1_1_matrix4_a388af79504744031b5cf85c32d368a02}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [21/24]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{U}]{p\+\_\+scalar }\end{DoxyParamCaption})}
+
+
+
+Multiply scalar to elements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+scalar} & \+: The value you want to scale the matrix with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a388af79504744031b5cf85c32d368a02}\label{struct_g_p_m_1_1_matrix4_a388af79504744031b5cf85c32d368a02}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [22/24]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{U}]{p\+\_\+scalar }\end{DoxyParamCaption})}
+
+
+
+Multiply scalar to elements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+scalar} & \+: The value you want to scale the matrix with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a388af79504744031b5cf85c32d368a02}\label{struct_g_p_m_1_1_matrix4_a388af79504744031b5cf85c32d368a02}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [23/24]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{U}]{p\+\_\+scalar }\end{DoxyParamCaption})}
+
+
+
+Definition at line 421 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a388af79504744031b5cf85c32d368a02}\label{struct_g_p_m_1_1_matrix4_a388af79504744031b5cf85c32d368a02}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [24/24]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{U}]{p\+\_\+scalar }\end{DoxyParamCaption})}
+
+
+
+Definition at line 421 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a1b573f76c78ba46fa233d68f007b6215}\label{struct_g_p_m_1_1_matrix4_a1b573f76c78ba46fa233d68f007b6215}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Normalize()}{Normalize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Normalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a2527a2a3630b95b7166d364d03c58e97}\label{struct_g_p_m_1_1_matrix4_a2527a2a3630b95b7166d364d03c58e97}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Normalize()}{Normalize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& Matrix4\+::\+Normalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 127 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a716388889a21db4e64d805a542f83ebe}\label{struct_g_p_m_1_1_matrix4_a716388889a21db4e64d805a542f83ebe}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Normalize()}{Normalize()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ Matrix4\+::\+Normalize (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 140 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_ae0a22ab69dbc11be8823adefe2f0c21d}\label{struct_g_p_m_1_1_matrix4_ae0a22ab69dbc11be8823adefe2f0c21d}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Normalize()}{Normalize()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Normalize (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_af3b717f6f016dbc70306139725051946}\label{struct_g_p_m_1_1_matrix4_af3b717f6f016dbc70306139725051946}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+bool \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_afc6a2b9011263f27b121d8836c747e14}\label{struct_g_p_m_1_1_matrix4_afc6a2b9011263f27b121d8836c747e14}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+bool Matrix4\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 581 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_ade1018c4ffaa1876346570ce35763471}\label{struct_g_p_m_1_1_matrix4_ade1018c4ffaa1876346570ce35763471}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+T \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator() (\begin{DoxyParamCaption}\item[{const int}]{p\+\_\+row,  }\item[{const int}]{p\+\_\+col }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a91c50590d5ea71428c2d483c40837178}\label{struct_g_p_m_1_1_matrix4_a91c50590d5ea71428c2d483c40837178}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+T Matrix4\+::operator() (\begin{DoxyParamCaption}\item[{const int}]{p\+\_\+row,  }\item[{const int}]{p\+\_\+col }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 623 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a5145816b388d594677e7ebb8bf02fea5}\label{struct_g_p_m_1_1_matrix4_a5145816b388d594677e7ebb8bf02fea5}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Multiply matrix to the current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: Multiply this matrix to the current one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a5145816b388d594677e7ebb8bf02fea5}\label{struct_g_p_m_1_1_matrix4_a5145816b388d594677e7ebb8bf02fea5}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Multiply matrix to the current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: Multiply this matrix to the current one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a5145816b388d594677e7ebb8bf02fea5}\label{struct_g_p_m_1_1_matrix4_a5145816b388d594677e7ebb8bf02fea5}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 498 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a5145816b388d594677e7ebb8bf02fea5}\label{struct_g_p_m_1_1_matrix4_a5145816b388d594677e7ebb8bf02fea5}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 498 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a69d2e8d71ace8ba843f61c23188bf704}\label{struct_g_p_m_1_1_matrix4_a69d2e8d71ace8ba843f61c23188bf704}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \&}]{p\+\_\+vector }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a69d2e8d71ace8ba843f61c23188bf704}\label{struct_g_p_m_1_1_matrix4_a69d2e8d71ace8ba843f61c23188bf704}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \&}]{p\+\_\+vector }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_acbcc71aad30743b707ec06402d4333ed}\label{struct_g_p_m_1_1_matrix4_acbcc71aad30743b707ec06402d4333ed}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename T $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \&}]{p\+\_\+vector }\end{DoxyParamCaption})}
+
+
+
+Definition at line 569 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_acbcc71aad30743b707ec06402d4333ed}\label{struct_g_p_m_1_1_matrix4_acbcc71aad30743b707ec06402d4333ed}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename T $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \&}]{p\+\_\+vector }\end{DoxyParamCaption})}
+
+
+
+Definition at line 569 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_acdf572ddc46f999f5e097c8814c3138c}\label{struct_g_p_m_1_1_matrix4_acdf572ddc46f999f5e097c8814c3138c}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Multiply matrix to the current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: Multiply this matrix to the current one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_acdf572ddc46f999f5e097c8814c3138c}\label{struct_g_p_m_1_1_matrix4_acdf572ddc46f999f5e097c8814c3138c}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Multiply matrix to the current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: Multiply this matrix to the current one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_acdf572ddc46f999f5e097c8814c3138c}\label{struct_g_p_m_1_1_matrix4_acdf572ddc46f999f5e097c8814c3138c}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Definition at line 505 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_acdf572ddc46f999f5e097c8814c3138c}\label{struct_g_p_m_1_1_matrix4_acdf572ddc46f999f5e097c8814c3138c}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Definition at line 505 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_ac9ee681d309559082ef0e63dc4e43a69}\label{struct_g_p_m_1_1_matrix4_ac9ee681d309559082ef0e63dc4e43a69}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Return the summation of other matrix and current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: The other matrix you want to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_ac9ee681d309559082ef0e63dc4e43a69}\label{struct_g_p_m_1_1_matrix4_ac9ee681d309559082ef0e63dc4e43a69}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Return the summation of other matrix and current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: The other matrix you want to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_ac9ee681d309559082ef0e63dc4e43a69}\label{struct_g_p_m_1_1_matrix4_ac9ee681d309559082ef0e63dc4e43a69}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 365 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_ac9ee681d309559082ef0e63dc4e43a69}\label{struct_g_p_m_1_1_matrix4_ac9ee681d309559082ef0e63dc4e43a69}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 365 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a27f4bd420a713a7baa894cf7502ce089}\label{struct_g_p_m_1_1_matrix4_a27f4bd420a713a7baa894cf7502ce089}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Add other matrix to the current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: The other matrix you want to add to the current one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a27f4bd420a713a7baa894cf7502ce089}\label{struct_g_p_m_1_1_matrix4_a27f4bd420a713a7baa894cf7502ce089}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Add other matrix to the current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: The other matrix you want to add to the current one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a27f4bd420a713a7baa894cf7502ce089}\label{struct_g_p_m_1_1_matrix4_a27f4bd420a713a7baa894cf7502ce089}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Definition at line 372 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a27f4bd420a713a7baa894cf7502ce089}\label{struct_g_p_m_1_1_matrix4_a27f4bd420a713a7baa894cf7502ce089}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Definition at line 372 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_ae4f4b86adbdc9a024e55cc9637caeba3}\label{struct_g_p_m_1_1_matrix4_ae4f4b86adbdc9a024e55cc9637caeba3}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Return the subtraction of other matrix and current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: The matrix you want to subtract to the current one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_ae4f4b86adbdc9a024e55cc9637caeba3}\label{struct_g_p_m_1_1_matrix4_ae4f4b86adbdc9a024e55cc9637caeba3}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Return the subtraction of other matrix and current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: The matrix you want to subtract to the current one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_ae4f4b86adbdc9a024e55cc9637caeba3}\label{struct_g_p_m_1_1_matrix4_ae4f4b86adbdc9a024e55cc9637caeba3}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 402 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_ae4f4b86adbdc9a024e55cc9637caeba3}\label{struct_g_p_m_1_1_matrix4_ae4f4b86adbdc9a024e55cc9637caeba3}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 402 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_add40b690e283f3edd7e4eea05beb23d5}\label{struct_g_p_m_1_1_matrix4_add40b690e283f3edd7e4eea05beb23d5}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Subtract other matrix to the current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: The matrix you want to subtract to the current one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_add40b690e283f3edd7e4eea05beb23d5}\label{struct_g_p_m_1_1_matrix4_add40b690e283f3edd7e4eea05beb23d5}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Subtract other matrix to the current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: The matrix you want to subtract to the current one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_add40b690e283f3edd7e4eea05beb23d5}\label{struct_g_p_m_1_1_matrix4_add40b690e283f3edd7e4eea05beb23d5}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Definition at line 409 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_add40b690e283f3edd7e4eea05beb23d5}\label{struct_g_p_m_1_1_matrix4_add40b690e283f3edd7e4eea05beb23d5}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Definition at line 409 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a1f3f9ae555bd089ca1b03721288990c6}\label{struct_g_p_m_1_1_matrix4_a1f3f9ae555bd089ca1b03721288990c6}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a1f3f9ae555bd089ca1b03721288990c6}\label{struct_g_p_m_1_1_matrix4_a1f3f9ae555bd089ca1b03721288990c6}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a8657d71b658cc689a1d97485cd614ca8}\label{struct_g_p_m_1_1_matrix4_a8657d71b658cc689a1d97485cd614ca8}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename T $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})}
+
+
+
+Definition at line 587 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a8657d71b658cc689a1d97485cd614ca8}\label{struct_g_p_m_1_1_matrix4_a8657d71b658cc689a1d97485cd614ca8}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename T $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})}
+
+
+
+Definition at line 587 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a05e3429f117a95bd389cbde4f06e2460}\label{struct_g_p_m_1_1_matrix4_a05e3429f117a95bd389cbde4f06e2460}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a05e3429f117a95bd389cbde4f06e2460}\label{struct_g_p_m_1_1_matrix4_a05e3429f117a95bd389cbde4f06e2460}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a05e3429f117a95bd389cbde4f06e2460}\label{struct_g_p_m_1_1_matrix4_a05e3429f117a95bd389cbde4f06e2460}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})}
+
+
+
+Definition at line 596 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a05e3429f117a95bd389cbde4f06e2460}\label{struct_g_p_m_1_1_matrix4_a05e3429f117a95bd389cbde4f06e2460}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})}
+
+
+
+Definition at line 596 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a1d653ce4b3e7786ebd165b304e81c3de}\label{struct_g_p_m_1_1_matrix4_a1d653ce4b3e7786ebd165b304e81c3de}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+bool Matrix4\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 575 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a234b53d0057f6c3d6a1f0a88216d00b8}\label{struct_g_p_m_1_1_matrix4_a234b53d0057f6c3d6a1f0a88216d00b8}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+bool \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a4c8dc4d6e1b156a8f7996fedfdcfed68}\label{struct_g_p_m_1_1_matrix4_a4c8dc4d6e1b156a8f7996fedfdcfed68}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+T Matrix4\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const int}]{p\+\_\+index }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 614 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a8b1c76c0bd2942ff2164d03d1d3231c9}\label{struct_g_p_m_1_1_matrix4_a8b1c76c0bd2942ff2164d03d1d3231c9}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+T \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const int}]{p\+\_\+index }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_acfd09f5d20e5be21a6b993aa74851ff2}\label{struct_g_p_m_1_1_matrix4_acfd09f5d20e5be21a6b993aa74851ff2}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Rotate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a9d20deb10c9656e81fcc00283ba50204}\label{struct_g_p_m_1_1_matrix4_a9d20deb10c9656e81fcc00283ba50204}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Rotate@{Rotate}}
+\index{Rotate@{Rotate}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Rotate()}{Rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& Matrix4\+::\+Rotate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 168 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a7851999c53320272ef2b8a167f872e05}\label{struct_g_p_m_1_1_matrix4_a7851999c53320272ef2b8a167f872e05}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Scale@{Scale}}
+\index{Scale@{Scale}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Scale()}{Scale()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Scale (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a7851999c53320272ef2b8a167f872e05}\label{struct_g_p_m_1_1_matrix4_a7851999c53320272ef2b8a167f872e05}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Scale@{Scale}}
+\index{Scale@{Scale}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Scale()}{Scale()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Scale (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a7851999c53320272ef2b8a167f872e05}\label{struct_g_p_m_1_1_matrix4_a7851999c53320272ef2b8a167f872e05}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Scale@{Scale}}
+\index{Scale@{Scale}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Scale()}{Scale()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Scale (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 148 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a7851999c53320272ef2b8a167f872e05}\label{struct_g_p_m_1_1_matrix4_a7851999c53320272ef2b8a167f872e05}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Scale@{Scale}}
+\index{Scale@{Scale}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Scale()}{Scale()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Scale (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 148 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_ad35678f3646d62d8820b7b95dbda61a1}\label{struct_g_p_m_1_1_matrix4_ad35678f3646d62d8820b7b95dbda61a1}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Set@{Set}}
+\index{Set@{Set}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+static void \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+matrix,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_ad35678f3646d62d8820b7b95dbda61a1}\label{struct_g_p_m_1_1_matrix4_ad35678f3646d62d8820b7b95dbda61a1}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Set@{Set}}
+\index{Set@{Set}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+static void \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+matrix,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_afc56c23baa1d869b787d664f11855186}\label{struct_g_p_m_1_1_matrix4_afc56c23baa1d869b787d664f11855186}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Set@{Set}}
+\index{Set@{Set}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+void \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+matrix,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 557 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_afc56c23baa1d869b787d664f11855186}\label{struct_g_p_m_1_1_matrix4_afc56c23baa1d869b787d664f11855186}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Set@{Set}}
+\index{Set@{Set}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+void \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+matrix,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 557 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a11156f63bc102c186f41d57326fe74bf}\label{struct_g_p_m_1_1_matrix4_a11156f63bc102c186f41d57326fe74bf}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!SetColumn@{SetColumn}}
+\index{SetColumn@{SetColumn}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetColumn()}{SetColumn()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Set\+Column (\begin{DoxyParamCaption}\item[{int}]{p\+\_\+column,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \&}]{p\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a333b35a3f4cf57021578314abd15e468}\label{struct_g_p_m_1_1_matrix4_a333b35a3f4cf57021578314abd15e468}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!SetColumn@{SetColumn}}
+\index{SetColumn@{SetColumn}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetColumn()}{SetColumn()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr void Matrix4\+::\+Set\+Column (\begin{DoxyParamCaption}\item[{int}]{p\+\_\+column,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \&}]{p\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 288 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_aea8561b4c4026808ba1e9f0a66611a04}\label{struct_g_p_m_1_1_matrix4_aea8561b4c4026808ba1e9f0a66611a04}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!SetRow@{SetRow}}
+\index{SetRow@{SetRow}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetRow()}{SetRow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr void Matrix4\+::\+Set\+Row (\begin{DoxyParamCaption}\item[{int}]{p\+\_\+row,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \&}]{p\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 297 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a929afa09fded5179d5095528c87a2d4b}\label{struct_g_p_m_1_1_matrix4_a929afa09fded5179d5095528c87a2d4b}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!SetRow@{SetRow}}
+\index{SetRow@{SetRow}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetRow()}{SetRow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr void \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Set\+Row (\begin{DoxyParamCaption}\item[{int}]{p\+\_\+row,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{Vector4}}$<$ T $>$ \&}]{p\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_adf915f88cd16391983f64014c88158ef}\label{struct_g_p_m_1_1_matrix4_adf915f88cd16391983f64014c88158ef}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Subtract@{Subtract}}
+\index{Subtract@{Subtract}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Subtract()}{Subtract()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Subtract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Subtract left matrix to the right matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+left} & \+: The first matrix you want to subtract to \\
+\hline
+{\em p\+\_\+right} & \+: The second matrix to be subtracted from the first one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_adf915f88cd16391983f64014c88158ef}\label{struct_g_p_m_1_1_matrix4_adf915f88cd16391983f64014c88158ef}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Subtract@{Subtract}}
+\index{Subtract@{Subtract}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Subtract()}{Subtract()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Subtract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Subtract left matrix to the right matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+left} & \+: The first matrix you want to subtract to \\
+\hline
+{\em p\+\_\+right} & \+: The second matrix to be subtracted from the first one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The copy of the Matrix operation result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_af105b2ff83b1d143f707f25734c34949}\label{struct_g_p_m_1_1_matrix4_af105b2ff83b1d143f707f25734c34949}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Subtract@{Subtract}}
+\index{Subtract@{Subtract}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Subtract()}{Subtract()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Subtract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 395 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_af105b2ff83b1d143f707f25734c34949}\label{struct_g_p_m_1_1_matrix4_af105b2ff83b1d143f707f25734c34949}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Subtract@{Subtract}}
+\index{Subtract@{Subtract}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Subtract()}{Subtract()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Subtract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 395 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a1c217093eec2707aa0ef44f2bb2ac43e}\label{struct_g_p_m_1_1_matrix4_a1c217093eec2707aa0ef44f2bb2ac43e}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Subtract@{Subtract}}
+\index{Subtract@{Subtract}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Subtract()}{Subtract()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Subtract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Subtract other matrix to the current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: The matrix you want to subtract to the current one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a1c217093eec2707aa0ef44f2bb2ac43e}\label{struct_g_p_m_1_1_matrix4_a1c217093eec2707aa0ef44f2bb2ac43e}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Subtract@{Subtract}}
+\index{Subtract@{Subtract}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Subtract()}{Subtract()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Subtract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Subtract other matrix to the current matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \+: The matrix you want to subtract to the current one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current Matrix modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a1c217093eec2707aa0ef44f2bb2ac43e}\label{struct_g_p_m_1_1_matrix4_a1c217093eec2707aa0ef44f2bb2ac43e}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Subtract@{Subtract}}
+\index{Subtract@{Subtract}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Subtract()}{Subtract()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Subtract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Definition at line 383 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a1c217093eec2707aa0ef44f2bb2ac43e}\label{struct_g_p_m_1_1_matrix4_a1c217093eec2707aa0ef44f2bb2ac43e}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Subtract@{Subtract}}
+\index{Subtract@{Subtract}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Subtract()}{Subtract()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Subtract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ U $>$ \&}]{p\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+Definition at line 383 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a53af69f77e9620443606a78df9a45b50}\label{struct_g_p_m_1_1_matrix4_a53af69f77e9620443606a78df9a45b50}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!ToString@{ToString}}
+\index{ToString@{ToString}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr std\+::string \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a53af69f77e9620443606a78df9a45b50}\label{struct_g_p_m_1_1_matrix4_a53af69f77e9620443606a78df9a45b50}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!ToString@{ToString}}
+\index{ToString@{ToString}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr std\+::string \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_ab44272fafb81f3578696c4156fcba11d}\label{struct_g_p_m_1_1_matrix4_ab44272fafb81f3578696c4156fcba11d}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!ToString@{ToString}}
+\index{ToString@{ToString}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr std\+::string Matrix4\+::\+To\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 328 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_ad7cd2f11b84312762f03e59e744d66bc}\label{struct_g_p_m_1_1_matrix4_ad7cd2f11b84312762f03e59e744d66bc}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!ToString@{ToString}}
+\index{ToString@{ToString}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr static std\+::string \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::To\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a6aa4793812526cbc367abc17b6981633}\label{struct_g_p_m_1_1_matrix4_a6aa4793812526cbc367abc17b6981633}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Transform@{Transform}}
+\index{Transform@{Transform}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Transform()}{Transform()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Transform (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+translate,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+rotation,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a6aa4793812526cbc367abc17b6981633}\label{struct_g_p_m_1_1_matrix4_a6aa4793812526cbc367abc17b6981633}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Transform@{Transform}}
+\index{Transform@{Transform}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Transform()}{Transform()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Transform (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+translate,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+rotation,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a6aa4793812526cbc367abc17b6981633}\label{struct_g_p_m_1_1_matrix4_a6aa4793812526cbc367abc17b6981633}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Transform@{Transform}}
+\index{Transform@{Transform}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Transform()}{Transform()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Transform (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+translate,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+rotation,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 205 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a6aa4793812526cbc367abc17b6981633}\label{struct_g_p_m_1_1_matrix4_a6aa4793812526cbc367abc17b6981633}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Transform@{Transform}}
+\index{Transform@{Transform}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Transform()}{Transform()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Transform (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+translate,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+rotation,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 205 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a28cc9b4fe6307d00c1fd5de5fdf073f8}\label{struct_g_p_m_1_1_matrix4_a28cc9b4fe6307d00c1fd5de5fdf073f8}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Translate@{Translate}}
+\index{Translate@{Translate}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Translate()}{Translate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Translate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+translate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a28cc9b4fe6307d00c1fd5de5fdf073f8}\label{struct_g_p_m_1_1_matrix4_a28cc9b4fe6307d00c1fd5de5fdf073f8}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Translate@{Translate}}
+\index{Translate@{Translate}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Translate()}{Translate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Translate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+translate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a28cc9b4fe6307d00c1fd5de5fdf073f8}\label{struct_g_p_m_1_1_matrix4_a28cc9b4fe6307d00c1fd5de5fdf073f8}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Translate@{Translate}}
+\index{Translate@{Translate}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Translate()}{Translate()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Translate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+translate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 183 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a28cc9b4fe6307d00c1fd5de5fdf073f8}\label{struct_g_p_m_1_1_matrix4_a28cc9b4fe6307d00c1fd5de5fdf073f8}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Translate@{Translate}}
+\index{Translate@{Translate}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Translate()}{Translate()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+template$<$typename U $>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Translate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ U $>$ \&}]{p\+\_\+translate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 183 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a5cf4c9a503207bf0920546e5243c3074}\label{struct_g_p_m_1_1_matrix4_a5cf4c9a503207bf0920546e5243c3074}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Transpose@{Transpose}}
+\index{Transpose@{Transpose}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Transpose()}{Transpose()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$\& \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Transpose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_abc2317facc5f2911ed4d4d01480db85d}\label{struct_g_p_m_1_1_matrix4_abc2317facc5f2911ed4d4d01480db85d}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Transpose@{Transpose}}
+\index{Transpose@{Transpose}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Transpose()}{Transpose()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \& Matrix4\+::\+Transpose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line 94 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_ab8405ff2d32cc0bc8903ee71f535c912}\label{struct_g_p_m_1_1_matrix4_ab8405ff2d32cc0bc8903ee71f535c912}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Transpose@{Transpose}}
+\index{Transpose@{Transpose}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Transpose()}{Transpose()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ Matrix4\+::\+Transpose (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line 111 of file Matrix4.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a437fcc04fa5717c6dfca875fe686d4ca}\label{struct_g_p_m_1_1_matrix4_a437fcc04fa5717c6dfca875fe686d4ca}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!Transpose@{Transpose}}
+\index{Transpose@{Transpose}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Transpose()}{Transpose()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+constexpr static \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$T$>$ \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::Transpose (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_afae332184627542e3e86da930a1f7004}\label{struct_g_p_m_1_1_matrix4_afae332184627542e3e86da930a1f7004}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!identity@{identity}}
+\index{identity@{identity}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{identity}{identity}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ Matrix4\+::identity\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ 1,0,0,0,}
+\DoxyCodeLine{                                    0,1,0,0,}
+\DoxyCodeLine{                                    0,0,1,0,}
+\DoxyCodeLine{                                    0,0,0,1 \}}
+
+\end{DoxyCode}
+
+
+This is a const matrix that has 1 in the diagonal and 0 elsewhere. 
+
+
+
+Definition at line 45 of file Matrix4.\+h.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_ac2f02145ca8760abee2730977a0e877f}\label{struct_g_p_m_1_1_matrix4_ac2f02145ca8760abee2730977a0e877f}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!m\_data@{m\_data}}
+\index{m\_data@{m\_data}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_data}{m\_data}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+T \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{G\+P\+M\+::\+Matrix4}}$<$ T $>$\+::m\+\_\+data}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{            1, 0, 0, 0,}
+\DoxyCodeLine{            0, 1, 0, 0,}
+\DoxyCodeLine{            0, 0, 1, 0,}
+\DoxyCodeLine{            0, 0, 0, 1}
+\DoxyCodeLine{        \}}
+
+\end{DoxyCode}
+
+
+Definition at line 19 of file Matrix4.\+h.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_matrix4_a473b1faf31ede957f8bba04e8b755f00}\label{struct_g_p_m_1_1_matrix4_a473b1faf31ede957f8bba04e8b755f00}} 
+\index{GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}!zero@{zero}}
+\index{zero@{zero}!GPM::Matrix4$<$ T $>$@{GPM::Matrix4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{zero}{zero}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ T $>$ Matrix4\+::zero\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ 0,0,0,0,}
+\DoxyCodeLine{                                0,0,0,0,}
+\DoxyCodeLine{                                0,0,0,0,}
+\DoxyCodeLine{                                0,0,0,0 \}}
+
+\end{DoxyCode}
+
+
+This is a const matrix that has 0 everywhere. 
+
+
+
+Definition at line 50 of file Matrix4.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+G\+P\+M/include/\+G\+P\+M/\+Matrix/\mbox{\hyperlink{_g_p_m_2include_2_g_p_m_2_matrix_2_matrix4_8h}{Matrix4.\+h}}\item 
+G\+P\+M/include/\+G\+P\+M/\+Matrix/\mbox{\hyperlink{_g_p_m_2include_2_g_p_m_2_matrix_2_matrix4_8inl}{Matrix4.\+inl}}\end{DoxyCompactItemize}

@@ -1,0 +1,1282 @@
+\hypertarget{class_g_p_m_1_1_tools_1_1_utils}{}\doxysection{G\+PM\+::Tools\+::Utils Class Reference}
+\label{class_g_p_m_1_1_tools_1_1_utils}\index{GPM::Tools::Utils@{GPM::Tools::Utils}}
+
+
+{\ttfamily \#include $<$Utils.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_aa9664afad0d25d9a0386a4f36253ae68}{Utils}} ()=delete
+\item 
+\mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_aa9664afad0d25d9a0386a4f36253ae68}{Utils}} ()=delete
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\static T \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a70b429d76d22e49647c88de1089e7312}{To\+Radians}} (const T p\+\_\+angle)
+\begin{DoxyCompactList}\small\item\em Convert the given angle to radians. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static T \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a49cf5fe0d1934f98f1dc142d929bee40}{To\+Degrees}} (const T p\+\_\+angle)
+\begin{DoxyCompactList}\small\item\em Convert the given angle to degrees in float precision. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static T \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a0a2c9405586569761cf65725ffae5609}{Lerp}} (const T p\+\_\+a, const T p\+\_\+b, const T p\+\_\+alpha)
+\begin{DoxyCompactList}\small\item\em Linearly interpolates between two values. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static T \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_ac13711364b6ff217d1919c0100152afb}{Pow}} (const T p\+\_\+value, const int p\+\_\+exp)
+\begin{DoxyCompactList}\small\item\em Return the pow of a numeric value with an integer exponent. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static T \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_af250d0228b6294311e1f687622f991e4}{Pow}} (const T p\+\_\+value, const float p\+\_\+exp)
+\begin{DoxyCompactList}\small\item\em Return the pow of a numeric value with a float exponent. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static T \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a146bc1e50694a48775a923433b3175df}{Square\+Root}} (const T p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Return the square root of a numeric value. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static T \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_ac02dd6b4a5f4275ca20e53fdda56f434}{Square\+RootF}} (const T p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Return the square root of a numeric value with float precision. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static T \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a9743b654d8cc2be9da76fa6611526760}{Root}} (const T p\+\_\+value, const float p\+\_\+n\+Root)
+\begin{DoxyCompactList}\small\item\em Return the root of a numeric value. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_aa9edb678fe565f1627bde93837114a97}{Greatest\+Common\+Divider}} (const int p\+\_\+a, const int p\+\_\+b)
+\begin{DoxyCompactList}\small\item\em Return the greatest common divider of the two given integers. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a3a20b28872cd4a985ece05b76d1c04a4}{Least\+Common\+Multiple}} (const int p\+\_\+a, const int p\+\_\+b)
+\begin{DoxyCompactList}\small\item\em Return the smallest common divider of the two given integers. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static T \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a00530d3254d0e013e0baf7d24eca625e}{Get\+Decimal\+Part}} (const T p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Return the decimal part of a float as an integer. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static T \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a6bda13b3bf16826929bf53634851b210}{Abs}} (const T p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Return the absolute value of a numeric value. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a7443b72a971353b6db74863b125d00fd}{Sin}} (const double p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Mathematics sinus implementation. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a0f3d4065795e6821a5ee311947402f0e}{SinF}} (const float p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Mathematics sinus implementation with float precision. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a78ee00d0935076bfaf086803bcaa450d}{Cos}} (const double p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Mathematics co-\/sinus implementation. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_aa6e9f34082eb741de10142faf5b90f4d}{CosF}} (const float p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Mathematics co-\/sinus implementation with float precision. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a5a9c560aca8272c0b465343face2c02c}{Tan}} (const double p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Mathematics tangent implementation. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a7f970a0d2699fca807da9998a42de214}{TanF}} (const float p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Mathematics tangent implementation with float precision. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a4ca49fd87d0bbc3e8e9bb77b81c8066a}{Arccos}} (const double p\+\_\+value)
+\item 
+static float \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a8c15175efccf29986a3aff2514dbba1b}{ArccosF}} (const float p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Mathematics arc co-\/sinus implementation with float precision. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a6517f9a7b3881010dbec3bb47cdad33f}{Arcsin}} (const double p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Mathematics arc sinus implementation. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_ad714beff795c073b562465b26a74f9c2}{ArcsinF}} (const float p\+\_\+value)
+\item 
+static double \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a367b9e397cf01aa0aa67e0a972fd1154}{Arctan}} (const double p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Mathematics arc tangent implementation. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a434816723e693fd9ba43fbacec30d1a4}{ArctanF}} (const float p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Mathematics arc tangent implementation with float precision. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a86ccaa1296f3cc684dfebc41141c501f}{Arctan2}} (const double p\+\_\+value\+Yx, const double p\+\_\+value\+Xx)
+\begin{DoxyCompactList}\small\item\em Mathematics arc tangent implementation. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_ad08949ae125eeb47562f55e91a79fa4d}{Arctan2F}} (const float p\+\_\+value\+Yx, const float p\+\_\+value\+Xx)
+\begin{DoxyCompactList}\small\item\em Mathematics arc tangent implementation with float precision. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static T \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a3c3da29c150dea4a840c7278c98c163e}{Sign}} (const T p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Return the sign of the parameter. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static T \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a3937021e2ec90bcbc7fdd30df00cb6ff}{To\+Radians}} (const T p\+\_\+angle)
+\begin{DoxyCompactList}\small\item\em Convert the given angle to radians. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static T \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a3229182e1b8412a14ab3fd79881ebb9a}{To\+Degrees}} (const T p\+\_\+angle)
+\begin{DoxyCompactList}\small\item\em Convert the given angle to degrees in float precision. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static T \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a02110be3e650766a247a252916152c12}{Lerp}} (const T p\+\_\+a, const T p\+\_\+b, const T p\+\_\+alpha)
+\begin{DoxyCompactList}\small\item\em Linearly interpolates between two values. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static T \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a2c8cb81a43cd4d684c33f7156bae770d}{Pow}} (const T p\+\_\+value, const int p\+\_\+exp)
+\begin{DoxyCompactList}\small\item\em Return the pow of a numeric value with an integer exponent. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static T \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_af9ace54a3dfb70888ad21443768d9eda}{Pow}} (const T p\+\_\+value, const float p\+\_\+exp)
+\begin{DoxyCompactList}\small\item\em Return the pow of a numeric value with a float exponent. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static T \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a3ff84a2fd9b4da5d2f5aef2edf00e186}{Square\+Root}} (const T p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Return the square root of a numeric value. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static T \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a4cdde5a333638b4868214b52fef2c837}{Square\+RootF}} (const T p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Return the square root of a numeric value with float precision. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static T \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a3a308fe47085a7782b070a96e939c6b8}{Root}} (const T p\+\_\+value, const float p\+\_\+n\+Root)
+\begin{DoxyCompactList}\small\item\em Return the root of a numeric value. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a9f1cb4e471bdc7f8bf6546ae5f8b8a56}{Greatest\+Common\+Divider}} (const int p\+\_\+a, const int p\+\_\+b)
+\begin{DoxyCompactList}\small\item\em Return the greatest common divider of the two given integers. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a51b256253d4d0eea97d628d8718c3afe}{Least\+Common\+Multiple}} (const int p\+\_\+a, const int p\+\_\+b)
+\begin{DoxyCompactList}\small\item\em Return the smallest common divider of the two given integers. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static T \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_ac9940ddc3b25cddf7097bfd68ef3ee9c}{Get\+Decimal\+Part}} (const T p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Return the decimal part of a float as an integer. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static T \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a30606ba77c3ba7ca20889d10eb07d378}{Abs}} (const T p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Return the absolute value of a numeric value. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a757b33f5f8fbeb73f559aaf150cd6a41}{Sin}} (const double p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Mathematics sinus implementation. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a606c73e7e282f0ebc0207b11d47cbe00}{SinF}} (const float p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Mathematics sinus implementation with float precision. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a8d26947b99d72d4a9735f1a313e12049}{Cos}} (const double p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Mathematics co-\/sinus implementation. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a2afce9b4227ace340e7dc3f8f815e858}{CosF}} (const float p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Mathematics co-\/sinus implementation with float precision. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a10392287cf73becffcd3626081b1e39a}{Tan}} (const double p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Mathematics tangent implementation. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a9e318f2daca5d8e7d79c18d8a98ef258}{TanF}} (const float p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Mathematics tangent implementation with float precision. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a40a9c0ecaddb7ca70c470133af6f98cc}{Arccos}} (const double p\+\_\+value)
+\item 
+static float \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a16aaef409893a96fa08b1f86b3041bc6}{ArccosF}} (const float p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Mathematics arc co-\/sinus implementation with float precision. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a830e3d8bc51375a5cef3a49fdb1f0ef4}{Arcsin}} (const double p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Mathematics arc sinus implementation. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_aeca1924acf96d3cc0e3ccc7719650b05}{ArcsinF}} (const float p\+\_\+value)
+\item 
+static double \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_ae0dc452439bd051e011d9cb24b92b86b}{Arctan}} (const double p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Mathematics arc tangent implementation. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a6664763d7aece46c071807b3036b439c}{ArctanF}} (const float p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Mathematics arc tangent implementation with float precision. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a6486948c594e6b4313c55063efc24dc4}{Arctan2}} (const double p\+\_\+value\+Yx, const double p\+\_\+value\+Xx)
+\begin{DoxyCompactList}\small\item\em Mathematics arc tangent implementation. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_ada08e25abe9c6ed60de19cec4a0bbe3f}{Arctan2F}} (const float p\+\_\+value\+Yx, const float p\+\_\+value\+Xx)
+\begin{DoxyCompactList}\small\item\em Mathematics arc tangent implementation with float precision. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static T \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils_a1d5096c3e8979e326e9ae0415d6271e8}{Sign}} (const T p\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Return the sign of the parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Return the square root of a numeric value 
+\begin{DoxyParams}{Parameters}
+{\em n} & \mbox{\hyperlink{class_g_p_m_1_1_tools_1_1_utils}{Utils}} class provides some simple mathematics tools, such as operations, pow, root, trigonometry stuffs... \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file Utils.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_aa9664afad0d25d9a0386a4f36253ae68}\label{class_g_p_m_1_1_tools_1_1_utils_aa9664afad0d25d9a0386a4f36253ae68}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!Utils@{Utils}}
+\index{Utils@{Utils}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{Utils()}{Utils()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily G\+P\+M\+::\+Tools\+::\+Utils\+::\+Utils (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_aa9664afad0d25d9a0386a4f36253ae68}\label{class_g_p_m_1_1_tools_1_1_utils_aa9664afad0d25d9a0386a4f36253ae68}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!Utils@{Utils}}
+\index{Utils@{Utils}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{Utils()}{Utils()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily G\+P\+M\+::\+Tools\+::\+Utils\+::\+Utils (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a6bda13b3bf16826929bf53634851b210}\label{class_g_p_m_1_1_tools_1_1_utils_a6bda13b3bf16826929bf53634851b210}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!Abs@{Abs}}
+\index{Abs@{Abs}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{Abs()}{Abs()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T G\+P\+M\+::\+Tools\+::\+Utils\+::\+Abs (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return the absolute value of a numeric value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & The value to make absolute \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The absolute value 
+\end{DoxyReturn}
+
+
+Definition at line 175 of file Utils.\+inl.
+
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a30606ba77c3ba7ca20889d10eb07d378}\label{class_g_p_m_1_1_tools_1_1_utils_a30606ba77c3ba7ca20889d10eb07d378}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!Abs@{Abs}}
+\index{Abs@{Abs}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{Abs()}{Abs()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static T G\+P\+M\+::\+Tools\+::\+Utils\+::\+Abs (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Return the absolute value of a numeric value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & The value to make absolute \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The absolute value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a4ca49fd87d0bbc3e8e9bb77b81c8066a}\label{class_g_p_m_1_1_tools_1_1_utils_a4ca49fd87d0bbc3e8e9bb77b81c8066a}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!Arccos@{Arccos}}
+\index{Arccos@{Arccos}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{Arccos()}{Arccos()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double G\+P\+M\+::\+Tools\+::\+Utils\+::\+Arccos (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+@biref Mathematics arc co-\/sinus implementation 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & Value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result in radians 
+\end{DoxyReturn}
+
+
+Definition at line 92 of file Utils.\+inl.
+
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a40a9c0ecaddb7ca70c470133af6f98cc}\label{class_g_p_m_1_1_tools_1_1_utils_a40a9c0ecaddb7ca70c470133af6f98cc}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!Arccos@{Arccos}}
+\index{Arccos@{Arccos}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{Arccos()}{Arccos()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static double G\+P\+M\+::\+Tools\+::\+Utils\+::\+Arccos (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+@biref Mathematics arc co-\/sinus implementation 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & Value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result in radians 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a8c15175efccf29986a3aff2514dbba1b}\label{class_g_p_m_1_1_tools_1_1_utils_a8c15175efccf29986a3aff2514dbba1b}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!ArccosF@{ArccosF}}
+\index{ArccosF@{ArccosF}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{ArccosF()}{ArccosF()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily float G\+P\+M\+::\+Tools\+::\+Utils\+::\+ArccosF (\begin{DoxyParamCaption}\item[{const float}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Mathematics arc co-\/sinus implementation with float precision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & Value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result in radians 
+\end{DoxyReturn}
+
+
+Definition at line 97 of file Utils.\+inl.
+
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a16aaef409893a96fa08b1f86b3041bc6}\label{class_g_p_m_1_1_tools_1_1_utils_a16aaef409893a96fa08b1f86b3041bc6}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!ArccosF@{ArccosF}}
+\index{ArccosF@{ArccosF}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{ArccosF()}{ArccosF()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static float G\+P\+M\+::\+Tools\+::\+Utils\+::\+ArccosF (\begin{DoxyParamCaption}\item[{const float}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Mathematics arc co-\/sinus implementation with float precision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & Value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result in radians 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a6517f9a7b3881010dbec3bb47cdad33f}\label{class_g_p_m_1_1_tools_1_1_utils_a6517f9a7b3881010dbec3bb47cdad33f}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!Arcsin@{Arcsin}}
+\index{Arcsin@{Arcsin}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{Arcsin()}{Arcsin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double G\+P\+M\+::\+Tools\+::\+Utils\+::\+Arcsin (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Mathematics arc sinus implementation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & Value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result in radians 
+\end{DoxyReturn}
+
+
+Definition at line 102 of file Utils.\+inl.
+
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a830e3d8bc51375a5cef3a49fdb1f0ef4}\label{class_g_p_m_1_1_tools_1_1_utils_a830e3d8bc51375a5cef3a49fdb1f0ef4}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!Arcsin@{Arcsin}}
+\index{Arcsin@{Arcsin}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{Arcsin()}{Arcsin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static double G\+P\+M\+::\+Tools\+::\+Utils\+::\+Arcsin (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Mathematics arc sinus implementation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & Value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result in radians 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_ad714beff795c073b562465b26a74f9c2}\label{class_g_p_m_1_1_tools_1_1_utils_ad714beff795c073b562465b26a74f9c2}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!ArcsinF@{ArcsinF}}
+\index{ArcsinF@{ArcsinF}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{ArcsinF()}{ArcsinF()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily float G\+P\+M\+::\+Tools\+::\+Utils\+::\+ArcsinF (\begin{DoxyParamCaption}\item[{const float}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Mathematics arc sinus implementation with float precision 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & Value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result in radians 
+\end{DoxyReturn}
+
+
+Definition at line 107 of file Utils.\+inl.
+
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_aeca1924acf96d3cc0e3ccc7719650b05}\label{class_g_p_m_1_1_tools_1_1_utils_aeca1924acf96d3cc0e3ccc7719650b05}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!ArcsinF@{ArcsinF}}
+\index{ArcsinF@{ArcsinF}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{ArcsinF()}{ArcsinF()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static float G\+P\+M\+::\+Tools\+::\+Utils\+::\+ArcsinF (\begin{DoxyParamCaption}\item[{const float}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Mathematics arc sinus implementation with float precision 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & Value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result in radians 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a367b9e397cf01aa0aa67e0a972fd1154}\label{class_g_p_m_1_1_tools_1_1_utils_a367b9e397cf01aa0aa67e0a972fd1154}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!Arctan@{Arctan}}
+\index{Arctan@{Arctan}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{Arctan()}{Arctan()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double G\+P\+M\+::\+Tools\+::\+Utils\+::\+Arctan (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Mathematics arc tangent implementation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & Value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result in radians 
+\end{DoxyReturn}
+
+
+Definition at line 112 of file Utils.\+inl.
+
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_ae0dc452439bd051e011d9cb24b92b86b}\label{class_g_p_m_1_1_tools_1_1_utils_ae0dc452439bd051e011d9cb24b92b86b}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!Arctan@{Arctan}}
+\index{Arctan@{Arctan}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{Arctan()}{Arctan()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static double G\+P\+M\+::\+Tools\+::\+Utils\+::\+Arctan (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Mathematics arc tangent implementation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & Value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result in radians 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a86ccaa1296f3cc684dfebc41141c501f}\label{class_g_p_m_1_1_tools_1_1_utils_a86ccaa1296f3cc684dfebc41141c501f}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!Arctan2@{Arctan2}}
+\index{Arctan2@{Arctan2}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{Arctan2()}{Arctan2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double G\+P\+M\+::\+Tools\+::\+Utils\+::\+Arctan2 (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+value\+Yx,  }\item[{const double}]{p\+\_\+value\+Xx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Mathematics arc tangent implementation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value\+Yx} & Left value \\
+\hline
+{\em p\+\_\+value\+Xx} & Right value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result in radians 
+\end{DoxyReturn}
+
+
+Definition at line 122 of file Utils.\+inl.
+
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a6486948c594e6b4313c55063efc24dc4}\label{class_g_p_m_1_1_tools_1_1_utils_a6486948c594e6b4313c55063efc24dc4}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!Arctan2@{Arctan2}}
+\index{Arctan2@{Arctan2}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{Arctan2()}{Arctan2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static double G\+P\+M\+::\+Tools\+::\+Utils\+::\+Arctan2 (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+value\+Yx,  }\item[{const double}]{p\+\_\+value\+Xx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Mathematics arc tangent implementation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value\+Yx} & Left value \\
+\hline
+{\em p\+\_\+value\+Xx} & Right value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result in radians 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_ad08949ae125eeb47562f55e91a79fa4d}\label{class_g_p_m_1_1_tools_1_1_utils_ad08949ae125eeb47562f55e91a79fa4d}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!Arctan2F@{Arctan2F}}
+\index{Arctan2F@{Arctan2F}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{Arctan2F()}{Arctan2F()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily float G\+P\+M\+::\+Tools\+::\+Utils\+::\+Arctan2F (\begin{DoxyParamCaption}\item[{const float}]{p\+\_\+value\+Yx,  }\item[{const float}]{p\+\_\+value\+Xx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Mathematics arc tangent implementation with float precision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value\+Yx} & \\
+\hline
+{\em p\+\_\+value\+Xx} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result in radians 
+\end{DoxyReturn}
+
+
+Definition at line 127 of file Utils.\+inl.
+
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_ada08e25abe9c6ed60de19cec4a0bbe3f}\label{class_g_p_m_1_1_tools_1_1_utils_ada08e25abe9c6ed60de19cec4a0bbe3f}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!Arctan2F@{Arctan2F}}
+\index{Arctan2F@{Arctan2F}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{Arctan2F()}{Arctan2F()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static float G\+P\+M\+::\+Tools\+::\+Utils\+::\+Arctan2F (\begin{DoxyParamCaption}\item[{const float}]{p\+\_\+value\+Yx,  }\item[{const float}]{p\+\_\+value\+Xx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Mathematics arc tangent implementation with float precision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value\+Yx} & \\
+\hline
+{\em p\+\_\+value\+Xx} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result in radians 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a6664763d7aece46c071807b3036b439c}\label{class_g_p_m_1_1_tools_1_1_utils_a6664763d7aece46c071807b3036b439c}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!ArctanF@{ArctanF}}
+\index{ArctanF@{ArctanF}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{ArctanF()}{ArctanF()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static float G\+P\+M\+::\+Tools\+::\+Utils\+::\+ArctanF (\begin{DoxyParamCaption}\item[{const float}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Mathematics arc tangent implementation with float precision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & Value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result in radians 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a434816723e693fd9ba43fbacec30d1a4}\label{class_g_p_m_1_1_tools_1_1_utils_a434816723e693fd9ba43fbacec30d1a4}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!ArctanF@{ArctanF}}
+\index{ArctanF@{ArctanF}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{ArctanF()}{ArctanF()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily float G\+P\+M\+::\+Tools\+::\+Utils\+::\+ArctanF (\begin{DoxyParamCaption}\item[{const float}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Mathematics arc tangent implementation with float precision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & Value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result in radians 
+\end{DoxyReturn}
+
+
+Definition at line 117 of file Utils.\+inl.
+
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a8d26947b99d72d4a9735f1a313e12049}\label{class_g_p_m_1_1_tools_1_1_utils_a8d26947b99d72d4a9735f1a313e12049}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!Cos@{Cos}}
+\index{Cos@{Cos}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{Cos()}{Cos()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static double G\+P\+M\+::\+Tools\+::\+Utils\+::\+Cos (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Mathematics co-\/sinus implementation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & Value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result in radians 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a78ee00d0935076bfaf086803bcaa450d}\label{class_g_p_m_1_1_tools_1_1_utils_a78ee00d0935076bfaf086803bcaa450d}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!Cos@{Cos}}
+\index{Cos@{Cos}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{Cos()}{Cos()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double G\+P\+M\+::\+Tools\+::\+Utils\+::\+Cos (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Mathematics co-\/sinus implementation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & Value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result in radians 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file Utils.\+inl.
+
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_aa6e9f34082eb741de10142faf5b90f4d}\label{class_g_p_m_1_1_tools_1_1_utils_aa6e9f34082eb741de10142faf5b90f4d}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!CosF@{CosF}}
+\index{CosF@{CosF}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{CosF()}{CosF()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily float G\+P\+M\+::\+Tools\+::\+Utils\+::\+CosF (\begin{DoxyParamCaption}\item[{const float}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Mathematics co-\/sinus implementation with float precision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & Value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result in radians 
+\end{DoxyReturn}
+
+
+Definition at line 77 of file Utils.\+inl.
+
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a2afce9b4227ace340e7dc3f8f815e858}\label{class_g_p_m_1_1_tools_1_1_utils_a2afce9b4227ace340e7dc3f8f815e858}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!CosF@{CosF}}
+\index{CosF@{CosF}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{CosF()}{CosF()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static float G\+P\+M\+::\+Tools\+::\+Utils\+::\+CosF (\begin{DoxyParamCaption}\item[{const float}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Mathematics co-\/sinus implementation with float precision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & Value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result in radians 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_ac9940ddc3b25cddf7097bfd68ef3ee9c}\label{class_g_p_m_1_1_tools_1_1_utils_ac9940ddc3b25cddf7097bfd68ef3ee9c}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!GetDecimalPart@{GetDecimalPart}}
+\index{GetDecimalPart@{GetDecimalPart}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{GetDecimalPart()}{GetDecimalPart()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static T G\+P\+M\+::\+Tools\+::\+Utils\+::\+Get\+Decimal\+Part (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Return the decimal part of a float as an integer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & The value from which we take the decimal part \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The decimal part 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a00530d3254d0e013e0baf7d24eca625e}\label{class_g_p_m_1_1_tools_1_1_utils_a00530d3254d0e013e0baf7d24eca625e}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!GetDecimalPart@{GetDecimalPart}}
+\index{GetDecimalPart@{GetDecimalPart}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{GetDecimalPart()}{GetDecimalPart()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T G\+P\+M\+::\+Tools\+::\+Utils\+::\+Get\+Decimal\+Part (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return the decimal part of a float as an integer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & The value from which we take the decimal part \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The decimal part 
+\end{DoxyReturn}
+
+
+Definition at line 56 of file Utils.\+inl.
+
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a9f1cb4e471bdc7f8bf6546ae5f8b8a56}\label{class_g_p_m_1_1_tools_1_1_utils_a9f1cb4e471bdc7f8bf6546ae5f8b8a56}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!GreatestCommonDivider@{GreatestCommonDivider}}
+\index{GreatestCommonDivider@{GreatestCommonDivider}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{GreatestCommonDivider()}{GreatestCommonDivider()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static int G\+P\+M\+::\+Tools\+::\+Utils\+::\+Greatest\+Common\+Divider (\begin{DoxyParamCaption}\item[{const int}]{p\+\_\+a,  }\item[{const int}]{p\+\_\+b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Return the greatest common divider of the two given integers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+a} & Left value \\
+\hline
+{\em p\+\_\+b} & Right value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The greatest common divider 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_aa9edb678fe565f1627bde93837114a97}\label{class_g_p_m_1_1_tools_1_1_utils_aa9edb678fe565f1627bde93837114a97}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!GreatestCommonDivider@{GreatestCommonDivider}}
+\index{GreatestCommonDivider@{GreatestCommonDivider}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{GreatestCommonDivider()}{GreatestCommonDivider()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int G\+P\+M\+::\+Tools\+::\+Utils\+::\+Greatest\+Common\+Divider (\begin{DoxyParamCaption}\item[{const int}]{p\+\_\+a,  }\item[{const int}]{p\+\_\+b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return the greatest common divider of the two given integers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+a} & Left value \\
+\hline
+{\em p\+\_\+b} & Right value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The greatest common divider 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file Utils.\+inl.
+
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a51b256253d4d0eea97d628d8718c3afe}\label{class_g_p_m_1_1_tools_1_1_utils_a51b256253d4d0eea97d628d8718c3afe}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!LeastCommonMultiple@{LeastCommonMultiple}}
+\index{LeastCommonMultiple@{LeastCommonMultiple}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{LeastCommonMultiple()}{LeastCommonMultiple()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static int G\+P\+M\+::\+Tools\+::\+Utils\+::\+Least\+Common\+Multiple (\begin{DoxyParamCaption}\item[{const int}]{p\+\_\+a,  }\item[{const int}]{p\+\_\+b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Return the smallest common divider of the two given integers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+a} & Left value \\
+\hline
+{\em p\+\_\+b} & Right value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The least common multiple 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a3a20b28872cd4a985ece05b76d1c04a4}\label{class_g_p_m_1_1_tools_1_1_utils_a3a20b28872cd4a985ece05b76d1c04a4}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!LeastCommonMultiple@{LeastCommonMultiple}}
+\index{LeastCommonMultiple@{LeastCommonMultiple}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{LeastCommonMultiple()}{LeastCommonMultiple()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int G\+P\+M\+::\+Tools\+::\+Utils\+::\+Least\+Common\+Multiple (\begin{DoxyParamCaption}\item[{const int}]{p\+\_\+a,  }\item[{const int}]{p\+\_\+b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return the smallest common divider of the two given integers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+a} & Left value \\
+\hline
+{\em p\+\_\+b} & Right value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The least common multiple 
+\end{DoxyReturn}
+
+
+Definition at line 50 of file Utils.\+inl.
+
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a0a2c9405586569761cf65725ffae5609}\label{class_g_p_m_1_1_tools_1_1_utils_a0a2c9405586569761cf65725ffae5609}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!Lerp@{Lerp}}
+\index{Lerp@{Lerp}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{Lerp()}{Lerp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T G\+P\+M\+::\+Tools\+::\+Utils\+::\+Lerp (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+a,  }\item[{const T}]{p\+\_\+b,  }\item[{const T}]{p\+\_\+alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Linearly interpolates between two values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+a} & Start value \\
+\hline
+{\em p\+\_\+b} & End value \\
+\hline
+{\em p\+\_\+alpha} & Coefficient \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The interpolated value 
+\end{DoxyReturn}
+
+
+Definition at line 26 of file Utils.\+inl.
+
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a02110be3e650766a247a252916152c12}\label{class_g_p_m_1_1_tools_1_1_utils_a02110be3e650766a247a252916152c12}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!Lerp@{Lerp}}
+\index{Lerp@{Lerp}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{Lerp()}{Lerp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static T G\+P\+M\+::\+Tools\+::\+Utils\+::\+Lerp (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+a,  }\item[{const T}]{p\+\_\+b,  }\item[{const T}]{p\+\_\+alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Linearly interpolates between two values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+a} & Start value \\
+\hline
+{\em p\+\_\+b} & End value \\
+\hline
+{\em p\+\_\+alpha} & Coefficient \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The interpolated value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_af250d0228b6294311e1f687622f991e4}\label{class_g_p_m_1_1_tools_1_1_utils_af250d0228b6294311e1f687622f991e4}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!Pow@{Pow}}
+\index{Pow@{Pow}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{Pow()}{Pow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T G\+P\+M\+::\+Tools\+::\+Utils\+::\+Pow (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+value,  }\item[{const float}]{p\+\_\+exp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return the pow of a numeric value with a float exponent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & The value \\
+\hline
+{\em p\+\_\+exp} & The power \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of power 
+\end{DoxyReturn}
+
+
+Definition at line 147 of file Utils.\+inl.
+
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_af9ace54a3dfb70888ad21443768d9eda}\label{class_g_p_m_1_1_tools_1_1_utils_af9ace54a3dfb70888ad21443768d9eda}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!Pow@{Pow}}
+\index{Pow@{Pow}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{Pow()}{Pow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static T G\+P\+M\+::\+Tools\+::\+Utils\+::\+Pow (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+value,  }\item[{const float}]{p\+\_\+exp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Return the pow of a numeric value with a float exponent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & The value \\
+\hline
+{\em p\+\_\+exp} & The power \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of power 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_ac13711364b6ff217d1919c0100152afb}\label{class_g_p_m_1_1_tools_1_1_utils_ac13711364b6ff217d1919c0100152afb}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!Pow@{Pow}}
+\index{Pow@{Pow}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{Pow()}{Pow()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T G\+P\+M\+::\+Tools\+::\+Utils\+::\+Pow (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+value,  }\item[{const int}]{p\+\_\+exp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return the pow of a numeric value with an integer exponent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & The value \\
+\hline
+{\em p\+\_\+exp} & The power \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of power 
+\end{DoxyReturn}
+
+
+Definition at line 140 of file Utils.\+inl.
+
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a2c8cb81a43cd4d684c33f7156bae770d}\label{class_g_p_m_1_1_tools_1_1_utils_a2c8cb81a43cd4d684c33f7156bae770d}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!Pow@{Pow}}
+\index{Pow@{Pow}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{Pow()}{Pow()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static T G\+P\+M\+::\+Tools\+::\+Utils\+::\+Pow (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+value,  }\item[{const int}]{p\+\_\+exp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Return the pow of a numeric value with an integer exponent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & The value \\
+\hline
+{\em p\+\_\+exp} & The power \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of power 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a3a308fe47085a7782b070a96e939c6b8}\label{class_g_p_m_1_1_tools_1_1_utils_a3a308fe47085a7782b070a96e939c6b8}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!Root@{Root}}
+\index{Root@{Root}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{Root()}{Root()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static T G\+P\+M\+::\+Tools\+::\+Utils\+::\+Root (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+value,  }\item[{const float}]{p\+\_\+n\+Root }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Return the root of a numeric value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & Value \\
+\hline
+{\em p\+\_\+n\+Root} & Root \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The root 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a9743b654d8cc2be9da76fa6611526760}\label{class_g_p_m_1_1_tools_1_1_utils_a9743b654d8cc2be9da76fa6611526760}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!Root@{Root}}
+\index{Root@{Root}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{Root()}{Root()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T G\+P\+M\+::\+Tools\+::\+Utils\+::\+Root (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+value,  }\item[{const float}]{p\+\_\+n\+Root }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return the root of a numeric value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & Value \\
+\hline
+{\em p\+\_\+n\+Root} & Root \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The root 
+\end{DoxyReturn}
+
+
+Definition at line 168 of file Utils.\+inl.
+
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a1d5096c3e8979e326e9ae0415d6271e8}\label{class_g_p_m_1_1_tools_1_1_utils_a1d5096c3e8979e326e9ae0415d6271e8}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!Sign@{Sign}}
+\index{Sign@{Sign}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{Sign()}{Sign()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static T G\+P\+M\+::\+Tools\+::\+Utils\+::\+Sign (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Return the sign of the parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & The value to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The sign of p\+\_\+value of type T 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a3c3da29c150dea4a840c7278c98c163e}\label{class_g_p_m_1_1_tools_1_1_utils_a3c3da29c150dea4a840c7278c98c163e}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!Sign@{Sign}}
+\index{Sign@{Sign}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{Sign()}{Sign()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T G\+P\+M\+::\+Tools\+::\+Utils\+::\+Sign (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return the sign of the parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & The value to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The sign of p\+\_\+value of type T 
+\end{DoxyReturn}
+
+
+Definition at line 133 of file Utils.\+inl.
+
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a757b33f5f8fbeb73f559aaf150cd6a41}\label{class_g_p_m_1_1_tools_1_1_utils_a757b33f5f8fbeb73f559aaf150cd6a41}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!Sin@{Sin}}
+\index{Sin@{Sin}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{Sin()}{Sin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static double G\+P\+M\+::\+Tools\+::\+Utils\+::\+Sin (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Mathematics sinus implementation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & Value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result in radians 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a7443b72a971353b6db74863b125d00fd}\label{class_g_p_m_1_1_tools_1_1_utils_a7443b72a971353b6db74863b125d00fd}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!Sin@{Sin}}
+\index{Sin@{Sin}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{Sin()}{Sin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double G\+P\+M\+::\+Tools\+::\+Utils\+::\+Sin (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Mathematics sinus implementation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & Value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result in radians 
+\end{DoxyReturn}
+
+
+Definition at line 62 of file Utils.\+inl.
+
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a0f3d4065795e6821a5ee311947402f0e}\label{class_g_p_m_1_1_tools_1_1_utils_a0f3d4065795e6821a5ee311947402f0e}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!SinF@{SinF}}
+\index{SinF@{SinF}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{SinF()}{SinF()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily float G\+P\+M\+::\+Tools\+::\+Utils\+::\+SinF (\begin{DoxyParamCaption}\item[{const float}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Mathematics sinus implementation with float precision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & Value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result in radians 
+\end{DoxyReturn}
+
+
+Definition at line 67 of file Utils.\+inl.
+
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a606c73e7e282f0ebc0207b11d47cbe00}\label{class_g_p_m_1_1_tools_1_1_utils_a606c73e7e282f0ebc0207b11d47cbe00}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!SinF@{SinF}}
+\index{SinF@{SinF}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{SinF()}{SinF()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static float G\+P\+M\+::\+Tools\+::\+Utils\+::\+SinF (\begin{DoxyParamCaption}\item[{const float}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Mathematics sinus implementation with float precision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & Value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result in radians 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a3ff84a2fd9b4da5d2f5aef2edf00e186}\label{class_g_p_m_1_1_tools_1_1_utils_a3ff84a2fd9b4da5d2f5aef2edf00e186}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!SquareRoot@{SquareRoot}}
+\index{SquareRoot@{SquareRoot}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{SquareRoot()}{SquareRoot()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static T G\+P\+M\+::\+Tools\+::\+Utils\+::\+Square\+Root (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Return the square root of a numeric value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & Value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The square root 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a146bc1e50694a48775a923433b3175df}\label{class_g_p_m_1_1_tools_1_1_utils_a146bc1e50694a48775a923433b3175df}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!SquareRoot@{SquareRoot}}
+\index{SquareRoot@{SquareRoot}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{SquareRoot()}{SquareRoot()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T G\+P\+M\+::\+Tools\+::\+Utils\+::\+Square\+Root (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return the square root of a numeric value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & Value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The square root 
+\end{DoxyReturn}
+
+
+Definition at line 154 of file Utils.\+inl.
+
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a4cdde5a333638b4868214b52fef2c837}\label{class_g_p_m_1_1_tools_1_1_utils_a4cdde5a333638b4868214b52fef2c837}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!SquareRootF@{SquareRootF}}
+\index{SquareRootF@{SquareRootF}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{SquareRootF()}{SquareRootF()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static T G\+P\+M\+::\+Tools\+::\+Utils\+::\+Square\+RootF (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Return the square root of a numeric value with float precision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & The \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result square root 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_ac02dd6b4a5f4275ca20e53fdda56f434}\label{class_g_p_m_1_1_tools_1_1_utils_ac02dd6b4a5f4275ca20e53fdda56f434}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!SquareRootF@{SquareRootF}}
+\index{SquareRootF@{SquareRootF}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{SquareRootF()}{SquareRootF()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T G\+P\+M\+::\+Tools\+::\+Utils\+::\+Square\+RootF (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return the square root of a numeric value with float precision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & The \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result square root 
+\end{DoxyReturn}
+
+
+Definition at line 161 of file Utils.\+inl.
+
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a5a9c560aca8272c0b465343face2c02c}\label{class_g_p_m_1_1_tools_1_1_utils_a5a9c560aca8272c0b465343face2c02c}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!Tan@{Tan}}
+\index{Tan@{Tan}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{Tan()}{Tan()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double G\+P\+M\+::\+Tools\+::\+Utils\+::\+Tan (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Mathematics tangent implementation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & Value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result in radians 
+\end{DoxyReturn}
+
+
+Definition at line 82 of file Utils.\+inl.
+
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a10392287cf73becffcd3626081b1e39a}\label{class_g_p_m_1_1_tools_1_1_utils_a10392287cf73becffcd3626081b1e39a}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!Tan@{Tan}}
+\index{Tan@{Tan}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{Tan()}{Tan()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static double G\+P\+M\+::\+Tools\+::\+Utils\+::\+Tan (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Mathematics tangent implementation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & Value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result in radians 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a9e318f2daca5d8e7d79c18d8a98ef258}\label{class_g_p_m_1_1_tools_1_1_utils_a9e318f2daca5d8e7d79c18d8a98ef258}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!TanF@{TanF}}
+\index{TanF@{TanF}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{TanF()}{TanF()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static float G\+P\+M\+::\+Tools\+::\+Utils\+::\+TanF (\begin{DoxyParamCaption}\item[{const float}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Mathematics tangent implementation with float precision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & Value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result in radians 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a7f970a0d2699fca807da9998a42de214}\label{class_g_p_m_1_1_tools_1_1_utils_a7f970a0d2699fca807da9998a42de214}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!TanF@{TanF}}
+\index{TanF@{TanF}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{TanF()}{TanF()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily float G\+P\+M\+::\+Tools\+::\+Utils\+::\+TanF (\begin{DoxyParamCaption}\item[{const float}]{p\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Mathematics tangent implementation with float precision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+value} & Value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result in radians 
+\end{DoxyReturn}
+
+
+Definition at line 87 of file Utils.\+inl.
+
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a3229182e1b8412a14ab3fd79881ebb9a}\label{class_g_p_m_1_1_tools_1_1_utils_a3229182e1b8412a14ab3fd79881ebb9a}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!ToDegrees@{ToDegrees}}
+\index{ToDegrees@{ToDegrees}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{ToDegrees()}{ToDegrees()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static T G\+P\+M\+::\+Tools\+::\+Utils\+::\+To\+Degrees (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Convert the given angle to degrees in float precision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+angle} & (In radians) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result in degrees 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a49cf5fe0d1934f98f1dc142d929bee40}\label{class_g_p_m_1_1_tools_1_1_utils_a49cf5fe0d1934f98f1dc142d929bee40}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!ToDegrees@{ToDegrees}}
+\index{ToDegrees@{ToDegrees}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{ToDegrees()}{ToDegrees()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T G\+P\+M\+::\+Tools\+::\+Utils\+::\+To\+Degrees (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Convert the given angle to degrees in float precision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+angle} & (In radians) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result in degrees 
+\end{DoxyReturn}
+
+
+Definition at line 18 of file Utils.\+inl.
+
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a70b429d76d22e49647c88de1089e7312}\label{class_g_p_m_1_1_tools_1_1_utils_a70b429d76d22e49647c88de1089e7312}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!ToRadians@{ToRadians}}
+\index{ToRadians@{ToRadians}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{ToRadians()}{ToRadians()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T G\+P\+M\+::\+Tools\+::\+Utils\+::\+To\+Radians (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Convert the given angle to radians. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+angle} & (In degrees) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The angle in radians 
+\end{DoxyReturn}
+
+
+Definition at line 10 of file Utils.\+inl.
+
+\mbox{\Hypertarget{class_g_p_m_1_1_tools_1_1_utils_a3937021e2ec90bcbc7fdd30df00cb6ff}\label{class_g_p_m_1_1_tools_1_1_utils_a3937021e2ec90bcbc7fdd30df00cb6ff}} 
+\index{GPM::Tools::Utils@{GPM::Tools::Utils}!ToRadians@{ToRadians}}
+\index{ToRadians@{ToRadians}!GPM::Tools::Utils@{GPM::Tools::Utils}}
+\doxysubsubsection{\texorpdfstring{ToRadians()}{ToRadians()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static T G\+P\+M\+::\+Tools\+::\+Utils\+::\+To\+Radians (\begin{DoxyParamCaption}\item[{const T}]{p\+\_\+angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Convert the given angle to radians. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+angle} & (In degrees) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The angle in radians 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+G\+P\+M/include/\+G\+P\+M/\+Tools/\mbox{\hyperlink{_g_p_m_2include_2_g_p_m_2_tools_2_utils_8h}{Utils.\+h}}\item 
+G\+P\+M/include/\+G\+P\+M/\+Tools/\mbox{\hyperlink{_g_p_m_2include_2_g_p_m_2_tools_2_utils_8inl}{Utils.\+inl}}\end{DoxyCompactItemize}
