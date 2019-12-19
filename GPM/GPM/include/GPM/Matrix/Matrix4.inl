@@ -1,5 +1,6 @@
 #pragma once
 #include <GPM/Quaternion/Quaternion.h>
+#include <stdexcept>
 
 // struct GPM::Quaternion;
 
