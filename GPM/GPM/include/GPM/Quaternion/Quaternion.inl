@@ -435,15 +435,15 @@ namespace GPM
     inline Quaternion Quaternion::Slerp(const Quaternion& p_start, const Quaternion& p_end,
         const double p_alpha)
     {
-        Quaternion qStartNormalized = Normalize(p_start);
-        Quaternion qEndNormalized = Normalize(p_end);
+	    const Quaternion qStartNormalized = Normalize(p_start);
+	    const Quaternion qEndNormalized = Normalize(p_end);
 
         double dot = DotProduct(qStartNormalized, qEndNormalized);
 
         //clamp values (just in case) because ArcCos only works from -1 to 1
-        if (dot > 1)
+        if (dot > 1.0)
         {
-            dot = 1;
+            dot = 1.0;
         }
         else if (dot < -1.0)
             dot = -1.0;
@@ -452,7 +452,7 @@ namespace GPM
         Quaternion relativeQuaternion = qEndNormalized - qStartNormalized * dot;
         relativeQuaternion.Normalize();
 
-        Quaternion result = ((qStartNormalized * Tools::Utils::Cos(theta)) + relativeQuaternion * Tools::Utils::Sin(theta));
+        Quaternion result = qStartNormalized * Tools::Utils::Cos(theta) + relativeQuaternion * Tools::Utils::Sin(theta);
 
         return result;
     }
@@ -476,9 +476,9 @@ namespace GPM
         }
 
         //clamp values (just in case) because ArcCos only works from -1 to 1
-        if (dot > 1)
+        if (dot > 1.0)
         {
-            dot = 1;
+            dot = 1.0;
         }
         else if (dot < -1.0)
             dot = -1.0;
@@ -487,7 +487,7 @@ namespace GPM
         Quaternion relativeQuaternion = qEndNormalized - qStartNormalized * dot;
         relativeQuaternion.Normalize();
 
-        Quaternion result = ((qStartNormalized * Tools::Utils::Cos(theta)) + relativeQuaternion * Tools::Utils::Sin(theta));
+        Quaternion result = qStartNormalized * Tools::Utils::Cos(theta) + relativeQuaternion * Tools::Utils::Sin(theta);
 
         return result;
     }
