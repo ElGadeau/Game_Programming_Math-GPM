@@ -1,0 +1,2643 @@
+\hypertarget{struct_g_p_m_1_1_quaternion}{}\doxysection{G\+PM\+::Quaternion Struct Reference}
+\label{struct_g_p_m_1_1_quaternion}\index{GPM::Quaternion@{GPM::Quaternion}}
+
+
+{\ttfamily \#include $<$Quaternion.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a134f1f9b5f30c981ca4e0462ff1f57bf}{Quaternion}} ()
+\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion_ad864b33ab48516b4734552986529fb1b}{Quaternion}} (const double p\+\_\+x, const double p\+\_\+y, const double p\+\_\+z, const double p\+\_\+w)
+\begin{DoxyCompactList}\small\item\em Constructor using all values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion_ae9ca7e9bc3244750676e81ed02e04d7c}{Quaternion}} (const double p\+\_\+scalar, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em Constructor using a scalar and a vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion_ab867af019096cdcc509839e298b9ad7b}{Quaternion}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Copy Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a2b1f7f9c446b47a8304593b01e37ca9b}{Quaternion}} (\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&\&p\+\_\+other) noexcept
+\begin{DoxyCompactList}\small\item\em Move Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a3e36684490c5052a7b6b9ce3615dbe1c}{Quaternion}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ double $>$ \&p\+\_\+matrix)
+\begin{DoxyCompactList}\small\item\em Construct from rotation matrix. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a21661a03da4c125b68091def2b563fc1}{Quaternion}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ double $>$ \&p\+\_\+matrix)
+\begin{DoxyCompactList}\small\item\em Construct from rotation matrix. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a7075733d4fa0d35dab5766f10a7fd6b5}{Quaternion}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+axis, const double p\+\_\+angle\+In\+Radians)
+\begin{DoxyCompactList}\small\item\em Constuct a quaternion from axis and angle in radian. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a7c676b750daf63f9145b2e7ec6535bba}{$\sim$\+Quaternion}} ()=default
+\item 
+void \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a8918e4f10c64ffc1cb4b6bffd91fd1d5}{Make\+From\+Euler}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+euler)
+\begin{DoxyCompactList}\small\item\em Construct from euler angles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a801e3e718090f9c13610878f74735fb2}{Make\+From\+Euler}} (const double p\+\_\+x, const double p\+\_\+y, const double p\+\_\+z)
+\begin{DoxyCompactList}\small\item\em Construct from euler angles. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_ae7fb2653620ec412db5934f3978e1715}{operator=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+other)=default
+\begin{DoxyCompactList}\small\item\em Copy assignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a72f1c88727fce3405dcd84f8099f70de}{operator=}} (\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&\&p\+\_\+other) noexcept
+\begin{DoxyCompactList}\small\item\em Move assigment. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_ab594f39dc726085223bee21539983001}{Is\+Identity}} () const
+\begin{DoxyCompactList}\small\item\em Check If the quaternion is Identity. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_ae3a3603d7a10d61e0d38b4fb79f9ea1a}{Is\+Pure}} () const
+\begin{DoxyCompactList}\small\item\em Check if the quaternion is pure. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a94dceaa6ef3a308796f68ba4a4074acf}{Is\+Normalized}} () const
+\begin{DoxyCompactList}\small\item\em Check if the quaternion is normalized. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a87ffb14c0f80de9b372533ded26c4ea3}{operator==}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+other\+Quaternion) const
+\begin{DoxyCompactList}\small\item\em Check is all components between the current quaternion and the other one are equals. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a99e82e163d1649b9b4622a991a2bad4e}{operator!=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+other\+Quaternion) const
+\begin{DoxyCompactList}\small\item\em Check is all components between the current quaternion and the other one are different. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_aa533df832686948443a226ecaa894ded}{operator+}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+other\+Quaternion) const
+\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_aba56eadca23a60a2a0cb4cc01ee80be0}{operator+=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+other\+Quaternion)
+\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a2aa47e9e830a4cbc1c78145c62e47413}{operator-\/}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+other\+Quaternion) const
+\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_aba7430e66dc1ed71dda0639ae286eef3}{operator-\/=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+other\+Quaternion)
+\item 
+double \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a3eaf8e9b4193d6a3b73b30f206349ecc}{Dot\+Product}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+other\+Quaternion) const
+\begin{DoxyCompactList}\small\item\em Return the dot product between the current quaternion and another one. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a36ba8e47e817d6cad9523f0ef788792a}{operator$\ast$}} (const double p\+\_\+scale) const
+\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a5e47871be30dc0377fb2fa9479d94f6c}{operator$\ast$=}} (const double p\+\_\+scale)
+\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a40857adc42a3c99c781ca51a98e4a25d}{operator$\ast$}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+other\+Quaternion) const
+\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a6deab7aefc02fc91cfdac60ef8ec5b0e}{operator$\ast$=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+other\+Quaternion)
+\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_ad7f07a2e6230a74fe9cc8a7fd4ee7690}{operator$\ast$}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+to\+Multiply) const
+\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a837ae073d1eb5f383b59c0108893dade}{operator$\ast$=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+to\+Multiply)
+\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a31901682c3179662db46bf6f7ac57126}{Normalize}} ()
+\begin{DoxyCompactList}\small\item\em Normalize the current quaternion. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_ad851375518e48c2f431c7198d042c901}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+quaternion) const
+\begin{DoxyCompactList}\small\item\em Multiply the current quaternion with another one. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a6540067ff621a654b007315429aa02a3}{Norm}} () const
+\begin{DoxyCompactList}\small\item\em Norm of a quaternion, alias magnitude. \end{DoxyCompactList}\item 
+constexpr double \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a2ba2a76024b87ab2e38f69ea16d3bdb4}{Norm\+Square}} () const
+\begin{DoxyCompactList}\small\item\em Norm square of a quaternion, alias magnitude square. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a63cf9ffa83e754b75f935cf9b8a74bad}{Inverse}} ()
+\begin{DoxyCompactList}\small\item\em Inverse the current quaternion. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a63b343621082e15ab8f9a5cb494daba8}{Conjugate}} ()
+\begin{DoxyCompactList}\small\item\em Conjugate the current quaternion. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a87882ad61ea5b1b34ed51be9b62a2ac8}{Convert\+To\+Unit\+Norm\+Quaternion}} ()
+\begin{DoxyCompactList}\small\item\em Convert the current quaternion to unit quaternion. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_ab8b1c7c90da2bcc25de2d6b0a63cc899}{Get\+Rotation\+Axis}} () const
+\begin{DoxyCompactList}\small\item\em Give the axis of the quaternion. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a35fa40a4507a56fec2ab78ede2826416}{Get\+X\+Axis\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Return the x value of the axis. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_ad89dbe168c6a14a9ed4b71cdc6a1b049}{Get\+Y\+Axis\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Return the y value of the axis. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a26f4d6e084232187f0097afc8be7ecff}{Get\+Z\+Axis\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Return the z value of the axis. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a52f3f1a28fd7520a7257e65c4345808e}{Get\+Real\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Return the w component (real part) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_ac74d043f0caab277c9ce3dafc4b3f8e9}{Set\+X\+Axis\+Value}} (const double p\+\_\+x\+Value)
+\begin{DoxyCompactList}\small\item\em Set the x value of the axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_aacea349183d79c3d47afe600b7679ff4}{Set\+Y\+Axis\+Value}} (const double p\+\_\+y\+Value)
+\begin{DoxyCompactList}\small\item\em Set the y value of the axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a28e63ed1b83c02c1255e5dca68082bce}{Set\+Z\+Axis\+Value}} (const double p\+\_\+z\+Value)
+\begin{DoxyCompactList}\small\item\em Set the z value of the axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_addc1675e89ca3db9bbca7cb60c9c95b8}{Set\+Real\+Value}} (const double p\+\_\+real\+Value)
+\begin{DoxyCompactList}\small\item\em Set the w component (real part) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a80f64a9e24b3ee84483d66692f62303f}{Look\+Rotation}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+forward, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+upwards=\mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$\+::up) const
+\begin{DoxyCompactList}\small\item\em Creates a rotation with the specified forward and upwards directions. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_aa82020d0cd24a32909de050c1eee94b6}{Rotate\+Relative\+To\+Pivot}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+position, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+pivot) const
+\begin{DoxyCompactList}\small\item\em Rotate a point relative to pivot. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a5d6c5e4fc6ebed7c87ac65d859d6d910}{Rotate\+Vector}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+to\+Rotate) const
+\begin{DoxyCompactList}\small\item\em Rotate a vector around another one. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_af6e8a453a27f17b44c3109535f5ce25c}{operator\mbox{[}$\,$\mbox{]}}} (const int p\+\_\+index) const
+\begin{DoxyCompactList}\small\item\em Return the value aliased with index, just like arrays. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_af9c8f2d1ba00736145cdab9899f36b12}{To\+Unit\+Norm\+Quaternion}} ()
+\begin{DoxyCompactList}\small\item\em Transform the current quaternion to a unit quaternion. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_af3f0597db46a0aefb5d684e9b64bff20}{To\+Euler}} () const
+\begin{DoxyCompactList}\small\item\em Transform the current quaternion to euler angles in degrees. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a017531fc2f7b1bb3375ef92949b4eb32}{To\+String}} () const
+\begin{DoxyCompactList}\small\item\em Transform the current quaternion to string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ float $>$ \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a34e16ff730f9dc679013aa7c9733ce83}{To\+Matrix3}} () const
+\begin{DoxyCompactList}\small\item\em Return a \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}} of double out of the quaternion. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ float $>$ \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_ae1c1f298497e9ef2294fc7eca5f7ae8d}{To\+Matrix4}} () const
+\begin{DoxyCompactList}\small\item\em Return a \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}} of double out of the quaternion. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a134f1f9b5f30c981ca4e0462ff1f57bf}{Quaternion}} ()
+\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion_ad864b33ab48516b4734552986529fb1b}{Quaternion}} (const double p\+\_\+x, const double p\+\_\+y, const double p\+\_\+z, const double p\+\_\+w)
+\begin{DoxyCompactList}\small\item\em Constructor using all values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion_ae9ca7e9bc3244750676e81ed02e04d7c}{Quaternion}} (const double p\+\_\+scalar, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em Constructor using a scalar and a vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion_ab867af019096cdcc509839e298b9ad7b}{Quaternion}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+other)
+\begin{DoxyCompactList}\small\item\em Copy Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a2b1f7f9c446b47a8304593b01e37ca9b}{Quaternion}} (\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&\&p\+\_\+other) noexcept
+\begin{DoxyCompactList}\small\item\em Move Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a3e36684490c5052a7b6b9ce3615dbe1c}{Quaternion}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ double $>$ \&p\+\_\+matrix)
+\begin{DoxyCompactList}\small\item\em Construct from rotation matrix. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a21661a03da4c125b68091def2b563fc1}{Quaternion}} (const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ double $>$ \&p\+\_\+matrix)
+\begin{DoxyCompactList}\small\item\em Construct from rotation matrix. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a7075733d4fa0d35dab5766f10a7fd6b5}{Quaternion}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+axis, const double p\+\_\+angle\+In\+Radians)
+\begin{DoxyCompactList}\small\item\em Constuct a quaternion from axis and angle in radian. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a7c676b750daf63f9145b2e7ec6535bba}{$\sim$\+Quaternion}} ()=default
+\item 
+void \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a8918e4f10c64ffc1cb4b6bffd91fd1d5}{Make\+From\+Euler}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+euler)
+\begin{DoxyCompactList}\small\item\em Construct from euler angles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a801e3e718090f9c13610878f74735fb2}{Make\+From\+Euler}} (const double p\+\_\+x, const double p\+\_\+y, const double p\+\_\+z)
+\begin{DoxyCompactList}\small\item\em Construct from euler angles. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_ae7fb2653620ec412db5934f3978e1715}{operator=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+other)=default
+\begin{DoxyCompactList}\small\item\em Copy assignment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a60eaadfc846d4e019bda13a0e22cc3f9}{operator=}} (\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&\&p\+\_\+other) noexcept
+\begin{DoxyCompactList}\small\item\em Move assigment. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_ab594f39dc726085223bee21539983001}{Is\+Identity}} () const
+\begin{DoxyCompactList}\small\item\em Check If the quaternion is Identity. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_ae3a3603d7a10d61e0d38b4fb79f9ea1a}{Is\+Pure}} () const
+\begin{DoxyCompactList}\small\item\em Check if the quaternion is pure. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a94dceaa6ef3a308796f68ba4a4074acf}{Is\+Normalized}} () const
+\begin{DoxyCompactList}\small\item\em Check if the quaternion is normalized. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a87ffb14c0f80de9b372533ded26c4ea3}{operator==}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+other\+Quaternion) const
+\begin{DoxyCompactList}\small\item\em Check is all components between the current quaternion and the other one are equals. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a99e82e163d1649b9b4622a991a2bad4e}{operator!=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+other\+Quaternion) const
+\begin{DoxyCompactList}\small\item\em Check is all components between the current quaternion and the other one are different. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_aa533df832686948443a226ecaa894ded}{operator+}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+other\+Quaternion) const
+\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a7fb9c9b764ea8b9f12daa64a5fe83c42}{operator+=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+other\+Quaternion)
+\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a2aa47e9e830a4cbc1c78145c62e47413}{operator-\/}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+other\+Quaternion) const
+\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a24f789a851481781e7a9cb12a41fa101}{operator-\/=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+other\+Quaternion)
+\item 
+double \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a3eaf8e9b4193d6a3b73b30f206349ecc}{Dot\+Product}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+other\+Quaternion) const
+\begin{DoxyCompactList}\small\item\em Return the dot product between the current quaternion and another one. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a36ba8e47e817d6cad9523f0ef788792a}{operator$\ast$}} (const double p\+\_\+scale) const
+\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a4b8794d30c975f384f00af2f804aa3f8}{operator$\ast$=}} (const double p\+\_\+scale)
+\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a40857adc42a3c99c781ca51a98e4a25d}{operator$\ast$}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+other\+Quaternion) const
+\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_aa3e4a4f1a0b11f0f466d2f84b10d8cdc}{operator$\ast$=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+other\+Quaternion)
+\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_ad7f07a2e6230a74fe9cc8a7fd4ee7690}{operator$\ast$}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+to\+Multiply) const
+\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a93d85d025f52450ca8d83a70d36c8e45}{operator$\ast$=}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+to\+Multiply)
+\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a1937c93d7861b5ef56ee77e8c1e410ca}{Normalize}} ()
+\begin{DoxyCompactList}\small\item\em Normalize the current quaternion. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_ad851375518e48c2f431c7198d042c901}{Multiply}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+quaternion) const
+\begin{DoxyCompactList}\small\item\em Multiply the current quaternion with another one. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a6540067ff621a654b007315429aa02a3}{Norm}} () const
+\begin{DoxyCompactList}\small\item\em Norm of a quaternion, alias magnitude. \end{DoxyCompactList}\item 
+constexpr double \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a2ba2a76024b87ab2e38f69ea16d3bdb4}{Norm\+Square}} () const
+\begin{DoxyCompactList}\small\item\em Norm square of a quaternion, alias magnitude square. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a220ec7bdbef8af4ee3a6328543c73bb4}{Inverse}} ()
+\begin{DoxyCompactList}\small\item\em Inverse the current quaternion. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a325c335062070edb880961075c9a4090}{Conjugate}} ()
+\begin{DoxyCompactList}\small\item\em Conjugate the current quaternion. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_ae9ad89cf6f8d7c1d2c20ebffe350095b}{Convert\+To\+Unit\+Norm\+Quaternion}} ()
+\begin{DoxyCompactList}\small\item\em Convert the current quaternion to unit quaternion. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a053bbc5669e254b303b0ff491dfa6b19}{Get\+Rotation\+Axis}} () const
+\begin{DoxyCompactList}\small\item\em Give the axis of the quaternion. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a35fa40a4507a56fec2ab78ede2826416}{Get\+X\+Axis\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Return the x value of the axis. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_ad89dbe168c6a14a9ed4b71cdc6a1b049}{Get\+Y\+Axis\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Return the y value of the axis. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a26f4d6e084232187f0097afc8be7ecff}{Get\+Z\+Axis\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Return the z value of the axis. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a52f3f1a28fd7520a7257e65c4345808e}{Get\+Real\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Return the w component (real part) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_ac74d043f0caab277c9ce3dafc4b3f8e9}{Set\+X\+Axis\+Value}} (const double p\+\_\+x\+Value)
+\begin{DoxyCompactList}\small\item\em Set the x value of the axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_aacea349183d79c3d47afe600b7679ff4}{Set\+Y\+Axis\+Value}} (const double p\+\_\+y\+Value)
+\begin{DoxyCompactList}\small\item\em Set the y value of the axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a28e63ed1b83c02c1255e5dca68082bce}{Set\+Z\+Axis\+Value}} (const double p\+\_\+z\+Value)
+\begin{DoxyCompactList}\small\item\em Set the z value of the axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_addc1675e89ca3db9bbca7cb60c9c95b8}{Set\+Real\+Value}} (const double p\+\_\+real\+Value)
+\begin{DoxyCompactList}\small\item\em Set the w component (real part) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a80f64a9e24b3ee84483d66692f62303f}{Look\+Rotation}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+forward, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+upwards=\mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$\+::up) const
+\begin{DoxyCompactList}\small\item\em Creates a rotation with the specified forward and upwards directions. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_aa82020d0cd24a32909de050c1eee94b6}{Rotate\+Relative\+To\+Pivot}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+position, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+pivot) const
+\begin{DoxyCompactList}\small\item\em Rotate a point relative to pivot. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a5d6c5e4fc6ebed7c87ac65d859d6d910}{Rotate\+Vector}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+to\+Rotate) const
+\begin{DoxyCompactList}\small\item\em Rotate a vector around another one. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_af6e8a453a27f17b44c3109535f5ce25c}{operator\mbox{[}$\,$\mbox{]}}} (const int p\+\_\+index) const
+\begin{DoxyCompactList}\small\item\em Return the value aliased with index, just like arrays. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_af9c8f2d1ba00736145cdab9899f36b12}{To\+Unit\+Norm\+Quaternion}} ()
+\begin{DoxyCompactList}\small\item\em Transform the current quaternion to a unit quaternion. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a03cd1c143f0a1f7ba256270c03e5a35e}{To\+Euler}} () const
+\begin{DoxyCompactList}\small\item\em Transform the current quaternion to euler angles in degrees. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a017531fc2f7b1bb3375ef92949b4eb32}{To\+String}} () const
+\begin{DoxyCompactList}\small\item\em Transform the current quaternion to string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ float $>$ \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a6945ad6886b6428d2241bd431446af9c}{To\+Matrix3}} () const
+\begin{DoxyCompactList}\small\item\em Return a \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}} of double out of the quaternion. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ float $>$ \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a726a21ad1b70008a19be3c445abea9c5}{To\+Matrix4}} () const
+\begin{DoxyCompactList}\small\item\em Return a \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}} of double out of the quaternion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a16a428a3566e1eb95265cf18fff2fed9}{Dot\+Product}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+left, const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+right)
+\begin{DoxyCompactList}\small\item\em Return the dot product between the current quaternion and another one. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a8a81c0eace6bb4353f31dd0d530eabba}{Normalize}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+quaternion)
+\begin{DoxyCompactList}\small\item\em Normalize the current quaternion. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a76ab87c8d2b2c44187f180497bf3f0de}{Inverse}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+quaternion)
+\begin{DoxyCompactList}\small\item\em Inverse the quaternion in parameter. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a3f2531db9cc0eeb6029a9c7bd6839871}{Conjugate}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+quaternion)
+\begin{DoxyCompactList}\small\item\em Conjugate the quaternion in parameter. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_af8678558a6ef53b90318a20257db8beb}{Create\+From\+Axis\+Angle}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+axis, const double p\+\_\+angle)
+\begin{DoxyCompactList}\small\item\em Create a quaternion out of an axis and angle. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a55c3ff38be75490c359daa36929498c7}{Lerp}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+start, const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+end, const double p\+\_\+alpha)
+\begin{DoxyCompactList}\small\item\em Interpolation between two quaternions. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a998a28ddd5cf611d1809ce36cacd285a}{Slerp}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+start, const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+end, const double p\+\_\+alpha)
+\begin{DoxyCompactList}\small\item\em Smoothly interpolate between two quaternions. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_afafd55d40b35297e8e1b0f3daf12442c}{Slerp\+Shortest\+Path}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+start, const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+end, double p\+\_\+alpha)
+\begin{DoxyCompactList}\small\item\em Smoothly interpolate between two quaternions and use the shortest path to it. Prevents wrong side rotation. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_af85f9a13557293294b2ddff0ddac4b24}{Nlerp}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+start, const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+end, const double p\+\_\+alpha)
+\begin{DoxyCompactList}\small\item\em Normalized interpolate between two quaternions. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_ae66a24be2f1fc1269aca1a31572946dc}{Rotate\+Relative\+To\+Pivot}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+position, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+pivot, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+euler\+Angles)
+\begin{DoxyCompactList}\small\item\em Rotate a point relative to pivot using euler angles. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a9cfee2c719d560a9397dbb26be807cbd}{Rotate\+Relative\+To\+Pivot}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+position, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+pivot, \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+quaternion)
+\begin{DoxyCompactList}\small\item\em Rotate a point relative to pivot using a quaternion. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a38158ec985f590e5ad6c90ba4c1a1058}{Rotate\+Vector\+About\+Angle\+And\+Axis}} (const double p\+\_\+angle, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+axis, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+vector\+To\+Rotate)
+\begin{DoxyCompactList}\small\item\em Rotate the vector of a certain angle around an arbitrary axis. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_abb793bcd00763c1a4a6741177d1e5a6b}{To\+Quaternion}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+euler)
+\begin{DoxyCompactList}\small\item\em Create a quaternion from euler in degrees. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a16c1af1524d5fed11c573bb120b3090a}{To\+Quaternion}} (const double p\+\_\+yaw, const double p\+\_\+pitch, const double p\+\_\+roll)
+\begin{DoxyCompactList}\small\item\em Create a quaternion from yaw, pitch and roll angle in degrees. \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_ab2cac43316f6e190f2fafcff83f534d6}{To\+String}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+quaternion)
+\begin{DoxyCompactList}\small\item\em Transform a quaternion to string. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a631f49bd7b70746b2c1750a49a472267}{Dot\+Product}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+left, const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+right)
+\begin{DoxyCompactList}\small\item\em Return the dot product between the current quaternion and another one. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a03ee77a9e2a15aa0b7f3fcd421a514d9}{Normalize}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+quaternion)
+\begin{DoxyCompactList}\small\item\em Normalize the current quaternion. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_ab3e91fce9f7e99ed48650e46a5b39674}{Inverse}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+quaternion)
+\begin{DoxyCompactList}\small\item\em Inverse the quaternion in parameter. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a5cb0465ebe8e2eb05087c7a1bd1837eb}{Conjugate}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+quaternion)
+\begin{DoxyCompactList}\small\item\em Conjugate the quaternion in parameter. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_aa128ba59427d37ad1b37f9b75f75ee6a}{Create\+From\+Axis\+Angle}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+axis, const double p\+\_\+angle)
+\begin{DoxyCompactList}\small\item\em Create a quaternion out of an axis and angle. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a788b3cd3513307782c669aa99f223885}{Lerp}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+start, const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+end, const double p\+\_\+alpha)
+\begin{DoxyCompactList}\small\item\em Interpolation between two quaternions. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a95522a8a728362e1c46dd7b8de83a220}{Slerp}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+start, const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+end, const double p\+\_\+alpha)
+\begin{DoxyCompactList}\small\item\em Smoothly interpolate between two quaternions. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a6e6efd6a0ad8d0daa0db3ffa59de0416}{Slerp\+Shortest\+Path}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+start, const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+end, double p\+\_\+alpha)
+\begin{DoxyCompactList}\small\item\em Smoothly interpolate between two quaternions and use the shortest path to it. Prevents wrong side rotation. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_ae6849c955db82b409c24a2ca146c2eea}{Nlerp}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+start, const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+end, const double p\+\_\+alpha)
+\begin{DoxyCompactList}\small\item\em Normalized interpolate between two quaternions. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_ae66a24be2f1fc1269aca1a31572946dc}{Rotate\+Relative\+To\+Pivot}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+position, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+pivot, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+euler\+Angles)
+\begin{DoxyCompactList}\small\item\em Rotate a point relative to pivot using euler angles. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a9cfee2c719d560a9397dbb26be807cbd}{Rotate\+Relative\+To\+Pivot}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+position, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+pivot, \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+quaternion)
+\begin{DoxyCompactList}\small\item\em Rotate a point relative to pivot using a quaternion. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a9bacd221c04bf7a647cadf6fd792b647}{Rotate\+Vector\+About\+Angle\+And\+Axis}} (const double p\+\_\+angle, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+axis, const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+vector\+To\+Rotate)
+\begin{DoxyCompactList}\small\item\em Rotate the vector of a certain angle around an arbitrary axis. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a7a15530c2e18e14807f48b25eee7c6e4}{To\+Quaternion}} (const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&p\+\_\+euler)
+\begin{DoxyCompactList}\small\item\em Create a quaternion from euler in degrees. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a9616b0991eae211bf02e9e6af3b83710}{To\+Quaternion}} (const double p\+\_\+yaw, const double p\+\_\+pitch, const double p\+\_\+roll)
+\begin{DoxyCompactList}\small\item\em Create a quaternion from yaw, pitch and roll angle in degrees. \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a4734dd1c521ac6a6214cb3b296fd89c0}{To\+String}} (const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&p\+\_\+quaternion)
+\begin{DoxyCompactList}\small\item\em Transform a quaternion to string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_a30d26dd8917d2e52cf99182d6cab5923}{axis}}
+\item 
+double \mbox{\hyperlink{struct_g_p_m_1_1_quaternion_aa1a3a64001caafeb89507ef830072a9c}{w}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 6 of file Quaternion.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a134f1f9b5f30c981ca4e0462ff1f57bf}\label{struct_g_p_m_1_1_quaternion_a134f1f9b5f30c981ca4e0462ff1f57bf}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/16]}}
+{\footnotesize\ttfamily G\+P\+M\+::\+Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 13 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_ad864b33ab48516b4734552986529fb1b}\label{struct_g_p_m_1_1_quaternion_ad864b33ab48516b4734552986529fb1b}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/16]}}
+{\footnotesize\ttfamily G\+P\+M\+::\+Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+x,  }\item[{const double}]{p\+\_\+y,  }\item[{const double}]{p\+\_\+z,  }\item[{const double}]{p\+\_\+w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor using all values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+x} & Vector part of \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \\
+\hline
+{\em p\+\_\+y} & Vector part of \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \\
+\hline
+{\em p\+\_\+z} & Vector part of \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \\
+\hline
+{\em p\+\_\+w} & Real value of \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+In pure/applied Maths, we write W (or real), (Xi + Yj + Zk) (or Vector) 
+\end{DoxyNote}
+
+
+Definition at line 17 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_ae9ca7e9bc3244750676e81ed02e04d7c}\label{struct_g_p_m_1_1_quaternion_ae9ca7e9bc3244750676e81ed02e04d7c}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [3/16]}}
+{\footnotesize\ttfamily G\+P\+M\+::\+Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+scalar,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor using a scalar and a vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+scalar} & The scalar \\
+\hline
+{\em p\+\_\+vector} & The vector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 22 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_ab867af019096cdcc509839e298b9ad7b}\label{struct_g_p_m_1_1_quaternion_ab867af019096cdcc509839e298b9ad7b}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [4/16]}}
+{\footnotesize\ttfamily G\+P\+M\+::\+Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 26 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a2b1f7f9c446b47a8304593b01e37ca9b}\label{struct_g_p_m_1_1_quaternion_a2b1f7f9c446b47a8304593b01e37ca9b}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [5/16]}}
+{\footnotesize\ttfamily G\+P\+M\+::\+Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&\&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Move Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 30 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a3e36684490c5052a7b6b9ce3615dbe1c}\label{struct_g_p_m_1_1_quaternion_a3e36684490c5052a7b6b9ce3615dbe1c}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [6/16]}}
+{\footnotesize\ttfamily G\+P\+M\+::\+Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ double $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct from rotation matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+matrix} & Rotation matrix \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 34 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a21661a03da4c125b68091def2b563fc1}\label{struct_g_p_m_1_1_quaternion_a21661a03da4c125b68091def2b563fc1}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [7/16]}}
+{\footnotesize\ttfamily G\+P\+M\+::\+Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ double $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct from rotation matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+matrix} & Rotation matrix \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 81 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a7075733d4fa0d35dab5766f10a7fd6b5}\label{struct_g_p_m_1_1_quaternion_a7075733d4fa0d35dab5766f10a7fd6b5}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [8/16]}}
+{\footnotesize\ttfamily G\+P\+M\+::\+Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+axis,  }\item[{const double}]{p\+\_\+angle\+In\+Radians }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constuct a quaternion from axis and angle in radian. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+axis} & \\
+\hline
+{\em p\+\_\+angle\+In\+Radians} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 94 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a7c676b750daf63f9145b2e7ec6535bba}\label{struct_g_p_m_1_1_quaternion_a7c676b750daf63f9145b2e7ec6535bba}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!````~Quaternion@{$\sim$Quaternion}}
+\index{````~Quaternion@{$\sim$Quaternion}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{$\sim$Quaternion()}{~Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily G\+P\+M\+::\+Quaternion\+::$\sim$\+Quaternion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a134f1f9b5f30c981ca4e0462ff1f57bf}\label{struct_g_p_m_1_1_quaternion_a134f1f9b5f30c981ca4e0462ff1f57bf}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [9/16]}}
+{\footnotesize\ttfamily G\+P\+M\+::\+Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_ad864b33ab48516b4734552986529fb1b}\label{struct_g_p_m_1_1_quaternion_ad864b33ab48516b4734552986529fb1b}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [10/16]}}
+{\footnotesize\ttfamily G\+P\+M\+::\+Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+x,  }\item[{const double}]{p\+\_\+y,  }\item[{const double}]{p\+\_\+z,  }\item[{const double}]{p\+\_\+w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor using all values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+x} & Vector part of \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \\
+\hline
+{\em p\+\_\+y} & Vector part of \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \\
+\hline
+{\em p\+\_\+z} & Vector part of \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \\
+\hline
+{\em p\+\_\+w} & Real value of \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+In pure/applied Maths, we write W (or real), (Xi + Yj + Zk) (or Vector) 
+\end{DoxyNote}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_ae9ca7e9bc3244750676e81ed02e04d7c}\label{struct_g_p_m_1_1_quaternion_ae9ca7e9bc3244750676e81ed02e04d7c}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [11/16]}}
+{\footnotesize\ttfamily G\+P\+M\+::\+Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+scalar,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor using a scalar and a vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+scalar} & The scalar \\
+\hline
+{\em p\+\_\+vector} & The vector \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_ab867af019096cdcc509839e298b9ad7b}\label{struct_g_p_m_1_1_quaternion_ab867af019096cdcc509839e298b9ad7b}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [12/16]}}
+{\footnotesize\ttfamily G\+P\+M\+::\+Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a2b1f7f9c446b47a8304593b01e37ca9b}\label{struct_g_p_m_1_1_quaternion_a2b1f7f9c446b47a8304593b01e37ca9b}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [13/16]}}
+{\footnotesize\ttfamily G\+P\+M\+::\+Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&\&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Move Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a3e36684490c5052a7b6b9ce3615dbe1c}\label{struct_g_p_m_1_1_quaternion_a3e36684490c5052a7b6b9ce3615dbe1c}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [14/16]}}
+{\footnotesize\ttfamily G\+P\+M\+::\+Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ double $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct from rotation matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+matrix} & Rotation matrix \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a21661a03da4c125b68091def2b563fc1}\label{struct_g_p_m_1_1_quaternion_a21661a03da4c125b68091def2b563fc1}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [15/16]}}
+{\footnotesize\ttfamily G\+P\+M\+::\+Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ double $>$ \&}]{p\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct from rotation matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+matrix} & Rotation matrix \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a7075733d4fa0d35dab5766f10a7fd6b5}\label{struct_g_p_m_1_1_quaternion_a7075733d4fa0d35dab5766f10a7fd6b5}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Quaternion()}{Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [16/16]}}
+{\footnotesize\ttfamily G\+P\+M\+::\+Quaternion\+::\+Quaternion (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+axis,  }\item[{const double}]{p\+\_\+angle\+In\+Radians }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constuct a quaternion from axis and angle in radian. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+axis} & \\
+\hline
+{\em p\+\_\+angle\+In\+Radians} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a7c676b750daf63f9145b2e7ec6535bba}\label{struct_g_p_m_1_1_quaternion_a7c676b750daf63f9145b2e7ec6535bba}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!````~Quaternion@{$\sim$Quaternion}}
+\index{````~Quaternion@{$\sim$Quaternion}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{$\sim$Quaternion()}{~Quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily G\+P\+M\+::\+Quaternion\+::$\sim$\+Quaternion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a63b343621082e15ab8f9a5cb494daba8}\label{struct_g_p_m_1_1_quaternion_a63b343621082e15ab8f9a5cb494daba8}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Conjugate@{Conjugate}}
+\index{Conjugate@{Conjugate}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Conjugate()}{Conjugate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& G\+P\+M\+::\+Quaternion\+::\+Conjugate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Conjugate the current quaternion. 
+
+\begin{DoxyReturn}{Returns}
+The current quaternion modified 
+\end{DoxyReturn}
+
+
+Definition at line 300 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a325c335062070edb880961075c9a4090}\label{struct_g_p_m_1_1_quaternion_a325c335062070edb880961075c9a4090}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Conjugate@{Conjugate}}
+\index{Conjugate@{Conjugate}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Conjugate()}{Conjugate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}}\& G\+P\+M\+::\+Quaternion\+::\+Conjugate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Conjugate the current quaternion. 
+
+\begin{DoxyReturn}{Returns}
+The current quaternion modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a5cb0465ebe8e2eb05087c7a1bd1837eb}\label{struct_g_p_m_1_1_quaternion_a5cb0465ebe8e2eb05087c7a1bd1837eb}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Conjugate@{Conjugate}}
+\index{Conjugate@{Conjugate}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Conjugate()}{Conjugate()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::\+Conjugate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+quaternion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Conjugate the quaternion in parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+quaternion} & The quaternion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new quaternion conjugate 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a3f2531db9cc0eeb6029a9c7bd6839871}\label{struct_g_p_m_1_1_quaternion_a3f2531db9cc0eeb6029a9c7bd6839871}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Conjugate@{Conjugate}}
+\index{Conjugate@{Conjugate}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Conjugate()}{Conjugate()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::\+Conjugate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+quaternion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Conjugate the quaternion in parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+quaternion} & The quaternion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new quaternion conjugate 
+\end{DoxyReturn}
+
+
+Definition at line 307 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_ae9ad89cf6f8d7c1d2c20ebffe350095b}\label{struct_g_p_m_1_1_quaternion_ae9ad89cf6f8d7c1d2c20ebffe350095b}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!ConvertToUnitNormQuaternion@{ConvertToUnitNormQuaternion}}
+\index{ConvertToUnitNormQuaternion@{ConvertToUnitNormQuaternion}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{ConvertToUnitNormQuaternion()}{ConvertToUnitNormQuaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}}\& G\+P\+M\+::\+Quaternion\+::\+Convert\+To\+Unit\+Norm\+Quaternion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Convert the current quaternion to unit quaternion. 
+
+\begin{DoxyReturn}{Returns}
+The current quaternion modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a87882ad61ea5b1b34ed51be9b62a2ac8}\label{struct_g_p_m_1_1_quaternion_a87882ad61ea5b1b34ed51be9b62a2ac8}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!ConvertToUnitNormQuaternion@{ConvertToUnitNormQuaternion}}
+\index{ConvertToUnitNormQuaternion@{ConvertToUnitNormQuaternion}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{ConvertToUnitNormQuaternion()}{ConvertToUnitNormQuaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& G\+P\+M\+::\+Quaternion\+::\+Convert\+To\+Unit\+Norm\+Quaternion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert the current quaternion to unit quaternion. 
+
+\begin{DoxyReturn}{Returns}
+The current quaternion modified 
+\end{DoxyReturn}
+
+
+Definition at line 312 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_af8678558a6ef53b90318a20257db8beb}\label{struct_g_p_m_1_1_quaternion_af8678558a6ef53b90318a20257db8beb}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!CreateFromAxisAngle@{CreateFromAxisAngle}}
+\index{CreateFromAxisAngle@{CreateFromAxisAngle}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{CreateFromAxisAngle()}{CreateFromAxisAngle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::\+Create\+From\+Axis\+Angle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+axis,  }\item[{const double}]{p\+\_\+angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Create a quaternion out of an axis and angle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+axis} & The axis \\
+\hline
+{\em p\+\_\+angle} & The angle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion 
+\end{DoxyReturn}
+
+
+Definition at line 424 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_aa128ba59427d37ad1b37f9b75f75ee6a}\label{struct_g_p_m_1_1_quaternion_aa128ba59427d37ad1b37f9b75f75ee6a}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!CreateFromAxisAngle@{CreateFromAxisAngle}}
+\index{CreateFromAxisAngle@{CreateFromAxisAngle}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{CreateFromAxisAngle()}{CreateFromAxisAngle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::\+Create\+From\+Axis\+Angle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+axis,  }\item[{const double}]{p\+\_\+angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a quaternion out of an axis and angle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+axis} & The axis \\
+\hline
+{\em p\+\_\+angle} & The angle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a631f49bd7b70746b2c1750a49a472267}\label{struct_g_p_m_1_1_quaternion_a631f49bd7b70746b2c1750a49a472267}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!DotProduct@{DotProduct}}
+\index{DotProduct@{DotProduct}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{DotProduct()}{DotProduct()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily static double G\+P\+M\+::\+Quaternion\+::\+Dot\+Product (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Return the dot product between the current quaternion and another one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+left} & The left quaternion \\
+\hline
+{\em p\+\_\+right} & The right quaternion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a16a428a3566e1eb95265cf18fff2fed9}\label{struct_g_p_m_1_1_quaternion_a16a428a3566e1eb95265cf18fff2fed9}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!DotProduct@{DotProduct}}
+\index{DotProduct@{DotProduct}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{DotProduct()}{DotProduct()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily double G\+P\+M\+::\+Quaternion\+::\+Dot\+Product (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+left,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return the dot product between the current quaternion and another one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+left} & The left quaternion \\
+\hline
+{\em p\+\_\+right} & The right quaternion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result 
+\end{DoxyReturn}
+
+
+Definition at line 205 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a3eaf8e9b4193d6a3b73b30f206349ecc}\label{struct_g_p_m_1_1_quaternion_a3eaf8e9b4193d6a3b73b30f206349ecc}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!DotProduct@{DotProduct}}
+\index{DotProduct@{DotProduct}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{DotProduct()}{DotProduct()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily double G\+P\+M\+::\+Quaternion\+::\+Dot\+Product (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+other\+Quaternion }\end{DoxyParamCaption}) const}
+
+
+
+Return the dot product between the current quaternion and another one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other\+Quaternion} & The other quaternion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a3eaf8e9b4193d6a3b73b30f206349ecc}\label{struct_g_p_m_1_1_quaternion_a3eaf8e9b4193d6a3b73b30f206349ecc}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!DotProduct@{DotProduct}}
+\index{DotProduct@{DotProduct}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{DotProduct()}{DotProduct()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily double G\+P\+M\+::\+Quaternion\+::\+Dot\+Product (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+other\+Quaternion }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the dot product between the current quaternion and another one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other\+Quaternion} & The other quaternion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result 
+\end{DoxyReturn}
+
+
+Definition at line 200 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a52f3f1a28fd7520a7257e65c4345808e}\label{struct_g_p_m_1_1_quaternion_a52f3f1a28fd7520a7257e65c4345808e}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!GetRealValue@{GetRealValue}}
+\index{GetRealValue@{GetRealValue}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{GetRealValue()}{GetRealValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double G\+P\+M\+::\+Quaternion\+::\+Get\+Real\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the w component (real part) 
+
+\begin{DoxyReturn}{Returns}
+The value 
+\end{DoxyReturn}
+
+
+Definition at line 378 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a52f3f1a28fd7520a7257e65c4345808e}\label{struct_g_p_m_1_1_quaternion_a52f3f1a28fd7520a7257e65c4345808e}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!GetRealValue@{GetRealValue}}
+\index{GetRealValue@{GetRealValue}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{GetRealValue()}{GetRealValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double G\+P\+M\+::\+Quaternion\+::\+Get\+Real\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return the w component (real part) 
+
+\begin{DoxyReturn}{Returns}
+The value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_ab8b1c7c90da2bcc25de2d6b0a63cc899}\label{struct_g_p_m_1_1_quaternion_ab8b1c7c90da2bcc25de2d6b0a63cc899}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!GetRotationAxis@{GetRotationAxis}}
+\index{GetRotationAxis@{GetRotationAxis}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{GetRotationAxis()}{GetRotationAxis()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ G\+P\+M\+::\+Quaternion\+::\+Get\+Rotation\+Axis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Give the axis of the quaternion. 
+
+\begin{DoxyReturn}{Returns}
+An axis 
+\end{DoxyReturn}
+
+
+Definition at line 358 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a053bbc5669e254b303b0ff491dfa6b19}\label{struct_g_p_m_1_1_quaternion_a053bbc5669e254b303b0ff491dfa6b19}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!GetRotationAxis@{GetRotationAxis}}
+\index{GetRotationAxis@{GetRotationAxis}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{GetRotationAxis()}{GetRotationAxis()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$double$>$ G\+P\+M\+::\+Quaternion\+::\+Get\+Rotation\+Axis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Give the axis of the quaternion. 
+
+\begin{DoxyReturn}{Returns}
+An axis 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a35fa40a4507a56fec2ab78ede2826416}\label{struct_g_p_m_1_1_quaternion_a35fa40a4507a56fec2ab78ede2826416}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!GetXAxisValue@{GetXAxisValue}}
+\index{GetXAxisValue@{GetXAxisValue}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{GetXAxisValue()}{GetXAxisValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double G\+P\+M\+::\+Quaternion\+::\+Get\+X\+Axis\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the x value of the axis. 
+
+\begin{DoxyReturn}{Returns}
+The value 
+\end{DoxyReturn}
+
+
+Definition at line 363 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a35fa40a4507a56fec2ab78ede2826416}\label{struct_g_p_m_1_1_quaternion_a35fa40a4507a56fec2ab78ede2826416}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!GetXAxisValue@{GetXAxisValue}}
+\index{GetXAxisValue@{GetXAxisValue}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{GetXAxisValue()}{GetXAxisValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double G\+P\+M\+::\+Quaternion\+::\+Get\+X\+Axis\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return the x value of the axis. 
+
+\begin{DoxyReturn}{Returns}
+The value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_ad89dbe168c6a14a9ed4b71cdc6a1b049}\label{struct_g_p_m_1_1_quaternion_ad89dbe168c6a14a9ed4b71cdc6a1b049}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!GetYAxisValue@{GetYAxisValue}}
+\index{GetYAxisValue@{GetYAxisValue}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{GetYAxisValue()}{GetYAxisValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double G\+P\+M\+::\+Quaternion\+::\+Get\+Y\+Axis\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the y value of the axis. 
+
+\begin{DoxyReturn}{Returns}
+The value 
+\end{DoxyReturn}
+
+
+Definition at line 368 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_ad89dbe168c6a14a9ed4b71cdc6a1b049}\label{struct_g_p_m_1_1_quaternion_ad89dbe168c6a14a9ed4b71cdc6a1b049}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!GetYAxisValue@{GetYAxisValue}}
+\index{GetYAxisValue@{GetYAxisValue}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{GetYAxisValue()}{GetYAxisValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double G\+P\+M\+::\+Quaternion\+::\+Get\+Y\+Axis\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return the y value of the axis. 
+
+\begin{DoxyReturn}{Returns}
+The value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a26f4d6e084232187f0097afc8be7ecff}\label{struct_g_p_m_1_1_quaternion_a26f4d6e084232187f0097afc8be7ecff}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!GetZAxisValue@{GetZAxisValue}}
+\index{GetZAxisValue@{GetZAxisValue}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{GetZAxisValue()}{GetZAxisValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double G\+P\+M\+::\+Quaternion\+::\+Get\+Z\+Axis\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the z value of the axis. 
+
+\begin{DoxyReturn}{Returns}
+The value 
+\end{DoxyReturn}
+
+
+Definition at line 373 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a26f4d6e084232187f0097afc8be7ecff}\label{struct_g_p_m_1_1_quaternion_a26f4d6e084232187f0097afc8be7ecff}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!GetZAxisValue@{GetZAxisValue}}
+\index{GetZAxisValue@{GetZAxisValue}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{GetZAxisValue()}{GetZAxisValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double G\+P\+M\+::\+Quaternion\+::\+Get\+Z\+Axis\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return the z value of the axis. 
+
+\begin{DoxyReturn}{Returns}
+The value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a220ec7bdbef8af4ee3a6328543c73bb4}\label{struct_g_p_m_1_1_quaternion_a220ec7bdbef8af4ee3a6328543c73bb4}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Inverse@{Inverse}}
+\index{Inverse@{Inverse}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Inverse()}{Inverse()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}}\& G\+P\+M\+::\+Quaternion\+::\+Inverse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inverse the current quaternion. 
+
+\begin{DoxyReturn}{Returns}
+The current quaternion modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a63cf9ffa83e754b75f935cf9b8a74bad}\label{struct_g_p_m_1_1_quaternion_a63cf9ffa83e754b75f935cf9b8a74bad}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Inverse@{Inverse}}
+\index{Inverse@{Inverse}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Inverse()}{Inverse()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& G\+P\+M\+::\+Quaternion\+::\+Inverse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inverse the current quaternion. 
+
+\begin{DoxyReturn}{Returns}
+The current quaternion modified 
+\end{DoxyReturn}
+
+
+Definition at line 274 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_ab3e91fce9f7e99ed48650e46a5b39674}\label{struct_g_p_m_1_1_quaternion_ab3e91fce9f7e99ed48650e46a5b39674}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Inverse@{Inverse}}
+\index{Inverse@{Inverse}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Inverse()}{Inverse()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::\+Inverse (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+quaternion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Inverse the quaternion in parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+quaternion} & The quaternion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new quaternion inversed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a76ab87c8d2b2c44187f180497bf3f0de}\label{struct_g_p_m_1_1_quaternion_a76ab87c8d2b2c44187f180497bf3f0de}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Inverse@{Inverse}}
+\index{Inverse@{Inverse}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Inverse()}{Inverse()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::\+Inverse (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+quaternion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Inverse the quaternion in parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+quaternion} & The quaternion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new quaternion inversed 
+\end{DoxyReturn}
+
+
+Definition at line 290 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_ab594f39dc726085223bee21539983001}\label{struct_g_p_m_1_1_quaternion_ab594f39dc726085223bee21539983001}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!IsIdentity@{IsIdentity}}
+\index{IsIdentity@{IsIdentity}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{IsIdentity()}{IsIdentity()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool G\+P\+M\+::\+Quaternion\+::\+Is\+Identity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check If the quaternion is Identity. 
+
+\begin{DoxyNote}{Note}
+If the quaternion has no rotation(meaning x,y,z axis values = 0), it\textquotesingle{}s Identity 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+True or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_ab594f39dc726085223bee21539983001}\label{struct_g_p_m_1_1_quaternion_ab594f39dc726085223bee21539983001}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!IsIdentity@{IsIdentity}}
+\index{IsIdentity@{IsIdentity}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{IsIdentity()}{IsIdentity()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool G\+P\+M\+::\+Quaternion\+::\+Is\+Identity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check If the quaternion is Identity. 
+
+\begin{DoxyNote}{Note}
+If the quaternion has no rotation(meaning x,y,z axis values = 0), it\textquotesingle{}s Identity 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+True or false 
+\end{DoxyReturn}
+
+
+Definition at line 149 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a94dceaa6ef3a308796f68ba4a4074acf}\label{struct_g_p_m_1_1_quaternion_a94dceaa6ef3a308796f68ba4a4074acf}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!IsNormalized@{IsNormalized}}
+\index{IsNormalized@{IsNormalized}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{IsNormalized()}{IsNormalized()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool G\+P\+M\+::\+Quaternion\+::\+Is\+Normalized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if the quaternion is normalized. 
+
+\begin{DoxyNote}{Note}
+A quaternion is normalized if his magnitude is equal to 1 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+True or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a94dceaa6ef3a308796f68ba4a4074acf}\label{struct_g_p_m_1_1_quaternion_a94dceaa6ef3a308796f68ba4a4074acf}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!IsNormalized@{IsNormalized}}
+\index{IsNormalized@{IsNormalized}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{IsNormalized()}{IsNormalized()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool G\+P\+M\+::\+Quaternion\+::\+Is\+Normalized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if the quaternion is normalized. 
+
+\begin{DoxyNote}{Note}
+A quaternion is normalized if his magnitude is equal to 1 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+True or false 
+\end{DoxyReturn}
+
+
+Definition at line 159 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_ae3a3603d7a10d61e0d38b4fb79f9ea1a}\label{struct_g_p_m_1_1_quaternion_ae3a3603d7a10d61e0d38b4fb79f9ea1a}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!IsPure@{IsPure}}
+\index{IsPure@{IsPure}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{IsPure()}{IsPure()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool G\+P\+M\+::\+Quaternion\+::\+Is\+Pure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if the quaternion is pure. 
+
+\begin{DoxyNote}{Note}
+If the quaternion has no real value(meaning real part = 0), it\textquotesingle{}s pure 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+True or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_ae3a3603d7a10d61e0d38b4fb79f9ea1a}\label{struct_g_p_m_1_1_quaternion_ae3a3603d7a10d61e0d38b4fb79f9ea1a}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!IsPure@{IsPure}}
+\index{IsPure@{IsPure}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{IsPure()}{IsPure()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool G\+P\+M\+::\+Quaternion\+::\+Is\+Pure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if the quaternion is pure. 
+
+\begin{DoxyNote}{Note}
+If the quaternion has no real value(meaning real part = 0), it\textquotesingle{}s pure 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+True or false 
+\end{DoxyReturn}
+
+
+Definition at line 154 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a55c3ff38be75490c359daa36929498c7}\label{struct_g_p_m_1_1_quaternion_a55c3ff38be75490c359daa36929498c7}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Lerp@{Lerp}}
+\index{Lerp@{Lerp}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Lerp()}{Lerp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::\+Lerp (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+start,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+end,  }\item[{const double}]{p\+\_\+alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Interpolation between two quaternions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+start} & Start quaternion \\
+\hline
+{\em p\+\_\+end} & End quaternion \\
+\hline
+{\em p\+\_\+alpha} & Coefficient \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion 
+\end{DoxyReturn}
+
+
+Definition at line 439 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a788b3cd3513307782c669aa99f223885}\label{struct_g_p_m_1_1_quaternion_a788b3cd3513307782c669aa99f223885}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Lerp@{Lerp}}
+\index{Lerp@{Lerp}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Lerp()}{Lerp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::\+Lerp (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+start,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+end,  }\item[{const double}]{p\+\_\+alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Interpolation between two quaternions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+start} & Start quaternion \\
+\hline
+{\em p\+\_\+end} & End quaternion \\
+\hline
+{\em p\+\_\+alpha} & Coefficient \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a80f64a9e24b3ee84483d66692f62303f}\label{struct_g_p_m_1_1_quaternion_a80f64a9e24b3ee84483d66692f62303f}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!LookRotation@{LookRotation}}
+\index{LookRotation@{LookRotation}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{LookRotation()}{LookRotation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::\+Look\+Rotation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+forward,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+upwards = {\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$double$>$\+:\+:up} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a rotation with the specified forward and upwards directions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+forward} & Forward direction \\
+\hline
+{\em p\+\_\+upwards} & Upwards direction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion 
+\end{DoxyReturn}
+
+
+Definition at line 403 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a80f64a9e24b3ee84483d66692f62303f}\label{struct_g_p_m_1_1_quaternion_a80f64a9e24b3ee84483d66692f62303f}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!LookRotation@{LookRotation}}
+\index{LookRotation@{LookRotation}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{LookRotation()}{LookRotation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::\+Look\+Rotation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+forward,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+upwards = {\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$~double~$>$\+:\+:up} }\end{DoxyParamCaption}) const}
+
+
+
+Creates a rotation with the specified forward and upwards directions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+forward} & Forward direction \\
+\hline
+{\em p\+\_\+upwards} & Upwards direction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a801e3e718090f9c13610878f74735fb2}\label{struct_g_p_m_1_1_quaternion_a801e3e718090f9c13610878f74735fb2}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!MakeFromEuler@{MakeFromEuler}}
+\index{MakeFromEuler@{MakeFromEuler}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{MakeFromEuler()}{MakeFromEuler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void G\+P\+M\+::\+Quaternion\+::\+Make\+From\+Euler (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+x,  }\item[{const double}]{p\+\_\+y,  }\item[{const double}]{p\+\_\+z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct from euler angles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+x} & The x-\/angle in degree \\
+\hline
+{\em p\+\_\+y} & The x-\/angle in degree \\
+\hline
+{\em p\+\_\+z} & The x-\/angle in degree \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 125 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a801e3e718090f9c13610878f74735fb2}\label{struct_g_p_m_1_1_quaternion_a801e3e718090f9c13610878f74735fb2}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!MakeFromEuler@{MakeFromEuler}}
+\index{MakeFromEuler@{MakeFromEuler}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{MakeFromEuler()}{MakeFromEuler()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void G\+P\+M\+::\+Quaternion\+::\+Make\+From\+Euler (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+x,  }\item[{const double}]{p\+\_\+y,  }\item[{const double}]{p\+\_\+z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct from euler angles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+x} & The x-\/angle in degree \\
+\hline
+{\em p\+\_\+y} & The x-\/angle in degree \\
+\hline
+{\em p\+\_\+z} & The x-\/angle in degree \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a8918e4f10c64ffc1cb4b6bffd91fd1d5}\label{struct_g_p_m_1_1_quaternion_a8918e4f10c64ffc1cb4b6bffd91fd1d5}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!MakeFromEuler@{MakeFromEuler}}
+\index{MakeFromEuler@{MakeFromEuler}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{MakeFromEuler()}{MakeFromEuler()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void G\+P\+M\+::\+Quaternion\+::\+Make\+From\+Euler (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+euler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct from euler angles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+euler} & A vector representing the euler angle in degree \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 109 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a8918e4f10c64ffc1cb4b6bffd91fd1d5}\label{struct_g_p_m_1_1_quaternion_a8918e4f10c64ffc1cb4b6bffd91fd1d5}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!MakeFromEuler@{MakeFromEuler}}
+\index{MakeFromEuler@{MakeFromEuler}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{MakeFromEuler()}{MakeFromEuler()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void G\+P\+M\+::\+Quaternion\+::\+Make\+From\+Euler (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+euler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct from euler angles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+euler} & A vector representing the euler angle in degree \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_ad851375518e48c2f431c7198d042c901}\label{struct_g_p_m_1_1_quaternion_ad851375518e48c2f431c7198d042c901}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::\+Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+quaternion }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Multiply the current quaternion with another one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+quaternion} & The quaternion to multiply \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the multiplication between the two quaternion 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_ad851375518e48c2f431c7198d042c901}\label{struct_g_p_m_1_1_quaternion_ad851375518e48c2f431c7198d042c901}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::\+Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+quaternion }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Multiply the current quaternion with another one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+quaternion} & The quaternion to multiply \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the multiplication between the two quaternion 
+\end{DoxyReturn}
+
+
+Definition at line 258 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_af85f9a13557293294b2ddff0ddac4b24}\label{struct_g_p_m_1_1_quaternion_af85f9a13557293294b2ddff0ddac4b24}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Nlerp@{Nlerp}}
+\index{Nlerp@{Nlerp}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Nlerp()}{Nlerp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::\+Nlerp (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+start,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+end,  }\item[{const double}]{p\+\_\+alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Normalized interpolate between two quaternions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+start} & Start quaternion \\
+\hline
+{\em p\+\_\+end} & End quaternion \\
+\hline
+{\em p\+\_\+alpha} & Coefficient \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion 
+\end{DoxyReturn}
+
+
+Definition at line 511 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_ae6849c955db82b409c24a2ca146c2eea}\label{struct_g_p_m_1_1_quaternion_ae6849c955db82b409c24a2ca146c2eea}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Nlerp@{Nlerp}}
+\index{Nlerp@{Nlerp}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Nlerp()}{Nlerp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::\+Nlerp (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+start,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+end,  }\item[{const double}]{p\+\_\+alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Normalized interpolate between two quaternions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+start} & Start quaternion \\
+\hline
+{\em p\+\_\+end} & End quaternion \\
+\hline
+{\em p\+\_\+alpha} & Coefficient \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a6540067ff621a654b007315429aa02a3}\label{struct_g_p_m_1_1_quaternion_a6540067ff621a654b007315429aa02a3}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Norm@{Norm}}
+\index{Norm@{Norm}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Norm()}{Norm()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double G\+P\+M\+::\+Quaternion\+::\+Norm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Norm of a quaternion, alias magnitude. 
+
+\begin{DoxyReturn}{Returns}
+The magnitude 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a6540067ff621a654b007315429aa02a3}\label{struct_g_p_m_1_1_quaternion_a6540067ff621a654b007315429aa02a3}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Norm@{Norm}}
+\index{Norm@{Norm}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Norm()}{Norm()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double G\+P\+M\+::\+Quaternion\+::\+Norm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Norm of a quaternion, alias magnitude. 
+
+\begin{DoxyReturn}{Returns}
+The magnitude 
+\end{DoxyReturn}
+
+
+Definition at line 269 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a1937c93d7861b5ef56ee77e8c1e410ca}\label{struct_g_p_m_1_1_quaternion_a1937c93d7861b5ef56ee77e8c1e410ca}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Normalize()}{Normalize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}}\& G\+P\+M\+::\+Quaternion\+::\+Normalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Normalize the current quaternion. 
+
+\begin{DoxyReturn}{Returns}
+The current quaternion modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a31901682c3179662db46bf6f7ac57126}\label{struct_g_p_m_1_1_quaternion_a31901682c3179662db46bf6f7ac57126}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Normalize()}{Normalize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& G\+P\+M\+::\+Quaternion\+::\+Normalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Normalize the current quaternion. 
+
+\begin{DoxyReturn}{Returns}
+The current quaternion modified 
+\end{DoxyReturn}
+
+
+Definition at line 522 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a03ee77a9e2a15aa0b7f3fcd421a514d9}\label{struct_g_p_m_1_1_quaternion_a03ee77a9e2a15aa0b7f3fcd421a514d9}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Normalize()}{Normalize()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::\+Normalize (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+quaternion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Normalize the current quaternion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+quaternion} & The quaternion to normalize \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A normalized quaternion 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a8a81c0eace6bb4353f31dd0d530eabba}\label{struct_g_p_m_1_1_quaternion_a8a81c0eace6bb4353f31dd0d530eabba}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Normalize()}{Normalize()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::\+Normalize (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+quaternion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Normalize the current quaternion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+quaternion} & The quaternion to normalize \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A normalized quaternion 
+\end{DoxyReturn}
+
+
+Definition at line 534 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a2ba2a76024b87ab2e38f69ea16d3bdb4}\label{struct_g_p_m_1_1_quaternion_a2ba2a76024b87ab2e38f69ea16d3bdb4}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!NormSquare@{NormSquare}}
+\index{NormSquare@{NormSquare}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{NormSquare()}{NormSquare()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily constexpr double G\+P\+M\+::\+Quaternion\+::\+Norm\+Square (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Norm square of a quaternion, alias magnitude square. 
+
+\begin{DoxyReturn}{Returns}
+The magnitude squared 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a2ba2a76024b87ab2e38f69ea16d3bdb4}\label{struct_g_p_m_1_1_quaternion_a2ba2a76024b87ab2e38f69ea16d3bdb4}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!NormSquare@{NormSquare}}
+\index{NormSquare@{NormSquare}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{NormSquare()}{NormSquare()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily constexpr double G\+P\+M\+::\+Quaternion\+::\+Norm\+Square (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Norm square of a quaternion, alias magnitude square. 
+
+\begin{DoxyReturn}{Returns}
+The magnitude squared 
+\end{DoxyReturn}
+
+
+Definition at line 517 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a99e82e163d1649b9b4622a991a2bad4e}\label{struct_g_p_m_1_1_quaternion_a99e82e163d1649b9b4622a991a2bad4e}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool G\+P\+M\+::\+Quaternion\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+other\+Quaternion }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check is all components between the current quaternion and the other one are different. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other\+Quaternion} & The other quaternion to check with \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 169 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a99e82e163d1649b9b4622a991a2bad4e}\label{struct_g_p_m_1_1_quaternion_a99e82e163d1649b9b4622a991a2bad4e}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool G\+P\+M\+::\+Quaternion\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+other\+Quaternion }\end{DoxyParamCaption}) const}
+
+
+
+Check is all components between the current quaternion and the other one are different. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other\+Quaternion} & The other quaternion to check with \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a36ba8e47e817d6cad9523f0ef788792a}\label{struct_g_p_m_1_1_quaternion_a36ba8e47e817d6cad9523f0ef788792a}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+scale }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 218 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a36ba8e47e817d6cad9523f0ef788792a}\label{struct_g_p_m_1_1_quaternion_a36ba8e47e817d6cad9523f0ef788792a}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+scale }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a40857adc42a3c99c781ca51a98e4a25d}\label{struct_g_p_m_1_1_quaternion_a40857adc42a3c99c781ca51a98e4a25d}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+other\+Quaternion }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 223 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a40857adc42a3c99c781ca51a98e4a25d}\label{struct_g_p_m_1_1_quaternion_a40857adc42a3c99c781ca51a98e4a25d}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+other\+Quaternion }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_ad7f07a2e6230a74fe9cc8a7fd4ee7690}\label{struct_g_p_m_1_1_quaternion_ad7f07a2e6230a74fe9cc8a7fd4ee7690}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+to\+Multiply }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_ad7f07a2e6230a74fe9cc8a7fd4ee7690}\label{struct_g_p_m_1_1_quaternion_ad7f07a2e6230a74fe9cc8a7fd4ee7690}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+to\+Multiply }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 235 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a5e47871be30dc0377fb2fa9479d94f6c}\label{struct_g_p_m_1_1_quaternion_a5e47871be30dc0377fb2fa9479d94f6c}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& G\+P\+M\+::\+Quaternion\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 210 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a4b8794d30c975f384f00af2f804aa3f8}\label{struct_g_p_m_1_1_quaternion_a4b8794d30c975f384f00af2f804aa3f8}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}}\& G\+P\+M\+::\+Quaternion\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_aa3e4a4f1a0b11f0f466d2f84b10d8cdc}\label{struct_g_p_m_1_1_quaternion_aa3e4a4f1a0b11f0f466d2f84b10d8cdc}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}}\& G\+P\+M\+::\+Quaternion\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+other\+Quaternion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a6deab7aefc02fc91cfdac60ef8ec5b0e}\label{struct_g_p_m_1_1_quaternion_a6deab7aefc02fc91cfdac60ef8ec5b0e}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& G\+P\+M\+::\+Quaternion\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+other\+Quaternion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 228 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a93d85d025f52450ca8d83a70d36c8e45}\label{struct_g_p_m_1_1_quaternion_a93d85d025f52450ca8d83a70d36c8e45}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}}\& G\+P\+M\+::\+Quaternion\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+to\+Multiply }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a837ae073d1eb5f383b59c0108893dade}\label{struct_g_p_m_1_1_quaternion_a837ae073d1eb5f383b59c0108893dade}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& G\+P\+M\+::\+Quaternion\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+to\+Multiply }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 245 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_aa533df832686948443a226ecaa894ded}\label{struct_g_p_m_1_1_quaternion_aa533df832686948443a226ecaa894ded}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!operator+@{operator+}}
+\index{operator+@{operator+}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+other\+Quaternion }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_aa533df832686948443a226ecaa894ded}\label{struct_g_p_m_1_1_quaternion_aa533df832686948443a226ecaa894ded}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!operator+@{operator+}}
+\index{operator+@{operator+}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+other\+Quaternion }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 174 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a7fb9c9b764ea8b9f12daa64a5fe83c42}\label{struct_g_p_m_1_1_quaternion_a7fb9c9b764ea8b9f12daa64a5fe83c42}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}}\& G\+P\+M\+::\+Quaternion\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+other\+Quaternion }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_aba56eadca23a60a2a0cb4cc01ee80be0}\label{struct_g_p_m_1_1_quaternion_aba56eadca23a60a2a0cb4cc01ee80be0}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& G\+P\+M\+::\+Quaternion\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+other\+Quaternion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 179 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a2aa47e9e830a4cbc1c78145c62e47413}\label{struct_g_p_m_1_1_quaternion_a2aa47e9e830a4cbc1c78145c62e47413}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+other\+Quaternion }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a2aa47e9e830a4cbc1c78145c62e47413}\label{struct_g_p_m_1_1_quaternion_a2aa47e9e830a4cbc1c78145c62e47413}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+other\+Quaternion }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 187 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a24f789a851481781e7a9cb12a41fa101}\label{struct_g_p_m_1_1_quaternion_a24f789a851481781e7a9cb12a41fa101}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}}\& G\+P\+M\+::\+Quaternion\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+other\+Quaternion }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_aba7430e66dc1ed71dda0639ae286eef3}\label{struct_g_p_m_1_1_quaternion_aba7430e66dc1ed71dda0639ae286eef3}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& G\+P\+M\+::\+Quaternion\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+other\+Quaternion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 192 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_ae7fb2653620ec412db5934f3978e1715}\label{struct_g_p_m_1_1_quaternion_ae7fb2653620ec412db5934f3978e1715}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!operator=@{operator=}}
+\index{operator=@{operator=}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}}\& G\+P\+M\+::\+Quaternion\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [default]}}
+
+
+
+Copy assignment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The quaternion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current quaternion modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_ae7fb2653620ec412db5934f3978e1715}\label{struct_g_p_m_1_1_quaternion_ae7fb2653620ec412db5934f3978e1715}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!operator=@{operator=}}
+\index{operator=@{operator=}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}}\& G\+P\+M\+::\+Quaternion\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [default]}}
+
+
+
+Copy assignment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The quaternion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current quaternion modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a60eaadfc846d4e019bda13a0e22cc3f9}\label{struct_g_p_m_1_1_quaternion_a60eaadfc846d4e019bda13a0e22cc3f9}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!operator=@{operator=}}
+\index{operator=@{operator=}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}}\& G\+P\+M\+::\+Quaternion\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&\&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Move assigment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The quaternion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current quaternion modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a72f1c88727fce3405dcd84f8099f70de}\label{struct_g_p_m_1_1_quaternion_a72f1c88727fce3405dcd84f8099f70de}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!operator=@{operator=}}
+\index{operator=@{operator=}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \& G\+P\+M\+::\+Quaternion\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&\&}]{p\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Move assigment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other} & The quaternion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current quaternion modified 
+\end{DoxyReturn}
+
+
+Definition at line 141 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a87ffb14c0f80de9b372533ded26c4ea3}\label{struct_g_p_m_1_1_quaternion_a87ffb14c0f80de9b372533ded26c4ea3}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!operator==@{operator==}}
+\index{operator==@{operator==}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool G\+P\+M\+::\+Quaternion\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+other\+Quaternion }\end{DoxyParamCaption}) const}
+
+
+
+Check is all components between the current quaternion and the other one are equals. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other\+Quaternion} & The other quaternion to check with \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a87ffb14c0f80de9b372533ded26c4ea3}\label{struct_g_p_m_1_1_quaternion_a87ffb14c0f80de9b372533ded26c4ea3}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!operator==@{operator==}}
+\index{operator==@{operator==}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool G\+P\+M\+::\+Quaternion\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+other\+Quaternion }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check is all components between the current quaternion and the other one are equals. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+other\+Quaternion} & The other quaternion to check with \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 164 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_af6e8a453a27f17b44c3109535f5ce25c}\label{struct_g_p_m_1_1_quaternion_af6e8a453a27f17b44c3109535f5ce25c}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double G\+P\+M\+::\+Quaternion\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const int}]{p\+\_\+index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the value aliased with index, just like arrays. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+index} & The index to access. 0 = w, 1 = x, 2 = y, 3 = z \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the value associated at the indicated index 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} representation is as follow \+: \mbox{[}w, x, y, z\mbox{]} 
+\end{DoxyNote}
+
+
+Definition at line 343 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_af6e8a453a27f17b44c3109535f5ce25c}\label{struct_g_p_m_1_1_quaternion_af6e8a453a27f17b44c3109535f5ce25c}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double G\+P\+M\+::\+Quaternion\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const int}]{p\+\_\+index }\end{DoxyParamCaption}) const}
+
+
+
+Return the value aliased with index, just like arrays. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+index} & The index to access. 0 = w, 1 = x, 2 = y, 3 = z \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the value associated at the indicated index 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} representation is as follow \+: \mbox{[}w, x, y, z\mbox{]} 
+\end{DoxyNote}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_aa82020d0cd24a32909de050c1eee94b6}\label{struct_g_p_m_1_1_quaternion_aa82020d0cd24a32909de050c1eee94b6}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!RotateRelativeToPivot@{RotateRelativeToPivot}}
+\index{RotateRelativeToPivot@{RotateRelativeToPivot}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{RotateRelativeToPivot()}{RotateRelativeToPivot()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$double$>$ G\+P\+M\+::\+Quaternion\+::\+Rotate\+Relative\+To\+Pivot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+position,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+pivot }\end{DoxyParamCaption}) const}
+
+
+
+Rotate a point relative to pivot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+position} & \\
+\hline
+{\em p\+\_\+pivot} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+This method is not implemented yet and will fail at compilation. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_aa82020d0cd24a32909de050c1eee94b6}\label{struct_g_p_m_1_1_quaternion_aa82020d0cd24a32909de050c1eee94b6}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!RotateRelativeToPivot@{RotateRelativeToPivot}}
+\index{RotateRelativeToPivot@{RotateRelativeToPivot}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{RotateRelativeToPivot()}{RotateRelativeToPivot()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$double$>$ G\+P\+M\+::\+Quaternion\+::\+Rotate\+Relative\+To\+Pivot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+position,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+pivot }\end{DoxyParamCaption}) const}
+
+
+
+Rotate a point relative to pivot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+position} & \\
+\hline
+{\em p\+\_\+pivot} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+This method is not implemented yet and will fail at compilation. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_ae66a24be2f1fc1269aca1a31572946dc}\label{struct_g_p_m_1_1_quaternion_ae66a24be2f1fc1269aca1a31572946dc}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!RotateRelativeToPivot@{RotateRelativeToPivot}}
+\index{RotateRelativeToPivot@{RotateRelativeToPivot}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{RotateRelativeToPivot()}{RotateRelativeToPivot()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$double$>$ G\+P\+M\+::\+Quaternion\+::\+Rotate\+Relative\+To\+Pivot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+position,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+pivot,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+euler\+Angles }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Rotate a point relative to pivot using euler angles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+position} & \\
+\hline
+{\em p\+\_\+pivot} & \\
+\hline
+{\em p\+\_\+euler\+Angles} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+This method is not implemented yet and will fail at compilation. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_ae66a24be2f1fc1269aca1a31572946dc}\label{struct_g_p_m_1_1_quaternion_ae66a24be2f1fc1269aca1a31572946dc}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!RotateRelativeToPivot@{RotateRelativeToPivot}}
+\index{RotateRelativeToPivot@{RotateRelativeToPivot}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{RotateRelativeToPivot()}{RotateRelativeToPivot()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$double$>$ G\+P\+M\+::\+Quaternion\+::\+Rotate\+Relative\+To\+Pivot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+position,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+pivot,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+euler\+Angles }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Rotate a point relative to pivot using euler angles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+position} & \\
+\hline
+{\em p\+\_\+pivot} & \\
+\hline
+{\em p\+\_\+euler\+Angles} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+This method is not implemented yet and will fail at compilation. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a9cfee2c719d560a9397dbb26be807cbd}\label{struct_g_p_m_1_1_quaternion_a9cfee2c719d560a9397dbb26be807cbd}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!RotateRelativeToPivot@{RotateRelativeToPivot}}
+\index{RotateRelativeToPivot@{RotateRelativeToPivot}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{RotateRelativeToPivot()}{RotateRelativeToPivot()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$double$>$ G\+P\+M\+::\+Quaternion\+::\+Rotate\+Relative\+To\+Pivot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+position,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+pivot,  }\item[{\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+quaternion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Rotate a point relative to pivot using a quaternion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+position} & \\
+\hline
+{\em p\+\_\+pivot} & \\
+\hline
+{\em p\+\_\+quaternion} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+This method is not implemented yet and will fail at compilation. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a9cfee2c719d560a9397dbb26be807cbd}\label{struct_g_p_m_1_1_quaternion_a9cfee2c719d560a9397dbb26be807cbd}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!RotateRelativeToPivot@{RotateRelativeToPivot}}
+\index{RotateRelativeToPivot@{RotateRelativeToPivot}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{RotateRelativeToPivot()}{RotateRelativeToPivot()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$double$>$ G\+P\+M\+::\+Quaternion\+::\+Rotate\+Relative\+To\+Pivot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+position,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+pivot,  }\item[{\mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+quaternion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Rotate a point relative to pivot using a quaternion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+position} & \\
+\hline
+{\em p\+\_\+pivot} & \\
+\hline
+{\em p\+\_\+quaternion} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+This method is not implemented yet and will fail at compilation. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a5d6c5e4fc6ebed7c87ac65d859d6d910}\label{struct_g_p_m_1_1_quaternion_a5d6c5e4fc6ebed7c87ac65d859d6d910}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!RotateVector@{RotateVector}}
+\index{RotateVector@{RotateVector}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{RotateVector()}{RotateVector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$double$>$ G\+P\+M\+::\+Quaternion\+::\+Rotate\+Vector (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+to\+Rotate }\end{DoxyParamCaption}) const}
+
+
+
+Rotate a vector around another one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+to\+Rotate} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+This method is not implemented yet and will fail at compilation. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a5d6c5e4fc6ebed7c87ac65d859d6d910}\label{struct_g_p_m_1_1_quaternion_a5d6c5e4fc6ebed7c87ac65d859d6d910}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!RotateVector@{RotateVector}}
+\index{RotateVector@{RotateVector}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{RotateVector()}{RotateVector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$double$>$ G\+P\+M\+::\+Quaternion\+::\+Rotate\+Vector (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+to\+Rotate }\end{DoxyParamCaption}) const}
+
+
+
+Rotate a vector around another one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+to\+Rotate} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+This method is not implemented yet and will fail at compilation. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a9bacd221c04bf7a647cadf6fd792b647}\label{struct_g_p_m_1_1_quaternion_a9bacd221c04bf7a647cadf6fd792b647}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!RotateVectorAboutAngleAndAxis@{RotateVectorAboutAngleAndAxis}}
+\index{RotateVectorAboutAngleAndAxis@{RotateVectorAboutAngleAndAxis}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{RotateVectorAboutAngleAndAxis()}{RotateVectorAboutAngleAndAxis()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$double$>$ G\+P\+M\+::\+Quaternion\+::\+Rotate\+Vector\+About\+Angle\+And\+Axis (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+angle,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+axis,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+vector\+To\+Rotate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Rotate the vector of a certain angle around an arbitrary axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+angle} & The angle \\
+\hline
+{\em p\+\_\+axis} & The axis \\
+\hline
+{\em p\+\_\+vector\+To\+Rotate} & Vector to rotate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The vector rotated 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a38158ec985f590e5ad6c90ba4c1a1058}\label{struct_g_p_m_1_1_quaternion_a38158ec985f590e5ad6c90ba4c1a1058}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!RotateVectorAboutAngleAndAxis@{RotateVectorAboutAngleAndAxis}}
+\index{RotateVectorAboutAngleAndAxis@{RotateVectorAboutAngleAndAxis}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{RotateVectorAboutAngleAndAxis()}{RotateVectorAboutAngleAndAxis()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ G\+P\+M\+::\+Quaternion\+::\+Rotate\+Vector\+About\+Angle\+And\+Axis (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+angle,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+axis,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+vector\+To\+Rotate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Rotate the vector of a certain angle around an arbitrary axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+angle} & The angle \\
+\hline
+{\em p\+\_\+axis} & The axis \\
+\hline
+{\em p\+\_\+vector\+To\+Rotate} & Vector to rotate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The vector rotated 
+\end{DoxyReturn}
+
+
+Definition at line 323 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_addc1675e89ca3db9bbca7cb60c9c95b8}\label{struct_g_p_m_1_1_quaternion_addc1675e89ca3db9bbca7cb60c9c95b8}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!SetRealValue@{SetRealValue}}
+\index{SetRealValue@{SetRealValue}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{SetRealValue()}{SetRealValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void G\+P\+M\+::\+Quaternion\+::\+Set\+Real\+Value (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+real\+Value }\end{DoxyParamCaption})}
+
+
+
+Set the w component (real part) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+real\+Value} & New value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_addc1675e89ca3db9bbca7cb60c9c95b8}\label{struct_g_p_m_1_1_quaternion_addc1675e89ca3db9bbca7cb60c9c95b8}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!SetRealValue@{SetRealValue}}
+\index{SetRealValue@{SetRealValue}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{SetRealValue()}{SetRealValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void G\+P\+M\+::\+Quaternion\+::\+Set\+Real\+Value (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+real\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the w component (real part) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+real\+Value} & New value \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 398 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_ac74d043f0caab277c9ce3dafc4b3f8e9}\label{struct_g_p_m_1_1_quaternion_ac74d043f0caab277c9ce3dafc4b3f8e9}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!SetXAxisValue@{SetXAxisValue}}
+\index{SetXAxisValue@{SetXAxisValue}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{SetXAxisValue()}{SetXAxisValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void G\+P\+M\+::\+Quaternion\+::\+Set\+X\+Axis\+Value (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+x\+Value }\end{DoxyParamCaption})}
+
+
+
+Set the x value of the axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+x\+Value} & New value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_ac74d043f0caab277c9ce3dafc4b3f8e9}\label{struct_g_p_m_1_1_quaternion_ac74d043f0caab277c9ce3dafc4b3f8e9}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!SetXAxisValue@{SetXAxisValue}}
+\index{SetXAxisValue@{SetXAxisValue}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{SetXAxisValue()}{SetXAxisValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void G\+P\+M\+::\+Quaternion\+::\+Set\+X\+Axis\+Value (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+x\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the x value of the axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+x\+Value} & New value \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 383 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_aacea349183d79c3d47afe600b7679ff4}\label{struct_g_p_m_1_1_quaternion_aacea349183d79c3d47afe600b7679ff4}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!SetYAxisValue@{SetYAxisValue}}
+\index{SetYAxisValue@{SetYAxisValue}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{SetYAxisValue()}{SetYAxisValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void G\+P\+M\+::\+Quaternion\+::\+Set\+Y\+Axis\+Value (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+y\+Value }\end{DoxyParamCaption})}
+
+
+
+Set the y value of the axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+y\+Value} & New value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_aacea349183d79c3d47afe600b7679ff4}\label{struct_g_p_m_1_1_quaternion_aacea349183d79c3d47afe600b7679ff4}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!SetYAxisValue@{SetYAxisValue}}
+\index{SetYAxisValue@{SetYAxisValue}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{SetYAxisValue()}{SetYAxisValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void G\+P\+M\+::\+Quaternion\+::\+Set\+Y\+Axis\+Value (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+y\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the y value of the axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+y\+Value} & New value \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 388 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a28e63ed1b83c02c1255e5dca68082bce}\label{struct_g_p_m_1_1_quaternion_a28e63ed1b83c02c1255e5dca68082bce}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!SetZAxisValue@{SetZAxisValue}}
+\index{SetZAxisValue@{SetZAxisValue}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{SetZAxisValue()}{SetZAxisValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void G\+P\+M\+::\+Quaternion\+::\+Set\+Z\+Axis\+Value (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+z\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the z value of the axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+z\+Value} & New value \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 393 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a28e63ed1b83c02c1255e5dca68082bce}\label{struct_g_p_m_1_1_quaternion_a28e63ed1b83c02c1255e5dca68082bce}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!SetZAxisValue@{SetZAxisValue}}
+\index{SetZAxisValue@{SetZAxisValue}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{SetZAxisValue()}{SetZAxisValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void G\+P\+M\+::\+Quaternion\+::\+Set\+Z\+Axis\+Value (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+z\+Value }\end{DoxyParamCaption})}
+
+
+
+Set the z value of the axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+z\+Value} & New value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a95522a8a728362e1c46dd7b8de83a220}\label{struct_g_p_m_1_1_quaternion_a95522a8a728362e1c46dd7b8de83a220}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Slerp@{Slerp}}
+\index{Slerp@{Slerp}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Slerp()}{Slerp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::\+Slerp (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+start,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+end,  }\item[{const double}]{p\+\_\+alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Smoothly interpolate between two quaternions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+start} & Start quaternion \\
+\hline
+{\em p\+\_\+end} & End quaternion \\
+\hline
+{\em p\+\_\+alpha} & Coefficient \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a998a28ddd5cf611d1809ce36cacd285a}\label{struct_g_p_m_1_1_quaternion_a998a28ddd5cf611d1809ce36cacd285a}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!Slerp@{Slerp}}
+\index{Slerp@{Slerp}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{Slerp()}{Slerp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::\+Slerp (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+start,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+end,  }\item[{const double}]{p\+\_\+alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Smoothly interpolate between two quaternions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+start} & Start quaternion \\
+\hline
+{\em p\+\_\+end} & End quaternion \\
+\hline
+{\em p\+\_\+alpha} & Coefficient \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion 
+\end{DoxyReturn}
+
+
+Definition at line 451 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_afafd55d40b35297e8e1b0f3daf12442c}\label{struct_g_p_m_1_1_quaternion_afafd55d40b35297e8e1b0f3daf12442c}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!SlerpShortestPath@{SlerpShortestPath}}
+\index{SlerpShortestPath@{SlerpShortestPath}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{SlerpShortestPath()}{SlerpShortestPath()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::\+Slerp\+Shortest\+Path (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+start,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+end,  }\item[{double}]{p\+\_\+alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Smoothly interpolate between two quaternions and use the shortest path to it. Prevents wrong side rotation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+start} & Start quaternion \\
+\hline
+{\em p\+\_\+end} & End quaternion \\
+\hline
+{\em p\+\_\+alpha} & Coefficient \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion 
+\end{DoxyReturn}
+
+
+Definition at line 476 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a6e6efd6a0ad8d0daa0db3ffa59de0416}\label{struct_g_p_m_1_1_quaternion_a6e6efd6a0ad8d0daa0db3ffa59de0416}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!SlerpShortestPath@{SlerpShortestPath}}
+\index{SlerpShortestPath@{SlerpShortestPath}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{SlerpShortestPath()}{SlerpShortestPath()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::\+Slerp\+Shortest\+Path (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+start,  }\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+end,  }\item[{double}]{p\+\_\+alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Smoothly interpolate between two quaternions and use the shortest path to it. Prevents wrong side rotation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+start} & Start quaternion \\
+\hline
+{\em p\+\_\+end} & End quaternion \\
+\hline
+{\em p\+\_\+alpha} & Coefficient \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_af3f0597db46a0aefb5d684e9b64bff20}\label{struct_g_p_m_1_1_quaternion_af3f0597db46a0aefb5d684e9b64bff20}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!ToEuler@{ToEuler}}
+\index{ToEuler@{ToEuler}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{ToEuler()}{ToEuler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ G\+P\+M\+::\+Quaternion\+::\+To\+Euler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transform the current quaternion to euler angles in degrees. 
+
+\begin{DoxyReturn}{Returns}
+A vector containing each angles 
+\end{DoxyReturn}
+
+
+Definition at line 559 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a03cd1c143f0a1f7ba256270c03e5a35e}\label{struct_g_p_m_1_1_quaternion_a03cd1c143f0a1f7ba256270c03e5a35e}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!ToEuler@{ToEuler}}
+\index{ToEuler@{ToEuler}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{ToEuler()}{ToEuler()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$double$>$ G\+P\+M\+::\+Quaternion\+::\+To\+Euler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Transform the current quaternion to euler angles in degrees. 
+
+\begin{DoxyReturn}{Returns}
+A vector containing each angles 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a34e16ff730f9dc679013aa7c9733ce83}\label{struct_g_p_m_1_1_quaternion_a34e16ff730f9dc679013aa7c9733ce83}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!ToMatrix3@{ToMatrix3}}
+\index{ToMatrix3@{ToMatrix3}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{ToMatrix3()}{ToMatrix3()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$ float $>$ G\+P\+M\+::\+Quaternion\+::\+To\+Matrix3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return a \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}} of double out of the quaternion. 
+
+\begin{DoxyReturn}{Returns}
+The Matrix3$<$float$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 622 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a6945ad6886b6428d2241bd431446af9c}\label{struct_g_p_m_1_1_quaternion_a6945ad6886b6428d2241bd431446af9c}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!ToMatrix3@{ToMatrix3}}
+\index{ToMatrix3@{ToMatrix3}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{ToMatrix3()}{ToMatrix3()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}}$<$float$>$ G\+P\+M\+::\+Quaternion\+::\+To\+Matrix3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return a \mbox{\hyperlink{struct_g_p_m_1_1_matrix3}{Matrix3}} of double out of the quaternion. 
+
+\begin{DoxyReturn}{Returns}
+The Matrix3$<$float$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a726a21ad1b70008a19be3c445abea9c5}\label{struct_g_p_m_1_1_quaternion_a726a21ad1b70008a19be3c445abea9c5}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!ToMatrix4@{ToMatrix4}}
+\index{ToMatrix4@{ToMatrix4}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{ToMatrix4()}{ToMatrix4()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$float$>$ G\+P\+M\+::\+Quaternion\+::\+To\+Matrix4 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return a \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}} of double out of the quaternion. 
+
+\begin{DoxyReturn}{Returns}
+The Matrix4$<$float$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_ae1c1f298497e9ef2294fc7eca5f7ae8d}\label{struct_g_p_m_1_1_quaternion_ae1c1f298497e9ef2294fc7eca5f7ae8d}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!ToMatrix4@{ToMatrix4}}
+\index{ToMatrix4@{ToMatrix4}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{ToMatrix4()}{ToMatrix4()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}}$<$ float $>$ G\+P\+M\+::\+Quaternion\+::\+To\+Matrix4 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return a \mbox{\hyperlink{struct_g_p_m_1_1_matrix4}{Matrix4}} of double out of the quaternion. 
+
+\begin{DoxyReturn}{Returns}
+The Matrix4$<$float$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 647 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a9616b0991eae211bf02e9e6af3b83710}\label{struct_g_p_m_1_1_quaternion_a9616b0991eae211bf02e9e6af3b83710}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!ToQuaternion@{ToQuaternion}}
+\index{ToQuaternion@{ToQuaternion}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{ToQuaternion()}{ToQuaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::\+To\+Quaternion (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+yaw,  }\item[{const double}]{p\+\_\+pitch,  }\item[{const double}]{p\+\_\+roll }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a quaternion from yaw, pitch and roll angle in degrees. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+yaw} & The yaw angle \\
+\hline
+{\em p\+\_\+pitch} & The pitch angle \\
+\hline
+{\em p\+\_\+roll} & The roll angle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a16c1af1524d5fed11c573bb120b3090a}\label{struct_g_p_m_1_1_quaternion_a16c1af1524d5fed11c573bb120b3090a}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!ToQuaternion@{ToQuaternion}}
+\index{ToQuaternion@{ToQuaternion}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{ToQuaternion()}{ToQuaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::\+To\+Quaternion (\begin{DoxyParamCaption}\item[{const double}]{p\+\_\+yaw,  }\item[{const double}]{p\+\_\+pitch,  }\item[{const double}]{p\+\_\+roll }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Create a quaternion from yaw, pitch and roll angle in degrees. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+yaw} & The yaw angle \\
+\hline
+{\em p\+\_\+pitch} & The pitch angle \\
+\hline
+{\em p\+\_\+roll} & The roll angle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion 
+\end{DoxyReturn}
+
+
+Definition at line 592 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_abb793bcd00763c1a4a6741177d1e5a6b}\label{struct_g_p_m_1_1_quaternion_abb793bcd00763c1a4a6741177d1e5a6b}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!ToQuaternion@{ToQuaternion}}
+\index{ToQuaternion@{ToQuaternion}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{ToQuaternion()}{ToQuaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::\+To\+Quaternion (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+euler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Create a quaternion from euler in degrees. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+euler} & The euler angle in degree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion 
+\end{DoxyReturn}
+
+
+Definition at line 587 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a7a15530c2e18e14807f48b25eee7c6e4}\label{struct_g_p_m_1_1_quaternion_a7a15530c2e18e14807f48b25eee7c6e4}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!ToQuaternion@{ToQuaternion}}
+\index{ToQuaternion@{ToQuaternion}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{ToQuaternion()}{ToQuaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::\+To\+Quaternion (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ \&}]{p\+\_\+euler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a quaternion from euler in degrees. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+euler} & The euler angle in degree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a017531fc2f7b1bb3375ef92949b4eb32}\label{struct_g_p_m_1_1_quaternion_a017531fc2f7b1bb3375ef92949b4eb32}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!ToString@{ToString}}
+\index{ToString@{ToString}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily std\+::string G\+P\+M\+::\+Quaternion\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transform the current quaternion to string. 
+
+\begin{DoxyReturn}{Returns}
+The converted string 
+\end{DoxyReturn}
+
+
+Definition at line 611 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a017531fc2f7b1bb3375ef92949b4eb32}\label{struct_g_p_m_1_1_quaternion_a017531fc2f7b1bb3375ef92949b4eb32}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!ToString@{ToString}}
+\index{ToString@{ToString}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily std\+::string G\+P\+M\+::\+Quaternion\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Transform the current quaternion to string. 
+
+\begin{DoxyReturn}{Returns}
+The converted string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_ab2cac43316f6e190f2fafcff83f534d6}\label{struct_g_p_m_1_1_quaternion_ab2cac43316f6e190f2fafcff83f534d6}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!ToString@{ToString}}
+\index{ToString@{ToString}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily std\+::string G\+P\+M\+::\+Quaternion\+::\+To\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+quaternion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Transform a quaternion to string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+quaternion} & The quaternion to turn into string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The converted string 
+\end{DoxyReturn}
+
+
+Definition at line 617 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a4734dd1c521ac6a6214cb3b296fd89c0}\label{struct_g_p_m_1_1_quaternion_a4734dd1c521ac6a6214cb3b296fd89c0}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!ToString@{ToString}}
+\index{ToString@{ToString}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily static std\+::string G\+P\+M\+::\+Quaternion\+::\+To\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} \&}]{p\+\_\+quaternion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Transform a quaternion to string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+quaternion} & The quaternion to turn into string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The converted string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_af9c8f2d1ba00736145cdab9899f36b12}\label{struct_g_p_m_1_1_quaternion_af9c8f2d1ba00736145cdab9899f36b12}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!ToUnitNormQuaternion@{ToUnitNormQuaternion}}
+\index{ToUnitNormQuaternion@{ToUnitNormQuaternion}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{ToUnitNormQuaternion()}{ToUnitNormQuaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::\+To\+Unit\+Norm\+Quaternion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transform the current quaternion to a unit quaternion. 
+
+\begin{DoxyReturn}{Returns}
+The quaternion 
+\end{DoxyReturn}
+
+
+Definition at line 550 of file Quaternion.\+inl.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_af9c8f2d1ba00736145cdab9899f36b12}\label{struct_g_p_m_1_1_quaternion_af9c8f2d1ba00736145cdab9899f36b12}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!ToUnitNormQuaternion@{ToUnitNormQuaternion}}
+\index{ToUnitNormQuaternion@{ToUnitNormQuaternion}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{ToUnitNormQuaternion()}{ToUnitNormQuaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_quaternion}{Quaternion}} G\+P\+M\+::\+Quaternion\+::\+To\+Unit\+Norm\+Quaternion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Transform the current quaternion to a unit quaternion. 
+
+\begin{DoxyReturn}{Returns}
+The quaternion 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_a30d26dd8917d2e52cf99182d6cab5923}\label{struct_g_p_m_1_1_quaternion_a30d26dd8917d2e52cf99182d6cab5923}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!axis@{axis}}
+\index{axis@{axis}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{axis}{axis}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_p_m_1_1_vector3}{Vector3}}$<$ double $>$ G\+P\+M\+::\+Quaternion\+::axis}
+
+
+
+Definition at line 8 of file Quaternion.\+h.
+
+\mbox{\Hypertarget{struct_g_p_m_1_1_quaternion_aa1a3a64001caafeb89507ef830072a9c}\label{struct_g_p_m_1_1_quaternion_aa1a3a64001caafeb89507ef830072a9c}} 
+\index{GPM::Quaternion@{GPM::Quaternion}!w@{w}}
+\index{w@{w}!GPM::Quaternion@{GPM::Quaternion}}
+\doxysubsubsection{\texorpdfstring{w}{w}}
+{\footnotesize\ttfamily double G\+P\+M\+::\+Quaternion\+::w}
+
+
+
+Definition at line 10 of file Quaternion.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+G\+P\+M/include/\+G\+P\+M/\+Quaternion/\mbox{\hyperlink{_g_p_m_2include_2_g_p_m_2_quaternion_2_quaternion_8h}{Quaternion.\+h}}\item 
+G\+P\+M/include/\+G\+P\+M/\+Quaternion/\mbox{\hyperlink{_g_p_m_2include_2_g_p_m_2_quaternion_2_quaternion_8inl}{Quaternion.\+inl}}\end{DoxyCompactItemize}

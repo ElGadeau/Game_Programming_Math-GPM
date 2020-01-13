@@ -107,6 +107,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <CompileAs>CompileAsCpp</CompileAs>
+      <PreprocessorDefinitions>DOUBLE_PRECISION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -122,6 +123,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <CompileAs>CompileAsCpp</CompileAs>
+      <PreprocessorDefinitions>DOUBLE_PRECISION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -135,6 +137,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <CompileAs>CompileAsCpp</CompileAs>
+      <PreprocessorDefinitions>DOUBLE_PRECISION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -150,6 +153,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <CompileAs>CompileAsCpp</CompileAs>
+      <PreprocessorDefinitions>DOUBLE_PRECISION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

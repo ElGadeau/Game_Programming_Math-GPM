@@ -1,0 +1,65 @@
+\hypertarget{_g_p_m_2include_2_g_p_m_2_vector_2_vector4_8h}{}\doxysection{G\+P\+M/include/\+G\+P\+M/\+Vector/\+Vector4.h File Reference}
+\label{_g_p_m_2include_2_g_p_m_2_vector_2_vector4_8h}\index{GPM/include/GPM/Vector/Vector4.h@{GPM/include/GPM/Vector/Vector4.h}}
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$ostream$>$}\newline
+{\ttfamily \#include $<$G\+P\+M/\+Vector/\+Vector3.\+h$>$}\newline
+{\ttfamily \#include $<$G\+P\+M/\+Vector/\+Vector4.\+inl$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_g_p_m_1_1_vector4}{G\+P\+M\+::\+Vector4$<$ T $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_g_p_m}{G\+PM}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespace_g_p_m_a4860b1b89b65da0758cb4aa47cd1749f}{G\+P\+M\+::\+Vector4F}} = Vector4$<$ float $>$
+\item 
+using \mbox{\hyperlink{namespace_g_p_m_a7026712c9c688dc016e0e08aaa22e459}{G\+P\+M\+::\+Vector4D}} = Vector4$<$ double $>$
+\item 
+using \mbox{\hyperlink{namespace_g_p_m_a9b9b77ae4443cf54355bf98691a3b916}{G\+P\+M\+::\+Vector4I}} = Vector4$<$ int $>$
+\item 
+using \mbox{\hyperlink{namespace_g_p_m_a8e491c90a55519f8e4461177452d3ce5}{G\+P\+M\+::\+Vector4L}} = Vector4$<$ long $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr std\+::ostream \& \mbox{\hyperlink{namespace_g_p_m_ac12c48d8c4cced5369d2583bca425380}{G\+P\+M\+::operator$<$$<$}} (std\+::ostream \&p\+\_\+stream, const Vector4$<$ T $>$ \&p\+\_\+vector)
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr Vector4$<$ T $>$ \mbox{\hyperlink{namespace_g_p_m_aa3dfc4d8365330fbb1db176d284f8779}{G\+P\+M\+::operator+}} (const T p\+\_\+scalar, const Vector4$<$ T $>$ \&p\+\_\+vector)
+\item 
+{\footnotesize template$<$typename T , typename U $>$ }\\constexpr Vector4$<$ T $>$ \mbox{\hyperlink{namespace_g_p_m_adece69b0ebbd38352901f61f957e1492}{G\+P\+M\+::operator+}} (const U p\+\_\+scalar, const Vector4$<$ T $>$ \&p\+\_\+vector)
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr Vector4$<$ T $>$ \& \mbox{\hyperlink{namespace_g_p_m_af08df075071b474c2a333e2d784c2b32}{G\+P\+M\+::operator+=}} (const T p\+\_\+scalar, Vector4$<$ T $>$ \&p\+\_\+vector)
+\item 
+{\footnotesize template$<$typename T , typename U $>$ }\\constexpr Vector4$<$ T $>$ \& \mbox{\hyperlink{namespace_g_p_m_a6db8c1445b31b6dc1383e5b0f3b2e1ec}{G\+P\+M\+::operator+=}} (const U p\+\_\+scalar, Vector4$<$ T $>$ \&p\+\_\+vector)
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr Vector4$<$ T $>$ \mbox{\hyperlink{namespace_g_p_m_a0f818bb7f425e73e80dd29db05ceabf6}{G\+P\+M\+::operator-\/}} (const T p\+\_\+scalar, const Vector4$<$ T $>$ \&p\+\_\+vector)
+\item 
+{\footnotesize template$<$typename T , typename U $>$ }\\constexpr Vector4$<$ T $>$ \mbox{\hyperlink{namespace_g_p_m_a388938279d87d5ae074d853aa79b68af}{G\+P\+M\+::operator-\/}} (const U p\+\_\+scalar, const Vector4$<$ T $>$ \&p\+\_\+vector)
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr Vector4$<$ T $>$ \& \mbox{\hyperlink{namespace_g_p_m_acd4cefe0b936550ba7a04162384eb42a}{G\+P\+M\+::operator-\/=}} (const T p\+\_\+scalar, Vector4$<$ T $>$ \&p\+\_\+vector)
+\item 
+{\footnotesize template$<$typename T , typename U $>$ }\\constexpr Vector4$<$ T $>$ \& \mbox{\hyperlink{namespace_g_p_m_abfa5c0689645946512e43e923991d0e3}{G\+P\+M\+::operator-\/=}} (const U p\+\_\+scalar, Vector4$<$ T $>$ \&p\+\_\+vector)
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr Vector4$<$ T $>$ \mbox{\hyperlink{namespace_g_p_m_aed7201ff970fe00fa08e7f827bc67895}{G\+P\+M\+::operator$\ast$}} (const T p\+\_\+scalar, const Vector4$<$ T $>$ \&p\+\_\+vector)
+\item 
+{\footnotesize template$<$typename T , typename U $>$ }\\constexpr Vector4$<$ T $>$ \mbox{\hyperlink{namespace_g_p_m_a23e82419bc85d999e892a26ae0e30f23}{G\+P\+M\+::operator$\ast$}} (const U p\+\_\+scalar, const Vector4$<$ T $>$ \&p\+\_\+vector)
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr Vector4$<$ T $>$ \& \mbox{\hyperlink{namespace_g_p_m_a7c0f40fce4b54d4f68ea25c93dc9f66c}{G\+P\+M\+::operator$\ast$=}} (const T p\+\_\+scalar, Vector4$<$ T $>$ \&p\+\_\+vector)
+\item 
+{\footnotesize template$<$typename T , typename U $>$ }\\constexpr Vector4$<$ T $>$ \& \mbox{\hyperlink{namespace_g_p_m_ace51895d630f664f08d2f699c2293f22}{G\+P\+M\+::operator$\ast$=}} (const U p\+\_\+scalar, Vector4$<$ T $>$ \&p\+\_\+vector)
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr Vector4$<$ T $>$ \mbox{\hyperlink{namespace_g_p_m_a669b8da102d13014c5e341401f7ee390}{G\+P\+M\+::operator/}} (const T p\+\_\+scalar, const Vector4$<$ T $>$ \&p\+\_\+vector)
+\item 
+{\footnotesize template$<$typename T , typename U $>$ }\\constexpr Vector4$<$ T $>$ \mbox{\hyperlink{namespace_g_p_m_ac98fb064eac61a38a2f146347faff248}{G\+P\+M\+::operator/}} (const U p\+\_\+scalar, const Vector4$<$ T $>$ \&p\+\_\+vector)
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr Vector4$<$ T $>$ \& \mbox{\hyperlink{namespace_g_p_m_a6b903f7f52d07d91b4de7eb1226d2c55}{G\+P\+M\+::operator/=}} (const T p\+\_\+scalar, Vector4$<$ T $>$ \&p\+\_\+vector)
+\item 
+{\footnotesize template$<$typename T , typename U $>$ }\\constexpr Vector4$<$ T $>$ \& \mbox{\hyperlink{namespace_g_p_m_a7956b11cc90ebb22ae3c59f176796857}{G\+P\+M\+::operator/=}} (const U p\+\_\+scalar, Vector4$<$ T $>$ \&p\+\_\+vector)
+\end{DoxyCompactItemize}
