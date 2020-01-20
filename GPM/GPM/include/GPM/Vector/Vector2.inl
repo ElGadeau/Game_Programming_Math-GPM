@@ -84,8 +84,11 @@ inline constexpr void GPM::Vector2<T>::Normalize()
 {
 	T magn = Magnitude();
 
-	if (magn == 0)
-		throw std::logic_error("Vector2::Normalize() got a vector2 magnitude of 0");
+    if (magn == 0)
+    {
+        *this = zero;
+        return;
+    }
 
 	Divide(magn);
 }
@@ -95,8 +98,8 @@ inline constexpr GPM::Vector2<T> GPM::Vector2<T>::normalized() const
 {
 	T magn = Magnitude();
 
-	if (magn == 0)
-		throw std::logic_error("Vector2::normalized() got a vector2 magnitude of 0");
+    if (magn == 0)
+        return zero;
 
 	return { x / magn, y / magn };
 }
@@ -114,6 +117,10 @@ template<typename T>
 constexpr GPM::Vector2<T> GPM::Vector2<T>::normalized(const Vector2<T>& p_vector2)
 {
 	T magn = p_vector2.Magnitude();
+
+    if (magn == T(0.0))
+        return zero;
+
 	return Vector2<T>{ p_vector2.x / magn, p_vector2.y / magn };
 }
 
@@ -122,8 +129,11 @@ inline constexpr void GPM::Vector2<T>::Normalize(Vector2<T>& p_vector2)
 {
 	T magn = p_vector2.Magnitude();
 
-	if (magn == 0)
-		throw std::logic_error("Vector2::Normalize(Vector2<T>& p_vector2) got a vector2 magnitude of 0");
+    if (magn == T(0.0))
+    {
+        p_vector2 = zero;
+        return;
+    }
 
 	p_vector2.x /= magn;
 	p_vector2.y /= magn;
