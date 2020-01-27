@@ -277,7 +277,16 @@ constexpr Matrix4<T> Matrix4<T>::Inverse(const Matrix4<T>& p_matrix)
 template<typename T>
 Matrix4<T> Matrix4<T>::LookAt(const Vector3<T>& p_from, const Vector3<T>& p_to, const Vector3<T>& p_up)
 {
+    Vector3<T> zAxis = (p_to - p_from).Normalized();
+    Vector3<T> xAxis = (Vector3<T>::Cross(zAxis, p_up)).Normalized();
+    Vector3<T> yAxis = Vector3<T>::Cross(xAxis, zAxis);
 
+    return Matrix4<T>{
+        xAxis.x, xAxis.y, xAxis.z, -Vector3<T>::Dot(xAxis, p_from),
+        yAxis.x, yAxis.y, yAxis.z, -Vector3<T>::Dot(yAxis, p_from),
+        zAxis.x, zAxis.y, zAxis.z, -Vector3<T>::Dot(zAxis, p_from),
+        T{0}, T{0}, T{0}, T{1}
+    };
 }
 
 
