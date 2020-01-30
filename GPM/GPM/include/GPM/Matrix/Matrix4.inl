@@ -277,16 +277,19 @@ constexpr Matrix4<T> Matrix4<T>::Inverse(const Matrix4<T>& p_matrix)
 template<typename T>
 Matrix4<T> Matrix4<T>::LookAt(const Vector3<T>& p_from, const Vector3<T>& p_to, const Vector3<T>& p_up)
 {
-    Vector3<T> zAxis = (p_to - p_from).Normalized();
-    Vector3<T> xAxis = (Vector3<T>::Cross(zAxis, p_up)).Normalized();
-    Vector3<T> yAxis = Vector3<T>::Cross(xAxis, zAxis);
+    Vector3<T> forward = (p_to - p_from).Normalized();
+    Vector3<T> right = (Vector3<T>::Cross(forward, p_up)).Normalized();
+    Vector3<T> up = Vector3<T>::Cross(right, forward);
 
     return Matrix4<T>{
-        xAxis.x, xAxis.y, xAxis.z, -Vector3<T>::Dot(xAxis, p_from),
-        yAxis.x, yAxis.y, yAxis.z, -Vector3<T>::Dot(yAxis, p_from),
-        zAxis.x, zAxis.y, zAxis.z, -Vector3<T>::Dot(zAxis, p_from),
-        T{0}, T{0}, T{0}, T{1}
-    };
+            right.x, up.x, forward.x, T{ 0 },
+            right.y, up.y, forward.y, T{ 0 },
+            right.z, up.z, forward.z, T{ 0 },
+            T{ 0 }, T{ 0 }, T{ 0 },   T{ 1 }
+        } * Matrix4F(1.0f, 0.0f, 0.0f, 0.0f,
+                 0.0f, 1.0f, 0.0f, 0.0f,
+                 0.0f, 0.0f, 1.0f, 0.0f,
+                 -p_from.x, -p_from.y, -p_from.z, 1.0f);
 }
 
 
